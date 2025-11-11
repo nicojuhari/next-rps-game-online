@@ -2,11 +2,11 @@ const GameResults = ({ playerId, gameWinner }: { playerId: string, gameWinner: n
     return ( 
         <div className="text-center text-xl font-medium mt-8">
             {gameWinner === playerId ? (
-            <div className="text-green-600">Congratulations!<br />You have won!</div>
+            <div className="text-green-600">You Win!</div>
             ) : gameWinner === 'draw' ? (
-            <div>It is a Tie</div>
+            <div>It&apos;s a Tie!</div>
             ) : (
-            <div className="text-red-600">Better luck next time!</div>
+            <div className="text-red-600">You Lost.</div>
             )}
         </div>
      );

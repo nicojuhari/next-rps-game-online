@@ -53,11 +53,11 @@ const GameBoard = () => {
     }
     return (
         <div className="max-w-sm mx-auto">
-            <div className="mt-8">
-                {!isGameFinished ? ( <h2 className="text-2xl font-bold text-center text-green-600 mb-4">Select your Move</h2> ) : (
-                    <h2 className="text-2xl font-bold text-center mb-4">Game Finished!</h2>
+            <div className="mt-10 text-center">
+                {!isGameFinished ? ( <h2 className="font-medium text-green-600">Select your Move</h2> ) : (
+                    <h2 className="font-medium">Game Finished!</h2>
                 )}
-                <div className="text-sm text-center text-gray-800 space-y-2">
+                <div className="text-sm text-center text-gray-500 space-y-2 mt-2">
                     <div>After both players select their move <strong>3 times,</strong><br/>the game ends and results will be displayed.</div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ const GameBoard = () => {
                 { isGameFinished && (
                     <>
                         <GameResults playerId={playerId} gameWinner={gameWinner} />
-                        <div className="my-8 text-center">
+                        <div className="my-6 text-center">
                             <button onClick={() => resetGame(gameData?.$id)} className="btn btn-outline">Play again</button>
                         </div>
                     </>

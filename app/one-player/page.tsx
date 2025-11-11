@@ -4,6 +4,7 @@ import TableBoard from "@/components/TableBoard"
 import GameResults from "@/components/GameResults"
 import { getGameWinner } from "@/lib/game-utils"
 import GameEffects from "@/components/GameEffects"
+import GameBoard from "@/components/GameBoard"
 
 const OnePlayer = () => {
     const playerId = 'You'
@@ -61,12 +62,14 @@ const OnePlayer = () => {
 
 
     return (
-    <div className="w-full max-w-sm mx-auto">
-        <div className="mt-8">
-            {!isGameFinished ? ( <h1 className="text-2xl font-bold text-center text-green-600 mb-4">Select your Move</h1> ) : (
-                <h1 className="text-2xl font-bold text-center mb-4">Game Finished!</h1>
+    <div className="container py-8">
+        <h1 className="text-xl font-bold mb-4 text-center">Rock Paper Scissors - 1 Player Game</h1>
+        <div className="max-w-sm mx-auto">
+        <div className="mt-10 text-center">
+            {!isGameFinished ? ( <h2 className="font-medium text-green-600">Select your Move</h2> ) : (
+                <h2 className="font-medium">Game Finished!</h2>
             )}
-            <div className="text-sm text-center text-gray-800 space-y-2">
+            <div className="text-sm text-center text-gray-500 space-y-2 mt-2">
                 <div>After both players select their move <strong>3 times,</strong><br/>the game ends and results will be displayed.</div>
             </div>
         </div>
@@ -81,12 +84,14 @@ const OnePlayer = () => {
         { isGameFinished && (
             <>
                 <GameResults playerId={playerId} gameWinner={gameWinner} />
-                <div className="my-8 text-center">
+                <div className="my-6 text-center">
                     <button onClick={() => resetGame()} className="btn btn-outline">Play again</button>
                 </div>
             </>
         ) }
         { isGameFinished && playerId === gameWinner && <GameEffects /> }
+
+        </div>
     </div>
     );
 }

@@ -42,7 +42,7 @@ const MainCTA = () => {
               Play Now</Link>
         </div>
         <div className="bg-white p-6 rounded-lg border border-gray-200">
-          <p className="font-bold text-lg">2 Players</p>
+          <p className="font-medium text-lg">2 Players</p>
           <Link onClick={createGameLink} href="#" title="Create a 2-player game" className="justify-center mt-6 w-full bg-green-500 hover:bg-green-600 h-10 text-white py-1 px-4 rounded-md inline-flex items-center gap-2.5">
             {loading ? (
               <SpinnerGapIcon weight="light" size={24} color="white" className="animate-spin" />

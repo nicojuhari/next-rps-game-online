@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import MainCTA from '@/components/MainCTA';
+import HomeContent from '@/components/HomeContent';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       </p>
     </div>
     <MainCTA />
+    <HomeContent/>
     <p className="text-sm text-center text-gray-500 mb-6">
         Read our <Link href="/privacy" className="text-blue-600 underline" title="privacy policy">
           Privacy Policy 
