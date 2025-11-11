@@ -1,25 +1,20 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Privacy Policy - Rock Paper Scissors Online",
   description: "Learn about our privacy practices and data protection policies for Rock Paper Scissors Online. We prioritize your privacy and data security.",
+  canonical: "/privacy",
   keywords: ["privacy policy", "data protection", "rock paper scissors privacy", "user data", "security"],
   openGraph: {
     title: "Privacy Policy - Rock Paper Scissors Online",
     description: "Learn about our privacy practices and data protection policies for Rock Paper Scissors Online.",
-    url: "https://rps-game.online/privacy",
-    type: "website",
   },
   twitter: {
     card: "summary",
     title: "Privacy Policy - Rock Paper Scissors Online",
     description: "Learn about our privacy practices and data protection policies.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+});
 
 const Privacy = () => {
     return (

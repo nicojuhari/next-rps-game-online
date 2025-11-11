@@ -28,18 +28,35 @@ export const baseMetadata: Metadata = {
   },
 };
 
-// Helper function to merge metadata
-export function createMetadata(overrides: Partial<Metadata> = {}): Metadata {
-  return {
+// Helper function to merge metadata with canonical URL
+export function createMetadata(overrides: Partial<Metadata> & { canonical?: string } = {}): Metadata {
+  const { canonical, ...metadataOverrides } = overrides;
+  
+  const metadata: Metadata = {
     ...baseMetadata,
-    ...overrides,
+    ...metadataOverrides,
     openGraph: {
       ...baseMetadata.openGraph,
-      ...overrides.openGraph,
+      ...metadataOverrides.openGraph,
     },
     twitter: {
       ...baseMetadata.twitter,
-      ...overrides.twitter,
+      ...metadataOverrides.twitter,
     },
   };
+
+  // Add canonical URL if provided
+  if (canonical) {
+    metadata.alternates = {
+      ...metadata.alternates,
+      canonical: canonical.startsWith('http') ? canonical : `https://rps-game.online${canonical}`,
+    };
+    
+    // Also set the OpenGraph URL to match canonical
+    if (metadata.openGraph) {
+      metadata.openGraph.url = canonical.startsWith('http') ? canonical : `https://rps-game.online${canonical}`;
+    }
+  }
+
+  return metadata;
 }

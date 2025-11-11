@@ -1,23 +1,23 @@
-import type { Metadata } from "next";
 import { Suspense } from 'react';
 import TwoPlayersContent from '@/components/TwoPlayersContent';
 import Image from 'next/image';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Two Players - Rock Paper Scissors Online Multiplayer",
   description: "Play Rock Paper Scissors with friends online! Create or join a game room and challenge your friends in real-time multiplayer RPS battles.",
+  canonical: "/two-players",
   keywords: ["multiplayer rock paper scissors", "two players", "online multiplayer", "friends game", "RPS multiplayer"],
   openGraph: {
     title: "Two Players - Rock Paper Scissors Online Multiplayer",
     description: "Play Rock Paper Scissors with friends online! Create or join a game room and challenge your friends in real-time.",
-    url: "https://rps-game.online/two-players",
   },
   twitter: {
     card: "summary_large_image",
     title: "Two Players - Rock Paper Scissors Multiplayer",
     description: "Play Rock Paper Scissors with friends online! Create or join a game room.",
   },
-};
+});
 
 const TwoPlayers = () => {
     return (
