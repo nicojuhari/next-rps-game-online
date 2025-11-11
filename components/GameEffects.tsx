@@ -8,13 +8,37 @@ const GameEffects = () => {
     const audioRef = useRef<HTMLAudioElement | null>(null)
 
     const setupAudio = async () => {
-        audioRef.current = new Audio('/cheer.mp3')
+        try {
+            audioRef.current = new Audio('/cheer.MP3') // Fixed case sensitivity
+            audioRef.current.preload = 'auto'
+            
+            // Handle loading errors
+            audioRef.current.addEventListener('error', (e) => {
+                console.error('Audio failed to load:', e)
+            })
+            
+            // Optional: preload the audio
+            audioRef.current.load()
+        } catch (error) {
+            console.error('Error setting up audio:', error)
+        }
     }
 
-    const playVictorySound = () => {
+    const playVictorySound = async () => {
         if (audioRef.current) {
-            audioRef.current.currentTime = 0 // Reset the audio to the beginning
-            audioRef.current.play()
+            try {
+                audioRef.current.currentTime = 0 // Reset the audio to the beginning
+                
+                // Many browsers require user interaction before playing audio
+                const playPromise = audioRef.current.play()
+                
+                if (playPromise !== undefined) {
+                    await playPromise
+                }
+            } catch (error) {
+                console.warn('Audio play failed:', error)
+                // This is common in browsers with autoplay restrictions
+            }
         }
     }
   const triggerConfetti = () => {
@@ -51,9 +75,11 @@ const GameEffects = () => {
     console.log('GameEffects mounted - triggering confetti');
     setupAudio().then(() => {
         playVictorySound();
+    }).catch(error => {
+        console.error('Error with audio setup:', error);
     });
     triggerConfetti();
-  });
+  }, []); // Added dependency array to prevent infinite re-renders
 
   return null; // No DOM element needed for canvas-confetti
 }
