@@ -75,5 +75,5 @@ body {
 
 .player-selected-table td,
 .player-selected-table th {
-  @apply border p-2 py-4 text-center text-sm border-gray-200
+  @apply p-2 py-4 text-center text-sm border-gray-200
 }

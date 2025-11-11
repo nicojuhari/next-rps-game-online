@@ -70,11 +70,11 @@ const OnePlayer = () => {
                 <div>After both players select their move <strong>3 times,</strong><br/>the game ends and results will be displayed.</div>
             </div>
         </div>
-        <div className={`grid grid-cols-3 items-center gap-6 w-full my-10 ${isGameFinished ? 'opacity-50' : ''}`}>
+        <div className={`grid grid-cols-3 items-center gap-6 w-full mt-10 ${isGameFinished ? 'opacity-50' : ''}`}>
             {Object.entries(controlers).map(([key, item]) => (
-                <div onClick={() => select(+key)} className={`aspect-square text-5xl inline-flex items-center select-none justify-center cursor-pointer p-2 bg-white shadow-xl rounded-md transition-all duration-300 ${!isGameFinished ? 'hover:shadow-md hover:translate-y-1' : ''}`}
+                <div onClick={() => select(+key)} className={`aspect-square text-5xl inline-flex items-center select-none justify-center cursor-pointer p-2 bg-white shadow-lg rounded-md transition-all duration-300 ${!isGameFinished ? 'hover:shadow hover:translate-y-1' : ''}`}
                     key={key}> { item }
-                </div>
+                </div> 
             ))}
         </div>
         <TableBoard yourChoices={playerChoices} secondPlayerChoices={computerChoices} isGameFinished={isGameFinished} isOnePlayer={true} />
