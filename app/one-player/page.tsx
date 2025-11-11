@@ -4,7 +4,6 @@ import TableBoard from "@/components/TableBoard"
 import GameResults from "@/components/GameResults"
 import { getGameWinner } from "@/lib/game-utils"
 import GameEffects from "@/components/GameEffects"
-import GameBoard from "@/components/GameBoard"
 
 const OnePlayer = () => {
     const playerId = 'You'

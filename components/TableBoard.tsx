@@ -28,15 +28,16 @@ const TableBoard = ({ yourChoices, secondPlayerChoices, isGameFinished, isOnePla
                         <tr key={item}>
                             <td>
                                 <div className="flex items-center justify-center">
-                                    { !isGameFinished ? (
-                                        <CheckCircleIcon weight="light" className={`w-6 h-6 transition-all duration-500 ${yourChoices?.[item] ? 'text-green-500' : 'text-gray-300'}`} />
-                                ) : (
-                                    <div className="h-6">
-                                        { controlers[yourChoices[item] as keyof typeof controlers] }
-                                    </div>
-                                )}
-                            
-                            </div>
+                                    {yourChoices?.[item] == null ? (
+                                        <div className="text-gray-300">
+                                            <CheckCircleIcon weight="light" className="w-6 h-6 transition-all duration-500 text-gray-300" />
+                                        </div>
+                                    ) : (
+                                        <div className="h-6">
+                                            { controlers[yourChoices[item] as keyof typeof controlers] }
+                                        </div>
+                                    )}
+                                </div>
                             </td>
                             <td>
                                 <div className="flex items-center justify-center">
