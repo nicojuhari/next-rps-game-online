@@ -33,17 +33,19 @@ const MainCTA = () => {
     <div className="mb-6 text-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center">
         <div className="bg-white p-6 rounded-lg border border-gray-200">
-          <p className="font-medium text-lg">1 Player</p>
+          <p className="font-medium text-xl">1 Player</p>
+          <p className="text-xs text-gray-400 mt-1">You vs Computer</p>
           <Link 
             href="/one-player" 
             title="Play Rock Paper Scissors Online with a computer" 
-            className="justify-center mt-6 w-full bg-blue-500 hover:bg-blue-600 h-10 text-white py-1 px-4 rounded-md inline-flex items-center gap-2.5">
+            className="justify-center mt-8 w-full bg-blue-500 hover:bg-blue-600 h-10 text-white py-1 px-4 rounded-md inline-flex items-center gap-2.5">
               <GameControllerIcon weight="duotone" size={24} color="white"/>
               Play Now</Link>
         </div>
         <div className="bg-white p-6 rounded-lg border border-gray-200">
-          <p className="font-medium text-lg">2 Players</p>
-          <button onClick={createGameLink} disabled={loading} title="Create a 2-player game" className="justify-center mt-6 w-full bg-green-500 hover:bg-green-600 disabled:bg-gray-400 disabled:cursor-not-allowed h-10 text-white py-1 px-4 rounded-md inline-flex items-center gap-2.5">
+          <p className="font-medium text-xl">2 Players</p>
+          <p className="text-xs text-gray-400 mt-1">You vs Friend</p>
+          <button onClick={createGameLink} disabled={loading} title="Create a 2-player game" className="justify-center mt-8 w-full bg-green-500 hover:bg-green-600 disabled:bg-gray-400 disabled:cursor-not-allowed h-10 text-white py-1 px-4 rounded-md inline-flex items-center gap-2.5">
             {loading ? (
               <SpinnerGapIcon weight="light" size={24} color="white" className="animate-spin" />
             ) : (

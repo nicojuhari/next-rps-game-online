@@ -4,13 +4,13 @@ const HomeContent = () => {
     return (
    <div className="my-8 space-y-10">
         <div className="text-center">
-            <h2 className="text-lg font-bold mb-2">🚀 RPS Online: Instant Play</h2>
-            <p>The fastest way to play and decide. <span className="font-bold">No sign-up required.</span></p>
+            <h2 className="text-lg font-bold mb-2">🚀 RPS Online - Instant Play</h2>
+            <p>The fastest way to play and decide. <span className="font-semibold">No sign-up required.</span></p>
         </div>
         <div>
-            <h2 className="text-xl font-semibold mb-1">How to Play Online</h2>
+            <h2 className="text-lg font-semibold mb-4">How to Play Online</h2>
             
-            <div className="space-y-4 bg-white p-4 rounded-lg shadow">
+            <div className="space-y-4 font-light">
                 <div className="flex items-start">
                     <span className="mr-3">1.</span>
                     <div>
@@ -36,28 +36,26 @@ const HomeContent = () => {
                 </div>
             </div>
 
-            <blockquote className="mt-4 p-3 bg-indigo-100 border-l-4 border-blue-600 rounded">
-                <p className="text-sm font-medium">
-                    <span className="font-bold">Rules:</span> Rock beats Scissors, Scissors beats Paper, Paper beats Rock. Tie means play again.
-                </p>
-            </blockquote>
         </div>
+        <blockquote className="p-3 bg-blue-200 border-l-4 border-blue-500 rounded">
+                <span className="font-bold">Rules:</span> Rock beats Scissors, Scissors beats Paper, Paper beats Rock. Tie means play again.
+        </blockquote>
         <div>
-            <h2 className="text-xl font-semibold mb-1">Strategy & Benefits</h2>
+            <h2 className="text-lg font-semibold mb-4">Strategy & Benefits</h2>
 
             <div className="space-y-6">
-                <div className="bg-white p-4 rounded-lg shadow">
-                    <h3 className="font-bold mb-3">How to Win More</h3>
-                    <ul className="list-disc list-inside space-y-2">
+                <div>
+                    <h3 className="mb-3">How to Win More</h3>
+                    <ul className="list-disc list-inside space-y-2 font-light">
                         <li><span className="font-semibold">Counter the pattern:</span> If they repeat a move, switch to the counter move.</li>
                         <li><span className="font-semibold">Exploit the start:</span> Many players open with Rock. Start with Paper to gain the edge.</li>
                         <li><span className="font-semibold">Stay random:</span> Avoid predictable sequences; mix up your choices.</li>
                     </ul>
                 </div>
 
-                <div className="bg-white p-4 rounded-lg shadow">
-                    <h3 className="font-bold mb-3">Why Play Here?</h3>
-                    <ul className="list-disc list-inside space-y-2">
+                <div>
+                    <h3 className="mb-3">Why Play Here?</h3>
+                    <ul className="list-disc list-inside space-y-2 font-light">
                         <li><span className="font-semibold">Zero Friction:</span> 100% free, no accounts, no downloads.</li>
                         <li><span className="font-semibold">Decide Fairly:</span> Use it to settle debates (Who pays? Who goes first?).</li>
                         <li><span className="font-semibold">Anywhere:</span> Works on mobile, tablet, or desktop.</li>
@@ -66,7 +64,7 @@ const HomeContent = () => {
             </div>
         </div>
         <div className="text-center">
-            <p className="font-medium mb-4">
+            <p className="mb-6 font-light">
                 Test your skills against friends or our computer opponent.
             </p>
             <MainCTA/>

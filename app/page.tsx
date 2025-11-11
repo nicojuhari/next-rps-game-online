@@ -7,13 +7,13 @@ const Home = () => {
     <>
     <div className="my-20 md:my-24 space-y-14 text-center">
       <h1 className="font-bold text-3xl md:text-5xl">
-        <span className="block mb-2.5 font-bold text-3xl">Play </span>
+        <span className="block mb-2.5 text-3xl">Play </span>
         <span className="text-blue-500">Rock </span>
         <span className="text-yellow-500">Paper </span>
         <span className="text-red-500">Scissors </span>
-        <span className="block mt-2.5 text-3xl">Online</span>
+        <span className="block mt-3 text-3xl">Online</span>
       </h1>
-      <p className="text-center text-gray-500">
+      <p className="text-center text-gray-600 font-light">
           Rock Paper Scissors is a FREE online game.<br /> Create a game and play with friends or challenge the computer anytime!
       </p>
     </div>
