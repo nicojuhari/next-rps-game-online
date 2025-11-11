@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Play Rock Paper Scissors Online - FREE",
-  description: "Play Rock Paper Scissors Online with your friends!",
+  description: "Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game. No downloads - just click and play!",
 };
 
 export default function RootLayout({
@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="RPS" />
+      </head>
       <body className={inter.className}>
         <FirebaseProvider>
           <Header />
