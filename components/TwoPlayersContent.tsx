@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { useFirebase } from '@/contexts/FirebaseContext';
+import { useFirebaseContext } from '@/contexts/FirebaseContext';
 import GameBoard from '@/components/GameBoard';
 import JoinGame from '@/components/JoinGame';
 import { usePlayer } from '@/lib/hooks/usePlayer';
@@ -15,7 +15,7 @@ const TwoPlayersContent = () => {
     const searchParams = useSearchParams();
     const gameId = searchParams.get('gameId');
     const { playerId } = usePlayer();
-    const { subscribeToGame, getGame, gameData } = useFirebase();
+    const { subscribeToGame, getGame, gameData } = useFirebaseContext();
 
     useEffect(() => {
         const fetchData = async () => {

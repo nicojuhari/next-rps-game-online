@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { GameControllerIcon, UsersIcon, SpinnerGapIcon } from '@phosphor-icons/react';
-import { useFirebase } from '@/contexts/FirebaseContext';
+import { useFirebase } from '@/lib/hooks/useFirebase';
 import { usePlayer } from '@/lib/hooks/usePlayer';
 
 const MainCTA = () => {

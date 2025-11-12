@@ -3,7 +3,6 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
-import { FirebaseProvider } from "@/contexts/FirebaseContext";
 import { createMetadata } from "@/lib/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -35,12 +34,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="RPS" />
       </head>
       <body className={inter.className}>
-        <FirebaseProvider>
           <Header />
           <main className="flex flex-col min-h-screen container">{children}</main>
-          <Footer />
-        </FirebaseProvider>
-        
+          <Footer />    
         {/* Simple Analytics - Only in production */}
         {isProduction && (
           <Script

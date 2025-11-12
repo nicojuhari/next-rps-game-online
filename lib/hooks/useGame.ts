@@ -1,11 +1,11 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useFirebase } from '@/contexts/FirebaseContext';
+import { useFirebaseContext } from '@/contexts/FirebaseContext';
 import { getGameWinner } from '@/lib/game-utils';
 
 export const useGame = () => {
-  const { gameData } = useFirebase();
+  const { gameData } = useFirebaseContext();
 
   // Calculate derived state using useMemo (equivalent to Nuxt's computed/watch)
   const isGameFinished = useMemo(() => {

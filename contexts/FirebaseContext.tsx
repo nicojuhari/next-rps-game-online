@@ -1,10 +1,8 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
-import { 
-  collection, 
+import {  
   doc, 
-  addDoc, 
   getDoc, 
   updateDoc, 
   deleteDoc, 
@@ -20,7 +18,6 @@ const COLLECTION_NAME = 'games';
 
 interface FirebaseContextType {
   gameData: Game | null;
-  createGame: (player1: string) => Promise<string>;
   joinGame: (gameId: string, player2: string) => Promise<Game>;
   getGame: (gameId: string) => Promise<Game | null>;
   subscribeToGame: (gameId: string) => void;
@@ -36,26 +33,6 @@ export const FirebaseProvider = ({ children }: { children: ReactNode }) => {
   const [gameData, setGameData] = useState<Game | null>(null);
   const unsubscribeRef = useRef<Unsubscribe | null>(null);
   const router = useRouter();
-
-  const createGame = async (player1: string): Promise<string> => {
-    try {
-      console.log('Creating game for player:', player1);
-      const docRef = await addDoc(collection(db, COLLECTION_NAME), {
-        player1,
-        player2: null,
-        player1Choices: [],
-        player2Choices: [],
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp()
-      });
-
-      console.log('Game created with ID:', docRef.id);
-      return docRef.id;
-    } catch (error) {
-      console.error('Error creating game:', error);
-      throw error;
-    }
-  };
 
   const joinGame = async (gameId: string, player2: string): Promise<Game> => {
     try {
@@ -194,7 +171,6 @@ export const FirebaseProvider = ({ children }: { children: ReactNode }) => {
   return (
     <FirebaseContext.Provider value={{
       gameData,
-      createGame,
       joinGame,
       getGame,
       subscribeToGame,
@@ -208,10 +184,10 @@ export const FirebaseProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useFirebase = () => {
+export const useFirebaseContext = () => {
   const context = useContext(FirebaseContext);
   if (!context) {
-    throw new Error('useFirebase must be used within a FirebaseProvider');
+    throw new Error('useFirebaseContext must be used within a FirebaseProvider');
   }
   return context;
 };

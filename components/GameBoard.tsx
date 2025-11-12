@@ -1,6 +1,6 @@
 'use client';
 import { useMemo } from 'react';
-import { useFirebase } from '@/contexts/FirebaseContext';
+import { useFirebaseContext } from '@/contexts/FirebaseContext';
 import { useGame } from '@/lib/hooks/useGame';
 import { usePlayer } from '@/lib/hooks/usePlayer';
 import { useSearchParams } from 'next/navigation';
@@ -13,7 +13,7 @@ const GameBoard = () => {
         gameData,
         updateGameChoices,
         resetGame
-    } = useFirebase();
+    } = useFirebaseContext();
 
     const { isGameFinished, gameWinner } = useGame();
     const searchParams = useSearchParams();

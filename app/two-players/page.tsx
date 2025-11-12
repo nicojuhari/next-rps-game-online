@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import TwoPlayersContent from '@/components/TwoPlayersContent';
 import Image from 'next/image';
 import { createMetadata } from '@/lib/metadata';
+import { FirebaseProvider } from '@/contexts/FirebaseContext';
 
 export const metadata = createMetadata({
   title: "Two Players - Rock Paper Scissors Online Multiplayer",
@@ -29,7 +30,9 @@ const TwoPlayers = () => {
                 </div>
             </div>
         }>
-            <TwoPlayersContent />
+            <FirebaseProvider>
+              <TwoPlayersContent />
+            </FirebaseProvider>
         </Suspense>
     );
 }

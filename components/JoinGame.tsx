@@ -1,9 +1,9 @@
 import { usePlayer } from "@/lib/hooks/usePlayer";
-import { useFirebase } from "@/contexts/FirebaseContext";
+import { useFirebaseContext } from "@/contexts/FirebaseContext";
 const JoinGame = () => {
 
     const { playerId } = usePlayer()
-    const { joinGame, gameData } = useFirebase();
+    const { joinGame, gameData } = useFirebaseContext();
 
     const onJoinGame = async () => {
         try {
