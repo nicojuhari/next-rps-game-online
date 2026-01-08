@@ -8,45 +8,47 @@ import { createMetadata } from "@/lib/metadata";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = createMetadata({
-  title: "Play Rock Paper Scissors Online | FREE Multiplayer Game",
-  description: "Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game. No downloads - just click and play!",
-  canonical: "/",
-  openGraph: {
-    title: 'Play Rock Paper Scissors Online | FREE Multiplayer Game',
-    description: 'Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game.',
-  },
-  twitter: {
-    title: 'Play Rock Paper Scissors Online | FREE Multiplayer Game',
-    description: 'Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game.',
-  },
+    title: "Play Rock Paper Scissors Online | FREE Multiplayer Game",
+    description:
+        "Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game. No downloads - just click and play!",
+    canonical: "/",
+    openGraph: {
+        title: "Play Rock Paper Scissors Online | FREE Multiplayer Game",
+        description: "Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game.",
+    },
+    twitter: {
+        title: "Play Rock Paper Scissors Online | FREE Multiplayer Game",
+        description: "Play Rock Paper Scissors Online for free! Challenge friends and family in this fun and fast multiplayer RPS game.",
+    },
 });
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  const isProduction = process.env.NODE_ENV === 'production';
+    const isProduction = process.env.NODE_ENV === "production";
 
-  return (
-    <html lang="en">
-      <head>
-        <meta name="apple-mobile-web-app-title" content="RPS" />
-      </head>
-      <body className={inter.className}>
-          <Header />
-          <main className="flex flex-col min-h-screen container">{children}</main>
-          <Footer />    
-        {/* Simple Analytics - Only in production */}
-        {isProduction && (
-          <Script
-            src="https://scripts.simpleanalyticscdn.com/latest.js"
-            strategy="afterInteractive"
-            async
-            data-collect-dnt="true"
-          />
-        )}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <head>
+                <meta name="google-site-verification" content="G-DmsXHjqgYIZfoeMtgM5iLhal2sV3E-IBpjR7G8zhg" />
+                <meta name="apple-mobile-web-app-title" content="RPS" />
+            </head>
+            <body className={inter.className}>
+                <Header />
+                <main className="flex flex-col min-h-screen container">{children}</main>
+                <Footer />
+                {/* Simple Analytics - Only in production */}
+                {isProduction && (
+                    <Script
+                        src="https://scripts.simpleanalyticscdn.com/latest.js"
+                        strategy="afterInteractive"
+                        async
+                        data-collect-dnt="true"
+                    />
+                )}
+            </body>
+        </html>
+    );
 }
