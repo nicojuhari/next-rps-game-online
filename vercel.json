@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/one-player",
+            "destination": "/",
+            "permanent": true
+        }
+    ]
+}

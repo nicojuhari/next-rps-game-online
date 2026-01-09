@@ -33,23 +33,17 @@ const MainCTA = () => {
             <p className="text-xs text-center text-gray-400">You vs Friend</p>
             <div className="bg-white p-6 rounded-lg border border-gray-100 mt-6">
                 <div className="mt-2 text-left">
-                    <label htmlFor="game-stakes" className="block text-sm mb-1">
-                        What are you deciding?
+                    <label htmlFor="game-stakes" className="block text-sm">
+                        What are you deciding? <span className="text-gray-400 text-xs">(optional)</span>
                     </label>
-
-                    <div className="relative">
-                        <input
-                            type="text"
-                            id="game-stakes"
-                            className="w-full mt-1 p-2 h-10 border border-gray-300 rounded-md"
-                            placeholder="Who washes the dishes?, Loser buys dinner, ..."
-                            maxLength={50}
-                            onChange={(e) => setGameStake(e.target.value)}
-                        />
-                        <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <span className="text-xl">🤝</span>
-                        </div>
-                    </div>
+                    <input
+                        type="text"
+                        id="game-stakes"
+                        className="w-full mt-1 p-2 h-10 border border-gray-300 rounded-md placeholder:text-xs"
+                        placeholder="e.g., who goes first, who washes dishes, etc."
+                        maxLength={50}
+                        onChange={(e) => setGameStake(e.target.value)}
+                    />
                 </div>
                 <button
                     onClick={createGameLink}
@@ -64,7 +58,7 @@ const MainCTA = () => {
                     )}
                     Create Private Room
                 </button>
-                <div className="mt-2 text-xs text-gray-500">No signup required</div>
+                <div className="mt-2 text-xs text-gray-500">Create - Share - Play</div>
             </div>
         </div>
     );

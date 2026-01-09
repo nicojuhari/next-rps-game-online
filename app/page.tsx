@@ -6,7 +6,7 @@ import OnePlayer from "@/components/OnePlayer";
 const Home = () => {
     return (
         <>
-            <div className="my-20 md:my-24 space-y-14 text-center">
+            <div className="my-16 md:my-20 space-y-14 text-center">
                 <h1 className="font-bold text-3xl md:text-4xl">
                     <span className="block mb-2.5 text-3xl">Play </span>
                     <span className="text-blue-500">Rock </span>
