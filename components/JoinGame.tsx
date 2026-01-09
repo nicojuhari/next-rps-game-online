@@ -14,13 +14,10 @@ const JoinGame = () => {
     };
 
     return (
-        <div className="text-center p-6 bg-white rounded-lg border border-gray-200/50 mt-6">
-            <div className="my-10 text-lg">You are invited to play RPS online!</div>
-            <button
-                onClick={onJoinGame}
-                className="cursor-pointer px-8 py-2 text-xl font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600"
-            >
-                Join
+        <div className="text-center p-6 py-8 bg-white space-y-8 rounded-lg border border-gray-100 my-6">
+            <div className="text-lg">You are invited to play RPS online!</div>
+            <button onClick={onJoinGame} className="btn btn-success justify-center w-40">
+                Join the Game
             </button>
         </div>
     );

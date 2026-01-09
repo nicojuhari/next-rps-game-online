@@ -1,8 +1,6 @@
-import MainCTA from "./MainCTA";
-
 const HomeContent = () => {
     return (
-        <div className="my-10 space-y-12 font-light">
+        <div className="my-16 space-y-12 font-light">
             <div>
                 <h2 className="text-lg font-semibold mb-4">What is Rock Paper Scissors?</h2>
                 <div className="space-y-2">

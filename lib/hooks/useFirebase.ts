@@ -1,11 +1,10 @@
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import db from "@/lib/firebase";
-import { stat } from "fs";
 
 const COLLECTION_NAME = "games";
 
 export const useFirebase = () => {
-    const createGame = async (player1: string): Promise<string> => {
+    const createGame = async (player1: string, gameStake: string): Promise<string> => {
         try {
             const docRef = await addDoc(collection(db, COLLECTION_NAME), {
                 players: {
@@ -17,6 +16,7 @@ export const useFirebase = () => {
                 },
                 maxPlayers: 2,
                 status: "waiting",
+                gameStake: gameStake,
                 createdAt: serverTimestamp(),
                 updatedAt: serverTimestamp(),
             });

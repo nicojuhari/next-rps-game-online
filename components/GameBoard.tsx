@@ -58,33 +58,37 @@ const GameBoard = () => {
 
     return (
         <div className="max-w-sm mx-auto">
-            <div className="mt-10 text-center">
-                {!isGameFinished ? (
-                    <h2 className="font-medium text-green-600">Select your Move</h2>
-                ) : (
-                    <h2 className="font-medium">Game Finished!</h2>
-                )}
-                <div className="text-sm text-center text-gray-500 space-y-2 mt-2">
-                    <div>
-                        After both players select their move <strong>3 times,</strong>
-                        <br />
-                        the game ends and results will be displayed.
-                    </div>
+            {gameData && gameData.gameStake && (
+                <div className="my-4">
+                    <p className="font-medium text-center">Let&apos;s decide:</p>
+                    <p className="text-sm text-center text-green-500"> {gameData.gameStake}</p>
                 </div>
-            </div>
-            <div className={`grid grid-cols-3 items-center gap-6 w-full mt-10 ${isGameFinished ? "opacity-50" : ""}`}>
-                {Object.entries(controlers).map(([key, item]) => (
-                    <div
-                        onClick={() => select(+key)}
-                        className={`aspect-square text-5xl inline-flex items-center select-none justify-center cursor-pointer p-2 bg-white shadow-lg rounded-md transition-all duration-300 ${
-                            !isGameFinished ? "hover:shadow-md hover:translate-y-1" : ""
-                        }`}
-                        key={key}
-                    >
-                        {" "}
-                        {item}
+            )}
+            <div className="relative">
+                <div className={`grid grid-cols-3 items-center gap-6 w-full mt-2 ${isGameFinished ? "opacity-50" : ""}`}>
+                    {Object.entries(controlers).map(([key, item]) => (
+                        <div
+                            onClick={() => select(+key)}
+                            className={`aspect-square text-5xl inline-flex items-center select-none justify-center cursor-pointer p-2 bg-white shadow-lg rounded-md transition-all duration-300 ${
+                                !isGameFinished ? "hover:shadow-md hover:translate-y-1" : ""
+                            }`}
+                            key={key}
+                        >
+                            {" "}
+                            {item}
+                        </div>
+                    ))}
+                </div>
+                {isGameFinished && gameData && (
+                    <div className="absolute inset-0 bg-white/95 border border-gray-100 flex flex-col items-center justify-center p-4 rounded-md">
+                        <GameResults playerId={playerId} gameWinner={gameWinner} />
+                        <div className="mt-3 text-center">
+                            <button onClick={() => resetGame(gameData?.$id)} className="btn btn-success">
+                                Play again
+                            </button>
+                        </div>
                     </div>
-                ))}
+                )}
             </div>
 
             {gameData && (
@@ -95,17 +99,11 @@ const GameBoard = () => {
                         secondPlayerChoices={secondPlayerChoices}
                         isGameFinished={isGameFinished || false}
                     />
-                    {isGameFinished && (
-                        <>
-                            <GameResults playerId={playerId} gameWinner={gameWinner} />
-                            <div className="my-6 text-center">
-                                <button onClick={() => resetGame(gameData?.$id)} className="btn btn-outline">
-                                    Play again
-                                </button>
-                            </div>
-                        </>
-                    )}
+
                     {isGameFinished && playerId === gameWinner && <GameEffects />}
+                    <div className="text-xs text-gray-500 space-y-2 mt-2">
+                        After both players select their moves 3 times, the game ends, and the results will be displayed.
+                    </div>
                 </>
             )}
         </div>

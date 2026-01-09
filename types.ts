@@ -9,7 +9,7 @@ export type Game = {
             wins?: number; // Optional: number of games won
         };
     };
-    objective?: string;
+    gameStake?: string;
     maxPlayers: number;
     status?: "waiting" | "ready" | "finished";
     createdAt?: Date | { seconds: number; nanoseconds: number }; // Firebase Timestamp

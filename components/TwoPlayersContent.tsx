@@ -43,8 +43,8 @@ const TwoPlayersContent = () => {
     const maxPlayers = gameData.maxPlayers || 2;
 
     return (
-        <div className="container py-8">
-            <h1 className="text-xl font-bold mb-4 text-center">Rock Paper Scissors - 2 Players Game</h1>
+        <div className="py-8">
+            <h1 className="text-lg font-bold mb-4 text-center">RPS - 2 Players Game</h1>
             {!hasJoined && playerCount < maxPlayers && <JoinGame />}
             {hasJoined && playerCount < maxPlayers && <WaitingPlayerTwo />}
             {hasJoined && playerCount === maxPlayers && <GameBoard />}

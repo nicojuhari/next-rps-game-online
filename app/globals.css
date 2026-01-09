@@ -73,7 +73,11 @@ body {
   @apply border-2 border-gray-900 text-gray-950;
 }
 
+.btn.btn-success {
+  @apply bg-green-600 text-white;
+}
+
 .player-selected-table td,
 .player-selected-table th {
-  @apply p-2 py-4 text-center text-sm border-gray-200
+  @apply p-2.5 text-center text-sm border-gray-200
 }
