@@ -1,41 +1,33 @@
-import { 
-  collection, 
-  doc, 
-  addDoc, 
-  getDoc, 
-  updateDoc, 
-  deleteDoc, 
-  onSnapshot,
-  serverTimestamp,
-  Unsubscribe
-} from 'firebase/firestore';
-import db from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import db from "@/lib/firebase";
+import { stat } from "fs";
 
-
-const COLLECTION_NAME = 'games';
+const COLLECTION_NAME = "games";
 
 export const useFirebase = () => {
     const createGame = async (player1: string): Promise<string> => {
-    try {
-      console.log('Creating game for player:', player1);
-      const docRef = await addDoc(collection(db, COLLECTION_NAME), {
-        player1,
-        player2: null,
-        player1Choices: [],
-        player2Choices: [],
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp()
-      });
+        try {
+            const docRef = await addDoc(collection(db, COLLECTION_NAME), {
+                players: {
+                    [player1]: {
+                        name: "player1",
+                        choices: [],
+                        wins: 0,
+                    },
+                },
+                maxPlayers: 2,
+                status: "waiting",
+                createdAt: serverTimestamp(),
+                updatedAt: serverTimestamp(),
+            });
+            return docRef.id;
+        } catch (error) {
+            console.error("Error creating game:", error);
+            throw error;
+        }
+    };
 
-      console.log('Game created with ID:', docRef.id);
-      return docRef.id;
-    } catch (error) {
-      console.error('Error creating game:', error);
-      throw error;
-    }
-  };
-
-  return {
-    createGame,
-  }
-}
+    return {
+        createGame,
+    };
+};
