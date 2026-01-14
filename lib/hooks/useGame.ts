@@ -2,7 +2,6 @@
 
 import { useMemo } from "react";
 import { useFirebaseContext } from "@/contexts/FirebaseContext";
-import { getGameWinner } from "@/lib/game-utils";
 
 export const useGame = () => {
     const { gameData } = useFirebaseContext();
@@ -18,15 +17,7 @@ export const useGame = () => {
         return true;
     }, [gameData]);
 
-    const gameWinner = useMemo(() => {
-        if (isGameFinished && gameData) {
-            return getGameWinner(gameData);
-        }
-        return null;
-    }, [isGameFinished, gameData]);
-
     return {
         isGameFinished,
-        gameWinner,
     };
 };

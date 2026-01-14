@@ -47,7 +47,16 @@ const TwoPlayersContent = () => {
             <h1 className="text-lg font-bold mb-4 text-center">RPS - 2 Players Game</h1>
             {!hasJoined && playerCount < maxPlayers && <JoinGame />}
             {hasJoined && playerCount < maxPlayers && <WaitingPlayerTwo />}
-            {hasJoined && playerCount === maxPlayers && <GameBoard />}
+            {hasJoined && playerCount === maxPlayers && (
+                <>
+                    <GameBoard />
+                    <div className="max-w-sm mx-auto">
+                        <div className="text-xs space-y-2 mt-4 md:mt-6 text-gray-600">
+                            After both players select their moves 3 times, the game ends, and the results will be displayed.
+                        </div>
+                    </div>
+                </>
+            )}
         </div>
     );
 };

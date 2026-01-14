@@ -6,15 +6,15 @@ import OnePlayer from "@/components/OnePlayer";
 const Home = () => {
     return (
         <>
-            <div className="my-16 md:my-20 space-y-14 text-center">
-                <h1 className="font-bold text-3xl md:text-4xl">
+            <div className="my-10 md:my-14 space-y-14 text-center">
+                <h1 className="font-bold text-2xl md:text-3xl">
                     <span className="block mb-2.5 text-3xl">Play </span>
                     <span className="text-blue-500">Rock </span>
                     <span className="text-yellow-500">Paper </span>
                     <span className="text-red-500">Scissors </span>
                     <span className="block mt-3 text-3xl">Online</span>
                 </h1>
-                <p className="text-center text-gray-600 font-light">
+                <p className="text-center text-gray-600 font-light text-sm">
                     Challenge Friends or Beat the Computer. <br />
                     100% Free and No Signup.
                 </p>

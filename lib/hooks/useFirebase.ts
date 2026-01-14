@@ -16,6 +16,7 @@ export const useFirebase = () => {
                 },
                 maxPlayers: 2,
                 status: "waiting",
+                lastWinner: "",
                 gameStake: gameStake,
                 createdAt: serverTimestamp(),
                 updatedAt: serverTimestamp(),

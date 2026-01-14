@@ -11,6 +11,7 @@ export type Game = {
     };
     gameStake?: string;
     maxPlayers: number;
+    lastWinner?: string;
     status?: "waiting" | "ready" | "finished";
     createdAt?: Date | { seconds: number; nanoseconds: number }; // Firebase Timestamp
     updatedAt?: Date | { seconds: number; nanoseconds: number }; // Firebase Timestamp

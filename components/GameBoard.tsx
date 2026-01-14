@@ -1,7 +1,8 @@
 "use client";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useFirebaseContext } from "@/contexts/FirebaseContext";
 import { useGame } from "@/lib/hooks/useGame";
+import { getGameWinner } from "@/lib/game-utils";
 import { usePlayer } from "@/lib/hooks/usePlayer";
 import { useSearchParams } from "next/navigation";
 import TableBoard from "./TableBoard";
@@ -9,17 +10,24 @@ import GameEffects from "./GameEffects";
 import GameResults from "./GameResults";
 
 const GameBoard = () => {
-    const { gameData, updateGameChoices, resetGame } = useFirebaseContext();
+    const { gameData, updateGameChoices, resetGame, updateGameWinner } = useFirebaseContext();
 
-    const { isGameFinished, gameWinner } = useGame();
+    const { isGameFinished } = useGame();
     const searchParams = useSearchParams();
     const gameId = searchParams.get("gameId") || "";
     const { playerId, isLoaded } = usePlayer();
+
     // Get your choices and all players' choices
     const yourChoices = useMemo(() => {
         if (!gameData) return [];
         const allPlayers = Object.entries(gameData.players || {});
         return allPlayers.find(([uid]) => uid === playerId)?.[1].choices || [];
+    }, [gameData, playerId]);
+
+    const yourWins = useMemo(() => {
+        if (!gameData) return 0;
+        const allPlayers = Object.entries(gameData.players || {});
+        return allPlayers.find(([uid]) => uid === playerId)?.[1].wins || 0;
     }, [gameData, playerId]);
 
     const secondPlayerChoices = useMemo(() => {
@@ -28,12 +36,26 @@ const GameBoard = () => {
         return allPlayers.find(([uid]) => uid !== playerId)?.[1].choices || [];
     }, [gameData, playerId]);
 
-    // useEffect(() => {
-    //     if (isGameFinished && gameData && gameWinner !== "draw" && gameWinner !== null) {
-    //         updateGameWinner(gameData.$id, gameWinner);
-    //         // Optionally update lastWinner in DB here
-    //     }
-    // }, [isGameFinished, gameWinner]);
+    const secondPlayerWins = useMemo(() => {
+        if (!gameData) return 0;
+        const allPlayers = Object.entries(gameData.players || {});
+        return allPlayers.find(([uid]) => uid !== playerId)?.[1].wins || 0;
+    }, [gameData, playerId]);
+
+    useEffect(() => {
+        const getTheWinner = () => {
+            if (isGameFinished && gameData) {
+                const winnerID = getGameWinner(gameData);
+                updateGameWinner(gameData.$id, winnerID || "draw");
+            }
+            console.log(gameData?.status);
+        };
+
+        if (isGameFinished) {
+            getTheWinner();
+        }
+        console.log("useGame - isGameFinished changed:", isGameFinished);
+    }, [isGameFinished]);
 
     // Show loading state while player ID is being initialized
     if (!isLoaded) {
@@ -57,15 +79,23 @@ const GameBoard = () => {
     };
 
     return (
-        <div className="max-w-sm mx-auto">
+        <div className="max-w-sm mx-auto p-4 md:p-6 bg-gray-600 rounded-lg shadow-md">
             {gameData && gameData.gameStake && (
-                <div className="my-4">
-                    <p className="font-medium text-center">Let&apos;s decide:</p>
-                    <p className="text-sm text-center text-green-500"> {gameData.gameStake}</p>
+                <div className="mb-4 md:mb-6 text-gray-300">
+                    <p className="text-sm text-center">This game will decide:</p>
+                    <p className="text-center text-green-400"> {gameData.gameStake}</p>
                 </div>
             )}
-            <div className="relative">
-                <div className={`grid grid-cols-3 items-center gap-6 w-full mt-2 ${isGameFinished ? "opacity-50" : ""}`}>
+            <div className="flex justify-between gap-8 text-sm text-gray-300">
+                <span>
+                    You: <strong>{yourWins}</strong>
+                </span>
+                <span>
+                    2nd Player: <strong>{secondPlayerWins}</strong>
+                </span>
+            </div>
+            <div className="relative mt-1">
+                <div className="grid grid-cols-3 items-center gap-4 md:gap-6 w-full">
                     {Object.entries(controlers).map(([key, item]) => (
                         <div
                             onClick={() => select(+key)}
@@ -80,10 +110,15 @@ const GameBoard = () => {
                     ))}
                 </div>
                 {isGameFinished && gameData && (
-                    <div className="absolute inset-0 bg-white/95 border border-gray-100 flex flex-col items-center justify-center p-4 rounded-md">
-                        <GameResults playerId={playerId} gameWinner={gameWinner} />
-                        <div className="mt-3 text-center">
-                            <button onClick={() => resetGame(gameData?.$id)} className="btn btn-success">
+                    <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded">
+                        <GameResults playerId={playerId} gameWinner={gameData.lastWinner || ""} />
+                        <div className="text-center">
+                            <button
+                                onClick={() => {
+                                    resetGame(gameData?.$id);
+                                }}
+                                className="btn btn-outline"
+                            >
                                 Play again
                             </button>
                         </div>
@@ -99,11 +134,7 @@ const GameBoard = () => {
                         secondPlayerChoices={secondPlayerChoices}
                         isGameFinished={isGameFinished || false}
                     />
-
-                    {isGameFinished && playerId === gameWinner && <GameEffects />}
-                    <div className="text-xs text-gray-500 space-y-2 mt-2">
-                        After both players select their moves 3 times, the game ends, and the results will be displayed.
-                    </div>
+                    {isGameFinished && playerId === gameData.lastWinner && <GameEffects />}
                 </>
             )}
         </div>

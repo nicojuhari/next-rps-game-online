@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from "react";
 import { doc, getDoc, updateDoc, deleteDoc, onSnapshot, serverTimestamp, Unsubscribe } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import db from "@/lib/firebase";
@@ -41,6 +41,7 @@ export const FirebaseProvider = ({ children }: { children: ReactNode }) => {
                 const updatedPlayers = { ...gameData.players, [playerId]: { name: playerName, choices: [], wins: 0 } };
                 await updateDoc(gameRef, {
                     players: updatedPlayers,
+                    status: "ready",
                     updatedAt: serverTimestamp(),
                 });
             }
@@ -88,11 +89,24 @@ export const FirebaseProvider = ({ children }: { children: ReactNode }) => {
             if (!gameSnap.exists()) return;
             const gameData = gameSnap.data() as Game;
 
+            if (gameData.status !== "ready") return; // Only update if game is in 'ready' status
+
+            if (winnerId === "draw") {
+                await updateDoc(gameRef, {
+                    lastWinner: "draw",
+                    status: "finished",
+                    updatedAt: serverTimestamp(),
+                });
+                return;
+            }
+
             const player = gameData.players[winnerId];
             if (!player) return;
             const currentWins = player.wins || 0;
             await updateDoc(gameRef, {
                 [`players.${winnerId}.wins`]: currentWins + 1,
+                lastWinner: winnerId,
+                status: "finished",
                 updatedAt: serverTimestamp(),
             });
         } catch (error) {
@@ -112,6 +126,8 @@ export const FirebaseProvider = ({ children }: { children: ReactNode }) => {
             );
             await updateDoc(gameRef, {
                 players: resetPlayers,
+                status: "ready",
+                lastWinner: "",
                 updatedAt: serverTimestamp(),
             });
         } catch (error) {

@@ -7,7 +7,7 @@ const JoinGame = () => {
     const onJoinGame = async () => {
         try {
             console.log("Joining game with ID:", gameData?.$id);
-            if (gameData) joinGame(gameData.$id, playerId, `Player ${Object.keys(gameData.players || {}).length + 1}`);
+            if (gameData) joinGame(gameData.$id, playerId, `player${Object.keys(gameData.players || {}).length + 1}`);
         } catch (err) {
             console.error(err);
         }
