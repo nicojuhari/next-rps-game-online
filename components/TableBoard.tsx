@@ -21,7 +21,7 @@ const TableBoard = ({
         <div className="mt-4 md:mt-6 rounded-md bg-gray-100/5">
             <table className="w-full table-fixed border-collapse player-selected-table">
                 <thead>
-                    <tr className="text-gray-300">
+                    <tr className="text-gray-500">
                         <th className="font-light">You</th>
                         {!isOnePlayer ? (
                             <th className="truncate font-light">2nd Player</th>
@@ -37,7 +37,7 @@ const TableBoard = ({
                             <td>
                                 <div className="flex items-center justify-center">
                                     {yourChoices?.[item] == null ? (
-                                        <div className="text-gray-400">
+                                        <div className="text-gray-500">
                                             <CheckCircleIcon weight="light" className="w-6 h-6 transition-all duration-500 text-gray-400" />
                                         </div>
                                     ) : (
@@ -62,13 +62,13 @@ const TableBoard = ({
                             <td>
                                 <div className="flex items-center justify-center">
                                     {!isGameFinished ? (
-                                        <div className="text-gray-300">
+                                        <div className="text-gray-400">
                                             <QuestionMarkIcon weight="light" className="w-6 h-6 text-gray-400" />
                                         </div>
                                     ) : (
                                         <div className="h-6">
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 0 && (
-                                                <EqualsIcon weight="light" className="w-6 h-6 text-gray-200" />
+                                                <EqualsIcon weight="light" className="w-6 h-6 text-gray-400" />
                                             )}
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 1 && (
                                                 <CheckCircleIcon weight="light" className="w-6 h-6 text-green-400" />

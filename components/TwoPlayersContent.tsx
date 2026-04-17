@@ -75,7 +75,7 @@ const TwoPlayersContent = () => {
                     <GameBoard />
                     <div className="max-w-sm mx-auto">
                         <p className="text-xs mt-4 md:mt-6 text-gray-600">
-                            After both players select their moves 3 times, the game ends and the results are displayed.
+                            Pick your move 3 times - results show once both players are done.
                         </p>
                     </div>
                 </>
@@ -86,21 +86,21 @@ const TwoPlayersContent = () => {
 
     return (
         <div className="py-8">
-            <h1 className="text-lg font-medium mb-2 text-center">Rock Paper Scissors - 2 Player Online</h1>
+            <h1 className="text-lg font-medium mb-10 text-center">Rock Paper Scissors - 2 Player Online</h1>
             {renderGameSection()}
             <div className="my-16 space-y-12 font-light">
                 <div>
                     <h2 className="text-lg font-semibold mb-4">How to Play Rock Paper Scissors Online with Friends</h2>
                     <div className="space-y-2">
-                        <p>Playing with a friend takes three steps, no account or app needed:</p>
+                        <p>Playing with a friend takes three steps - no account or app needed:</p>
                         <ol className="pl-4 space-y-2 list-decimal">
                             <li>
-                                <span className="font-semibold">Create a private room</span> - click &quot;Create Private Room&quot; above
-                                or on the homepage. A unique game link is generated instantly.
+                                <span className="font-semibold">Create a private room</span> - click &quot;Create a Game&quot; above or on
+                                the homepage. You get a private link right away.
                             </li>
                             <li>
                                 <span className="font-semibold">Share the link</span> - send it to your friend via any messaging app. Works
-                                on any device, no signup required.
+                                on any device.
                             </li>
                             <li>
                                 <span className="font-semibold">Play</span> - both players pick Rock, Paper, or Scissors. Best of 3 rounds
@@ -113,19 +113,15 @@ const TwoPlayersContent = () => {
                     <h2 className="text-lg font-semibold mb-4">Rock Paper Scissors 1v1 - How It Works</h2>
                     <div className="space-y-2">
                         <p>
-                            Both players choose simultaneously and neither can see the other&apos;s pick before committing. This removes the
-                            main way to cheat in a physical game - reacting to your opponent&apos;s hand at the last second.
+                            Both players pick at the same time and neither can see the other&apos;s choice before locking in. This makes
+                            every match genuinely fair - no last-second reactions, no disputes.
                         </p>
                         <ul className="list-disc pl-4 space-y-2">
-                            <li>
-                                Each match is <span className="font-semibold">3 rounds</span>. Both players submit all three choices before
-                                any results are shown.
-                            </li>
                             <li>
                                 The player who wins the most rounds wins the game. <span className="font-semibold">First to 2 wins</span>{" "}
                                 takes it.
                             </li>
-                            <li>Scores are tracked across multiple games in the same room, no need to create a new link.</li>
+                            <li>Scores are tracked across multiple games in the same room - no need to create a new link each time.</li>
                         </ul>
                     </div>
                 </div>
@@ -137,7 +133,7 @@ const TwoPlayersContent = () => {
                             <li>Who pays for dinner</li>
                             <li>Who picks the movie or playlist</li>
                             <li>Who goes first in a board game</li>
-                            <li>Quick decisions in remote teams</li>
+                            <li>Any decision where you both want a fair shot</li>
                         </ul>
                         <p>
                             Playing online means no arguments over who threw what. Both choices are locked in and revealed at the same time,

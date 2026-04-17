@@ -43,30 +43,13 @@ const GameBoard = () => {
     }, [gameData, playerId]);
 
     useEffect(() => {
-        const getTheWinner = () => {
-            if (isGameFinished && gameData) {
-                const winnerID = getGameWinner(gameData);
-                updateGameWinner(gameData.$id, winnerID || "draw");
-            }
-            console.log(gameData?.status);
-        };
-
-        if (isGameFinished) {
-            getTheWinner();
+        if (isGameFinished && gameData) {
+            const winnerID = getGameWinner(gameData);
+            updateGameWinner(gameData.$id, winnerID || "draw");
         }
-        console.log("useGame - isGameFinished changed:", isGameFinished);
     }, [isGameFinished, gameData, updateGameWinner]);
 
-    // Show loading state while player ID is being initialized
-    if (!isLoaded) {
-        return (
-            <div className="max-w-sm mx-auto">
-                <div className="text-center mt-8">
-                    <div>Loading...</div>
-                </div>
-            </div>
-        );
-    }
+    if (!isLoaded) return null;
 
     const controlers: Record<string, string> = {
         "1": "🪨",
@@ -74,69 +57,81 @@ const GameBoard = () => {
         "3": "✂️",
     };
 
+    const getButtonLabel = (key: string) => {
+        if (key === "1") return "Rock";
+        if (key === "2") return "Paper";
+        return "Scissors";
+    };
+
+    const isPickingDone = yourChoices.length >= 3;
+    const isDisabled = isPickingDone || !!isGameFinished;
+
+    const getButtonStyle = (key: string) => {
+        const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
+        if (isDisabled) return `${base} cursor-not-allowed opacity-40 bg-gray-50 border-gray-200`;
+        if (key === "1")
+            return `${base} cursor-pointer bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100 hover:scale-105`;
+        if (key === "2")
+            return `${base} cursor-pointer bg-yellow-50 border-yellow-200 hover:bg-yellow-100 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100 hover:scale-105`;
+        return `${base} cursor-pointer bg-red-50 border-red-200 hover:bg-red-100 hover:border-red-400 hover:shadow-lg hover:shadow-red-100 hover:scale-105`;
+    };
+
     const select = async (choice: number) => {
+        if (isDisabled) return;
         await updateGameChoices(gameId, playerId, choice);
     };
 
     return (
-        <div className="max-w-sm mx-auto p-4 md:p-6 bg-gray-600 rounded-lg shadow-md">
-            {gameData && gameData.gameStake && (
-                <div className="mb-4 md:mb-6 text-gray-300">
-                    <p className="text-sm text-center">This game will decide:</p>
-                    <p className="text-center text-green-400"> {gameData.gameStake}</p>
+        <div className="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
+            {/* Score header */}
+            <div className="bg-blue-500 px-5 py-3 flex items-center justify-between">
+                <div className="text-center min-w-12">
+                    <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                    <div className="text-white font-bold text-2xl leading-none">{yourWins}</div>
                 </div>
-            )}
-            <div className="flex justify-between gap-8 text-sm text-gray-300">
-                <span>
-                    You: <strong>{yourWins}</strong>
-                </span>
-                <span>
-                    2nd Player: <strong>{secondPlayerWins}</strong>
-                </span>
-            </div>
-            <div className="relative mt-1">
-                <div className="grid grid-cols-3 items-center gap-4 md:gap-6 w-full">
-                    {Object.entries(controlers).map(([key, item]) => (
-                        <div
-                            onClick={() => select(+key)}
-                            className={`aspect-square text-5xl inline-flex items-center select-none justify-center cursor-pointer p-2 bg-white shadow-lg rounded-md transition-all duration-300 ${
-                                !isGameFinished ? "hover:shadow-md hover:translate-y-1" : ""
-                            }`}
-                            key={key}
-                        >
-                            {" "}
-                            {item}
-                        </div>
-                    ))}
+                <div className="text-center">
+                    <p className="text-white font-semibold text-sm">Play vs Friend</p>
+                    {gameData?.gameStake && <p className="text-blue-100 text-xs mt-0.5 max-w-32 truncate">{gameData.gameStake}</p>}
                 </div>
-                {isGameFinished && gameData && (
-                    <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded">
-                        <GameResults playerId={playerId} gameWinner={gameData.lastWinner || ""} />
-                        <div className="text-center">
-                            <button
-                                onClick={() => {
-                                    resetGame(gameData?.$id);
-                                }}
-                                className="btn btn-outline"
-                            >
-                                Play again
-                            </button>
-                        </div>
-                    </div>
-                )}
+                <div className="text-center min-w-12">
+                    <div className="text-blue-100 text-xs uppercase tracking-widest">Friend</div>
+                    <div className="text-white font-bold text-2xl leading-none">{secondPlayerWins}</div>
+                </div>
             </div>
 
-            {gameData && (
-                <>
-                    {/* Show all players' choices in a table or list */}
+            {/* Game body */}
+            <div className="bg-white p-4 md:p-6">
+                <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
+                <div className="relative">
+                    <div className="grid grid-cols-3 gap-3 w-full">
+                        {Object.entries(controlers).map(([key, item]) => (
+                            <button onClick={() => select(+key)} className={getButtonStyle(key)} key={key} disabled={isDisabled}>
+                                <span className="text-3xl">{item}</span>
+                                <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
+                            </button>
+                        ))}
+                    </div>
+                    {isGameFinished && gameData && (
+                        <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded-xl">
+                            <GameResults playerId={playerId} gameWinner={gameData.lastWinner || ""} />
+                            <div className="text-center">
+                                <button onClick={() => resetGame(gameData?.$id)} className="btn btn-outline">
+                                    Play again
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+                {gameData && (
                     <TableBoard
                         yourChoices={yourChoices}
                         secondPlayerChoices={secondPlayerChoices}
                         isGameFinished={isGameFinished || false}
                     />
-                    {isGameFinished && playerId === gameData.lastWinner && <GameEffects />}
-                </>
-            )}
+                )}
+            </div>
+
+            {gameData && isGameFinished && playerId === gameData.lastWinner && <GameEffects />}
         </div>
     );
 };

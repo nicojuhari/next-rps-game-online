@@ -5,6 +5,23 @@ import GameResults from "@/components/GameResults";
 import { getGameWinner } from "@/lib/game-utils";
 import GameEffects from "@/components/GameEffects";
 
+const getButtonStyle = (key: string, finished: boolean) => {
+    const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
+    const disabled = "cursor-not-allowed opacity-40";
+    const active = "cursor-pointer hover:scale-105";
+
+    if (finished) return `${base} ${disabled} bg-gray-50 border-gray-200`;
+    if (key === "1") return `${base} ${active} bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100`;
+    if (key === "2") return `${base} ${active} bg-yellow-50 border-yellow-200 hover:bg-yellow-100 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100`;
+    return `${base} ${active} bg-red-50 border-red-200 hover:bg-red-100 hover:border-red-400 hover:shadow-lg hover:shadow-red-100`;
+};
+
+const getButtonLabel = (key: string) => {
+    if (key === "1") return "Rock";
+    if (key === "2") return "Paper";
+    return "Scissors";
+};
+
 const OnePlayer = () => {
     const playerId = "player1";
     const controlers = {
@@ -19,7 +36,6 @@ const OnePlayer = () => {
     const [userWins, setUserWins] = useState<number>(0);
     const [computerWins, setComputerWins] = useState<number>(0);
 
-    // Load scores from localStorage on mount
     useEffect(() => {
         const storedUserWins = localStorage.getItem("rps_userWins");
         const storedComputerWins = localStorage.getItem("rps_computerWins");
@@ -57,7 +73,6 @@ const OnePlayer = () => {
                 });
                 setGameWinner(winner);
 
-                // Update localStorage win counters
                 if (winner === "player1") {
                     const newUserWins = userWins + 1;
                     setUserWins(newUserWins);
@@ -78,52 +93,75 @@ const OnePlayer = () => {
         setTimeout(() => setGameWinner(null), 800);
     };
 
+    const resetScore = () => {
+        setUserWins(0);
+        setComputerWins(0);
+        localStorage.removeItem("rps_userWins");
+        localStorage.removeItem("rps_computerWins");
+    };
+
     return (
-        <div className="max-w-sm mx-auto p-4 md:p-6 bg-gray-600 rounded-lg shadow-md">
-            <p className="font-medium text-xl text-center text-white mb-4 md:mb-6">Play vs Computer</p>
-            {/* <p className="text-xs text-center text-gray-400">You vs Computer</p> */}
-            <div className="flex justify-between gap-8 text-sm text-gray-300">
-                <span>
-                    You: <strong>{userWins}</strong>
-                </span>
-                <span>
-                    Computer: <strong>{computerWins}</strong>
-                </span>
-            </div>
-            <div className="relative mt-1">
-                <div className="grid grid-cols-3 items-center gap-4 md:gap-6 w-full">
-                    {Object.entries(controlers).map(([key, item]) => (
-                        <div
-                            onClick={() => select(+key)}
-                            className={`aspect-square text-5xl inline-flex items-center select-none justify-center cursor-pointer p-2 bg-white shadow-md rounded-md transition-all duration-300 ${
-                                !isGameFinished ? "hover:shadow-sm hover:translate-y-1" : "shadow-none cursor-not-allowed"
-                            }`}
-                            key={key}
-                        >
-                            {item}
-                        </div>
-                    ))}
+        <>
+        <div className="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
+            {/* Score header */}
+            <div className="bg-blue-500 px-5 py-3 flex items-center justify-between">
+                <div className="text-center min-w-12">
+                    <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                    <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
                 </div>
-                {isGameFinished && (
-                    <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded">
-                        <GameResults playerId={playerId} gameWinner={gameWinner} />
-                        <div className="text-center">
-                            <button onClick={() => resetGame()} className="btn btn-outline">
-                                Play again
-                            </button>
-                        </div>
-                    </div>
-                )}
+                <p className="text-white font-semibold text-sm">Play vs Computer</p>
+                <div className="text-center min-w-12">
+                    <div className="text-blue-100 text-xs uppercase tracking-widest">PC</div>
+                    <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
+                </div>
             </div>
-            <TableBoard
-                yourChoices={playerChoices}
-                secondPlayerChoices={computerChoices}
-                isGameFinished={isGameFinished}
-                isOnePlayer={true}
-            />
+
+            {/* Game body */}
+            <div className="bg-white p-4 md:p-6">
+                <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
+                <div className="relative">
+                    <div className="grid grid-cols-3 gap-3 w-full">
+                        {Object.entries(controlers).map(([key, item]) => (
+                            <button
+                                onClick={() => select(+key)}
+                                className={getButtonStyle(key, isGameFinished)}
+                                key={key}
+                                disabled={isGameFinished}
+                            >
+                                <span className="text-3xl">{item}</span>
+                                <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
+                            </button>
+                        ))}
+                    </div>
+                    {isGameFinished && (
+                        <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded-xl">
+                            <GameResults playerId={playerId} gameWinner={gameWinner} />
+                            <div className="text-center">
+                                <button onClick={() => resetGame()} className="btn btn-outline">
+                                    Play again
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+                <TableBoard
+                    yourChoices={playerChoices}
+                    secondPlayerChoices={computerChoices}
+                    isGameFinished={isGameFinished}
+                    isOnePlayer={true}
+                />
+            </div>
 
             {isGameFinished && playerId === gameWinner && <GameEffects />}
         </div>
+        {(userWins > 0 || computerWins > 0) && (
+            <div className="text-center mt-2">
+                <button onClick={resetScore} className="text-xs text-gray-400 hover:text-red-500 underline cursor-pointer transition-colors">
+                    Reset score
+                </button>
+            </div>
+        )}
+        </>
     );
 };
 

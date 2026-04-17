@@ -74,7 +74,26 @@ body {
 }
 
 .btn.btn-success {
-  @apply bg-green-600 text-white;
+  @apply text-white;
+  background: linear-gradient(135deg, #34c069 0%, #1d9e4e 100%);
+  box-shadow: 0 4px 14px rgba(29, 158, 78, 0.3);
+  transition: filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn.btn-success:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 18px rgba(29, 158, 78, 0.45);
+}
+
+.btn-cta-green {
+  background: linear-gradient(135deg, #34c069 0%, #1d9e4e 100%);
+  box-shadow: 0 3px 10px rgba(29, 158, 78, 0.35);
+  transition: filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-cta-green:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 5px 16px rgba(29, 158, 78, 0.5);
 }
 
 .player-selected-table td,
