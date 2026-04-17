@@ -55,7 +55,7 @@ const GameBoard = () => {
             getTheWinner();
         }
         console.log("useGame - isGameFinished changed:", isGameFinished);
-    }, [isGameFinished]);
+    }, [isGameFinished, gameData, updateGameWinner]);
 
     // Show loading state while player ID is being initialized
     if (!isLoaded) {

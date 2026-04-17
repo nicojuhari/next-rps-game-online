@@ -15,11 +15,15 @@ const Home = () => {
                     <span className="block mt-3 text-3xl">Online</span>
                 </h1>
                 <p className="text-center text-gray-600 font-light text-sm">
-                    Challenge Friends or Beat the Computer. <br />
-                    100% Free and No Signup.
+                    Play against the computer or challenge a friend
+                    <br /> Free, Instant, No Signup.
                 </p>
             </div>
             <OnePlayer />
+            <p className="text-xs text-center text-gray-400 mt-3 max-w-sm px-2 mx-auto">
+                The computer picks moves randomly each round. This is what most browser games call &quot;playing vs AI&quot; - it&apos;s the
+                same thing.
+            </p>
             <MainCTA />
             <HomeContent />
             <p className="text-sm text-center text-gray-500 mb-6">

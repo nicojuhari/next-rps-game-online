@@ -8,19 +8,19 @@ import { createMetadata } from "@/lib/metadata";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = createMetadata({
-    title: "Play Rock Paper Scissors Online | 1 or 2 Players (No Signup)",
+    title: "Play Rock Paper Scissors Online - Free, No Signup",
     description:
-        "Create a private multiplayer room in 1 click. The fastest way to play RPS with friends or the computer. 100% Free, secure, and no downloads required.",
+        "Play rock paper scissors online against the computer or challenge a friend in a private multiplayer room. Free, instant, no signup needed.",
     canonical: "/",
     openGraph: {
-        title: "Play Rock Paper Scissors Online | 1 or 2 Players (No Signup)",
+        title: "Play Rock Paper Scissors Online - Free, No Signup",
         description:
-            "Create a private multiplayer room in 1 click. The fastest way to play RPS with friends or the computer. 100% Free, secure, and no downloads required.",
+            "Play rock paper scissors online against the computer or challenge a friend in a private multiplayer room. Free, instant, no signup needed.",
     },
     twitter: {
-        title: "Play Rock Paper Scissors Online | 1 or 2 Players (No Signup)",
+        title: "Play Rock Paper Scissors Online - Free, No Signup",
         description:
-            "Create a private multiplayer room in 1 click. The fastest way to play RPS with friends or the computer. 100% Free, secure, and no downloads required.",
+            "Play rock paper scissors online against the computer or challenge a friend in a private multiplayer room. Free, instant, no signup needed.",
     },
 });
 

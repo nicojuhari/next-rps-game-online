@@ -29,8 +29,8 @@ const MainCTA = () => {
 
     return (
         <div className="mt-16 text-center md:max-w-sm mx-auto w-full">
-            <p className="font-medium text-xl text-center">2 Players Game</p>
-            <p className="text-xs text-center text-gray-400">You vs Friend</p>
+            <p className="font-medium text-lg text-center">Play with a Friend</p>
+            <p className="text-xs text-center text-gray-400">Create a private room, share the link, play instantly</p>
             <div className="bg-white p-6 rounded-lg border border-gray-100 mt-6">
                 <div className="mt-2 text-left">
                     <label htmlFor="game-stakes" className="block text-sm">

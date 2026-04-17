@@ -80,7 +80,7 @@ const OnePlayer = () => {
 
     return (
         <div className="max-w-sm mx-auto p-4 md:p-6 bg-gray-600 rounded-lg shadow-md">
-            <p className="font-medium text-xl text-center text-white mb-4 md:mb-6">1 Player Game</p>
+            <p className="font-medium text-xl text-center text-white mb-4 md:mb-6">Play vs Computer</p>
             {/* <p className="text-xs text-center text-gray-400">You vs Computer</p> */}
             <div className="flex justify-between gap-8 text-sm text-gray-300">
                 <span>
