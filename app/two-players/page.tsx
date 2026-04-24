@@ -33,7 +33,7 @@ const TwoPlayers = () => {
         <Suspense
             fallback={
                 <div className="py-8">
-                    <h1 className="text-xl mb-4 text-center">Rock Paper Scissors - 2 Player Online</h1>
+                    <h1 className="text-xl mb-4 text-center">Rock Paper Scissors Multiplayer</h1>
                     <div className="flex justify-center">
                         <Image src="/loading.svg" loading="eager" alt="Loading" width={40} height={40} className="mx-auto my-24" />
                     </div>

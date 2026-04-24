@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import "./globals.css";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import { createMetadata } from "@/lib/metadata";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,6 +82,15 @@ export default function RootLayout({
                 <Header />
                 <main className="flex flex-col min-h-screen container">{children}</main>
                 <Footer />
+                {/* Google AdSense - Only in production */}
+                {isProduction && process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
+                    <Script
+                        async
+                        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
+                        crossOrigin="anonymous"
+                        strategy="afterInteractive"
+                    />
+                )}
                 {/* Simple Analytics - Only in production */}
                 {isProduction && (
                     <Script

@@ -1,13 +1,36 @@
 "use client";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useFirebaseContext } from "@/contexts/FirebaseContext";
 import { useGame } from "@/lib/hooks/useGame";
-import { getGameWinner } from "@/lib/game-utils";
+import { getGameWinner, compareChoices } from "@/lib/game-utils";
 import { usePlayer } from "@/lib/hooks/usePlayer";
 import { useSearchParams } from "next/navigation";
 import TableBoard from "./TableBoard";
 import GameEffects from "./GameEffects";
 import GameResults from "./GameResults";
+import CertificateModal from "./CertificateModal";
+import { type CertificateData } from "@/lib/certificate";
+
+const buildCertData = (
+    me: { name: string; choices: number[] },
+    opponent: { name: string; choices: number[] },
+    lastWinner: string | undefined,
+    playerId: string
+): CertificateData => {
+    const p1Wins = me.choices.filter((c, i) => compareChoices(c, opponent.choices[i]) === 1).length;
+    const p2Wins = me.choices.filter((c, i) => compareChoices(c, opponent.choices[i]) === 2).length;
+    return {
+        mode: "multi",
+        player1Name: me.name || "You",
+        player2Name: opponent.name || "Opponent",
+        player1Wins: p1Wins,
+        player2Wins: p2Wins,
+        player1Choices: me.choices,
+        player2Choices: opponent.choices,
+        winner: lastWinner === playerId ? "player1" : lastWinner === "draw" ? "draw" : "player2",
+        generatedAt: Date.now(),
+    };
+};
 
 const GameBoard = () => {
     const { gameData, updateGameChoices, resetGame, updateGameWinner } = useFirebaseContext();
@@ -16,6 +39,8 @@ const GameBoard = () => {
     const searchParams = useSearchParams();
     const gameId = searchParams.get("gameId") || "";
     const { playerId, isLoaded } = usePlayer();
+    const [showCert, setShowCert] = useState(false);
+    const [certData, setCertData] = useState<CertificateData | null>(null);
 
     // Get your choices and all players' choices
     const yourChoices = useMemo(() => {
@@ -41,6 +66,19 @@ const GameBoard = () => {
         const allPlayers = Object.entries(gameData.players || {});
         return allPlayers.find(([uid]) => uid !== playerId)?.[1].wins || 0;
     }, [gameData, playerId]);
+
+    const handleShare = () => {
+        if (!gameData || !isGameFinished) return;
+        const allPlayers = Object.entries(gameData.players || {});
+        const meEntry = allPlayers.find(([uid]) => uid === playerId);
+        const opponentEntry = allPlayers.find(([uid]) => uid !== playerId);
+        if (!meEntry || !opponentEntry) return;
+        const [, me] = meEntry;
+        const [, opponent] = opponentEntry;
+        if (me.choices.length < 3 || opponent.choices.length < 3) return;
+        setCertData(buildCertData(me, opponent, gameData.lastWinner, playerId));
+        setShowCert(true);
+    };
 
     useEffect(() => {
         if (isGameFinished && gameData) {
@@ -84,7 +122,7 @@ const GameBoard = () => {
     return (
         <div className="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
             {/* Score header */}
-            <div className="bg-blue-500 px-5 py-3 flex items-center justify-between">
+            <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
                 <div className="text-center min-w-12">
                     <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
                     <div className="text-white font-bold text-2xl leading-none">{yourWins}</div>
@@ -113,13 +151,20 @@ const GameBoard = () => {
                     </div>
                     {isGameFinished && gameData && (
                         <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded-xl">
-                            <GameResults playerId={playerId} gameWinner={gameData.lastWinner || ""} />
+                            <GameResults
+                                playerId={playerId}
+                                gameWinner={gameData.lastWinner || ""}
+                                onShare={handleShare}
+                            />
                             <div className="text-center">
                                 <button onClick={() => resetGame(gameData?.$id)} className="btn btn-outline">
                                     Play again
                                 </button>
                             </div>
                         </div>
+                    )}
+                    {showCert && certData && (
+                        <CertificateModal data={certData} onClose={() => setShowCert(false)} />
                     )}
                 </div>
                 {gameData && (

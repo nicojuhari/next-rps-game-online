@@ -1,5 +1,5 @@
 import { compareChoices } from "@/lib/game-utils";
-import { CheckCircleIcon, XCircleIcon, EqualsIcon, QuestionMarkIcon } from "@phosphor-icons/react";
+import { CheckIcon, CheckCircleIcon, XCircleIcon, EqualsIcon, QuestionMarkIcon } from "@phosphor-icons/react";
 
 const TableBoard = ({
     yourChoices,
@@ -37,9 +37,7 @@ const TableBoard = ({
                             <td>
                                 <div className="flex items-center justify-center">
                                     {yourChoices?.[item] == null ? (
-                                        <div className="text-gray-500">
-                                            <CheckCircleIcon weight="light" className="w-6 h-6 transition-all duration-500 text-gray-400" />
-                                        </div>
+                                        <QuestionMarkIcon weight="light" className="w-6 h-6 text-gray-400" />
                                     ) : (
                                         <div className="h-6">{controlers[yourChoices[item] as keyof typeof controlers]}</div>
                                     )}
@@ -48,12 +46,11 @@ const TableBoard = ({
                             <td>
                                 <div className="flex items-center justify-center">
                                     {!isGameFinished ? (
-                                        <CheckCircleIcon
-                                            weight="light"
-                                            className={`w-6 h-6 transition-all duration-500 ${
-                                                secondPlayerChoices?.[item] ? "text-green-400" : "text-gray-400"
-                                            }`}
-                                        />
+                                        secondPlayerChoices?.[item] ? (
+                                            <CheckIcon className="w-6 h-6 text-green-500" />
+                                        ) : (
+                                            <QuestionMarkIcon weight="light" className="w-6 h-6 text-gray-400" />
+                                        )
                                     ) : (
                                         <div className="h-6">{controlers[secondPlayerChoices[item] as keyof typeof controlers]}</div>
                                     )}
@@ -62,16 +59,14 @@ const TableBoard = ({
                             <td>
                                 <div className="flex items-center justify-center">
                                     {!isGameFinished ? (
-                                        <div className="text-gray-400">
-                                            <QuestionMarkIcon weight="light" className="w-6 h-6 text-gray-400" />
-                                        </div>
+                                        <QuestionMarkIcon weight="light" className="w-6 h-6 text-gray-400" />
                                     ) : (
                                         <div className="h-6">
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 0 && (
-                                                <EqualsIcon weight="light" className="w-6 h-6 text-gray-400" />
+                                                <EqualsIcon weight="light" className="w-6 h-6 text-gray-500" />
                                             )}
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 1 && (
-                                                <CheckCircleIcon weight="light" className="w-6 h-6 text-green-400" />
+                                                <CheckCircleIcon weight="light" className="w-6 h-6 text-green-500" />
                                             )}
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 2 && (
                                                 <XCircleIcon weight="light" className="w-6 h-6 text-red-500" />

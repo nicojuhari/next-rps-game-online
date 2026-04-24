@@ -9,6 +9,7 @@ import JoinGame from "@/components/JoinGame";
 import { usePlayer } from "@/lib/hooks/usePlayer";
 import WaitingPlayerTwo from "@/components/WaitingPlayerTwo";
 import MainCTA from "@/components/MainCTA";
+import AdSense from "./AdSense";
 
 const TwoPlayersContent = () => {
     const searchParams = useSearchParams();
@@ -20,7 +21,9 @@ const TwoPlayersContent = () => {
 
     useEffect(() => {
         if (!gameId) return;
-        setLoading(true);
+        setTimeout(() => {
+            setLoading(true);
+        });
         const fetchData = async () => {
             try {
                 await getGame(gameId);
@@ -74,8 +77,9 @@ const TwoPlayersContent = () => {
                 <>
                     <GameBoard />
                     <div className="max-w-sm mx-auto">
-                        <p className="text-xs mt-4 md:mt-6 text-gray-600">
-                            Pick your move 3 times - results show once both players are done.
+                        <p className="text-xs mt-4 md:mt-6 text-gray-600 text-center">
+                            Pick your move 3 times, <br />
+                            results show once both players are done.
                         </p>
                     </div>
                 </>
@@ -86,9 +90,10 @@ const TwoPlayersContent = () => {
 
     return (
         <div className="py-8">
-            <h1 className="text-lg font-medium mb-10 text-center">Rock Paper Scissors - 2 Player Online</h1>
+            <h1 className="text-lg font-medium mb-6 text-center">Rock Paper Scissors Multiplayer</h1>
             {renderGameSection()}
-            <div className="my-16 space-y-12 font-light">
+            <AdSense adSlot="6657389797" className="mt-6" />
+            <div className="my-10 space-y-12 font-light">
                 <div>
                     <h2 className="text-lg font-semibold mb-4">How to Play Rock Paper Scissors Online with Friends</h2>
                     <div className="space-y-2">

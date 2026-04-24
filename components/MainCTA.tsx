@@ -28,13 +28,13 @@ const MainCTA = () => {
 
     return (
         <div className="text-center md:max-w-sm mx-auto w-full">
-            <p className="font-medium text-lg text-center inline-flex items-center">
-                Create <DotIcon size={32} />
-                Share <DotIcon size={32} />
-                Play
+            <p className="font-semibold text-lg text-center inline-flex items-center">
+                <span className="text-blue-500">Create</span> <DotIcon size={32} className="text-gray-400" />
+                <span className="text-yellow-500">Share</span> <DotIcon size={32} className="text-gray-400" />
+                <span className="text-red-500">Play</span>
             </p>
 
-            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm mt-4">
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm mt-1">
                 <div className="text-left">
                     <label htmlFor="game-stakes" className="block text-sm text-gray-700">
                         What&apos;s at stake? <span className="text-gray-400 text-xs">(optional)</span>

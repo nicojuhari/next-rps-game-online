@@ -2,8 +2,31 @@
 import { useState, useMemo, useEffect } from "react";
 import TableBoard from "@/components/TableBoard";
 import GameResults from "@/components/GameResults";
-import { getGameWinner } from "@/lib/game-utils";
+import CertificateModal from "@/components/CertificateModal";
+import { getGameWinner, compareChoices } from "@/lib/game-utils";
+import { type CertificateData } from "@/lib/certificate";
 import GameEffects from "@/components/GameEffects";
+import { XIcon } from "@phosphor-icons/react";
+
+const buildCertData = (
+    playerChoices: number[],
+    computerChoices: number[],
+    gameWinner: string
+): CertificateData => {
+    const p1Wins = playerChoices.filter((c, i) => compareChoices(c, computerChoices[i]) === 1).length;
+    const p2Wins = playerChoices.filter((c, i) => compareChoices(c, computerChoices[i]) === 2).length;
+    return {
+        mode: "single",
+        player1Name: "You",
+        player2Name: "Computer",
+        player1Wins: p1Wins,
+        player2Wins: p2Wins,
+        player1Choices: playerChoices,
+        player2Choices: computerChoices,
+        winner: gameWinner === "player1" ? "player1" : gameWinner === "computer" ? "player2" : "draw",
+        generatedAt: Date.now(),
+    };
+};
 
 const getButtonStyle = (key: string, finished: boolean) => {
     const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
@@ -11,8 +34,10 @@ const getButtonStyle = (key: string, finished: boolean) => {
     const active = "cursor-pointer hover:scale-105";
 
     if (finished) return `${base} ${disabled} bg-gray-50 border-gray-200`;
-    if (key === "1") return `${base} ${active} bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100`;
-    if (key === "2") return `${base} ${active} bg-yellow-50 border-yellow-200 hover:bg-yellow-100 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100`;
+    if (key === "1")
+        return `${base} ${active} bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100`;
+    if (key === "2")
+        return `${base} ${active} bg-yellow-50 border-yellow-200 hover:bg-yellow-100 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100`;
     return `${base} ${active} bg-red-50 border-red-200 hover:bg-red-100 hover:border-red-400 hover:shadow-lg hover:shadow-red-100`;
 };
 
@@ -35,6 +60,8 @@ const OnePlayer = () => {
     const [gameWinner, setGameWinner] = useState<null | string>(null);
     const [userWins, setUserWins] = useState<number>(0);
     const [computerWins, setComputerWins] = useState<number>(0);
+    const [showCert, setShowCert] = useState(false);
+    const [certData, setCertData] = useState<CertificateData | null>(null);
 
     useEffect(() => {
         const storedUserWins = localStorage.getItem("rps_userWins");
@@ -50,6 +77,12 @@ const OnePlayer = () => {
     const isGameFinished = useMemo(() => {
         return playerChoices.length === 3 && computerChoices.length === 3;
     }, [playerChoices, computerChoices]);
+
+    const handleShare = () => {
+        if (!gameWinner || playerChoices.length < 3 || computerChoices.length < 3) return;
+        setCertData(buildCertData(playerChoices, computerChoices, gameWinner));
+        setShowCert(true);
+    };
 
     const getComputerChoice = () => {
         return Math.floor(Math.random() * 3) + 1;
@@ -102,65 +135,73 @@ const OnePlayer = () => {
 
     return (
         <>
-        <div className="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
-            {/* Score header */}
-            <div className="bg-blue-500 px-5 py-3 flex items-center justify-between">
-                <div className="text-center min-w-12">
-                    <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
-                    <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
-                </div>
-                <p className="text-white font-semibold text-sm">Play vs Computer</p>
-                <div className="text-center min-w-12">
-                    <div className="text-blue-100 text-xs uppercase tracking-widest">PC</div>
-                    <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
-                </div>
-            </div>
-
-            {/* Game body */}
-            <div className="bg-white p-4 md:p-6">
-                <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
-                <div className="relative">
-                    <div className="grid grid-cols-3 gap-3 w-full">
-                        {Object.entries(controlers).map(([key, item]) => (
-                            <button
-                                onClick={() => select(+key)}
-                                className={getButtonStyle(key, isGameFinished)}
-                                key={key}
-                                disabled={isGameFinished}
-                            >
-                                <span className="text-3xl">{item}</span>
-                                <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
-                            </button>
-                        ))}
+            <div className="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
+                {/* Score header */}
+                <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
+                    <div className="text-center min-w-12">
+                        <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                        <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
                     </div>
-                    {isGameFinished && (
-                        <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded-xl">
-                            <GameResults playerId={playerId} gameWinner={gameWinner} />
-                            <div className="text-center">
-                                <button onClick={() => resetGame()} className="btn btn-outline">
-                                    Play again
-                                </button>
-                            </div>
-                        </div>
-                    )}
+                    <p className="text-white font-semibold text-sm">Play vs Computer</p>
+                    <div className="text-center min-w-12">
+                        <div className="text-blue-100 text-xs uppercase tracking-widest">Bot</div>
+                        <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
+                    </div>
                 </div>
-                <TableBoard
-                    yourChoices={playerChoices}
-                    secondPlayerChoices={computerChoices}
-                    isGameFinished={isGameFinished}
-                    isOnePlayer={true}
-                />
-            </div>
 
-            {isGameFinished && playerId === gameWinner && <GameEffects />}
-        </div>
-        {(userWins > 0 || computerWins > 0) && (
-            <div className="text-center mt-2">
-                <button onClick={resetScore} className="text-xs text-gray-400 hover:text-red-500 underline cursor-pointer transition-colors">
-                    Reset score
-                </button>
+                {/* Game body */}
+                <div className="bg-white p-4 md:p-6">
+                    <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
+                    <div className="relative">
+                        <div className="grid grid-cols-3 gap-3 w-full">
+                            {Object.entries(controlers).map(([key, item]) => (
+                                <button
+                                    onClick={() => select(+key)}
+                                    className={getButtonStyle(key, isGameFinished)}
+                                    key={key}
+                                    disabled={isGameFinished}
+                                >
+                                    <span className="text-3xl">{item}</span>
+                                    <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
+                                </button>
+                            ))}
+                        </div>
+                        {isGameFinished && (
+                            <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded-xl">
+                                <GameResults
+                                    playerId={playerId}
+                                    gameWinner={gameWinner}
+                                    onShare={isGameFinished && gameWinner ? handleShare : undefined}
+                                />
+                                <div className="text-center">
+                                    <button onClick={() => resetGame()} className="btn btn-outline">
+                                        Play again
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                        {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
+                    </div>
+                    <TableBoard
+                        yourChoices={playerChoices}
+                        secondPlayerChoices={computerChoices}
+                        isGameFinished={isGameFinished}
+                        isOnePlayer={true}
+                    />
+                </div>
+
+                {isGameFinished && playerId === gameWinner && <GameEffects />}
             </div>
-        )}
+            {(userWins > 0 || computerWins > 0) && (
+                <div className="text-center mt-2">
+                    <button
+                        onClick={resetScore}
+                        className="text-xs inline-flex gap-1 items-center text-red-300 hover:text-red-500 underline cursor-pointer transition-colors"
+                    >
+                        Reset score <XIcon weight="bold" className="" />
+                    </button>
+                </div>
+            )}
         </>
     );
 };
