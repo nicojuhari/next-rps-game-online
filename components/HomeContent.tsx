@@ -37,6 +37,11 @@ const HomeContent = () => {
                         player wins 33.3% of the time. But human choices are not random, which is why spotting patterns gives you a real
                         advantage.
                     </p>
+                    <p>
+                        Put the strategy to the test — win more games than your opponent and you can{" "}
+                        <span className="font-semibold text-amber-600">claim a personalised winner&apos;s certificate</span> to download
+                        and share.
+                    </p>
                 </div>
             </div>
 

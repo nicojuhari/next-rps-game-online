@@ -20,6 +20,7 @@ const GameBoard = () => {
     const { playerId, isLoaded } = usePlayer();
     const [showCert, setShowCert] = useState(false);
     const [certData, setCertData] = useState<CertificateData | null>(null);
+    const [certHint, setCertHint] = useState(false);
 
     const yourChoices = useMemo(() => {
         if (!gameData) return [];
@@ -41,9 +42,17 @@ const GameBoard = () => {
         return Object.entries(gameData.players || {}).find(([uid]) => uid !== playerId)?.[1].wins || 0;
     }, [gameData, playerId]);
 
+    const handleCertBadgeClick = (canGetCert: boolean) => {
+        if (canGetCert) {
+            handleGetCertificate();
+        } else {
+            setCertHint(true);
+            setTimeout(() => setCertHint(false), 2500);
+        }
+    };
+
     const handleGetCertificate = () => {
-        const opponentName =
-            Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || "Friend";
+        const opponentName = Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || "Friend";
         setCertData({
             mode: "multi",
             player1Name: "You",
@@ -95,69 +104,81 @@ const GameBoard = () => {
 
     const lastWinner = gameData?.lastWinner;
     const outcome = lastWinner === playerId ? "win" : lastWinner === "draw" ? "draw" : lastWinner ? "lose" : null;
+    const canGetCert = yourWins > secondPlayerWins;
 
     return (
-        <div className="max-w-sm mx-auto relative">
-            <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
-                {/* Score header */}
-                <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
-                    <div className="text-center min-w-12">
-                        <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
-                        <div className="text-white font-bold text-2xl leading-none">{yourWins}</div>
+        <>
+            <div className="max-w-sm mx-auto relative">
+                <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
+                    {/* Score header */}
+                    <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
+                        <div className="text-center min-w-12">
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                            <div className="text-white font-bold text-2xl leading-none">{yourWins}</div>
+                        </div>
+                        <div className="text-center">
+                            <p className="text-white font-semibold text-sm">Play vs Friend</p>
+                            {gameData?.gameStake && <p className="text-blue-100 text-xs mt-0.5 max-w-32 truncate">{gameData.gameStake}</p>}
+                        </div>
+                        <div className="text-center min-w-12">
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">Friend</div>
+                            <div className="text-white font-bold text-2xl leading-none">{secondPlayerWins}</div>
+                        </div>
                     </div>
-                    <div className="text-center">
-                        <p className="text-white font-semibold text-sm">Play vs Friend</p>
-                        {gameData?.gameStake && <p className="text-blue-100 text-xs mt-0.5 max-w-32 truncate">{gameData.gameStake}</p>}
-                    </div>
-                    <div className="text-center min-w-12">
-                        <div className="text-blue-100 text-xs uppercase tracking-widest">Friend</div>
-                        <div className="text-white font-bold text-2xl leading-none">{secondPlayerWins}</div>
+
+                    {/* Game body */}
+                    <div className="bg-white p-4 md:p-6">
+                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
+                        <div className="grid grid-cols-3 gap-3 w-full">
+                            {Object.entries(controlers).map(([key, item]) => (
+                                <button onClick={() => select(+key)} className={getButtonStyle(key)} key={key} disabled={isDisabled}>
+                                    <span className="text-3xl">{item}</span>
+                                    <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
+                                </button>
+                            ))}
+                        </div>
+                        {gameData && (
+                            <TableBoard
+                                yourChoices={yourChoices}
+                                secondPlayerChoices={secondPlayerChoices}
+                                isGameFinished={isGameFinished || false}
+                            />
+                        )}
                     </div>
                 </div>
 
-                {/* Game body */}
-                <div className="bg-white p-4 md:p-6">
-                    <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
-                    <div className="grid grid-cols-3 gap-3 w-full">
-                        {Object.entries(controlers).map(([key, item]) => (
-                            <button onClick={() => select(+key)} className={getButtonStyle(key)} key={key} disabled={isDisabled}>
-                                <span className="text-3xl">{item}</span>
-                                <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
-                            </button>
-                        ))}
-                    </div>
-                    {gameData && (
-                        <TableBoard
-                            yourChoices={yourChoices}
-                            secondPlayerChoices={secondPlayerChoices}
-                            isGameFinished={isGameFinished || false}
-                        />
-                    )}
-                </div>
+                {/* Full-card overlay */}
+                {isGameFinished && gameData && outcome && (
+                    <GameOverlay
+                        outcome={outcome}
+                        youScore={yourWins}
+                        opponentScore={secondPlayerWins}
+                        opponentLabel="Friend"
+                        onPlayAgain={() => resetGame(gameData.$id)}
+                        onGetCertificate={outcome === "win" && yourWins > secondPlayerWins ? handleGetCertificate : undefined}
+                    />
+                )}
+
+                {gameData && isGameFinished && playerId === gameData.lastWinner && <GameEffects />}
+
+                {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
             </div>
 
-            {/* Full-card overlay */}
-            {isGameFinished && gameData && outcome && (
-                <GameOverlay
-                    outcome={outcome}
-                    youScore={yourWins}
-                    opponentScore={secondPlayerWins}
-                    opponentLabel="Friend"
-                    onPlayAgain={() => resetGame(gameData.$id)}
-                    onGetCertificate={outcome === "win" && yourWins > secondPlayerWins ? handleGetCertificate : undefined}
-                />
-            )}
-
-            {gameData && isGameFinished && playerId === gameData.lastWinner && <GameEffects />}
-
-            {showCert && certData && (
-                <CertificateModal
-                    data={certData}
-                    initialStake={gameData?.gameStake}
-                    onClose={() => setShowCert(false)}
-                />
-            )}
-        </div>
+            {/* Certificate badge — always visible */}
+            <div className="text-center mt-3 max-w-sm mx-auto">
+                <button
+                    onClick={() => handleCertBadgeClick(canGetCert)}
+                    className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${
+                        canGetCert
+                            ? "border-amber-200 text-amber-600 bg-amber-50 hover:bg-amber-100 hover:border-amber-300"
+                            : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
+                    }`}
+                >
+                    🏆 Get your winner&apos;s certificate
+                </button>
+                {certHint && <p className="text-xs text-gray-500 mt-1.5">Win more games than your friend to unlock your certificate.</p>}
+            </div>
+        </>
     );
 };
 

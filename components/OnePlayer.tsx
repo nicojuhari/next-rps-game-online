@@ -38,6 +38,7 @@ const OnePlayer = () => {
     const [computerWins, setComputerWins] = useState<number>(0);
     const [showCert, setShowCert] = useState(false);
     const [certData, setCertData] = useState<CertificateData | null>(null);
+    const [certHint, setCertHint] = useState(false);
 
     useEffect(() => {
         const storedUserWins = localStorage.getItem("rps_userWins");
@@ -63,6 +64,15 @@ const OnePlayer = () => {
             generatedAt: Date.now(),
         });
         setShowCert(true);
+    };
+
+    const handleCertBadgeClick = () => {
+        if (userWins > computerWins) {
+            handleGetCertificate();
+        } else {
+            setCertHint(true);
+            setTimeout(() => setCertHint(false), 2500);
+        }
     };
 
     const getComputerChoice = () => Math.floor(Math.random() * 3) + 1;
@@ -111,6 +121,7 @@ const OnePlayer = () => {
     };
 
     const outcome = gameWinner === playerId ? "win" : gameWinner === "draw" ? "draw" : gameWinner ? "lose" : null;
+    const canGetCert = userWins > computerWins;
 
     return (
         <>
@@ -118,20 +129,22 @@ const OnePlayer = () => {
             <div className="max-w-sm mx-auto relative">
                 <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
                     {/* Score header */}
-                    <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
-                        <div className="text-center min-w-12">
-                            <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
-                            <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
-                        </div>
-                        <p className="text-white font-semibold text-sm">Play vs Computer</p>
-                        <div className="text-center min-w-12">
-                            <div className="text-blue-100 text-xs uppercase tracking-widest">Bot</div>
-                            <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
+                    <div className="bg-gray-700 px-5 pt-3 pb-2">
+                        <div className="flex items-center justify-between">
+                            <div className="text-center min-w-12">
+                                <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                                <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
+                            </div>
+                            <p className="text-white font-semibold text-sm">Play vs Computer</p>
+                            <div className="text-center min-w-12">
+                                <div className="text-blue-100 text-xs uppercase tracking-widest">Bot</div>
+                                <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
+                            </div>
                         </div>
                     </div>
 
                     {/* Game body */}
-                    <div className="bg-white p-4 md:p-6">
+                    <div className="bg-white p-4 md:p-6 relative">
                         <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
                         <div className="grid grid-cols-3 gap-3 w-full">
                             {Object.entries(controlers).map(([key, item]) => (
@@ -152,6 +165,16 @@ const OnePlayer = () => {
                             isGameFinished={isGameFinished}
                             isOnePlayer={true}
                         />
+                        <div className="text-center h-6 mt-1 -mb-4">
+                            {(userWins > 0 || computerWins > 0) && (
+                                <button
+                                    onClick={resetScore}
+                                    className="transition-all duration-700 text-xs inline-flex gap-1 items-center text-gray-500 hover:text-red-400 cursor-pointer"
+                                >
+                                    Reset the Score <XIcon size={10} weight="bold" />
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
 
@@ -163,23 +186,27 @@ const OnePlayer = () => {
                         opponentScore={computerWins}
                         opponentLabel="Bot"
                         onPlayAgain={resetGame}
-                        onGetCertificate={outcome === "win" && userWins > computerWins ? handleGetCertificate : undefined}
+                        onGetCertificate={outcome === "win" && canGetCert ? handleGetCertificate : undefined}
                     />
                 )}
 
                 {isGameFinished && playerId === gameWinner && <GameEffects />}
             </div>
 
-            {(userWins > 0 || computerWins > 0) && (
-                <div className="text-center mt-2">
-                    <button
-                        onClick={resetScore}
-                        className="text-xs inline-flex gap-1 items-center text-red-300 hover:text-red-500 underline cursor-pointer transition-colors"
-                    >
-                        Reset score <XIcon weight="bold" />
-                    </button>
-                </div>
-            )}
+            {/* Certificate badge — always visible */}
+            <div className="text-center mt-3">
+                <button
+                    onClick={handleCertBadgeClick}
+                    className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${
+                        canGetCert
+                            ? "border-amber-200 text-amber-600 bg-amber-50 hover:bg-amber-100 hover:border-amber-300"
+                            : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
+                    }`}
+                >
+                    🏆 Get your winner&apos;s certificate
+                </button>
+                {certHint && <p className="text-xs text-gray-500 mt-1.5">Win more games than the bot to unlock your certificate.</p>}
+            </div>
 
             {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
         </>

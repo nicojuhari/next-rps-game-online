@@ -111,6 +111,10 @@ const TwoPlayersContent = () => {
                                 <span className="font-semibold">Play</span> - both players pick Rock, Paper, or Scissors. Best of 3 rounds
                                 decides the winner.
                             </li>
+                            <li>
+                                <span className="font-semibold">Claim your certificate</span> - win more games than your opponent and grab
+                                a personalised winner&apos;s certificate. Download it or copy it to rub it in.
+                            </li>
                         </ol>
                     </div>
                 </div>

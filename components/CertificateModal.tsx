@@ -2,13 +2,12 @@
 
 import { useRef, useState } from "react";
 import { toPng, toBlob } from "html-to-image";
-import { DownloadSimple, Copy, X, ArrowLeft, ArrowCounterClockwise } from "@phosphor-icons/react";
+import { DownloadSimple, Copy, X, ArrowLeft } from "@phosphor-icons/react";
 import CertificateCard, { CARD_W, CARD_H } from "@/components/CertificateCard";
-import { CertificateData, getRandomStake } from "@/lib/certificate";
+import { CertificateData } from "@/lib/certificate";
 
 interface CertificateModalProps {
     data: CertificateData;
-    initialStake?: string;
     onClose: () => void;
 }
 
@@ -16,25 +15,22 @@ const DISPLAY_W = 480;
 const SCALE = DISPLAY_W / CARD_W;
 const DISPLAY_H = Math.round(CARD_H * SCALE);
 
-const CertificateModal = ({ data, initialStake, onClose }: CertificateModalProps) => {
+const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
     const captureRef = useRef<HTMLDivElement>(null);
     const [step, setStep] = useState<1 | 2>(1);
     const [winnerName, setWinnerName] = useState("");
-    const [stakeMode, setStakeMode] = useState<"random" | "custom">(initialStake ? "custom" : "random");
-    const [currentRandomStake, setCurrentRandomStake] = useState(() => getRandomStake());
-    const [customStake, setCustomStake] = useState(initialStake || "");
+    const [player2Name, setPlayer2Name] = useState(data.player2Name || "");
     const [certDataFinal, setCertDataFinal] = useState<CertificateData | null>(null);
     const [downloading, setDownloading] = useState(false);
     const [copyStatus, setCopyStatus] = useState<"idle" | "copying" | "done">("idle");
 
-    const rerollStake = () => setCurrentRandomStake(getRandomStake());
-
     const handleGenerate = () => {
-        const stake = stakeMode === "random" ? currentRandomStake : customStake.trim();
+        const finalPlayer2Name =
+            data.mode === "multi" ? player2Name.trim() || "a friend" : data.player2Name;
         setCertDataFinal({
             ...data,
+            player2Name: finalPlayer2Name,
             winnerName: winnerName.trim() || undefined,
-            stake: stake || undefined,
         });
         setStep(2);
     };
@@ -107,7 +103,7 @@ const CertificateModal = ({ data, initialStake, onClose }: CertificateModalProps
                         </button>
                     </div>
 
-                    {/* Name */}
+                    {/* Winner name */}
                     <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">Your name (optional)</label>
                         <input
@@ -120,54 +116,20 @@ const CertificateModal = ({ data, initialStake, onClose }: CertificateModalProps
                         />
                     </div>
 
-                    {/* Stake */}
-                    <div className="mb-5">
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">What was at stake?</label>
-                        <div className="flex gap-2 mb-3">
-                            <button
-                                onClick={() => setStakeMode("random")}
-                                className={`flex-1 text-sm py-1.5 rounded-lg border transition-colors ${
-                                    stakeMode === "random"
-                                        ? "bg-blue-500 text-white border-blue-500"
-                                        : "border-gray-200 text-gray-600 hover:border-blue-300"
-                                }`}
-                            >
-                                🎲 Random
-                            </button>
-                            <button
-                                onClick={() => setStakeMode("custom")}
-                                className={`flex-1 text-sm py-1.5 rounded-lg border transition-colors ${
-                                    stakeMode === "custom"
-                                        ? "bg-blue-500 text-white border-blue-500"
-                                        : "border-gray-200 text-gray-600 hover:border-blue-300"
-                                }`}
-                            >
-                                ✏️ Custom
-                            </button>
-                        </div>
-                        {stakeMode === "random" && (
-                            <div className="bg-gray-50 rounded-lg p-3 flex items-start gap-2">
-                                <p className="text-sm text-gray-600 italic flex-1">&ldquo;{currentRandomStake}&rdquo;</p>
-                                <button
-                                    onClick={rerollStake}
-                                    className="text-gray-400 hover:text-blue-500 transition-colors flex-shrink-0 mt-0.5"
-                                    title="Reroll"
-                                >
-                                    <ArrowCounterClockwise size={16} weight="bold" />
-                                </button>
-                            </div>
-                        )}
-                        {stakeMode === "custom" && (
+                    {/* Opponent name (multiplayer only) */}
+                    {data.mode === "multi" && (
+                        <div className="mb-6">
+                            <label className="block text-sm font-medium text-gray-700 mb-1.5">Opponent&apos;s name (optional)</label>
                             <input
                                 type="text"
-                                value={customStake}
-                                onChange={(e) => setCustomStake(e.target.value)}
-                                placeholder="What was on the line?"
-                                maxLength={80}
+                                value={player2Name}
+                                onChange={(e) => setPlayer2Name(e.target.value)}
+                                placeholder="a friend"
+                                maxLength={40}
                                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
                             />
-                        )}
-                    </div>
+                        </div>
+                    )}
 
                     <button
                         onClick={handleGenerate}
@@ -201,7 +163,7 @@ const CertificateModal = ({ data, initialStake, onClose }: CertificateModalProps
                         }}
                     >
                         {/*
-                         * Capture target: full 720×450 card, nearly invisible (opacity 0.001).
+                         * Capture target: full 720×470, nearly invisible (opacity 0.001).
                          * position:absolute inside a visible on-screen parent → browser DOES paint it.
                          * html-to-image overrides opacity:'1' so the exported PNG is fully opaque.
                          */}
