@@ -4,7 +4,7 @@ import TableBoard from "@/components/TableBoard";
 import GameOverlay from "@/components/GameOverlay";
 import CertificateModal from "@/components/CertificateModal";
 import { getGameWinner } from "@/lib/game-utils";
-import { type CertificateData, getRandomStake } from "@/lib/certificate";
+import { type CertificateData } from "@/lib/certificate";
 import GameEffects from "@/components/GameEffects";
 import { XIcon } from "@phosphor-icons/react";
 
@@ -50,21 +50,18 @@ const OnePlayer = () => {
         return playerChoices.length === 3 && computerChoices.length === 3;
     }, [playerChoices, computerChoices]);
 
-    const handleGetCertificate = (winnerName: string) => {
-        const cert: CertificateData = {
+    const handleGetCertificate = () => {
+        setCertData({
             mode: "single",
             player1Name: "You",
             player2Name: "Computer",
-            winnerName: winnerName || undefined,
             player1SessionWins: userWins,
             player2SessionWins: computerWins,
             player1Choices: playerChoices,
             player2Choices: computerChoices,
             winner: "player1",
-            stake: getRandomStake(),
             generatedAt: Date.now(),
-        };
-        setCertData(cert);
+        });
         setShowCert(true);
     };
 

@@ -9,7 +9,7 @@ import TableBoard from "./TableBoard";
 import GameEffects from "./GameEffects";
 import GameOverlay from "./GameOverlay";
 import CertificateModal from "./CertificateModal";
-import { type CertificateData, getRandomStake } from "@/lib/certificate";
+import { type CertificateData } from "@/lib/certificate";
 
 const GameBoard = () => {
     const { gameData, updateGameChoices, resetGame, updateGameWinner } = useFirebaseContext();
@@ -41,23 +41,20 @@ const GameBoard = () => {
         return Object.entries(gameData.players || {}).find(([uid]) => uid !== playerId)?.[1].wins || 0;
     }, [gameData, playerId]);
 
-    const handleGetCertificate = (winnerName: string) => {
-        const stake = gameData?.gameStake || getRandomStake();
-        const opponentName = Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || "Friend";
-        const cert: CertificateData = {
+    const handleGetCertificate = () => {
+        const opponentName =
+            Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || "Friend";
+        setCertData({
             mode: "multi",
             player1Name: "You",
             player2Name: opponentName,
-            winnerName: winnerName || undefined,
             player1SessionWins: yourWins,
             player2SessionWins: secondPlayerWins,
             player1Choices: yourChoices,
             player2Choices: secondPlayerChoices,
             winner: "player1",
-            stake,
             generatedAt: Date.now(),
-        };
-        setCertData(cert);
+        });
         setShowCert(true);
     };
 
@@ -153,7 +150,13 @@ const GameBoard = () => {
 
             {gameData && isGameFinished && playerId === gameData.lastWinner && <GameEffects />}
 
-            {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
+            {showCert && certData && (
+                <CertificateModal
+                    data={certData}
+                    initialStake={gameData?.gameStake}
+                    onClose={() => setShowCert(false)}
+                />
+            )}
         </div>
     );
 };

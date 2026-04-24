@@ -1,14 +1,12 @@
 "use client";
 
-import { useState } from "react";
-
 interface GameOverlayProps {
     outcome: "win" | "draw" | "lose";
     youScore: number;
     opponentScore: number;
     opponentLabel?: string;
     onPlayAgain: () => void;
-    onGetCertificate?: (winnerName: string) => void;
+    onGetCertificate?: () => void;
 }
 
 const CONFIG = {
@@ -37,7 +35,6 @@ const CONFIG = {
 
 const GameOverlay = ({ outcome, youScore, opponentScore, opponentLabel = "Opponent", onPlayAgain, onGetCertificate }: GameOverlayProps) => {
     const cfg = CONFIG[outcome];
-    const [winnerName, setWinnerName] = useState("");
 
     return (
         <div
@@ -84,23 +81,12 @@ const GameOverlay = ({ outcome, youScore, opponentScore, opponentLabel = "Oppone
                 </div>
             </div>
 
-            {/* Buttons + optional name input */}
+            {/* Buttons */}
             <div className="flex flex-col gap-2 w-full max-w-[220px]" style={{ animation: "fade-up 0.35s ease-out 0.45s both" }}>
                 {onGetCertificate && (
-                    <>
-                        <input
-                            type="text"
-                            value={winnerName}
-                            onChange={(e) => setWinnerName(e.target.value)}
-                            placeholder="Your name for the cert (optional)"
-                            maxLength={40}
-                            className="w-full rounded-lg px-3 py-2 text-sm text-gray-900 placeholder-gray-400 outline-none"
-                            style={{ background: "rgba(255,255,255,0.92)", border: "none" }}
-                        />
-                        <button onClick={() => onGetCertificate(winnerName.trim())} className="btn btn-success w-full justify-center">
-                            🏆 Get Certificate
-                        </button>
-                    </>
+                    <button onClick={onGetCertificate} className="btn btn-success w-full justify-center">
+                        🏆 Get Certificate
+                    </button>
                 )}
                 <button
                     onClick={onPlayAgain}
