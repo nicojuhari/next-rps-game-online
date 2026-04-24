@@ -38,7 +38,7 @@ const PrivacyPolicyComp = () => {
                         <a href="https://simpleanalytics.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
                             Simple Analytics
                         </a>{" "}
-                        to understand general website usage — like how many people visit — without tracking individuals or using cookies.
+                        to understand general website usage - like how many people visit - without tracking individuals or using cookies.
                     </p>
                 </div>
 

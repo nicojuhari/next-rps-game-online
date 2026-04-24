@@ -14,23 +14,26 @@ No test suite is configured.
 
 ## Architecture
 
-**Rock Paper Scissors Online** — a Next.js 16 App Router app with single-player (vs computer) and multiplayer (real-time) modes.
+**Rock Paper Scissors Online** - a Next.js 16 App Router app with single-player (vs computer) and multiplayer (real-time) modes.
 
 ### Tech Stack
+
 - **Next.js 16** with App Router, TypeScript, React Compiler enabled (`reactCompiler: true`)
 - **Firebase Firestore** for real-time multiplayer state (no auth)
 - **Tailwind CSS v4** via `@tailwindcss/postcss` (not the traditional config file)
-- Firebase config is hardcoded in `lib/firebase.ts` (intentional — public project)
+- Firebase config is hardcoded in `lib/firebase.ts` (intentional - public project)
 
 ### Key Directories
-- `app/` — pages: `/` (1-player), `/two-players` (multiplayer), `/privacy`
-- `components/` — UI components
-- `contexts/FirebaseContext.tsx` — all Firestore operations (joinGame, subscribeToGame, updateGameChoices, updateGameWinner, resetGame, deleteGame)
-- `lib/game-utils.ts` — core game logic (`compareChoices`, `getGameWinner`)
-- `lib/hooks/` — `usePlayer` (localStorage-based anonymous ID), `useGame` (detects finished state), `useFirebase` (createGame)
-- `types.ts` — central `Game` type definition
+
+- `app/` - pages: `/` (1-player), `/two-players` (multiplayer), `/privacy`
+- `components/` - UI components
+- `contexts/FirebaseContext.tsx` - all Firestore operations (joinGame, subscribeToGame, updateGameChoices, updateGameWinner, resetGame, deleteGame)
+- `lib/game-utils.ts` - core game logic (`compareChoices`, `getGameWinner`)
+- `lib/hooks/` - `usePlayer` (localStorage-based anonymous ID), `useGame` (detects finished state), `useFirebase` (createGame)
+- `types.ts` - central `Game` type definition
 
 ### Multiplayer Data Flow
+
 1. Player 1 calls `createGame()` → new Firestore doc created
 2. Player 2 joins via URL `?gameId=<id>` → `joinGame()` adds player, status → `"ready"`
 3. Players pick moves → `updateGameChoices()` appends to `choices[]` array (max 3)
@@ -39,6 +42,7 @@ No test suite is configured.
 6. Reset → `resetGame()` clears choices, status → `"ready"`
 
 ### Firestore Game Document Shape
+
 ```typescript
 {
   $id: string                          // document ID (game room)
@@ -56,6 +60,7 @@ No test suite is configured.
 ```
 
 ### Non-Obvious Patterns
+
 - **Anonymous player IDs**: `usePlayer` generates IDs client-side via localStorage; uses `queueMicrotask` + `isLoaded` flag to avoid hydration mismatches
 - **Real-time sync**: `FirebaseContext` uses `onSnapshot`; unsubscribe function stored in `useRef` to prevent duplicate listeners on remount
 - **Game deletion**: if the Firestore doc disappears, the `onSnapshot` error handler redirects to `/`

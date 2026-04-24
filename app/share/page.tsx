@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     }
     const winnerName =
         cert.winner === "player1" ? cert.player1Name : cert.winner === "player2" ? cert.player2Name : "Draw";
-    const scoreStr = `${cert.player1Wins}:${cert.player2Wins}`;
+    const scoreStr = `${cert.player1SessionWins}:${cert.player2SessionWins}`;
     const ogImageUrl = `${SITE_URL}/share/og?data=${data}`;
 
     return createMetadata({

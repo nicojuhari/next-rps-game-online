@@ -1,32 +1,12 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
 import TableBoard from "@/components/TableBoard";
-import GameResults from "@/components/GameResults";
+import GameOverlay from "@/components/GameOverlay";
 import CertificateModal from "@/components/CertificateModal";
-import { getGameWinner, compareChoices } from "@/lib/game-utils";
-import { type CertificateData } from "@/lib/certificate";
+import { getGameWinner } from "@/lib/game-utils";
+import { type CertificateData, getRandomStake } from "@/lib/certificate";
 import GameEffects from "@/components/GameEffects";
 import { XIcon } from "@phosphor-icons/react";
-
-const buildCertData = (
-    playerChoices: number[],
-    computerChoices: number[],
-    gameWinner: string
-): CertificateData => {
-    const p1Wins = playerChoices.filter((c, i) => compareChoices(c, computerChoices[i]) === 1).length;
-    const p2Wins = playerChoices.filter((c, i) => compareChoices(c, computerChoices[i]) === 2).length;
-    return {
-        mode: "single",
-        player1Name: "You",
-        player2Name: "Computer",
-        player1Wins: p1Wins,
-        player2Wins: p2Wins,
-        player1Choices: playerChoices,
-        player2Choices: computerChoices,
-        winner: gameWinner === "player1" ? "player1" : gameWinner === "computer" ? "player2" : "draw",
-        generatedAt: Date.now(),
-    };
-};
 
 const getButtonStyle = (key: string, finished: boolean) => {
     const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
@@ -49,11 +29,7 @@ const getButtonLabel = (key: string) => {
 
 const OnePlayer = () => {
     const playerId = "player1";
-    const controlers = {
-        1: "🪨",
-        2: "📃",
-        3: "✂️",
-    };
+    const controlers = { 1: "🪨", 2: "📃", 3: "✂️" };
 
     const [playerChoices, setPlayerChoices] = useState<number[]>([]);
     const [computerChoices, setComputerChoices] = useState<number[]>([]);
@@ -66,31 +42,36 @@ const OnePlayer = () => {
     useEffect(() => {
         const storedUserWins = localStorage.getItem("rps_userWins");
         const storedComputerWins = localStorage.getItem("rps_computerWins");
-        if (storedUserWins) {
-            queueMicrotask(() => setUserWins(Number(storedUserWins)));
-        }
-        if (storedComputerWins) {
-            queueMicrotask(() => setComputerWins(Number(storedComputerWins)));
-        }
+        if (storedUserWins) queueMicrotask(() => setUserWins(Number(storedUserWins)));
+        if (storedComputerWins) queueMicrotask(() => setComputerWins(Number(storedComputerWins)));
     }, []);
 
     const isGameFinished = useMemo(() => {
         return playerChoices.length === 3 && computerChoices.length === 3;
     }, [playerChoices, computerChoices]);
 
-    const handleShare = () => {
-        if (!gameWinner || playerChoices.length < 3 || computerChoices.length < 3) return;
-        setCertData(buildCertData(playerChoices, computerChoices, gameWinner));
+    const handleGetCertificate = (winnerName: string) => {
+        const cert: CertificateData = {
+            mode: "single",
+            player1Name: "You",
+            player2Name: "Computer",
+            winnerName: winnerName || undefined,
+            player1SessionWins: userWins,
+            player2SessionWins: computerWins,
+            player1Choices: playerChoices,
+            player2Choices: computerChoices,
+            winner: "player1",
+            stake: getRandomStake(),
+            generatedAt: Date.now(),
+        };
+        setCertData(cert);
         setShowCert(true);
     };
 
-    const getComputerChoice = () => {
-        return Math.floor(Math.random() * 3) + 1;
-    };
+    const getComputerChoice = () => Math.floor(Math.random() * 3) + 1;
 
     const select = (choice: number) => {
         if (playerChoices.length === 3) return;
-
         setPlayerChoices((prev) => {
             const newChoices = [...prev, choice];
             if (prev.length === 2) {
@@ -105,15 +86,14 @@ const OnePlayer = () => {
                     },
                 });
                 setGameWinner(winner);
-
                 if (winner === "player1") {
-                    const newUserWins = userWins + 1;
-                    setUserWins(newUserWins);
-                    localStorage.setItem("rps_userWins", String(newUserWins));
+                    const n = userWins + 1;
+                    setUserWins(n);
+                    localStorage.setItem("rps_userWins", String(n));
                 } else if (winner === "computer") {
-                    const newComputerWins = computerWins + 1;
-                    setComputerWins(newComputerWins);
-                    localStorage.setItem("rps_computerWins", String(newComputerWins));
+                    const n = computerWins + 1;
+                    setComputerWins(n);
+                    localStorage.setItem("rps_computerWins", String(n));
                 }
             }
             return newChoices;
@@ -133,26 +113,29 @@ const OnePlayer = () => {
         localStorage.removeItem("rps_computerWins");
     };
 
+    const outcome = gameWinner === playerId ? "win" : gameWinner === "draw" ? "draw" : gameWinner ? "lose" : null;
+
     return (
         <>
-            <div className="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
-                {/* Score header */}
-                <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
-                    <div className="text-center min-w-12">
-                        <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
-                        <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
+            {/* relative wrapper so the overlay can cover the full card including header */}
+            <div className="max-w-sm mx-auto relative">
+                <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
+                    {/* Score header */}
+                    <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
+                        <div className="text-center min-w-12">
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                            <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
+                        </div>
+                        <p className="text-white font-semibold text-sm">Play vs Computer</p>
+                        <div className="text-center min-w-12">
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">Bot</div>
+                            <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
+                        </div>
                     </div>
-                    <p className="text-white font-semibold text-sm">Play vs Computer</p>
-                    <div className="text-center min-w-12">
-                        <div className="text-blue-100 text-xs uppercase tracking-widest">Bot</div>
-                        <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
-                    </div>
-                </div>
 
-                {/* Game body */}
-                <div className="bg-white p-4 md:p-6">
-                    <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
-                    <div className="relative">
+                    {/* Game body */}
+                    <div className="bg-white p-4 md:p-6">
+                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
                         <div className="grid grid-cols-3 gap-3 w-full">
                             {Object.entries(controlers).map(([key, item]) => (
                                 <button
@@ -166,42 +149,42 @@ const OnePlayer = () => {
                                 </button>
                             ))}
                         </div>
-                        {isGameFinished && (
-                            <div className="absolute inset-0 bg-white flex justify-between gap-6 items-center p-4 md:p-6 rounded-xl">
-                                <GameResults
-                                    playerId={playerId}
-                                    gameWinner={gameWinner}
-                                    onShare={isGameFinished && gameWinner ? handleShare : undefined}
-                                />
-                                <div className="text-center">
-                                    <button onClick={() => resetGame()} className="btn btn-outline">
-                                        Play again
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                        {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
+                        <TableBoard
+                            yourChoices={playerChoices}
+                            secondPlayerChoices={computerChoices}
+                            isGameFinished={isGameFinished}
+                            isOnePlayer={true}
+                        />
                     </div>
-                    <TableBoard
-                        yourChoices={playerChoices}
-                        secondPlayerChoices={computerChoices}
-                        isGameFinished={isGameFinished}
-                        isOnePlayer={true}
-                    />
                 </div>
+
+                {/* Full-card overlay - only for winner/draw/loser */}
+                {isGameFinished && outcome && (
+                    <GameOverlay
+                        outcome={outcome}
+                        youScore={userWins}
+                        opponentScore={computerWins}
+                        opponentLabel="Bot"
+                        onPlayAgain={resetGame}
+                        onGetCertificate={outcome === "win" && userWins > computerWins ? handleGetCertificate : undefined}
+                    />
+                )}
 
                 {isGameFinished && playerId === gameWinner && <GameEffects />}
             </div>
+
             {(userWins > 0 || computerWins > 0) && (
                 <div className="text-center mt-2">
                     <button
                         onClick={resetScore}
                         className="text-xs inline-flex gap-1 items-center text-red-300 hover:text-red-500 underline cursor-pointer transition-colors"
                     >
-                        Reset score <XIcon weight="bold" className="" />
+                        Reset score <XIcon weight="bold" />
                     </button>
                 </div>
             )}
+
+            {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
         </>
     );
 };

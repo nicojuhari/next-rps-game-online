@@ -13,10 +13,10 @@ export async function GET(request: NextRequest) {
         return new Response(null, { status: 302, headers: { Location: "https://rps-game.online/og_rps.jpg" } });
     }
 
-    const { player1Name, player2Name, player1Wins, player2Wins, player1Choices, player2Choices, winner } = cert;
+    const { player1Name, player2Name, player1SessionWins, player2SessionWins, player1Choices, player2Choices, winner, winnerName } = cert;
 
-    const outcomeText =
-        winner === "player1" ? `${player1Name} Wins!` : winner === "player2" ? `${player2Name} Wins!` : "It's a Draw!";
+    const displayName = winnerName || player1Name;
+    const outcomeText = winner === "player1" ? `${displayName} Wins!` : winner === "player2" ? `${player2Name} Wins!` : "It's a Draw!";
     const outcomeColor = winner === "draw" ? "#efaf03" : "#34c069";
 
     const p1NameColor = winner === "player1" ? "#34c069" : winner === "player2" ? "#ed4c46" : "#efaf03";
@@ -81,9 +81,9 @@ export async function GET(request: NextRequest) {
                                 <span style={{ color: "#6b7280", fontSize: "13px", textTransform: "uppercase", letterSpacing: "2px" }}>Player</span>
                             </div>
                             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                                <span style={{ color: "#ffffff", fontSize: "88px", fontWeight: 900, lineHeight: 1 }}>{player1Wins}</span>
+                                <span style={{ color: "#ffffff", fontSize: "88px", fontWeight: 900, lineHeight: 1 }}>{player1SessionWins}</span>
                                 <span style={{ color: "#4a5568", fontSize: "48px", fontWeight: 300 }}>:</span>
-                                <span style={{ color: "#ffffff", fontSize: "88px", fontWeight: 900, lineHeight: 1 }}>{player2Wins}</span>
+                                <span style={{ color: "#ffffff", fontSize: "88px", fontWeight: 900, lineHeight: 1 }}>{player2SessionWins}</span>
                             </div>
                             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
                                 <span style={{ color: p2NameColor, fontSize: "22px", fontWeight: 700 }}>{player2Name}</span>
