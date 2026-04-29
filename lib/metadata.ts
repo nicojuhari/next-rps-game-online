@@ -3,7 +3,19 @@ import type { Metadata } from "next";
 // Base metadata configuration
 export const baseMetadata: Metadata = {
   metadataBase: new URL('https://rps-game.online'),
-  keywords: ["rock paper scissors", "online game", "multiplayer", "free game", "rps"],
+  keywords: [
+    "rock paper scissors online",
+    "play rock paper scissors online",
+    "rps game online",
+    "rock paper scissors free online",
+    "rock paper scissors multiplayer",
+    "rock paper scissors with friends online",
+    "rock paper scissors no signup",
+    "rock paper scissors no download",
+    "rock paper scissors vs computer",
+    "roshambo online",
+    "janken online",
+  ],
   authors: [{ name: "Rock Paper Scissors Online" }],
   robots: {
     index: true,

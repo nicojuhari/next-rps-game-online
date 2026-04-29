@@ -14,10 +14,10 @@ const HomeContent = () => {
                     </p>
                     <ul className="list-disc space-y-2 pl-4">
                         <li>
-                            <span className="font-semibold text-gray-700">If you win:</span> Your opponent is likely to switch to the move
-                            that would have beaten your winning throw.
+                            <span className="font-semibold text-gray-700">If you win:</span> Your opponent will probably switch moves.
                             <br />
-                            <span className="italic text-gray-500">Counter-move:</span> Play what your opponent just played.
+                            <span className="italic text-gray-500">Counter-move:</span> Play the move they just threw - it beats what
+                            they'll try next.
                         </li>
                         <li>
                             <span className="font-semibold text-gray-700">If you lose:</span> Your opponent is likely to repeat their
@@ -38,17 +38,15 @@ const HomeContent = () => {
                         advantage.
                     </p>
                     <p>
-                        Put the strategy to the test — win more games than your opponent and you can{" "}
-                        <span className="font-semibold text-amber-600">claim a personalised winner&apos;s certificate</span> to download
-                        and share.
+                        Put the strategy to the test - win more games than your opponent and you can{" "}
+                        <span className="font-semibold text-amber-600">claim a personalised winner&apos;s certificate</span> to download and
+                        share.
                     </p>
                 </div>
             </div>
 
             <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">
-                    Rock Paper Scissors Rules
-                </h2>
+                <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">Rock Paper Scissors Rules</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>
                         Rock Paper Scissors is played between two players. Each player reveals one of three hand gestures at the same time,
@@ -68,9 +66,9 @@ const HomeContent = () => {
                     <p>If both players throw the same gesture, the round is a draw.</p>
                     <p className="font-semibold text-gray-700">How does best of 3 work?</p>
                     <p>
-                        Each match is 3 rounds. Both players lock in all their choices before any results are shown, so neither player
-                        can react to the other. The player who wins the most rounds takes the game. If each player wins one round and the
-                        third is a draw, the match is tied.
+                        Each match is 3 rounds. Both players lock in all their choices before any results are shown, so neither player can
+                        react to the other. The player who wins the most rounds takes the game. If each player wins one round and the third
+                        is a draw, the match is tied.
                     </p>
                 </div>
             </div>
@@ -88,12 +86,11 @@ const HomeContent = () => {
                         In practice, humans do not throw randomly. Research suggests the actual distribution among casual players looks
                         like: <span className="font-semibold text-gray-700">Rock ~35%</span>,{" "}
                         <span className="font-semibold text-gray-700">Paper ~35%</span>,{" "}
-                        <span className="font-semibold text-gray-700">Scissors ~30%</span>. Scissors is thrown the least, making it the
-                        safest opening move. Paper is the riskiest opener because experienced players expect it and counter with Scissors.
+                        <span className="font-semibold text-gray-700">Scissors ~30%</span>. Scissors is thrown the least.
                     </p>
                     <p>
-                        In 2005, a single hand of Rock Paper Scissors decided a $17.8 million auction contract. The two most famous
-                        auction houses, <span className="font-semibold text-gray-700">Christie&apos;s</span> and{" "}
+                        In 2005, a single hand of Rock Paper Scissors decided a $17.8 million auction contract. The two most famous auction
+                        houses, <span className="font-semibold text-gray-700">Christie&apos;s</span> and{" "}
                         <span className="font-semibold text-gray-700">Sotheby&apos;s</span>, were deadlocked over the rights to sell a
                         valuable art collection and agreed to settle it with one game.
                     </p>
@@ -103,8 +100,8 @@ const HomeContent = () => {
                             <span className="italic">Paper</span>.
                         </li>
                         <li>
-                            <span className="font-semibold text-gray-700">Christie&apos;s</span> asked the 11-year-old twin daughters of
-                            one of their directors for advice. The girls reasoned:{" "}
+                            <span className="font-semibold text-gray-700">Christie&apos;s</span> asked the 11-year-old twin daughters of one
+                            of their directors for advice. The girls reasoned:{" "}
                             <span className="italic">
                                 &quot;Everyone thinks Rock is the strong move. Sotheby&apos;s will expect Rock, so they will play Paper.
                                 Play Scissors.&quot;
@@ -113,8 +110,8 @@ const HomeContent = () => {
                     </ul>
                     <p>
                         Christie&apos;s played <span className="font-semibold text-gray-700">Scissors</span>. Sotheby&apos;s played{" "}
-                        <span className="font-semibold text-gray-700">Paper</span>. Christie&apos;s won, proving that even in a simple
-                        game, <span className="font-semibold text-gray-700">psychology beats pure chance</span>.
+                        <span className="font-semibold text-gray-700">Paper</span>. Christie&apos;s won, proving that even in a simple game,{" "}
+                        <span className="font-semibold text-gray-700">psychology beats pure chance</span>.
                     </p>
                 </div>
             </div>
@@ -125,8 +122,8 @@ const HomeContent = () => {
                 </h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>
-                        Rock Paper Scissors is a hand game played worldwide, usually between two people. It is commonly used as a quick
-                        way to settle decisions, but it is also a game of reading your opponent.
+                        Rock Paper Scissors is a hand game played worldwide, usually between two people. It is commonly used as a quick way
+                        to settle decisions, but it is also a game of reading your opponent.
                     </p>
                     <p>
                         The game traces back over <span className="font-semibold text-gray-700">2,000 years</span> to the{" "}
@@ -139,26 +136,74 @@ const HomeContent = () => {
                     <p>
                         It reached Japan as <span className="italic">Jan-Ken</span>, where it became a daily social tool for settling
                         disputes in schools and businesses. It arrived in the West in the early 20th century and became the standard
-                        quick-decision game it is today. Today it goes by many names: <span className="font-semibold text-gray-700">roshambo</span> in
-                        the US, <span className="font-semibold text-gray-700">piedra papel tijeras</span> in Spanish-speaking countries -
-                        all using the same three gestures.
+                        quick-decision game it is today. Today it goes by many names:{" "}
+                        <span className="font-semibold text-gray-700">roshambo</span> in the US,{" "}
+                        <span className="font-semibold text-gray-700">piedra papel tijeras</span> in Spanish-speaking countries - all using
+                        the same three gestures.
                     </p>
                     <p>
-                        <span className="font-semibold text-gray-700">Did you know?</span>{" "}
-                        <span className="underline">August 27th</span> is officially{" "}
-                        <span className="font-semibold text-gray-700">World Rock Paper Scissors Day</span>.
+                        <span className="font-semibold text-gray-700">Did you know?</span> <span className="underline">August 27th</span> is
+                        officially <span className="font-semibold text-gray-700">World Rock Paper Scissors Day</span>.
                     </p>
                     <p>
-                        The single-player mode on this site picks moves randomly - the same approach most browser games label as
-                        &quot;vs AI&quot;. There is no machine learning or pattern recognition behind it, just an equal 1 in 3 chance
-                        for each throw.
+                        The computer on this site picks randomly - it has an equal 1 in 3 chance of throwing Rock, Paper, or Scissors every
+                        time. No tricks, just chance.
                     </p>
                     <p>
-                        Playing online also removes the main way to cheat in a physical game. In person, a player can delay their throw by
-                        a split second to react to the opponent&apos;s hand - a technique called &quot;shadowing&quot;. On
-                        rps-game.online, both players commit their choice privately before either result is shown, so every match is
-                        genuinely fair.
+                        Playing online also removes the main way to cheat in a physical game. In person, a player can delay their throw by a
+                        split second to react to the opponent&apos;s hand - a technique called &quot;shadowing&quot;. On rps-game.online,
+                        both players commit their choice privately before either result is shown, so every match is genuinely fair.
                     </p>
+                </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+                <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Frequently Asked Questions</h2>
+                <div className="space-y-4 text-sm text-gray-600">
+                    <div>
+                        <h3 className="font-semibold text-gray-800">What beats Rock in Rock Paper Scissors?</h3>
+                        <p className="mt-1">
+                            Paper beats Rock. Paper symbolically covers Rock, making it the winning move whenever your opponent throws Rock.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-gray-800">What beats Paper?</h3>
+                        <p className="mt-1">
+                            Scissors beats Paper. Scissors cuts through Paper, making it the counter whenever your opponent plays Paper.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-gray-800">What beats Scissors?</h3>
+                        <p className="mt-1">
+                            Rock beats Scissors. Rock crushes Scissors, making it the winning move whenever your opponent throws Scissors.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-gray-800">Is Rock Paper Scissors just luck?</h3>
+                        <p className="mt-1">
+                            Not entirely. A random player wins 33% of the time, but real people follow patterns - and patterns can be read.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-gray-800">Do I need to sign up or download anything?</h3>
+                        <p className="mt-1">
+                            No. The game runs entirely in your browser. No account, no download, no app required - just open the page and
+                            play instantly.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-gray-800">Does it work on mobile?</h3>
+                        <p className="mt-1">
+                            Yes. The game is fully responsive and works on any smartphone or tablet with a modern browser.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-gray-800">What is the best opening move?</h3>
+                        <p className="mt-1">
+                            Statistically, Paper is a strong opener. Most players - especially beginners - throw Rock first because it feels
+                            like the strongest move. Playing Paper counters that tendency and gives you a statistical edge in the first
+                            round.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

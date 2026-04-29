@@ -61,7 +61,7 @@ const GameOverlay = ({ outcome, youScore, opponentScore, opponentLabel = "Oppone
 
             {/* Score */}
             <div
-                className="flex items-center gap-4 px-6 py-3 rounded-xl"
+                className="flex items-center gap-4 px-6 py-4 rounded-xl"
                 style={{ background: "rgba(255,255,255,0.06)", animation: "fade-up 0.35s ease-out 0.35s both" }}
             >
                 <div className="text-center">
@@ -82,7 +82,7 @@ const GameOverlay = ({ outcome, youScore, opponentScore, opponentLabel = "Oppone
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col gap-2 w-full max-w-[220px]" style={{ animation: "fade-up 0.35s ease-out 0.45s both" }}>
+            <div className="flex flex-col gap-4 w-full max-w-55" style={{ animation: "fade-up 0.35s ease-out 0.45s both" }}>
                 {onGetCertificate && (
                     <button onClick={onGetCertificate} className="btn btn-success w-full justify-center">
                         🏆 Get Certificate

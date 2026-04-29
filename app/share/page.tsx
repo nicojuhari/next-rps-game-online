@@ -9,7 +9,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     const { data } = await searchParams;
     const cert = decodeCertificate(data || "");
     if (!cert) {
-        return createMetadata({ title: "Game Certificate — Rock Paper Scissors Online" });
+        return createMetadata({ title: "Game Certificate - Rock Paper Scissors Online" });
     }
     const winnerName =
         cert.winner === "player1" ? cert.winnerName || cert.player1Name : cert.winner === "player2" ? cert.player2Name : "Draw";
@@ -17,11 +17,11 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     const ogImageUrl = `${SITE_URL}/share/og?data=${data}`;
 
     return createMetadata({
-        title: `${cert.player1Name} vs ${cert.player2Name} — Rock Paper Scissors`,
+        title: `${cert.player1Name} vs ${cert.player2Name} - Rock Paper Scissors`,
         description: `${winnerName} wins ${scoreStr}! Play Rock Paper Scissors free at rps-game.online`,
         canonical: `/share`,
         openGraph: {
-            title: `${cert.player1Name} vs ${cert.player2Name} — Rock Paper Scissors`,
+            title: `${cert.player1Name} vs ${cert.player2Name} - Rock Paper Scissors`,
             description: `${winnerName} wins ${scoreStr}! Play Rock Paper Scissors free at rps-game.online`,
             images: [{ url: ogImageUrl, width: 1200, height: 630, alt: "Game Certificate" }],
         },

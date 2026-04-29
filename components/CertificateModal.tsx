@@ -25,8 +25,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
     const [copyStatus, setCopyStatus] = useState<"idle" | "copying" | "done">("idle");
 
     const handleGenerate = () => {
-        const finalPlayer2Name =
-            data.mode === "multi" ? player2Name.trim() || "a friend" : data.player2Name;
+        const finalPlayer2Name = data.mode === "multi" ? player2Name.trim() || "a friend" : data.player2Name;
         setCertDataFinal({
             ...data,
             player2Name: finalPlayer2Name,
@@ -151,7 +150,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                         <X size={24} weight="bold" />
                     </button>
 
-                    {/* Certificate preview — also contains the capture target */}
+                    {/* Certificate preview - also contains the capture target */}
                     <div
                         style={{
                             width: `${DISPLAY_W}px`,

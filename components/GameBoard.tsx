@@ -164,8 +164,8 @@ const GameBoard = () => {
                 {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
             </div>
 
-            {/* Certificate badge — always visible */}
-            <div className="text-center mt-3 max-w-sm mx-auto">
+            {/* Certificate badge - always visible */}
+            <div className="text-center mt-5 max-w-sm mx-auto">
                 <button
                     onClick={() => handleCertBadgeClick(canGetCert)}
                     className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${

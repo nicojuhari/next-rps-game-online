@@ -90,7 +90,7 @@ const TwoPlayersContent = () => {
 
     return (
         <div className="py-8">
-            <h1 className="text-lg font-medium mb-6 text-center">Rock Paper Scissors Multiplayer</h1>
+            <h1 className="text-lg font-medium mb-6 text-center">Play Rock Paper Scissors Online with Friends</h1>
             {renderGameSection()}
             <AdSense adSlot="6657389797" className="mt-6" />
             <div className="my-10 space-y-12 font-light">
@@ -112,8 +112,8 @@ const TwoPlayersContent = () => {
                                 decides the winner.
                             </li>
                             <li>
-                                <span className="font-semibold">Claim your certificate</span> - win more games than your opponent and grab
-                                a personalised winner&apos;s certificate. Download it or copy it to rub it in.
+                                <span className="font-semibold">Claim your certificate</span> - win more games than your opponent and grab a
+                                personalised winner&apos;s certificate. Download it or copy it to rub it in.
                             </li>
                         </ol>
                     </div>
@@ -148,6 +148,44 @@ const TwoPlayersContent = () => {
                             Playing online means no arguments over who threw what. Both choices are locked in and revealed at the same time,
                             every time.
                         </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
+                    <div className="space-y-4">
+                        <div>
+                            <h3 className="font-semibold text-sm text-gray-800">Is it free to play?</h3>
+                            <p className="text-sm text-gray-600 mt-1">Yes. Completely free, no account needed, no download required.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-sm text-gray-800">Does my friend need to create an account?</h3>
+                            <p className="text-sm text-gray-600 mt-1">No. Just share the link - no sign-up on either side.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-sm text-gray-800">Can we play from different devices?</h3>
+                            <p className="text-sm text-gray-600 mt-1">
+                                Yes. One player on desktop, the other on a phone - works on any device with a browser.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-sm text-gray-800">
+                                Can either player see the other&apos;s move before choosing?
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-1">
+                                No. Both picks are hidden until both players are done. No peeking, no cheating.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-sm text-gray-800">What happens if I close the browser mid-game?</h3>
+                            <p className="text-sm text-gray-600 mt-1">
+                                Your game room stays open. Reopen the link and continue where you left off.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-sm text-gray-800">Can I play on mobile?</h3>
+                            <p className="text-sm text-gray-600 mt-1">Yes. The game works on any smartphone or tablet.</p>
+                        </div>
                     </div>
                 </div>
             </div>

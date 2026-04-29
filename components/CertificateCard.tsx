@@ -7,7 +7,7 @@ interface CertificateCardProps {
 export const CARD_W = 720;
 export const CARD_H = 470;
 
-// Inline RPS SVG logo — required for html-to-image capture (no external fetch)
+// Inline RPS SVG logo - required for html-to-image capture (no external fetch)
 const RpsLogo = () => (
     <svg
         width="118"
@@ -179,9 +179,7 @@ const CertificateCard = ({ data }: CertificateCardProps) => {
 
                 {/* Award section */}
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <p style={{ fontSize: "11px", color: "#9ca3af", marginBottom: "5px", fontStyle: "italic" }}>
-                        Proudly awarded to
-                    </p>
+                    <p style={{ fontSize: "11px", color: "#9ca3af", marginBottom: "5px", fontStyle: "italic" }}>Proudly awarded to</p>
                     <p
                         style={{
                             fontSize: "34px",

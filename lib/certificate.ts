@@ -58,7 +58,7 @@ const FUNNY_BODIES_SINGLE: Array<(name: string, score: string) => string> = [
     (name, score) =>
         `Physicists confirm this outcome was statistically possible. ${name} wins ${score}. The bot will not be sending a congratulatory message. It has been unplugged for its own good.`,
     (name, score) =>
-        `${name} arrived, played, and conquered — ${score}. The computer offered no rematch. The computer has no feelings about this. Probably.`,
+        `${name} arrived, played, and conquered - ${score}. The computer offered no rematch. The computer has no feelings about this. Probably.`,
 ];
 
 const FUNNY_BODIES_MULTI: Array<(name: string, opponent: string, score: string) => string> = [
@@ -75,13 +75,13 @@ const FUNNY_BODIES_MULTI: Array<(name: string, opponent: string, score: string) 
     (name, opponent, score) =>
         `Eyewitnesses confirm that ${opponent} never had a chance. ${name} wins ${score} and will not be taking questions at this time. The trophy is metaphorical but the glory is eternal.`,
     (name, opponent, score) =>
-        `History books will remember this day. ${opponent} will remember it differently. ${name} wins ${score} and takes home the last slice of pizza, control of the remote, and the moral high ground — simultaneously.`,
+        `History books will remember this day. ${opponent} will remember it differently. ${name} wins ${score} and takes home the last slice of pizza, control of the remote, and the moral high ground - simultaneously.`,
     (name, opponent, score) =>
         `In three rounds of pure psychological warfare, ${name} outmaneuvered ${opponent} completely. Final score: ${score}. ${opponent}'s reputation: under review.`,
     (name, opponent, score) =>
         `${opponent} entered the arena with confidence. ${opponent} left the arena with a lesson. ${name} wins ${score} and leaves with bragging rights valid for no less than one calendar year.`,
     (name, opponent, score) =>
-        `An independent panel of judges — consisting entirely of ${name} — has ruled the result of ${score} to be both fair and inevitable. ${opponent}'s appeal has been denied.`,
+        `An independent panel of judges - consisting entirely of ${name} - has ruled the result of ${score} to be both fair and inevitable. ${opponent}'s appeal has been denied.`,
 ];
 
 export const getCertText = (data: CertificateData): { title: string; body: string } => {

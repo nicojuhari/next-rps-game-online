@@ -165,7 +165,7 @@ const OnePlayer = () => {
                             isGameFinished={isGameFinished}
                             isOnePlayer={true}
                         />
-                        <div className="text-center h-6 mt-1 -mb-4">
+                        <div className="text-center h-6 mt-2 -mb-2">
                             {(userWins > 0 || computerWins > 0) && (
                                 <button
                                     onClick={resetScore}
@@ -193,8 +193,8 @@ const OnePlayer = () => {
                 {isGameFinished && playerId === gameWinner && <GameEffects />}
             </div>
 
-            {/* Certificate badge — always visible */}
-            <div className="text-center mt-3">
+            {/* Certificate badge - always visible */}
+            <div className="text-center mt-5">
                 <button
                     onClick={handleCertBadgeClick}
                     className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${

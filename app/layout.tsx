@@ -8,19 +8,17 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = createMetadata({
-    title: "Play Rock Paper Scissors Online - Free, No Signup",
+    title: "Rock Paper Scissors Online - Play Free vs Computer | No Signup",
     description:
-        "Play rock paper scissors online against the computer or challenge a friend in a private multiplayer room. Free, instant, no signup needed.",
+        "Play Rock Paper Scissors online for free. Challenge the computer instantly - no download, no account required. Best-of-3 rounds, works on all devices.",
     canonical: "/",
     openGraph: {
-        title: "Play Rock Paper Scissors Online - Free, No Signup",
-        description:
-            "Play rock paper scissors online against the computer or challenge a friend in a private multiplayer room. Free, instant, no signup needed.",
+        title: "Rock Paper Scissors Online - Play Free vs Computer",
+        description: "Play Rock Paper Scissors online for free. Challenge the computer instantly - no download, no account required.",
     },
     twitter: {
-        title: "Play Rock Paper Scissors Online - Free, No Signup",
-        description:
-            "Play rock paper scissors online against the computer or challenge a friend in a private multiplayer room. Free, instant, no signup needed.",
+        title: "Rock Paper Scissors Online - Play Free vs Computer",
+        description: "Play Rock Paper Scissors online for free. No download, no account required.",
     },
 });
 
@@ -41,16 +39,16 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": ["WebApplication", "GameApplication", "EntertainmentApplication"],
+                            "@type": "VideoGame",
                             name: "Rock Paper Scissors Online",
                             url: "https://rps-game.online",
                             description:
-                                "Create a private multiplayer room in 1 click. The fastest way to play RPS with friends or the computer. 100% Free, secure, and no downloads required",
+                                "Play Rock Paper Scissors online for free. Challenge the computer or play real-time multiplayer with friends. No download, no signup required.",
                             applicationCategory: "Game",
-                            genre: "Family Friendly, Casual, Strategy",
+                            genre: "Casual",
                             operatingSystem: "Any",
                             gamePlatform: "Web Browser",
-                            playMode: "MultiPlayer",
+                            playMode: ["SinglePlayer", "MultiPlayer"],
                             author: {
                                 "@type": "Person",
                                 name: "Nick",
@@ -72,7 +70,8 @@ export default function RootLayout({
                                 category: "free",
                             },
                             screenshot: "https://rps-game.online/og_rps.jpg",
-                            featureList: "Instant Private Rooms, No Signup Required, 128-bit Encryption for Fair Play, Mobile Compatible",
+                            featureList:
+                                "Single-player vs Computer, Real-time Multiplayer, Instant Private Rooms, No Signup Required, Mobile Compatible",
                             isAccessibleForFree: true,
                         }),
                     }}
