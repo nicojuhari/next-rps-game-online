@@ -237,6 +237,20 @@
     "copyLink": "Copy the Link",
     "copying": "Copying ..."
   },
+  "certificate": {
+    "title": "🏆 Your Certificate",
+    "yourName": "Your name (optional)",
+    "anonymous": "Leave blank to stay anonymous",
+    "opponentName": "Opponent's name (optional)",
+    "friendPlaceholder": "a friend",
+    "generate": "Generate Certificate →",
+    "saving": "Saving…",
+    "download": "Download PNG",
+    "copied": "Copied!",
+    "copying": "Copying…",
+    "copyImage": "Copy Image",
+    "back": "Back"
+  },
   "jsonLd": {
     "videoGame": {
       "name": "Rock Paper Scissors Online",

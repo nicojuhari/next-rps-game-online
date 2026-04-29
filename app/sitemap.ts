@@ -1,24 +1,17 @@
 import { MetadataRoute } from "next";
 
+const BASE = "https://rps-game.online";
+
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
-        {
-            url: "https://rps-game.online",
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 1,
-        },
-        {
-            url: "https://rps-game.online/two-players",
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.8,
-        },
-        {
-            url: "https://rps-game.online/privacy",
-            lastModified: new Date(),
-            changeFrequency: "yearly",
-            priority: 0.3,
-        },
+        { url: `${BASE}`, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
+        { url: `${BASE}/es`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+        { url: `${BASE}/pt`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+        { url: `${BASE}/two-players`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+        { url: `${BASE}/es/two-players`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+        { url: `${BASE}/pt/two-players`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+        { url: `${BASE}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+        { url: `${BASE}/es/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
+        { url: `${BASE}/pt/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
     ];
 }

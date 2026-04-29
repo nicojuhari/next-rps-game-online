@@ -24,7 +24,8 @@ const HomeContent = () => {
                             <span className="italic text-gray-500">{t("strategy.loseCounterLabel")}</span> {t("strategy.loseCounter")}
                         </li>
                         <li>
-                            <span className="font-semibold text-gray-700">{t("strategy.firstThrowLabel")}</span> {t("strategy.firstThrowText")}
+                            <span className="font-semibold text-gray-700">{t("strategy.firstThrowLabel")}</span>{" "}
+                            {t("strategy.firstThrowText")}
                             <br />
                             <span className="italic text-gray-500">{t("strategy.tipLabel")}</span> {t("strategy.tip")}
                         </li>
@@ -42,13 +43,13 @@ const HomeContent = () => {
                     <p>{t("rules.p1")}</p>
                     <ul className="pl-4 space-y-2 list-disc">
                         <li>
-                            <span className="font-semibold text-gray-700">{t("rules.rockCrushes")}</span> - ✊ beats ✂️
+                            <span className="font-semibold text-gray-700">{t("rules.rockCrushes")}</span> - ✊ → ✂️
                         </li>
                         <li>
-                            <span className="font-semibold text-gray-700">{t("rules.scissorsCuts")}</span> - ✂️ beats 📄
+                            <span className="font-semibold text-gray-700">{t("rules.scissorsCuts")}</span> - ✂️ → 📄
                         </li>
                         <li>
-                            <span className="font-semibold text-gray-700">{t("rules.paperCovers")}</span> - 📄 beats ✊
+                            <span className="font-semibold text-gray-700">{t("rules.paperCovers")}</span> - 📄 → ✊
                         </li>
                     </ul>
                     <p>{t("rules.drawRule")}</p>

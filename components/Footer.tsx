@@ -1,20 +1,38 @@
 "use client";
+import { useState, useRef, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 
 const languages = [
-    { code: "en", label: "EN" },
-    { code: "es", label: "ES" },
-    { code: "pt", label: "PT" },
+    { code: "en", label: "English", flag: "🇺🇸" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
+    { code: "pt", label: "Português", flag: "🇵🇹" },
 ] as const;
 
+type LangCode = (typeof languages)[number]["code"];
+
 const Footer = () => {
-    const locale = useLocale();
+    const locale = useLocale() as LangCode;
     const pathname = usePathname();
     const router = useRouter();
+    const [open, setOpen] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClick = (e: MouseEvent) => {
+            if (ref.current && !ref.current.contains(e.target as Node)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClick);
+        return () => document.removeEventListener("mousedown", handleClick);
+    }, []);
+
+    const current = languages.find((l) => l.code === locale) ?? languages[0];
 
     const switchLocale = (newLocale: string) => {
         router.replace(pathname, { locale: newLocale });
+        setOpen(false);
     };
 
     return (
@@ -33,20 +51,41 @@ const Footer = () => {
                         Nick
                     </a>
                 </div>
-                <div className="flex items-center gap-1">
-                    {languages.map(({ code, label }) => (
-                        <button
-                            key={code}
-                            onClick={() => switchLocale(code)}
-                            className={`text-xs px-2 py-1 rounded transition-colors cursor-pointer ${
-                                locale === code
-                                    ? "bg-gray-200 text-gray-700 font-semibold"
-                                    : "text-gray-400 hover:text-gray-600 hover:bg-gray-100"
-                            }`}
+
+                <div className="relative" ref={ref}>
+                    <button
+                        onClick={() => setOpen(!open)}
+                        className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+                    >
+                        <span className="text-base leading-none">{current.flag}</span>
+                        <span className="text-xs font-medium uppercase tracking-wide">{current.code}</span>
+                        <svg
+                            className={`w-3 h-3 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
+                            viewBox="0 0 12 12"
+                            fill="none"
                         >
-                            {label}
-                        </button>
-                    ))}
+                            <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+
+                    {open && (
+                        <div className="absolute bottom-full right-0 mb-1.5 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden min-w-[140px] py-1">
+                            {languages.map(({ code, label, flag }) => (
+                                <button
+                                    key={code}
+                                    onClick={() => switchLocale(code)}
+                                    className={`w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left transition-colors cursor-pointer ${
+                                        code === locale
+                                            ? "bg-gray-50 text-gray-800 font-medium"
+                                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-800"
+                                    }`}
+                                >
+                                    <span className="text-base leading-none">{flag}</span>
+                                    <span>{label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </footer>

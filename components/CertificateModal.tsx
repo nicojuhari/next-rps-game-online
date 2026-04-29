@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { toPng, toBlob } from "html-to-image";
 import { DownloadSimple, Copy, X, ArrowLeft } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 import CertificateCard, { CARD_W, CARD_H } from "@/components/CertificateCard";
 import { CertificateData } from "@/lib/certificate";
 
@@ -16,6 +17,7 @@ const SCALE = DISPLAY_W / CARD_W;
 const DISPLAY_H = Math.round(CARD_H * SCALE);
 
 const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
+    const t = useTranslations("certificate");
     const captureRef = useRef<HTMLDivElement>(null);
     const [step, setStep] = useState<1 | 2>(1);
     const [winnerName, setWinnerName] = useState("");
@@ -25,7 +27,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
     const [copyStatus, setCopyStatus] = useState<"idle" | "copying" | "done">("idle");
 
     const handleGenerate = () => {
-        const finalPlayer2Name = data.mode === "multi" ? player2Name.trim() || "a friend" : data.player2Name;
+        const finalPlayer2Name = data.mode === "multi" ? player2Name.trim() || t("friendPlaceholder") : data.player2Name;
         setCertDataFinal({
             ...data,
             player2Name: finalPlayer2Name,
@@ -96,7 +98,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
             {step === 1 && (
                 <div className="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl">
                     <div className="flex items-center justify-between mb-5">
-                        <h2 className="text-lg font-bold text-gray-800">🏆 Your Certificate</h2>
+                        <h2 className="text-lg font-bold text-gray-800">{t("title")}</h2>
                         <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
                             <X size={20} weight="bold" />
                         </button>
@@ -104,12 +106,12 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
 
                     {/* Winner name */}
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Your name (optional)</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">{t("yourName")}</label>
                         <input
                             type="text"
                             value={winnerName}
                             onChange={(e) => setWinnerName(e.target.value)}
-                            placeholder="Leave blank to stay anonymous"
+                            placeholder={t("anonymous")}
                             maxLength={40}
                             className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
                         />
@@ -118,12 +120,12 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                     {/* Opponent name (multiplayer only) */}
                     {data.mode === "multi" && (
                         <div className="mb-6">
-                            <label className="block text-sm font-medium text-gray-700 mb-1.5">Opponent&apos;s name (optional)</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1.5">{t("opponentName")}</label>
                             <input
                                 type="text"
                                 value={player2Name}
                                 onChange={(e) => setPlayer2Name(e.target.value)}
-                                placeholder="a friend"
+                                placeholder={t("friendPlaceholder")}
                                 maxLength={40}
                                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
                             />
@@ -134,7 +136,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                         onClick={handleGenerate}
                         className="w-full py-2.5 rounded-xl text-white font-semibold text-sm transition-all bg-blue-500 hover:bg-blue-600"
                     >
-                        Generate Certificate →
+                        {t("generate")}
                     </button>
                 </div>
             )}
@@ -205,7 +207,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                             className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-all bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50"
                         >
                             <DownloadSimple size={16} weight="bold" />
-                            {downloading ? "Saving…" : "Download PNG"}
+                            {downloading ? t("saving") : t("download")}
                         </button>
                         <button
                             onClick={handleCopy}
@@ -213,7 +215,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                             className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-all border-2 border-white/20 text-white hover:border-white/40 disabled:opacity-50"
                         >
                             <Copy size={16} weight="bold" />
-                            {copyStatus === "done" ? "Copied!" : copyStatus === "copying" ? "Copying…" : "Copy Image"}
+                            {copyStatus === "done" ? t("copied") : copyStatus === "copying" ? t("copying") : t("copyImage")}
                         </button>
                     </div>
 
@@ -222,7 +224,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                         className="flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition-colors"
                     >
                         <ArrowLeft size={14} />
-                        Back
+                        {t("back")}
                     </button>
                 </div>
             )}
