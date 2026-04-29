@@ -1,16 +1,19 @@
 import { compareChoices } from "@/lib/game-utils";
 import { CheckIcon, CheckCircleIcon, XCircleIcon, EqualsIcon, QuestionMarkIcon } from "@phosphor-icons/react";
+import type { Translations } from "@/lib/i18n";
 
 const TableBoard = ({
     yourChoices,
     secondPlayerChoices,
     isGameFinished,
     isOnePlayer,
+    t,
 }: {
     yourChoices: number[];
     secondPlayerChoices: number[];
     isGameFinished: boolean;
     isOnePlayer?: boolean;
+    t: Translations;
 }) => {
     const controlers = {
         1: "🪨",
@@ -22,13 +25,13 @@ const TableBoard = ({
             <table className="w-full table-fixed border-collapse player-selected-table">
                 <thead>
                     <tr className="text-gray-500">
-                        <th className="font-light">You</th>
+                        <th className="font-light">{t.tableBoard.you}</th>
                         {!isOnePlayer ? (
-                            <th className="truncate font-light">2nd Player</th>
+                            <th className="truncate font-light">{t.tableBoard.secondPlayer}</th>
                         ) : (
-                            <th className="truncate font-light">Computer</th>
+                            <th className="truncate font-light">{t.tableBoard.computer}</th>
                         )}
-                        <th className="font-light">Results</th>
+                        <th className="font-light">{t.tableBoard.results}</th>
                     </tr>
                 </thead>
                 <tbody>

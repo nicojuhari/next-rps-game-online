@@ -7,6 +7,7 @@ import { getGameWinner } from "@/lib/game-utils";
 import { type CertificateData } from "@/lib/certificate";
 import GameEffects from "@/components/GameEffects";
 import { XIcon } from "@phosphor-icons/react";
+import type { Translations } from "@/lib/i18n";
 
 const getButtonStyle = (key: string, finished: boolean) => {
     const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
@@ -21,13 +22,13 @@ const getButtonStyle = (key: string, finished: boolean) => {
     return `${base} ${active} bg-red-50 border-red-200 hover:bg-red-100 hover:border-red-400 hover:shadow-lg hover:shadow-red-100`;
 };
 
-const getButtonLabel = (key: string) => {
-    if (key === "1") return "Rock";
-    if (key === "2") return "Paper";
-    return "Scissors";
+const getButtonLabel = (key: string, t: Translations) => {
+    if (key === "1") return t.onePlayer.rock;
+    if (key === "2") return t.onePlayer.paper;
+    return t.onePlayer.scissors;
 };
 
-const OnePlayer = () => {
+const OnePlayer = ({ t }: { t: Translations }) => {
     const playerId = "player1";
     const controlers = { 1: "🪨", 2: "📃", 3: "✂️" };
 
@@ -54,8 +55,8 @@ const OnePlayer = () => {
     const handleGetCertificate = () => {
         setCertData({
             mode: "single",
-            player1Name: "You",
-            player2Name: "Computer",
+            player1Name: t.onePlayer.you,
+            player2Name: t.tableBoard.computer,
             player1SessionWins: userWins,
             player2SessionWins: computerWins,
             player1Choices: playerChoices,
@@ -88,8 +89,8 @@ const OnePlayer = () => {
                     $id: "local-one-player",
                     maxPlayers: 2,
                     players: {
-                        player1: { name: "You", choices: newChoices },
-                        computer: { name: "Computer", choices: compChoices },
+                        player1: { name: t.onePlayer.you, choices: newChoices },
+                        computer: { name: t.tableBoard.computer, choices: compChoices },
                     },
                 });
                 setGameWinner(winner);
@@ -125,27 +126,24 @@ const OnePlayer = () => {
 
     return (
         <>
-            {/* relative wrapper so the overlay can cover the full card including header */}
             <div className="max-w-sm mx-auto relative">
                 <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
-                    {/* Score header */}
                     <div className="bg-gray-700 px-5 pt-3 pb-2">
                         <div className="flex items-center justify-between">
                             <div className="text-center min-w-12">
-                                <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                                <div className="text-blue-100 text-xs uppercase tracking-widest">{t.onePlayer.you}</div>
                                 <div className="text-white font-bold text-2xl leading-none">{userWins}</div>
                             </div>
-                            <p className="text-white font-semibold text-sm">Play vs Computer</p>
+                            <p className="text-white font-semibold text-sm">{t.onePlayer.vsComputer}</p>
                             <div className="text-center min-w-12">
-                                <div className="text-blue-100 text-xs uppercase tracking-widest">Bot</div>
+                                <div className="text-blue-100 text-xs uppercase tracking-widest">{t.onePlayer.bot}</div>
                                 <div className="text-white font-bold text-2xl leading-none">{computerWins}</div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Game body */}
                     <div className="bg-white p-4 md:p-6 relative">
-                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
+                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">{t.onePlayer.pickMove}</p>
                         <div className="grid grid-cols-3 gap-3 w-full">
                             {Object.entries(controlers).map(([key, item]) => (
                                 <button
@@ -155,7 +153,7 @@ const OnePlayer = () => {
                                     disabled={isGameFinished}
                                 >
                                     <span className="text-3xl">{item}</span>
-                                    <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
+                                    <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key, t)}</span>
                                 </button>
                             ))}
                         </div>
@@ -164,6 +162,7 @@ const OnePlayer = () => {
                             secondPlayerChoices={computerChoices}
                             isGameFinished={isGameFinished}
                             isOnePlayer={true}
+                            t={t}
                         />
                         <div className="text-center h-6 mt-2 -mb-2">
                             {(userWins > 0 || computerWins > 0) && (
@@ -171,29 +170,28 @@ const OnePlayer = () => {
                                     onClick={resetScore}
                                     className="transition-all duration-700 text-xs inline-flex gap-1 items-center text-gray-500 hover:text-red-400 cursor-pointer"
                                 >
-                                    Reset the Score <XIcon size={10} weight="bold" />
+                                    {t.onePlayer.resetScore} <XIcon size={10} weight="bold" />
                                 </button>
                             )}
                         </div>
                     </div>
                 </div>
 
-                {/* Full-card overlay - only for winner/draw/loser */}
                 {isGameFinished && outcome && (
                     <GameOverlay
                         outcome={outcome}
                         youScore={userWins}
                         opponentScore={computerWins}
-                        opponentLabel="Bot"
+                        opponentLabel={t.onePlayer.bot}
                         onPlayAgain={resetGame}
                         onGetCertificate={outcome === "win" && canGetCert ? handleGetCertificate : undefined}
+                        t={t}
                     />
                 )}
 
                 {isGameFinished && playerId === gameWinner && <GameEffects />}
             </div>
 
-            {/* Certificate badge - always visible */}
             <div className="text-center mt-5">
                 <button
                     onClick={handleCertBadgeClick}
@@ -203,9 +201,9 @@ const OnePlayer = () => {
                             : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
                     }`}
                 >
-                    🏆 Get your winner&apos;s certificate
+                    {t.onePlayer.getCertificate}
                 </button>
-                {certHint && <p className="text-xs text-gray-500 mt-1.5">Win more games than the bot to unlock your certificate.</p>}
+                {certHint && <p className="text-xs text-gray-500 mt-1.5">{t.onePlayer.certUnlock}</p>}
             </div>
 
             {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}

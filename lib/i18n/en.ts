@@ -1,0 +1,386 @@
+import type { Translations } from "./types";
+
+const en: Translations = {
+    meta: {
+        home: {
+            title: "Rock Paper Scissors Online - Play Free vs Computer | No Signup",
+            description:
+                "Play Rock Paper Scissors online for free. Challenge the computer instantly - no download, no account required. Best-of-3 rounds, works on all devices.",
+            keywords: [
+                "rock paper scissors online",
+                "play rock paper scissors online",
+                "rps game online",
+                "rock paper scissors free online",
+                "rock paper scissors vs computer",
+                "play rock paper scissors against computer",
+                "rock paper scissors no signup",
+                "rock paper scissors no download",
+                "rock paper scissors game",
+                "play rps online",
+            ],
+        },
+        twoPlayers: {
+            title: "Rock Paper Scissors with Friends Online - Free Real-Time Multiplayer | No Signup",
+            description:
+                "Challenge a friend to Rock Paper Scissors online in real time. Share a link, pick your moves, see who wins. Free, no login, works on any device.",
+            keywords: [
+                "rock paper scissors online multiplayer",
+                "rock paper scissors with friends online",
+                "play rock paper scissors with friends online free",
+                "rock paper scissors two player online",
+                "rps multiplayer online",
+                "rock paper scissors real-time online game",
+                "rock paper scissors 1v1",
+                "rock paper scissors no signup",
+                "rock paper scissors decision maker online",
+            ],
+        },
+        privacy: {
+            title: "Privacy Policy - Rock Paper Scissors Online",
+            description:
+                "Learn about our privacy practices and data protection policies for Rock Paper Scissors Online. We prioritize your privacy and data security.",
+        },
+    },
+
+    home: {
+        h1Label: "Free · No Signup",
+        h1Rock: "Rock",
+        h1Paper: "Paper",
+        h1Scissors: "Scissors",
+        h1Online: "Online",
+        subtitle: "Play against the computer or challenge a friend\nNo download, no account required.",
+        privacyNoticeBefore: "Read our ",
+        privacyNoticeLink: "Privacy Policy",
+        privacyNoticeAfter: " to learn how we protect your data.",
+        strategy: {
+            title: "How to Win at Rock Paper Scissors",
+            p1: "Most players treat Rock Paper Scissors as pure chance, like flipping a coin. It is not.",
+            p2: 'A study by Zhejiang University analyzed hundreds of thousands of matches and found that human players follow predictable patterns. They discovered a strategy called "Win-Stay, Lose-Shift":',
+            winLabel: "If you win:",
+            winText: "Your opponent will probably switch moves.",
+            winCounterLabel: "Counter-move:",
+            winCounter: "Play the move they just threw - it beats what they'll try next.",
+            loseLabel: "If you lose:",
+            loseText: 'Your opponent is likely to repeat their winning move because it feels "lucky".',
+            loseCounterLabel: "Counter-move:",
+            loseCounter: "Play the move that beats what they just threw.",
+            firstThrowLabel: "First Throw Strategy:",
+            firstThrowText: "Beginners, especially male players, overwhelmingly open with Rock because it feels strong.",
+            tipLabel: "Tip:",
+            tip: "Against a new opponent, throw Paper first.",
+            luckQ: "Is Rock Paper Scissors luck or skill?",
+            luckA: "Both. A purely random player wins 33.3% of the time. But human choices are not random, which is why spotting patterns gives you a real advantage.",
+            certCTA:
+                "Put the strategy to the test - win more games than your opponent and you can claim a personalised winner's certificate to download and share.",
+        },
+        rules: {
+            title: "Rock Paper Scissors Rules",
+            p1: "Rock Paper Scissors is played between two players. Each player reveals one of three hand gestures at the same time, and the winner is decided by a simple set of rules:",
+            rockCrushes: "Rock crushes Scissors",
+            scissorsCuts: "Scissors cuts Paper",
+            paperCovers: "Paper covers Rock",
+            drawRule: "If both players throw the same gesture, the round is a draw.",
+            bestOf3Q: "How does best of 3 work?",
+            bestOf3A: "Each match is 3 rounds. Both players lock in all their choices before any results are shown, so neither player can react to the other. The player who wins the most rounds takes the game. If each player wins one round and the third is a draw, the match is tied.",
+        },
+        statistics: {
+            title: "Rock Paper Scissors Statistics",
+            p1: "In a perfectly random game, each throw has an equal 1 in 3 chance (33.3%) of winning, losing, or drawing.",
+            p2: "In practice, humans do not throw randomly. Research suggests the actual distribution among casual players looks like: Rock ~35%, Paper ~35%, Scissors ~30%. Scissors is thrown the least.",
+            story: "In 2005, a single hand of Rock Paper Scissors decided a $17.8 million auction contract. The two most famous auction houses, Christie's and Sotheby's, were deadlocked over the rights to sell a valuable art collection and agreed to settle it with one game.",
+            sothebys: "Sotheby's treated it as chance and played Paper.",
+            christies:
+                "Christie's asked the 11-year-old twin daughters of one of their directors for advice. The girls reasoned: \"Everyone thinks Rock is the strong move. Sotheby's will expect Rock, so they will play Paper. Play Scissors.\"",
+            conclusion:
+                "Christie's played Scissors. Sotheby's played Paper. Christie's won, proving that even in a simple game, psychology beats pure chance.",
+        },
+        history: {
+            title: "What Is Rock Paper Scissors?",
+            p1: "Rock Paper Scissors is a hand game played worldwide, usually between two people. It is commonly used as a quick way to settle decisions, but it is also a game of reading your opponent.",
+            p2: "The game traces back over 2,000 years to the Chinese Han Dynasty (206 BC - 220 AD), where it was called shoushiling and used gestures representing a Frog, a Slug, and a Snake.",
+            p3: "It reached Japan as Jan-Ken, where it became a daily social tool for settling disputes in schools and businesses. It arrived in the West in the early 20th century and became the standard quick-decision game it is today. Today it goes by many names: roshambo in the US, piedra papel tijeras in Spanish-speaking countries - all using the same three gestures.",
+            didYouKnow: "Did you know? August 27th is officially World Rock Paper Scissors Day.",
+            computerNote:
+                "The computer on this site picks randomly - it has an equal 1 in 3 chance of throwing Rock, Paper, or Scissors every time. No tricks, just chance.",
+            fairPlay:
+                "Playing online also removes the main way to cheat in a physical game. In person, a player can delay their throw by a split second to react to the opponent's hand - a technique called \"shadowing\". On rps-game.online, both players commit their choice privately before either result is shown, so every match is genuinely fair.",
+        },
+        faq: {
+            title: "Frequently Asked Questions",
+            items: [
+                {
+                    q: "What beats Rock in Rock Paper Scissors?",
+                    a: "Paper beats Rock. Paper symbolically covers Rock, making it the winning move whenever your opponent throws Rock.",
+                },
+                {
+                    q: "What beats Paper?",
+                    a: "Scissors beats Paper. Scissors cuts through Paper, making it the counter whenever your opponent plays Paper.",
+                },
+                {
+                    q: "What beats Scissors?",
+                    a: "Rock beats Scissors. Rock crushes Scissors, making it the winning move whenever your opponent throws Scissors.",
+                },
+                {
+                    q: "Is Rock Paper Scissors just luck?",
+                    a: "Not entirely. A random player wins 33% of the time, but real people follow patterns - and patterns can be read.",
+                },
+                {
+                    q: "Do I need to sign up or download anything?",
+                    a: "No. The game runs entirely in your browser. No account, no download, no app required - just open the page and play instantly.",
+                },
+                {
+                    q: "Does it work on mobile?",
+                    a: "Yes. The game is fully responsive and works on any smartphone or tablet with a modern browser.",
+                },
+                {
+                    q: "What is the best opening move?",
+                    a: "Statistically, Paper is a strong opener. Most players - especially beginners - throw Rock first because it feels like the strongest move. Playing Paper counters that tendency and gives you a statistical edge in the first round.",
+                },
+            ],
+        },
+    },
+
+    twoPlayers: {
+        h1: "Play Rock Paper Scissors Online with Friends",
+        gameNotFound: "Game not found. Create a new one above.",
+        cancelGame: "Cancel and create a new game",
+        pickMoveNote: "Pick your move 3 times, results show once both players are done.",
+        howToPlay: {
+            title: "How to Play Rock Paper Scissors Online with Friends",
+            intro: "Playing with a friend takes three steps - no account or app needed:",
+            createRoomLabel: "Create a private room",
+            createRoomText: 'click "Create a Game" above or on the homepage. You get a private link right away.',
+            shareLinkLabel: "Share the link",
+            shareLinkText: "send it to your friend via any messaging app. Works on any device.",
+            playLabel: "Play",
+            playText: "both players pick Rock, Paper, or Scissors. Best of 3 rounds decides the winner.",
+            claimCertLabel: "Claim your certificate",
+            claimCertText:
+                "win more games than your opponent and grab a personalised winner's certificate. Download it or copy it to rub it in.",
+        },
+        howItWorks: {
+            title: "Rock Paper Scissors 1v1 - How It Works",
+            p1: "Both players pick at the same time and neither can see the other's choice before locking in. This makes every match genuinely fair - no last-second reactions, no disputes.",
+            firstTo2: "The player who wins the most rounds wins the game. First to 2 wins takes it.",
+            scores: "Scores are tracked across multiple games in the same room - no need to create a new link each time.",
+        },
+        whySettle: {
+            title: "Why Settle It with Rock Paper Scissors?",
+            p1: "Rock Paper Scissors gives both players an equal shot and takes seconds to play. People use it to decide:",
+            items: [
+                "Who pays for dinner",
+                "Who picks the movie or playlist",
+                "Who goes first in a board game",
+                "Any decision where you both want a fair shot",
+            ],
+            p2: "Playing online means no arguments over who threw what. Both choices are locked in and revealed at the same time, every time.",
+        },
+        faq: {
+            title: "Frequently Asked Questions",
+            items: [
+                {
+                    q: "Is it free to play?",
+                    a: "Yes. Completely free, no account needed, no download required.",
+                },
+                {
+                    q: "Does my friend need to create an account?",
+                    a: "No. Just share the link - no sign-up on either side.",
+                },
+                {
+                    q: "Can we play from different devices?",
+                    a: "Yes. One player on desktop, the other on a phone - works on any device with a browser.",
+                },
+                {
+                    q: "Can either player see the other's move before choosing?",
+                    a: "No. Both picks are hidden until both players are done. No peeking, no cheating.",
+                },
+                {
+                    q: "What happens if I close the browser mid-game?",
+                    a: "Your game room stays open. Reopen the link and continue where you left off.",
+                },
+                {
+                    q: "Can I play on mobile?",
+                    a: "Yes. The game works on any smartphone or tablet.",
+                },
+            ],
+        },
+    },
+
+    privacy: {
+        h1: "Privacy Assurance",
+        intro: "We take your privacy seriously. Here is what you need to know:",
+        noPersonalDataTitle: "No Personal Data Collection",
+        noPersonalDataText: "We do not collect or store any personal information like names, emails, or IP addresses.",
+        anonymousIdTitle: "Anonymous Player ID",
+        anonymousIdText:
+            "A random player ID is automatically generated to enable gameplay. This ID is stored in your browser's local storage and is not linked to any personal data.",
+        simpleAnalyticsTitle: "Simple Analytics",
+        simpleAnalyticsText:
+            "We use Simple Analytics to understand general website usage - like how many people visit - without tracking individuals or using cookies.",
+        gameDataTitle: "Game Data Storage",
+        gameDataText:
+            "Your in-game actions (rock, paper, or scissors) and your anonymous player ID are saved securely in our database. This is used only for gameplay purposes and cannot be used to identify you.",
+        localStorageTitle: "Local Storage",
+        localStorageText: "Most of your game data stays on your device using local storage. This helps the game run smoothly and privately.",
+        anonymityTitle: "Your Anonymity is Safe",
+        anonymityText:
+            "We don't use cookies, track you across the web, or build user profiles. You can enjoy the game completely anonymously.",
+        deleteButton: "Delete My Game Data",
+        deleteAlert: "Your game data has been deleted.",
+    },
+
+    header: {
+        playWithFriend: "Play with a Friend",
+    },
+
+    mainCTA: {
+        createLabel: "Create",
+        shareLabel: "Share",
+        playLabel: "Play",
+        stakeLabel: "What's at stake?",
+        stakeOptional: "(optional)",
+        stakePlaceholder: "e.g., who goes first, who washes dishes, etc.",
+        createButton: "Create a Game",
+        noAccount: "No account needed",
+    },
+
+    onePlayer: {
+        you: "You",
+        bot: "Bot",
+        vsComputer: "Play vs Computer",
+        pickMove: "Pick your move",
+        rock: "Rock",
+        paper: "Paper",
+        scissors: "Scissors",
+        resetScore: "Reset the Score",
+        getCertificate: "🏆 Get your winner's certificate",
+        certUnlock: "Win more games than the bot to unlock your certificate.",
+    },
+
+    gameBoard: {
+        you: "You",
+        friend: "Friend",
+        vsFriend: "Play vs Friend",
+        pickMove: "Pick your move",
+        rock: "Rock",
+        paper: "Paper",
+        scissors: "Scissors",
+        getCertificate: "🏆 Get your winner's certificate",
+        certUnlock: "Win more games than your friend to unlock your certificate.",
+    },
+
+    tableBoard: {
+        you: "You",
+        computer: "Computer",
+        secondPlayer: "2nd Player",
+        results: "Results",
+    },
+
+    gameOverlay: {
+        win: {
+            headline: "You Win!",
+            sub: "Nicely done. Ready for another round?",
+        },
+        draw: {
+            headline: "It's a Draw!",
+            sub: "So close. Want to settle it?",
+        },
+        lose: {
+            headline: "You Lost.",
+            sub: "Don't give up - play again!",
+        },
+        youLabel: "You",
+        getCertificate: "🏆 Get Certificate",
+        playAgain: "Play Again",
+    },
+
+    gameResults: {
+        won: "🥳 You Won!",
+        draw: "It's a Draw!",
+        lost: "😞 You Lost.",
+        shareScore: "🏆 Share score",
+    },
+
+    joinGame: {
+        invitation: "You are invited to play RPS online!",
+        joinButton: "Join the Game",
+    },
+
+    waitingPlayer: {
+        roomCreated: "You created this game room",
+        sharePrompt: "Share the link with someone to start playing!",
+        copyLink: "Copy the Link",
+        copying: "Copying ...",
+    },
+
+    jsonLd: {
+        videoGame: {
+            name: "Rock Paper Scissors Online",
+            description:
+                "Play Rock Paper Scissors online for free. Challenge the computer or play real-time multiplayer with friends. No download, no signup required.",
+            featureList: "Single-player vs Computer, Real-time Multiplayer, Instant Private Rooms, No Signup Required, Mobile Compatible",
+        },
+        faqHome: [
+            {
+                q: "What beats Rock in Rock Paper Scissors?",
+                a: "Paper beats Rock. Paper symbolically covers Rock, making it the winning move whenever your opponent throws Rock.",
+            },
+            {
+                q: "What beats Paper in Rock Paper Scissors?",
+                a: "Scissors beats Paper. Scissors cuts through Paper, making it the counter whenever your opponent plays Paper.",
+            },
+            {
+                q: "What beats Scissors in Rock Paper Scissors?",
+                a: "Rock beats Scissors. Rock crushes Scissors, making it the winning move whenever your opponent throws Scissors.",
+            },
+            {
+                q: "Is Rock Paper Scissors just luck?",
+                a: "At random, each throw wins 33.3% of the time. But humans don't choose randomly - they follow predictable patterns. Research shows most beginners open with Rock, and players tend to repeat winning moves. Recognising these tendencies gives skilled players a real advantage.",
+            },
+            {
+                q: "Do I need to sign up or download anything to play?",
+                a: "No. The game runs entirely in your browser. No account, no download, no app required - just open the page and play instantly.",
+            },
+            {
+                q: "Does Rock Paper Scissors Online work on mobile?",
+                a: "Yes. The game is fully responsive and works on any smartphone or tablet with a modern browser.",
+            },
+            {
+                q: "What is the best opening move in Rock Paper Scissors?",
+                a: "Statistically, Paper is a strong opener. Most players - especially beginners - throw Rock first because it feels like the strongest move. Playing Paper counters that tendency and gives you a statistical edge in the first round.",
+            },
+        ],
+        faqTwoPlayers: [
+            {
+                q: "Is it free to play?",
+                a: "Yes. Completely free, no account needed, no download required.",
+            },
+            {
+                q: "Does my friend need to create an account?",
+                a: "No. Just share the link - no sign-up on either side.",
+            },
+            {
+                q: "Can we play from different devices?",
+                a: "Yes. One player on desktop, the other on a phone - works on any device with a browser.",
+            },
+            {
+                q: "Can either player see the other's move before choosing?",
+                a: "No. Both picks are hidden until both players are done. No peeking, no cheating.",
+            },
+            {
+                q: "What happens if I close the browser mid-game?",
+                a: "Your game room stays open. Reopen the link and continue where you left off.",
+            },
+            {
+                q: "Can I play on mobile?",
+                a: "Yes. The game works on any smartphone or tablet.",
+            },
+            {
+                q: "Can I use Rock Paper Scissors to settle a decision with a friend?",
+                a: "Absolutely. Playing online is fairer than in person - both choices are locked in and revealed at the same time, so nobody can cheat by throwing late.",
+            },
+        ],
+    },
+};
+
+export default en;

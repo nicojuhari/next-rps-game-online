@@ -1,71 +1,59 @@
 "use client";
-const PrivacyPolicyComp = () => {
+
+import type { Translations } from "@/lib/i18n";
+
+const PrivacyPolicyComp = ({ t }: { t: Translations }) => {
     const deleteGameData = () => {
-        //delete data from local storage
         localStorage.removeItem("rps_playerId");
         localStorage.removeItem("rps_userWins");
         localStorage.removeItem("rps_computerWins");
-        // Optionally, you can also refresh the page or show a confirmation message
-        alert("Your game data has been deleted.");
+        alert(t.privacy.deleteAlert);
     };
 
     return (
         <div className="py-16 container">
-            <h1 className="text-2xl font-bold mb-8 text-center">Privacy Assurance</h1>
+            <h1 className="text-2xl font-bold mb-8 text-center">{t.privacy.h1}</h1>
 
-            <p className="text-gray-600 mb-6">We take your privacy seriously. Here is what you need to know:</p>
+            <p className="text-gray-600 mb-6">{t.privacy.intro}</p>
 
             <div className="space-y-6">
                 <div>
-                    <h2 className="text-lg font-semibold">No Personal Data Collection</h2>
-                    <p className="text-gray-600">
-                        We do <strong>not</strong> collect or store any personal information like names, emails, or IP addresses.
-                    </p>
+                    <h2 className="text-lg font-semibold">{t.privacy.noPersonalDataTitle}</h2>
+                    <p className="text-gray-600">{t.privacy.noPersonalDataText}</p>
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold">Anonymous Player ID</h2>
-                    <p className="text-gray-600">
-                        A random player ID is automatically generated to enable gameplay. This ID is stored in your browser&apos;s local
-                        storage and is not linked to any personal data.
-                    </p>
+                    <h2 className="text-lg font-semibold">{t.privacy.anonymousIdTitle}</h2>
+                    <p className="text-gray-600">{t.privacy.anonymousIdText}</p>
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold">Simple Analytics</h2>
+                    <h2 className="text-lg font-semibold">{t.privacy.simpleAnalyticsTitle}</h2>
                     <p className="text-gray-600">
-                        We use{" "}
+                        {t.privacy.simpleAnalyticsText.split("Simple Analytics")[0]}
                         <a href="https://simpleanalytics.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
                             Simple Analytics
-                        </a>{" "}
-                        to understand general website usage - like how many people visit - without tracking individuals or using cookies.
+                        </a>
+                        {t.privacy.simpleAnalyticsText.split("Simple Analytics")[1]}
                     </p>
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold">Game Data Storage</h2>
-                    <p className="text-gray-600">
-                        Your in-game actions (rock, paper, or scissors) and your anonymous player ID are saved securely in our database.
-                        This is used only for gameplay purposes and cannot be used to identify you.
-                    </p>
+                    <h2 className="text-lg font-semibold">{t.privacy.gameDataTitle}</h2>
+                    <p className="text-gray-600">{t.privacy.gameDataText}</p>
                     <button onClick={deleteGameData} className="btn btn-primary mt-2">
-                        Delete My Game Data
+                        {t.privacy.deleteButton}
                     </button>
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold">Local Storage</h2>
-                    <p className="text-gray-600">
-                        Most of your game data stays on your device using local storage. This helps the game run smoothly and privately.
-                    </p>
+                    <h2 className="text-lg font-semibold">{t.privacy.localStorageTitle}</h2>
+                    <p className="text-gray-600">{t.privacy.localStorageText}</p>
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold">Your Anonymity is Safe</h2>
-                    <p className="text-gray-600">
-                        We don&apos;t use cookies, track you across the web, or build user profiles. You can enjoy the game completely
-                        anonymously.
-                    </p>
+                    <h2 className="text-lg font-semibold">{t.privacy.anonymityTitle}</h2>
+                    <p className="text-gray-600">{t.privacy.anonymityText}</p>
                 </div>
             </div>
         </div>

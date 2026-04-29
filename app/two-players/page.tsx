@@ -3,6 +3,7 @@ import TwoPlayersContent from "@/components/TwoPlayersContent";
 import Image from "next/image";
 import { createMetadata } from "@/lib/metadata";
 import { FirebaseProvider } from "@/contexts/FirebaseContext";
+import { getTranslations } from "@/lib/i18n";
 
 export const metadata = createMetadata({
     title: "Rock Paper Scissors with Friends Online - Free Real-Time Multiplayer | No Signup",
@@ -96,6 +97,8 @@ const faqJsonLd = {
 };
 
 const TwoPlayers = () => {
+    const t = getTranslations("en");
+
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -110,7 +113,7 @@ const TwoPlayers = () => {
                 }
             >
                 <FirebaseProvider>
-                    <TwoPlayersContent />
+                    <TwoPlayersContent t={t} />
                 </FirebaseProvider>
             </Suspense>
         </>

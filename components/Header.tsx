@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { UsersIcon } from "@phosphor-icons/react";
+import type { Translations } from "@/lib/i18n";
 
-const Header = () => {
+const Header = ({ t }: { t: Translations }) => {
     return (
         <header className="bg-white/10 border-b border-gray-100">
             <div className="container h-14 flex items-center justify-between">
@@ -28,7 +29,7 @@ const Header = () => {
                     className="btn-cta-green inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white"
                 >
                     <UsersIcon weight="duotone" size={14} />
-                    Play with a Friend
+                    {t.header.playWithFriend}
                 </Link>
             </div>
         </header>

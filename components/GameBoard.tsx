@@ -10,8 +10,9 @@ import GameEffects from "./GameEffects";
 import GameOverlay from "./GameOverlay";
 import CertificateModal from "./CertificateModal";
 import { type CertificateData } from "@/lib/certificate";
+import type { Translations } from "@/lib/i18n";
 
-const GameBoard = () => {
+const GameBoard = ({ t }: { t: Translations }) => {
     const { gameData, updateGameChoices, resetGame, updateGameWinner } = useFirebaseContext();
 
     const { isGameFinished } = useGame();
@@ -52,10 +53,10 @@ const GameBoard = () => {
     };
 
     const handleGetCertificate = () => {
-        const opponentName = Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || "Friend";
+        const opponentName = Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || t.gameBoard.friend;
         setCertData({
             mode: "multi",
-            player1Name: "You",
+            player1Name: t.gameBoard.you,
             player2Name: opponentName,
             player1SessionWins: yourWins,
             player2SessionWins: secondPlayerWins,
@@ -79,9 +80,9 @@ const GameBoard = () => {
     const controlers: Record<string, string> = { "1": "🪨", "2": "📃", "3": "✂️" };
 
     const getButtonLabel = (key: string) => {
-        if (key === "1") return "Rock";
-        if (key === "2") return "Paper";
-        return "Scissors";
+        if (key === "1") return t.gameBoard.rock;
+        if (key === "2") return t.gameBoard.paper;
+        return t.gameBoard.scissors;
     };
 
     const isPickingDone = yourChoices.length >= 3;
@@ -110,25 +111,23 @@ const GameBoard = () => {
         <>
             <div className="max-w-sm mx-auto relative">
                 <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
-                    {/* Score header */}
                     <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
                         <div className="text-center min-w-12">
-                            <div className="text-blue-100 text-xs uppercase tracking-widest">You</div>
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">{t.gameBoard.you}</div>
                             <div className="text-white font-bold text-2xl leading-none">{yourWins}</div>
                         </div>
                         <div className="text-center">
-                            <p className="text-white font-semibold text-sm">Play vs Friend</p>
+                            <p className="text-white font-semibold text-sm">{t.gameBoard.vsFriend}</p>
                             {gameData?.gameStake && <p className="text-blue-100 text-xs mt-0.5 max-w-32 truncate">{gameData.gameStake}</p>}
                         </div>
                         <div className="text-center min-w-12">
-                            <div className="text-blue-100 text-xs uppercase tracking-widest">Friend</div>
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">{t.gameBoard.friend}</div>
                             <div className="text-white font-bold text-2xl leading-none">{secondPlayerWins}</div>
                         </div>
                     </div>
 
-                    {/* Game body */}
                     <div className="bg-white p-4 md:p-6">
-                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">Pick your move</p>
+                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">{t.gameBoard.pickMove}</p>
                         <div className="grid grid-cols-3 gap-3 w-full">
                             {Object.entries(controlers).map(([key, item]) => (
                                 <button onClick={() => select(+key)} className={getButtonStyle(key)} key={key} disabled={isDisabled}>
@@ -142,20 +141,21 @@ const GameBoard = () => {
                                 yourChoices={yourChoices}
                                 secondPlayerChoices={secondPlayerChoices}
                                 isGameFinished={isGameFinished || false}
+                                t={t}
                             />
                         )}
                     </div>
                 </div>
 
-                {/* Full-card overlay */}
                 {isGameFinished && gameData && outcome && (
                     <GameOverlay
                         outcome={outcome}
                         youScore={yourWins}
                         opponentScore={secondPlayerWins}
-                        opponentLabel="Friend"
+                        opponentLabel={t.gameBoard.friend}
                         onPlayAgain={() => resetGame(gameData.$id)}
                         onGetCertificate={outcome === "win" && yourWins > secondPlayerWins ? handleGetCertificate : undefined}
+                        t={t}
                     />
                 )}
 
@@ -164,7 +164,6 @@ const GameBoard = () => {
                 {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}
             </div>
 
-            {/* Certificate badge - always visible */}
             <div className="text-center mt-5 max-w-sm mx-auto">
                 <button
                     onClick={() => handleCertBadgeClick(canGetCert)}
@@ -174,9 +173,9 @@ const GameBoard = () => {
                             : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
                     }`}
                 >
-                    🏆 Get your winner&apos;s certificate
+                    {t.gameBoard.getCertificate}
                 </button>
-                {certHint && <p className="text-xs text-gray-500 mt-1.5">Win more games than your friend to unlock your certificate.</p>}
+                {certHint && <p className="text-xs text-gray-500 mt-1.5">{t.gameBoard.certUnlock}</p>}
             </div>
         </>
     );

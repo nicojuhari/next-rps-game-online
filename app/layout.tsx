@@ -3,6 +3,7 @@ import Script from "next/script";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import { createMetadata } from "@/lib/metadata";
+import { getTranslations } from "@/lib/i18n";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const isProduction = process.env.NODE_ENV === "production";
+    const t = getTranslations("en");
 
     return (
         <html lang="en">
@@ -78,7 +80,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={inter.className}>
-                <Header />
+                <Header t={t} />
                 <main className="flex flex-col min-h-screen container">{children}</main>
                 <Footer />
                 {/* Google AdSense - Only in production */}

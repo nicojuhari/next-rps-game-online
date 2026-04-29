@@ -4,6 +4,7 @@ import HomeContent from "@/components/HomeContent";
 import OnePlayer from "@/components/OnePlayer";
 import AdSense from "@/components/AdSense";
 import { createMetadata } from "@/lib/metadata";
+import { getTranslations } from "@/lib/i18n";
 
 export const metadata = createMetadata({
     title: "Rock Paper Scissors Online - Play Free vs Computer | No Signup",
@@ -96,24 +97,27 @@ const faqJsonLd = {
 };
 
 const Home = () => {
+    const t = getTranslations("en");
+    const [subtitleLine1, subtitleLine2] = t.home.subtitle.split("\n");
+
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
             <div className="pt-8 pb-6 text-center space-y-3">
                 <h1 className="font-semibold leading-tight">
-                    <span className="block text-sm font-normal text-gray-400 tracking-widest uppercase mb-2">Free · No Signup</span>
-                    <span className="text-blue-500 text-3xl md:text-4xl">Rock </span>
-                    <span className="text-yellow-500 text-3xl md:text-4xl">Paper </span>
-                    <span className="text-red-500 text-3xl md:text-4xl">Scissors </span>
-                    <span className="text-gray-400 text-2xl md:text-3xl">Online</span>
+                    <span className="block text-sm font-normal text-gray-400 tracking-widest uppercase mb-2">{t.home.h1Label}</span>
+                    <span className="text-blue-500 text-3xl md:text-4xl">{t.home.h1Rock} </span>
+                    <span className="text-yellow-500 text-3xl md:text-4xl">{t.home.h1Paper} </span>
+                    <span className="text-red-500 text-3xl md:text-4xl">{t.home.h1Scissors} </span>
+                    <span className="text-gray-400 text-2xl md:text-3xl">{t.home.h1Online}</span>
                 </h1>
                 <p className="text-gray-500 text-sm font-light">
-                    Play against the computer or challenge a friend
-                    <br /> No download, no account required.
+                    {subtitleLine1}
+                    <br /> {subtitleLine2}
                 </p>
             </div>
 
-            <OnePlayer />
+            <OnePlayer t={t} />
             <AdSense adSlot="6657389797" className="mt-6" />
             {/* <div className="flex items-center gap-3 my-10">
                 <div className="flex-1 h-px bg-gray-200"></div>
@@ -121,15 +125,15 @@ const Home = () => {
                 <div className="flex-1 h-px bg-gray-200"></div>
             </div>
 
-            <MainCTA /> */}
-            <HomeContent />
+            <MainCTA t={t} /> */}
+            <HomeContent t={t} />
 
             <p className="text-sm text-center text-gray-400 mb-8">
-                Read our{" "}
+                {t.home.privacyNoticeBefore}
                 <Link href="/privacy" className="text-blue-500 underline underline-offset-2" title="privacy policy">
-                    Privacy Policy
-                </Link>{" "}
-                to learn how we protect your data.
+                    {t.home.privacyNoticeLink}
+                </Link>
+                {t.home.privacyNoticeAfter}
             </p>
         </>
     );

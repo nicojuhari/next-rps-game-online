@@ -1,5 +1,6 @@
 import { createMetadata } from "@/lib/metadata";
 import PrivacyPolicyComp from "@/components/PrivacyPolicy";
+import { getTranslations } from "@/lib/i18n";
 export const metadata = createMetadata({
     title: "Privacy Policy - Rock Paper Scissors Online",
     description:
@@ -18,7 +19,8 @@ export const metadata = createMetadata({
 });
 
 const Privacy = () => {
-    return <PrivacyPolicyComp />;
+    const t = getTranslations("en");
+    return <PrivacyPolicyComp t={t} />;
 };
 
 export default Privacy;
