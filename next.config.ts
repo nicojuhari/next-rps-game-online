@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
     reactCompiler: true,
@@ -6,12 +9,7 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: "/:path*",
-                has: [
-                    {
-                        type: "host",
-                        value: "www.rps-game.online",
-                    },
-                ],
+                has: [{ type: "host", value: "www.rps-game.online" }],
                 destination: "https://rps-game.online/:path*",
                 permanent: true,
             },
@@ -27,7 +25,6 @@ const nextConfig: NextConfig = {
             },
         ];
     },
-    /* config options here */
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

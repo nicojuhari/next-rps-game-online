@@ -1,9 +1,11 @@
 "use client";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { UsersIcon } from "@phosphor-icons/react";
-import type { Translations } from "@/lib/i18n";
 
-const Header = ({ t }: { t: Translations }) => {
+const Header = () => {
+    const t = useTranslations("header");
+
     return (
         <header className="bg-white/10 border-b border-gray-100">
             <div className="container h-14 flex items-center justify-between">
@@ -29,7 +31,7 @@ const Header = ({ t }: { t: Translations }) => {
                     className="btn-cta-green inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white"
                 >
                     <UsersIcon weight="duotone" size={14} />
-                    {t.header.playWithFriend}
+                    {t("playWithFriend")}
                 </Link>
             </div>
         </header>

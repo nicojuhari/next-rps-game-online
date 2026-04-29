@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useFirebaseContext } from "@/contexts/FirebaseContext";
 import GameBoard from "@/components/GameBoard";
@@ -10,9 +12,9 @@ import { usePlayer } from "@/lib/hooks/usePlayer";
 import WaitingPlayerTwo from "@/components/WaitingPlayerTwo";
 import MainCTA from "@/components/MainCTA";
 import AdSense from "./AdSense";
-import type { Translations } from "@/lib/i18n";
 
-const TwoPlayersContent = ({ t }: { t: Translations }) => {
+const TwoPlayersContent = () => {
+    const t = useTranslations("twoPlayers");
     const searchParams = useSearchParams();
     const gameId = searchParams.get("gameId");
     const router = useRouter();
@@ -22,9 +24,7 @@ const TwoPlayersContent = ({ t }: { t: Translations }) => {
 
     useEffect(() => {
         if (!gameId) return;
-        setTimeout(() => {
-            setLoading(true);
-        });
+        setTimeout(() => setLoading(true));
         const fetchData = async () => {
             try {
                 await getGame(gameId);
@@ -45,29 +45,26 @@ const TwoPlayersContent = ({ t }: { t: Translations }) => {
         router.push("/two-players");
     };
 
+    const whySettleItems = t.raw("whySettle.items") as string[];
+    const faqItems = t.raw("faq.items") as Array<{ q: string; a: string }>;
+
     const renderGameSection = () => {
-        if (!gameId) {
-            return <MainCTA t={t} />;
-        }
-        if (loading) {
-            return <Image src="/loading.svg" loading="eager" alt="Loading" width={40} height={40} className="mx-auto my-24" />;
-        }
-        if (!gameData) {
-            return <p className="text-center text-gray-500 my-12">{t.twoPlayers.gameNotFound}</p>;
-        }
+        if (!gameId) return <MainCTA />;
+        if (loading) return <Image src="/loading.svg" loading="eager" alt="Loading" width={40} height={40} className="mx-auto my-24" />;
+        if (!gameData) return <p className="text-center text-gray-500 my-12">{t("gameNotFound")}</p>;
 
         const playerCount = Object.keys(gameData.players || {}).length;
         const hasJoined = !!gameData.players?.[playerId];
         const maxPlayers = gameData.maxPlayers || 2;
 
-        if (!hasJoined && playerCount < maxPlayers) return <JoinGame t={t} />;
+        if (!hasJoined && playerCount < maxPlayers) return <JoinGame />;
         if (hasJoined && playerCount < maxPlayers) {
             return (
                 <div>
-                    <WaitingPlayerTwo t={t} />
+                    <WaitingPlayerTwo />
                     <div className="text-center mt-4">
                         <button onClick={handleCancelGame} className="text-sm text-gray-400 hover:text-red-500 underline cursor-pointer">
-                            {t.twoPlayers.cancelGame}
+                            {t("cancelGame")}
                         </button>
                     </div>
                 </div>
@@ -76,9 +73,9 @@ const TwoPlayersContent = ({ t }: { t: Translations }) => {
         if (hasJoined && playerCount === maxPlayers) {
             return (
                 <>
-                    <GameBoard t={t} />
+                    <GameBoard />
                     <div className="max-w-sm mx-auto">
-                        <p className="text-xs mt-4 md:mt-6 text-gray-600 text-center">{t.twoPlayers.pickMoveNote}</p>
+                        <p className="text-xs mt-4 md:mt-6 text-gray-600 text-center">{t("pickMoveNote")}</p>
                     </div>
                 </>
             );
@@ -88,60 +85,56 @@ const TwoPlayersContent = ({ t }: { t: Translations }) => {
 
     return (
         <div className="py-8">
-            <h1 className="text-lg font-medium mb-6 text-center">{t.twoPlayers.h1}</h1>
+            <h1 className="text-lg font-medium mb-6 text-center">{t("h1")}</h1>
             {renderGameSection()}
             <AdSense adSlot="6657389797" className="mt-6" />
             <div className="my-10 space-y-12 font-light">
                 <div>
-                    <h2 className="text-lg font-semibold mb-4">{t.twoPlayers.howToPlay.title}</h2>
+                    <h2 className="text-lg font-semibold mb-4">{t("howToPlay.title")}</h2>
                     <div className="space-y-2">
-                        <p>{t.twoPlayers.howToPlay.intro}</p>
+                        <p>{t("howToPlay.intro")}</p>
                         <ol className="pl-4 space-y-2 list-decimal">
                             <li>
-                                <span className="font-semibold">{t.twoPlayers.howToPlay.createRoomLabel}</span> -{" "}
-                                {t.twoPlayers.howToPlay.createRoomText}
+                                <span className="font-semibold">{t("howToPlay.createRoomLabel")}</span> - {t("howToPlay.createRoomText")}
                             </li>
                             <li>
-                                <span className="font-semibold">{t.twoPlayers.howToPlay.shareLinkLabel}</span> -{" "}
-                                {t.twoPlayers.howToPlay.shareLinkText}
+                                <span className="font-semibold">{t("howToPlay.shareLinkLabel")}</span> - {t("howToPlay.shareLinkText")}
                             </li>
                             <li>
-                                <span className="font-semibold">{t.twoPlayers.howToPlay.playLabel}</span> -{" "}
-                                {t.twoPlayers.howToPlay.playText}
+                                <span className="font-semibold">{t("howToPlay.playLabel")}</span> - {t("howToPlay.playText")}
                             </li>
                             <li>
-                                <span className="font-semibold">{t.twoPlayers.howToPlay.claimCertLabel}</span> -{" "}
-                                {t.twoPlayers.howToPlay.claimCertText}
+                                <span className="font-semibold">{t("howToPlay.claimCertLabel")}</span> - {t("howToPlay.claimCertText")}
                             </li>
                         </ol>
                     </div>
                 </div>
                 <div>
-                    <h2 className="text-lg font-semibold mb-4">{t.twoPlayers.howItWorks.title}</h2>
+                    <h2 className="text-lg font-semibold mb-4">{t("howItWorks.title")}</h2>
                     <div className="space-y-2">
-                        <p>{t.twoPlayers.howItWorks.p1}</p>
+                        <p>{t("howItWorks.p1")}</p>
                         <ul className="list-disc pl-4 space-y-2">
-                            <li>{t.twoPlayers.howItWorks.firstTo2}</li>
-                            <li>{t.twoPlayers.howItWorks.scores}</li>
+                            <li>{t("howItWorks.firstTo2")}</li>
+                            <li>{t("howItWorks.scores")}</li>
                         </ul>
                     </div>
                 </div>
                 <div>
-                    <h2 className="text-lg font-semibold mb-4">{t.twoPlayers.whySettle.title}</h2>
+                    <h2 className="text-lg font-semibold mb-4">{t("whySettle.title")}</h2>
                     <div className="space-y-2">
-                        <p>{t.twoPlayers.whySettle.p1}</p>
+                        <p>{t("whySettle.p1")}</p>
                         <ul className="list-disc pl-4 space-y-1">
-                            {t.twoPlayers.whySettle.items.map((item, i) => (
+                            {whySettleItems.map((item, i) => (
                                 <li key={i}>{item}</li>
                             ))}
                         </ul>
-                        <p>{t.twoPlayers.whySettle.p2}</p>
+                        <p>{t("whySettle.p2")}</p>
                     </div>
                 </div>
                 <div>
-                    <h2 className="text-lg font-semibold mb-4">{t.twoPlayers.faq.title}</h2>
+                    <h2 className="text-lg font-semibold mb-4">{t("faq.title")}</h2>
                     <div className="space-y-4">
-                        {t.twoPlayers.faq.items.map((item, i) => (
+                        {faqItems.map((item, i) => (
                             <div key={i}>
                                 <h3 className="font-semibold text-sm text-gray-800">{item.q}</h3>
                                 <p className="text-sm text-gray-600 mt-1">{item.a}</p>

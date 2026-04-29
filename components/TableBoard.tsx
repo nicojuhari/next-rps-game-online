@@ -1,37 +1,34 @@
+"use client";
+import { useTranslations } from "next-intl";
 import { compareChoices } from "@/lib/game-utils";
 import { CheckIcon, CheckCircleIcon, XCircleIcon, EqualsIcon, QuestionMarkIcon } from "@phosphor-icons/react";
-import type { Translations } from "@/lib/i18n";
 
 const TableBoard = ({
     yourChoices,
     secondPlayerChoices,
     isGameFinished,
     isOnePlayer,
-    t,
 }: {
     yourChoices: number[];
     secondPlayerChoices: number[];
     isGameFinished: boolean;
     isOnePlayer?: boolean;
-    t: Translations;
 }) => {
-    const controlers = {
-        1: "🪨",
-        2: "📃",
-        3: "✂️",
-    };
+    const t = useTranslations("tableBoard");
+    const controlers = { 1: "🪨", 2: "📃", 3: "✂️" };
+
     return (
         <div className="mt-4 md:mt-6 rounded-md bg-gray-100/5">
             <table className="w-full table-fixed border-collapse player-selected-table">
                 <thead>
                     <tr className="text-gray-500">
-                        <th className="font-light">{t.tableBoard.you}</th>
+                        <th className="font-light">{t("you")}</th>
                         {!isOnePlayer ? (
-                            <th className="truncate font-light">{t.tableBoard.secondPlayer}</th>
+                            <th className="truncate font-light">{t("secondPlayer")}</th>
                         ) : (
-                            <th className="truncate font-light">{t.tableBoard.computer}</th>
+                            <th className="truncate font-light">{t("computer")}</th>
                         )}
-                        <th className="font-light">{t.tableBoard.results}</th>
+                        <th className="font-light">{t("results")}</th>
                     </tr>
                 </thead>
                 <tbody>

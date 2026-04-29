@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "home": {
+      "title": "Pedra Papel Tesoura Online — Jogue Grátis vs Computador | Sem Cadastro",
+      "description": "Jogue Pedra Papel Tesoura online de graça. Desafie o computador instantaneamente — sem download, sem conta necessária. Melhor de 3 rodadas, funciona em qualquer dispositivo.",
+      "keywords": [
+        "pedra papel tesoura online",
+        "jogar pedra papel tesoura online",
+        "jogo rps online",
+        "pedra papel tesoura grátis",
+        "pedra papel tesoura sem cadastro",
+        "pedra papel tesoura vs computador",
+        "jogar rps online"
+      ]
+    },
+    "twoPlayers": {
+      "title": "Pedra Papel Tesoura com Amigos Online — Multijogador em Tempo Real | Sem Cadastro",
+      "description": "Desafie um amigo para Pedra Papel Tesoura online em tempo real. Compartilhe o link, escolha seus movimentos, veja quem ganha. Grátis, sem login, funciona em qualquer dispositivo.",
+      "keywords": [
+        "pedra papel tesoura multijogador",
+        "pedra papel tesoura com amigos online",
+        "rps multijogador online",
+        "pedra papel tesoura em tempo real",
+        "pedra papel tesoura dois jogadores",
+        "sem cadastro"
+      ]
+    },
+    "privacy": {
+      "title": "Política de Privacidade — Pedra Papel Tesoura Online",
+      "description": "Saiba sobre nossas práticas de privacidade e proteção de dados para Pedra Papel Tesoura Online."
+    }
+  },
+  "home": {
+    "h1Label": "Grátis · Sem Cadastro",
+    "h1Rock": "Pedra",
+    "h1Paper": "Papel",
+    "h1Scissors": "Tesoura",
+    "h1Online": "Online",
+    "subtitle": "Jogue contra o computador ou desafie um amigo\nSem download, sem conta necessária.",
+    "privacyNoticeBefore": "Leia nossa ",
+    "privacyNoticeLink": "Política de Privacidade",
+    "privacyNoticeAfter": " para saber como protegemos seus dados.",
+    "strategy": {
+      "title": "Como Vencer no Pedra Papel Tesoura",
+      "p1": "A maioria dos jogadores trata Pedra Papel Tesoura como puro acaso, como lançar uma moeda. Não é.",
+      "p2": "Um estudo da Universidade de Zhejiang analisou centenas de milhares de partidas e descobriu que os jogadores humanos seguem padrões previsíveis. Eles encontraram uma estratégia chamada \"Ganha-Mantém, Perde-Muda\":",
+      "winLabel": "Se você ganhar:",
+      "winText": "Seu oponente provavelmente mudará de movimento.",
+      "winCounterLabel": "Contra-movimento:",
+      "winCounter": "Jogue o movimento que eles acabaram de fazer — vence o que tentarão a seguir.",
+      "loseLabel": "Se você perder:",
+      "loseText": "Seu oponente provavelmente repetirá o movimento vencedor porque parece \"sortudo\".",
+      "loseCounterLabel": "Contra-movimento:",
+      "loseCounter": "Jogue o movimento que vence o que eles acabaram de lançar.",
+      "firstThrowLabel": "Estratégia do Primeiro Lançamento:",
+      "firstThrowText": "Iniciantes, especialmente jogadores masculinos, abrem majoritariamente com Pedra porque parece forte.",
+      "tipLabel": "Dica:",
+      "tip": "Contra um novo oponente, lance Papel primeiro.",
+      "luckQ": "Pedra Papel Tesoura é sorte ou habilidade?",
+      "luckA": "Ambos. Um jogador puramente aleatório ganha 33,3% das vezes. Mas as escolhas humanas não são aleatórias, por isso identificar padrões dá uma vantagem real.",
+      "certCTA": "Coloque a estratégia à prova — ganhe mais jogos que seu oponente e poderá reivindicar um certificado de vencedor personalizado para baixar e compartilhar."
+    },
+    "rules": {
+      "title": "Regras do Pedra Papel Tesoura",
+      "p1": "Pedra Papel Tesoura é jogado entre duas pessoas. Cada jogador revela um de três gestos ao mesmo tempo, e o vencedor é decidido por um conjunto simples de regras:",
+      "rockCrushes": "Pedra esmaga Tesoura",
+      "scissorsCuts": "Tesoura corta Papel",
+      "paperCovers": "Papel cobre Pedra",
+      "drawRule": "Se ambos os jogadores fizerem o mesmo gesto, a rodada é empate.",
+      "bestOf3Q": "Como funciona o melhor de 3?",
+      "bestOf3A": "Cada partida tem 3 rodadas. Ambos os jogadores confirmam todas as suas escolhas antes de os resultados serem mostrados, para que nenhum jogador possa reagir ao outro. O jogador que vencer mais rodadas ganha a partida. Se cada jogador vencer uma rodada e a terceira for empate, a partida termina empatada."
+    },
+    "statistics": {
+      "title": "Estatísticas do Pedra Papel Tesoura",
+      "p1": "Em um jogo perfeitamente aleatório, cada lançamento tem uma probabilidade igual de 1 em 3 (33,3%) de ganhar, perder ou empatar.",
+      "p2": "Na prática, os humanos não lançam aleatoriamente. Pesquisas sugerem que a distribuição real entre jogadores casuais é: Pedra ~35%, Papel ~35%, Tesoura ~30%. Tesoura é lançada com menos frequência.",
+      "story": "Em 2005, uma única mão de Pedra Papel Tesoura decidiu um contrato de leilão de US$ 17,8 milhões. As duas casas de leilão mais famosas, Christie's e Sotheby's, estavam em impasse pelos direitos de venda de uma valiosa coleção de arte e concordaram em resolver com um jogo.",
+      "sothebys": "A Sotheby's tratou como acaso e jogou Papel.",
+      "christies": "A Christie's pediu conselho às filhas gêmeas de 11 anos de um de seus diretores. As meninas raciocinaram: \"Todo mundo acha que Pedra é o movimento forte. A Sotheby's vai esperar Pedra, então vai jogar Papel. Joguem Tesoura.\"",
+      "conclusion": "A Christie's jogou Tesoura. A Sotheby's jogou Papel. A Christie's ganhou, provando que mesmo em um jogo simples, a psicologia supera o puro acaso."
+    },
+    "history": {
+      "title": "O Que é Pedra Papel Tesoura?",
+      "p1": "Pedra Papel Tesoura é um jogo de mãos jogado no mundo todo, geralmente entre duas pessoas. É comumente usado como uma forma rápida de tomar decisões, mas também é um jogo de leitura do oponente.",
+      "p2": "O jogo remonta a mais de 2.000 anos à Dinastia Han Chinesa (206 a.C. - 220 d.C.), onde era chamado de shoushiling e usava gestos representando um Sapo, uma Lesma e uma Cobra.",
+      "p3": "Chegou ao Japão como Jan-Ken, onde se tornou uma ferramenta social diária para resolver disputas em escolas e negócios. Chegou ao Ocidente no início do século XX e se tornou o jogo de decisão rápida padrão que é hoje. Hoje tem muitos nomes: roshambo nos EUA, pedra papel tesoura nos países de língua portuguesa — todos usando os mesmos três gestos.",
+      "didYouKnow": "Você sabia? O dia 27 de agosto é oficialmente o Dia Mundial do Pedra Papel Tesoura.",
+      "computerNote": "O computador neste site escolhe aleatoriamente — tem uma probabilidade igual de 1 em 3 de lançar Pedra, Papel ou Tesoura toda vez. Sem truques, apenas acaso.",
+      "fairPlay": "Jogar online também elimina a principal forma de trapacear em um jogo físico. Em pessoa, um jogador pode atrasar seu lançamento uma fração de segundo para reagir à mão do oponente — uma técnica chamada \"sombreamento\". Em rps-game.online, ambos os jogadores confirmam sua escolha em particular antes de qualquer resultado ser mostrado, para que cada partida seja genuinamente justa."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": [
+        { "q": "O que vence Pedra no Pedra Papel Tesoura?", "a": "Papel vence Pedra. Papel cobre simbolicamente a Pedra, tornando-o o movimento vencedor sempre que seu oponente lançar Pedra." },
+        { "q": "O que vence Papel?", "a": "Tesoura vence Papel. Tesoura corta Papel, tornando-o o contra-ataque sempre que seu oponente jogar Papel." },
+        { "q": "O que vence Tesoura?", "a": "Pedra vence Tesoura. Pedra esmaga Tesoura, tornando-o o movimento vencedor sempre que seu oponente lançar Tesoura." },
+        { "q": "Pedra Papel Tesoura é só sorte?", "a": "Não inteiramente. Um jogador aleatório ganha 33% das vezes, mas pessoas reais seguem padrões — e padrões podem ser lidos." },
+        { "q": "Preciso me cadastrar ou baixar algo?", "a": "Não. O jogo funciona inteiramente no seu navegador. Sem conta, sem download, sem aplicativo — só abra a página e jogue instantaneamente." },
+        { "q": "Funciona no celular?", "a": "Sim. O jogo é totalmente responsivo e funciona em qualquer smartphone ou tablet com um navegador moderno." },
+        { "q": "Qual é o melhor primeiro movimento?", "a": "Estatisticamente, Papel é uma boa abertura. A maioria dos jogadores — especialmente iniciantes — lança Pedra primeiro porque parece o movimento mais forte. Jogar Papel contraria essa tendência e dá uma vantagem estatística na primeira rodada." }
+      ]
+    }
+  },
+  "twoPlayers": {
+    "h1": "Jogue Pedra Papel Tesoura Online com Amigos",
+    "gameNotFound": "Partida não encontrada. Crie uma nova acima.",
+    "cancelGame": "Cancelar e criar uma nova partida",
+    "pickMoveNote": "Escolha seu movimento 3 vezes, os resultados aparecem quando ambos os jogadores terminarem.",
+    "howToPlay": {
+      "title": "Como Jogar Pedra Papel Tesoura Online com Amigos",
+      "intro": "Jogar com um amigo são três passos — sem conta nem aplicativo:",
+      "createRoomLabel": "Crie uma sala privada",
+      "createRoomText": "clique em \"Criar uma Partida\" acima ou na página inicial. Você recebe um link privado imediatamente.",
+      "shareLinkLabel": "Compartilhe o link",
+      "shareLinkText": "envie para seu amigo por qualquer aplicativo de mensagens. Funciona em qualquer dispositivo.",
+      "playLabel": "Jogue",
+      "playText": "ambos os jogadores escolhem Pedra, Papel ou Tesoura. O melhor de 3 rodadas decide o vencedor.",
+      "claimCertLabel": "Reivindique seu certificado",
+      "claimCertText": "ganhe mais jogos que seu oponente e obtenha um certificado de vencedor personalizado. Baixe-o ou compartilhe para se gabar."
+    },
+    "howItWorks": {
+      "title": "Pedra Papel Tesoura 1v1 — Como Funciona",
+      "p1": "Ambos os jogadores escolhem ao mesmo tempo e nenhum pode ver a escolha do outro antes de confirmar. Isso torna cada partida genuinamente justa — sem reações de última hora, sem disputas.",
+      "firstTo2": "O jogador que vencer mais rodadas ganha a partida. O primeiro a ganhar 2 leva a vitória.",
+      "scores": "As pontuações são rastreadas em múltiplas partidas na mesma sala — sem necessidade de criar um novo link a cada vez."
+    },
+    "whySettle": {
+      "title": "Por Que Decidir com Pedra Papel Tesoura?",
+      "p1": "Pedra Papel Tesoura dá a ambos os jogadores uma chance igual e leva segundos para jogar. As pessoas usam para decidir:",
+      "items": [
+        "Quem paga o jantar",
+        "Quem escolhe o filme ou a playlist",
+        "Quem vai primeiro em um jogo de tabuleiro",
+        "Qualquer decisão onde ambos querem uma chance justa"
+      ],
+      "p2": "Jogar online significa sem discussões sobre quem jogou o quê. Ambas as escolhas são confirmadas e reveladas ao mesmo tempo, sempre."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": [
+        { "q": "É grátis jogar?", "a": "Sim. Completamente grátis, sem conta necessária, sem download obrigatório." },
+        { "q": "Meu amigo precisa criar uma conta?", "a": "Não. Basta compartilhar o link — sem cadastro em nenhum dos lados." },
+        { "q": "Podemos jogar de dispositivos diferentes?", "a": "Sim. Um jogador no computador, o outro no celular — funciona em qualquer dispositivo com navegador." },
+        { "q": "Algum jogador pode ver o movimento do outro antes de escolher?", "a": "Não. Ambas as escolhas ficam ocultas até que os dois jogadores terminem. Sem espiar, sem trapacear." },
+        { "q": "O que acontece se eu fechar o navegador no meio do jogo?", "a": "Sua sala de jogo permanece aberta. Reabra o link e continue de onde parou." },
+        { "q": "Posso jogar no celular?", "a": "Sim. O jogo funciona em qualquer smartphone ou tablet." }
+      ]
+    }
+  },
+  "privacy": {
+    "h1": "Garantia de Privacidade",
+    "intro": "Levamos sua privacidade a sério. Aqui está o que você precisa saber:",
+    "noPersonalDataTitle": "Sem Coleta de Dados Pessoais",
+    "noPersonalDataText": "Não coletamos nem armazenamos nenhuma informação pessoal como nomes, e-mails ou endereços IP.",
+    "anonymousIdTitle": "ID de Jogador Anônimo",
+    "anonymousIdText": "Um ID de jogador aleatório é gerado automaticamente para habilitar o jogo. Este ID é armazenado no armazenamento local do seu navegador e não está vinculado a nenhum dado pessoal.",
+    "simpleAnalyticsTitle": "Análise Simples",
+    "simpleAnalyticsText": "Usamos Simple Analytics para entender o uso geral do site — como quantas pessoas visitam — sem rastrear indivíduos ou usar cookies.",
+    "gameDataTitle": "Armazenamento de Dados do Jogo",
+    "gameDataText": "Suas ações no jogo (pedra, papel ou tesoura) e seu ID de jogador anônimo são salvos com segurança em nosso banco de dados. Isso é usado apenas para fins de jogo e não pode ser usado para identificá-lo.",
+    "localStorageTitle": "Armazenamento Local",
+    "localStorageText": "A maioria dos seus dados de jogo fica no seu dispositivo usando armazenamento local. Isso ajuda o jogo a funcionar de forma suave e privada.",
+    "anonymityTitle": "Seu Anonimato está Seguro",
+    "anonymityText": "Não usamos cookies, não rastreamos você pela web nem criamos perfis de usuário. Você pode desfrutar do jogo de forma completamente anônima.",
+    "deleteButton": "Excluir Meus Dados de Jogo",
+    "deleteAlert": "Seus dados de jogo foram excluídos."
+  },
+  "header": {
+    "playWithFriend": "Jogar com um Amigo"
+  },
+  "mainCTA": {
+    "createLabel": "Criar",
+    "shareLabel": "Compartilhar",
+    "playLabel": "Jogar",
+    "stakeLabel": "O que está em jogo?",
+    "stakeOptional": "(opcional)",
+    "stakePlaceholder": "ex.: quem vai primeiro, quem lava a louça, etc.",
+    "createButton": "Criar uma Partida",
+    "noAccount": "Sem conta necessária"
+  },
+  "onePlayer": {
+    "you": "Você",
+    "bot": "Bot",
+    "vsComputer": "Jogar vs Computador",
+    "pickMove": "Escolha seu movimento",
+    "rock": "Pedra",
+    "paper": "Papel",
+    "scissors": "Tesoura",
+    "resetScore": "Reiniciar Placar",
+    "getCertificate": "🏆 Obtenha seu certificado de vencedor",
+    "certUnlock": "Ganhe mais jogos que o bot para desbloquear seu certificado."
+  },
+  "gameBoard": {
+    "you": "Você",
+    "friend": "Amigo",
+    "vsFriend": "Jogar vs Amigo",
+    "pickMove": "Escolha seu movimento",
+    "rock": "Pedra",
+    "paper": "Papel",
+    "scissors": "Tesoura",
+    "getCertificate": "🏆 Obtenha seu certificado de vencedor",
+    "certUnlock": "Ganhe mais jogos que seu amigo para desbloquear seu certificado."
+  },
+  "tableBoard": {
+    "you": "Você",
+    "computer": "Computador",
+    "secondPlayer": "2.º Jogador",
+    "results": "Resultado"
+  },
+  "gameOverlay": {
+    "win": { "headline": "Você Ganhou!", "sub": "Muito bem. Pronto para mais uma rodada?" },
+    "draw": { "headline": "Empate!", "sub": "Tão perto. Quer resolver?" },
+    "lose": { "headline": "Você Perdeu.", "sub": "Não desista — jogue de novo!" },
+    "youLabel": "Você",
+    "getCertificate": "🏆 Obter Certificado",
+    "playAgain": "Jogar Novamente"
+  },
+  "gameResults": {
+    "won": "🥳 Você Ganhou!",
+    "draw": "Empate!",
+    "lost": "😞 Você Perdeu.",
+    "shareScore": "🏆 Compartilhar placar"
+  },
+  "joinGame": {
+    "invitation": "Você foi convidado para jogar RPS online!",
+    "joinButton": "Entrar no Jogo"
+  },
+  "waitingPlayer": {
+    "roomCreated": "Você criou esta sala de jogo",
+    "sharePrompt": "Compartilhe o link com alguém para começar a jogar!",
+    "copyLink": "Copiar o Link",
+    "copying": "Copiando ..."
+  },
+  "jsonLd": {
+    "videoGame": {
+      "name": "Pedra Papel Tesoura Online",
+      "description": "Jogue Pedra Papel Tesoura online de graça. Desafie o computador ou jogue multijogador em tempo real com amigos. Sem download, sem cadastro necessário.",
+      "featureList": "Um jogador vs Computador, Multijogador em Tempo Real, Salas Privadas Instantâneas, Sem Cadastro Necessário, Compatível com Celular"
+    },
+    "faqHome": [
+      { "q": "O que vence Pedra no Pedra Papel Tesoura?", "a": "Papel vence Pedra. Papel cobre simbolicamente a Pedra, tornando-o o movimento vencedor sempre que seu oponente lançar Pedra." },
+      { "q": "O que vence Papel no Pedra Papel Tesoura?", "a": "Tesoura vence Papel. Tesoura corta Papel, tornando-o o contra-ataque sempre que seu oponente jogar Papel." },
+      { "q": "O que vence Tesoura no Pedra Papel Tesoura?", "a": "Pedra vence Tesoura. Pedra esmaga Tesoura, tornando-o o movimento vencedor sempre que seu oponente lançar Tesoura." },
+      { "q": "Pedra Papel Tesoura é só sorte?", "a": "No acaso, cada lançamento ganha 33,3% das vezes. Mas os humanos não escolhem aleatoriamente — seguem padrões previsíveis. Pesquisas mostram que a maioria dos iniciantes começa com Pedra, e os jogadores tendem a repetir os movimentos vencedores. Reconhecer essas tendências dá aos jogadores experientes uma vantagem real." },
+      { "q": "Preciso me cadastrar ou baixar algo para jogar?", "a": "Não. O jogo funciona inteiramente no seu navegador. Sem conta, sem download, sem aplicativo — só abra a página e jogue instantaneamente." },
+      { "q": "O Pedra Papel Tesoura Online funciona no celular?", "a": "Sim. O jogo é totalmente responsivo e funciona em qualquer smartphone ou tablet com um navegador moderno." },
+      { "q": "Qual é o melhor primeiro movimento no Pedra Papel Tesoura?", "a": "Estatisticamente, Papel é uma boa abertura. A maioria dos jogadores — especialmente iniciantes — lança Pedra primeiro porque parece o movimento mais forte. Jogar Papel contraria essa tendência e dá uma vantagem estatística na primeira rodada." }
+    ],
+    "faqTwoPlayers": [
+      { "q": "É grátis jogar?", "a": "Sim. Completamente grátis, sem conta necessária, sem download obrigatório." },
+      { "q": "Meu amigo precisa criar uma conta?", "a": "Não. Basta compartilhar o link — sem cadastro em nenhum dos lados." },
+      { "q": "Podemos jogar de dispositivos diferentes?", "a": "Sim. Um jogador no computador, o outro no celular — funciona em qualquer dispositivo com navegador." },
+      { "q": "Algum jogador pode ver o movimento do outro antes de escolher?", "a": "Não. Ambas as escolhas ficam ocultas até que os dois jogadores terminem. Sem espiar, sem trapacear." },
+      { "q": "O que acontece se eu fechar o navegador no meio do jogo?", "a": "Sua sala de jogo permanece aberta. Reabra o link e continue de onde parou." },
+      { "q": "Posso jogar no celular?", "a": "Sim. O jogo funciona em qualquer smartphone ou tablet." },
+      { "q": "Posso usar Pedra Papel Tesoura para tomar uma decisão com um amigo?", "a": "Com certeza. Jogar online é mais justo do que em pessoa — ambas as escolhas são confirmadas e reveladas ao mesmo tempo, para que ninguém possa trapacear lançando tarde." }
+    ]
+  }
+}

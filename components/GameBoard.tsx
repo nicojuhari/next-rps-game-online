@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useFirebaseContext } from "@/contexts/FirebaseContext";
 import { useGame } from "@/lib/hooks/useGame";
 import { getGameWinner } from "@/lib/game-utils";
@@ -10,11 +11,10 @@ import GameEffects from "./GameEffects";
 import GameOverlay from "./GameOverlay";
 import CertificateModal from "./CertificateModal";
 import { type CertificateData } from "@/lib/certificate";
-import type { Translations } from "@/lib/i18n";
 
-const GameBoard = ({ t }: { t: Translations }) => {
+const GameBoard = () => {
+    const t = useTranslations("gameBoard");
     const { gameData, updateGameChoices, resetGame, updateGameWinner } = useFirebaseContext();
-
     const { isGameFinished } = useGame();
     const searchParams = useSearchParams();
     const gameId = searchParams.get("gameId") || "";
@@ -53,10 +53,10 @@ const GameBoard = ({ t }: { t: Translations }) => {
     };
 
     const handleGetCertificate = () => {
-        const opponentName = Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || t.gameBoard.friend;
+        const opponentName = Object.entries(gameData?.players || {}).find(([uid]) => uid !== playerId)?.[1].name || t("friend");
         setCertData({
             mode: "multi",
-            player1Name: t.gameBoard.you,
+            player1Name: t("you"),
             player2Name: opponentName,
             player1SessionWins: yourWins,
             player2SessionWins: secondPlayerWins,
@@ -80,9 +80,9 @@ const GameBoard = ({ t }: { t: Translations }) => {
     const controlers: Record<string, string> = { "1": "🪨", "2": "📃", "3": "✂️" };
 
     const getButtonLabel = (key: string) => {
-        if (key === "1") return t.gameBoard.rock;
-        if (key === "2") return t.gameBoard.paper;
-        return t.gameBoard.scissors;
+        if (key === "1") return t("rock");
+        if (key === "2") return t("paper");
+        return t("scissors");
     };
 
     const isPickingDone = yourChoices.length >= 3;
@@ -113,21 +113,21 @@ const GameBoard = ({ t }: { t: Translations }) => {
                 <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
                     <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
                         <div className="text-center min-w-12">
-                            <div className="text-blue-100 text-xs uppercase tracking-widest">{t.gameBoard.you}</div>
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">{t("you")}</div>
                             <div className="text-white font-bold text-2xl leading-none">{yourWins}</div>
                         </div>
                         <div className="text-center">
-                            <p className="text-white font-semibold text-sm">{t.gameBoard.vsFriend}</p>
+                            <p className="text-white font-semibold text-sm">{t("vsFriend")}</p>
                             {gameData?.gameStake && <p className="text-blue-100 text-xs mt-0.5 max-w-32 truncate">{gameData.gameStake}</p>}
                         </div>
                         <div className="text-center min-w-12">
-                            <div className="text-blue-100 text-xs uppercase tracking-widest">{t.gameBoard.friend}</div>
+                            <div className="text-blue-100 text-xs uppercase tracking-widest">{t("friend")}</div>
                             <div className="text-white font-bold text-2xl leading-none">{secondPlayerWins}</div>
                         </div>
                     </div>
 
                     <div className="bg-white p-4 md:p-6">
-                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">{t.gameBoard.pickMove}</p>
+                        <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-4">{t("pickMove")}</p>
                         <div className="grid grid-cols-3 gap-3 w-full">
                             {Object.entries(controlers).map(([key, item]) => (
                                 <button onClick={() => select(+key)} className={getButtonStyle(key)} key={key} disabled={isDisabled}>
@@ -141,7 +141,6 @@ const GameBoard = ({ t }: { t: Translations }) => {
                                 yourChoices={yourChoices}
                                 secondPlayerChoices={secondPlayerChoices}
                                 isGameFinished={isGameFinished || false}
-                                t={t}
                             />
                         )}
                     </div>
@@ -152,10 +151,9 @@ const GameBoard = ({ t }: { t: Translations }) => {
                         outcome={outcome}
                         youScore={yourWins}
                         opponentScore={secondPlayerWins}
-                        opponentLabel={t.gameBoard.friend}
+                        opponentLabel={t("friend")}
                         onPlayAgain={() => resetGame(gameData.$id)}
                         onGetCertificate={outcome === "win" && yourWins > secondPlayerWins ? handleGetCertificate : undefined}
-                        t={t}
                     />
                 )}
 
@@ -173,9 +171,9 @@ const GameBoard = ({ t }: { t: Translations }) => {
                             : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
                     }`}
                 >
-                    {t.gameBoard.getCertificate}
+                    {t("getCertificate")}
                 </button>
-                {certHint && <p className="text-xs text-gray-500 mt-1.5">{t.gameBoard.certUnlock}</p>}
+                {certHint && <p className="text-xs text-gray-500 mt-1.5">{t("certUnlock")}</p>}
             </div>
         </>
     );
