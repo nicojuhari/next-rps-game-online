@@ -14,7 +14,8 @@ const OG_LOCALE: Record<string, string> = {
 };
 
 function absUrl(locale: string, path: string): string {
-    return `${BASE_URL}${locale === "en" ? path : `/${locale}${path}`}`;
+    if (locale === "en") return `${BASE_URL}${path}`;
+    return `${BASE_URL}/${locale}${path === "/" ? "" : path}`;
 }
 
 interface CreateMetadataOptions {

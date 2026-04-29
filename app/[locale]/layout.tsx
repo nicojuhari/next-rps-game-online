@@ -6,25 +6,12 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { createMetadata } from "@/lib/metadata";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-    const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: "meta" });
-    return createMetadata({
-        locale,
-        path: "/",
-        title: t("home.title"),
-        description: t("home.description"),
-        keywords: t.raw("home.keywords") as string[],
-    });
 }
 
 export default async function LocaleLayout({

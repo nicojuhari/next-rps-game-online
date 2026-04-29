@@ -20,7 +20,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
     const tJsonLd = await getTranslations({ locale, namespace: "jsonLd" });
-    const t = await getTranslations({ locale, namespace: "twoPlayers" });
 
     const faqJsonLd = {
         "@context": "https://schema.org",
@@ -38,7 +37,6 @@ const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) =
             <Suspense
                 fallback={
                     <div className="py-8">
-                        <h1 className="text-xl mb-4 text-center">{t("h1")}</h1>
                         <div className="flex justify-center">
                             <Image src="/loading.svg" loading="eager" alt="Loading" width={40} height={40} className="mx-auto my-24" />
                         </div>
