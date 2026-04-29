@@ -9,12 +9,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
+        locale,
+        path: "/",
         title: t("home.title"),
         description: t("home.description"),
-        canonical: locale === "en" ? "/" : `/${locale}`,
         keywords: t.raw("home.keywords") as string[],
-        openGraph: { title: t("home.title"), description: t("home.description") },
-        twitter: { title: t("home.title"), description: t("home.description") },
     });
 }
 

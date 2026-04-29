@@ -9,18 +9,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
+        locale,
+        path: "/two-players",
         title: t("twoPlayers.title"),
         description: t("twoPlayers.description"),
-        canonical: locale === "en" ? "/two-players" : `/${locale}/two-players`,
         keywords: t.raw("twoPlayers.keywords") as string[],
-        openGraph: { title: t("twoPlayers.title"), description: t("twoPlayers.description") },
-        twitter: { card: "summary_large_image", title: t("twoPlayers.title"), description: t("twoPlayers.description") },
     });
 }
 
 const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
     const tJsonLd = await getTranslations({ locale, namespace: "jsonLd" });
+    const t = await getTranslations({ locale, namespace: "twoPlayers" });
 
     const faqJsonLd = {
         "@context": "https://schema.org",
@@ -38,7 +38,7 @@ const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) =
             <Suspense
                 fallback={
                     <div className="py-8">
-                        <h1 className="text-xl mb-4 text-center">Play Rock Paper Scissors Online with Friends</h1>
+                        <h1 className="text-xl mb-4 text-center">{t("h1")}</h1>
                         <div className="flex justify-center">
                             <Image src="/loading.svg" loading="eager" alt="Loading" width={40} height={40} className="mx-auto my-24" />
                         </div>

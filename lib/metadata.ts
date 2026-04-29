@@ -1,74 +1,81 @@
 import type { Metadata } from "next";
 
-// Base metadata configuration
-export const baseMetadata: Metadata = {
-  metadataBase: new URL('https://rps-game.online'),
-  keywords: [
-    "rock paper scissors online",
-    "play rock paper scissors online",
-    "rps game online",
-    "rock paper scissors free online",
-    "rock paper scissors multiplayer",
-    "rock paper scissors with friends online",
-    "rock paper scissors no signup",
-    "rock paper scissors no download",
-    "rock paper scissors vs computer",
-    "roshambo online",
-    "janken online",
-  ],
-  authors: [{ name: "Rock Paper Scissors Online" }],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Rock Paper Scissors Online',
-    images: [
-      {
-        url: 'https://rps-game.online/og_rps.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Rock Paper Scissors Online Game',
-        type: 'image/jpg',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-  },
+const BASE_URL = "https://rps-game.online";
+const OG_IMAGE = `${BASE_URL}/og_rps.jpg`;
+
+const LOCALES = ["en", "es", "pt", "de", "fr"] as const;
+
+const OG_LOCALE: Record<string, string> = {
+    en: "en_US",
+    es: "es_ES",
+    pt: "pt_BR",
+    de: "de_DE",
+    fr: "fr_FR",
 };
 
-// Helper function to merge metadata with canonical URL
-export function createMetadata(overrides: Partial<Metadata> & { canonical?: string } = {}): Metadata {
-  const { canonical, ...metadataOverrides } = overrides;
-  
-  const metadata: Metadata = {
-    ...baseMetadata,
-    ...metadataOverrides,
-    openGraph: {
-      ...baseMetadata.openGraph,
-      ...metadataOverrides.openGraph,
-    },
-    twitter: {
-      ...baseMetadata.twitter,
-      ...metadataOverrides.twitter,
-    },
-  };
+function absUrl(locale: string, path: string): string {
+    return `${BASE_URL}${locale === "en" ? path : `/${locale}${path}`}`;
+}
 
-  // Add canonical URL if provided
-  if (canonical) {
-    metadata.alternates = {
-      ...metadata.alternates,
-      canonical: canonical.startsWith('http') ? canonical : `https://rps-game.online${canonical}`,
+interface CreateMetadataOptions {
+    locale: string;
+    path: string; // e.g. "/" | "/two-players" | "/privacy"
+    title: string;
+    description: string;
+    keywords?: string[];
+    twitterCard?: "summary" | "summary_large_image";
+}
+
+export function createMetadata({
+    locale,
+    path,
+    title,
+    description,
+    keywords,
+    twitterCard = "summary_large_image",
+}: CreateMetadataOptions): Metadata {
+    const canonical = absUrl(locale, path);
+
+    const hreflang: Record<string, string> = {
+        "x-default": absUrl("en", path),
     };
-    
-    // Also set the OpenGraph URL to match canonical
-    if (metadata.openGraph) {
-      metadata.openGraph.url = canonical.startsWith('http') ? canonical : `https://rps-game.online${canonical}`;
+    for (const l of LOCALES) {
+        hreflang[l] = absUrl(l, path);
     }
-  }
 
-  return metadata;
+    return {
+        metadataBase: new URL(BASE_URL),
+        title,
+        description,
+        ...(keywords?.length && { keywords }),
+        robots: { index: true, follow: true },
+        authors: [{ name: "Rock Paper Scissors Online" }],
+        alternates: {
+            canonical,
+            languages: hreflang,
+        },
+        openGraph: {
+            type: "website",
+            url: canonical,
+            siteName: "Rock Paper Scissors Online",
+            locale: OG_LOCALE[locale] ?? "en_US",
+            title,
+            description,
+            images: [
+                {
+                    url: OG_IMAGE,
+                    width: 1200,
+                    height: 630,
+                    alt: title,
+                    type: "image/jpeg",
+                },
+            ],
+        },
+        twitter: {
+            card: twitterCard,
+            title,
+            description,
+            images: [OG_IMAGE],
+        },
+    };
 }

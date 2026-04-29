@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="bg-white/10 border-b border-gray-100">
             <div className="container h-14 flex items-center justify-between">
-                <Link href="/" title="Rock Paper Scissors Online">
+                <Link href="/" title={t("logoTitle")}>
                     <svg className="h-4" viewBox="0 0 499 226" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             fill="#427cb5"

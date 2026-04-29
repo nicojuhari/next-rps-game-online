@@ -17,19 +17,13 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
-        title: "Rock Paper Scissors Online - Play Free vs Computer | No Signup",
-        description: "Play Rock Paper Scissors online for free. Challenge the computer instantly - no download, no account required. Best-of-3 rounds, works on all devices.",
-        canonical: "/",
-        openGraph: {
-            title: "Rock Paper Scissors Online - Play Free vs Computer",
-            description: "Play Rock Paper Scissors online for free. Challenge the computer instantly - no download, no account required.",
-            locale: locale === "es" ? "es_ES" : locale === "pt" ? "pt_BR" : "en_US",
-        },
-        twitter: {
-            title: "Rock Paper Scissors Online - Play Free vs Computer",
-            description: "Play Rock Paper Scissors online for free. No download, no account required.",
-        },
+        locale,
+        path: "/",
+        title: t("home.title"),
+        description: t("home.description"),
+        keywords: t.raw("home.keywords") as string[],
     });
 }
 

@@ -172,6 +172,7 @@
     "deleteAlert": "Your game data has been deleted."
   },
   "header": {
+    "logoTitle": "Rock Paper Scissors Online",
     "playWithFriend": "Play with a Friend"
   },
   "mainCTA": {

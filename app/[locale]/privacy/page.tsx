@@ -6,11 +6,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
+        locale,
+        path: "/privacy",
         title: t("privacy.title"),
         description: t("privacy.description"),
-        canonical: locale === "en" ? "/privacy" : `/${locale}/privacy`,
-        openGraph: { title: t("privacy.title"), description: t("privacy.description") },
-        twitter: { card: "summary", title: t("privacy.title"), description: t("privacy.description") },
+        twitterCard: "summary",
     });
 }
 
