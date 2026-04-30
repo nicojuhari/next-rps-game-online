@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { UsersIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
+import { CtaLink } from "./CtaLink";
 
 const Header = () => {
     const t = useTranslations("header");
@@ -38,13 +39,10 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                <Link
-                    href="/two-players"
-                    className="btn-cta-green inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white"
-                >
+                <CtaLink href="/two-players" className="px-3.5 py-1.5 text-xs">
                     <UsersIcon weight="duotone" size={14} />
                     {t("playWithFriend")}
-                </Link>
+                </CtaLink>
                 </motion.div>
             </div>
         </header>
