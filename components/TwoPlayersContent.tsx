@@ -15,6 +15,7 @@ import AdSense from "./AdSense";
 
 const TwoPlayersContent = () => {
     const t = useTranslations("twoPlayers");
+    const tHome = useTranslations("home");
     const searchParams = useSearchParams();
     const gameId = searchParams.get("gameId");
     const router = useRouter();
@@ -84,8 +85,7 @@ const TwoPlayersContent = () => {
     };
 
     return (
-        <div className="py-8">
-            <h1 className="text-lg font-medium mb-6 text-center">{t("h1")}</h1>
+        <div className="pb-8">
             {renderGameSection()}
             <AdSense adSlot="6657389797" className="mt-6" />
             <div className="my-10 space-y-12 font-light">
@@ -142,6 +142,15 @@ const TwoPlayersContent = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+            <div className="text-center py-8 mt-2 border-t border-gray-100">
+                <p className="text-sm text-gray-400 font-light">
+                    {tHome("footerPreamble")}{" "}
+                    <span className="font-medium text-blue-400">{tHome("h1Rock")}</span>{" "}
+                    <span className="font-medium text-yellow-400">{tHome("h1Paper")}</span>{" "}
+                    <span className="font-medium text-red-400">{tHome("h1Scissors")}</span>{" "}
+                    <span className="text-gray-400">{t("h1WithFriends")}</span>
+                </p>
             </div>
         </div>
     );

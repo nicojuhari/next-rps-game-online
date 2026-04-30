@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Stein Papier Schere Online – Kostenlos gegen Computer",
-      "description": "Spiel Stein Papier Schere online kostenlos. Fordere den Computer sofort heraus – kein Download, keine Anmeldung. Beste aus 3 Runden, auf jedem Gerät.",
+      "title": "Stein Papier Schere Online - Kostenlos gegen Computer",
+      "description": "Spiel Stein Papier Schere online kostenlos. Fordere den Computer sofort heraus - kein Download, keine Anmeldung. Beste aus 3 Runden, auf jedem Gerät.",
       "keywords": [
         "stein papier schere online",
         "stein papier schere spielen",
@@ -14,7 +14,7 @@
       ]
     },
     "twoPlayers": {
-      "title": "Stein Papier Schere Online mit Freunden – Kostenlos spielen",
+      "title": "Stein Papier Schere Online mit Freunden - Kostenlos spielen",
       "description": "Fordere einen Freund zu Stein Papier Schere online heraus. Link teilen, Züge wählen, Gewinner ermitteln. Kostenlos, ohne Login, auf jedem Gerät.",
       "keywords": [
         "stein papier schere multiplayer",
@@ -26,7 +26,7 @@
       ]
     },
     "privacy": {
-      "title": "Datenschutzerklärung – Stein Papier Schere Online",
+      "title": "Datenschutzerklärung - Stein Papier Schere Online",
       "description": "Erfahre, wie wir deine Daten bei Stein Papier Schere Online schützen. Keine Cookies, kein Tracking, keine persönlichen Daten. Deine Privatsphäre ist sicher."
     }
   },
@@ -36,39 +36,40 @@
     "h1Paper": "Papier",
     "h1Scissors": "Schere",
     "h1Online": "Online",
+    "footerPreamble": "Wir hoffen, dir gefällt",
     "subtitle": "Spiel gegen den Computer oder fordere einen Freund heraus\nKein Download, kein Konto erforderlich.",
     "privacyNoticeBefore": "Lies unsere ",
     "privacyNoticeLink": "Datenschutzerklärung",
     "privacyNoticeAfter": ", um zu erfahren, wie wir deine Daten schützen.",
     "strategy": {
       "title": "Wie du bei Stein Papier Schere gewinnst",
-      "p1": "Die meisten Spieler behandeln Stein Papier Schere wie reinen Zufall – wie einen Münzwurf. Das ist falsch.",
+      "p1": "Die meisten Spieler behandeln Stein Papier Schere wie reinen Zufall - wie einen Münzwurf. Das ist falsch.",
       "p2": "Eine Studie der Universität Zhejiang untersuchte Hunderttausende von Partien und entdeckte, dass Menschen vorhersehbaren Mustern folgen. Die Forscher fanden eine Strategie namens \"Gewinn-Halten, Verlust-Wechseln\":",
       "winLabel": "Wenn du gewinnst:",
       "winText": "Dein Gegner wechselt wahrscheinlich seinen Zug.",
       "winCounterLabel": "Gegenzug:",
-      "winCounter": "Spiel denselben Zug wie dein Gegner – er schlägt das, was als Nächstes kommt.",
+      "winCounter": "Spiel denselben Zug wie dein Gegner - er schlägt das, was als Nächstes kommt.",
       "loseLabel": "Wenn du verlierst:",
       "loseText": "Dein Gegner wiederholt seinen Siegeszug, weil er sich \"glücklich\" fühlt.",
       "loseCounterLabel": "Gegenzug:",
       "loseCounter": "Spiel den Zug, der seinen letzten Zug schlägt.",
       "firstThrowLabel": "Strategie beim ersten Wurf:",
-      "firstThrowText": "Anfänger – besonders männliche Spieler – beginnen meist mit Stein, weil er stark wirkt.",
+      "firstThrowText": "Anfänger - besonders männliche Spieler - beginnen meist mit Stein, weil er stark wirkt.",
       "tipLabel": "Tipp:",
       "tip": "Gegen einen unbekannten Gegner: fang mit Papier an.",
       "luckQ": "Ist Stein Papier Schere Glück oder Können?",
-      "luckA": "Beides. Ein rein zufälliger Spieler gewinnt 33,3 % der Zeit. Menschliche Entscheidungen sind aber nicht zufällig – Muster zu erkennen bringt einen echten Vorteil.",
-      "certCTA": "Teste deine Strategie – gewinne mehr Partien als dein Gegner und sichere dir ein persönliches Siegerzeugnis zum Herunterladen und Teilen."
+      "luckA": "Beides. Ein rein zufälliger Spieler gewinnt 33,3 % der Zeit. Menschliche Entscheidungen sind aber nicht zufällig - Muster zu erkennen bringt einen echten Vorteil.",
+      "certCTA": "Teste deine Strategie - gewinne mehr Partien als dein Gegner und sichere dir ein persönliches Siegerzeugnis zum Herunterladen und Teilen."
     },
     "rules": {
       "title": "Regeln von Stein Papier Schere",
-      "p1": "Stein Papier Schere wird zwischen zwei Spielern gespielt. Beide zeigen gleichzeitig eines von drei Zeichen – der Gewinner wird nach drei einfachen Regeln bestimmt:",
+      "p1": "Stein Papier Schere wird zwischen zwei Spielern gespielt. Beide zeigen gleichzeitig eines von drei Zeichen - der Gewinner wird nach drei einfachen Regeln bestimmt:",
       "rockCrushes": "Stein schlägt Schere",
       "scissorsCuts": "Schere schneidet Papier",
       "paperCovers": "Papier bedeckt Stein",
       "drawRule": "Zeigen beide dasselbe Zeichen, endet die Runde unentschieden.",
       "bestOf3Q": "Wie funktioniert 'Beste aus 3'?",
-      "bestOf3A": "Jede Partie besteht aus 3 Runden. Beide Spieler wählen alle Züge, bevor Ergebnisse angezeigt werden – niemand kann auf den anderen reagieren. Wer die meisten Runden gewinnt, gewinnt die Partie. Gewinnt jeder eine Runde und die dritte endet unentschieden, ist die Partie remis."
+      "bestOf3A": "Jede Partie besteht aus 3 Runden. Beide Spieler wählen alle Züge, bevor Ergebnisse angezeigt werden - niemand kann auf den anderen reagieren. Wer die meisten Runden gewinnt, gewinnt die Partie. Gewinnt jeder eine Runde und die dritte endet unentschieden, ist die Partie remis."
     },
     "statistics": {
       "title": "Statistiken zu Stein Papier Schere",
@@ -77,38 +78,61 @@
       "story": "2005 entschied eine einzige Runde Stein Papier Schere über einen Auktionsauftrag im Wert von 17,8 Millionen Dollar. Christie's und Sotheby's waren sich uneinig über das Recht, eine wertvolle Kunstsammlung zu versteigern, und einigten sich auf ein Spiel.",
       "sothebys": "Sotheby's behandelte es als Zufall und spielte Papier.",
       "christies": "Christie's fragte die elfjährigen Zwillingstöchter eines Direktors um Rat. Die Mädchen überlegten: \"Alle denken, Stein ist der starke Zug. Sotheby's erwartet Stein, also spielen sie Papier. Spielt Schere.\"",
-      "conclusion": "Christie's spielte Schere. Sotheby's spielte Papier. Christie's gewann – und bewies, dass selbst bei einem einfachen Spiel Psychologie über reinen Zufall siegt."
+      "conclusion": "Christie's spielte Schere. Sotheby's spielte Papier. Christie's gewann - und bewies, dass selbst bei einem einfachen Spiel Psychologie über reinen Zufall siegt."
     },
     "history": {
       "title": "Was ist Stein Papier Schere?",
-      "p1": "Stein Papier Schere ist ein Handspiel, das weltweit gespielt wird – meist zwischen zwei Personen. Es dient oft als schnelle Entscheidungshilfe, ist aber auch ein Spiel des gegenseitigen Einschätzens.",
-      "p2": "Das Spiel reicht über 2.000 Jahre zurück in die chinesische Han-Dynastie (206 v. Chr. – 220 n. Chr.), wo es Shoushiling hieß und Gesten eines Frosches, einer Schnecke und einer Schlange darstellte.",
-      "p3": "In Japan wurde es als Jan-Ken bekannt und zum alltäglichen Mittel zur Streitbeilegung in Schulen und Betrieben. Im frühen 20. Jahrhundert gelangte es in den Westen. Heute kennt es viele Namen: Roshambo in den USA, Piedra Papel Tijeras in Spanien – immer dieselben drei Gesten.",
+      "p1": "Stein Papier Schere ist ein Handspiel, das weltweit gespielt wird - meist zwischen zwei Personen. Es dient oft als schnelle Entscheidungshilfe, ist aber auch ein Spiel des gegenseitigen Einschätzens.",
+      "p2": "Das Spiel reicht über 2.000 Jahre zurück in die chinesische Han-Dynastie (206 v. Chr. - 220 n. Chr.), wo es Shoushiling hieß und Gesten eines Frosches, einer Schnecke und einer Schlange darstellte.",
+      "p3": "In Japan wurde es als Jan-Ken bekannt und zum alltäglichen Mittel zur Streitbeilegung in Schulen und Betrieben. Im frühen 20. Jahrhundert gelangte es in den Westen. Heute kennt es viele Namen: Roshambo in den USA, Piedra Papel Tijeras in Spanien - immer dieselben drei Gesten.",
       "didYouKnow": "Wusstest du? Der 27. August ist offiziell der Welt-Stein-Papier-Schere-Tag.",
-      "computerNote": "Der Computer auf dieser Seite wählt rein zufällig – jedes Mal eine gleiche Chance von 1 zu 3 für Stein, Papier oder Schere. Keine Tricks, nur Zufall.",
-      "fairPlay": "Online spielen schließt auch die häufigste Betrugsform beim physischen Spiel aus. In Person kann ein Spieler seinen Wurf um Millisekunden verzögern, um auf die Hand des Gegners zu reagieren – bekannt als \"Shadowing\". Auf rps-game.online bestätigen beide Spieler ihren Zug verdeckt, bevor Ergebnisse angezeigt werden – jede Partie ist fair."
+      "computerNote": "Der Computer auf dieser Seite wählt rein zufällig - jedes Mal eine gleiche Chance von 1 zu 3 für Stein, Papier oder Schere. Keine Tricks, nur Zufall.",
+      "fairPlay": "Online spielen schließt auch die häufigste Betrugsform beim physischen Spiel aus. In Person kann ein Spieler seinen Wurf um Millisekunden verzögern, um auf die Hand des Gegners zu reagieren - bekannt als \"Shadowing\". Auf rps-game.online bestätigen beide Spieler ihren Zug verdeckt, bevor Ergebnisse angezeigt werden - jede Partie ist fair."
     },
     "faq": {
       "title": "Häufig gestellte Fragen",
       "items": [
-        { "q": "Was schlägt Stein bei Stein Papier Schere?", "a": "Papier schlägt Stein. Papier bedeckt symbolisch den Stein und ist der Gewinnerzug, wenn dein Gegner Stein wirft." },
-        { "q": "Was schlägt Papier?", "a": "Schere schlägt Papier. Schere schneidet Papier und ist der richtige Zug, wenn dein Gegner Papier spielt." },
-        { "q": "Was schlägt Schere?", "a": "Stein schlägt Schere. Stein zerschmettert die Schere und gewinnt, wenn dein Gegner Schere wirft." },
-        { "q": "Ist Stein Papier Schere nur Glück?", "a": "Nicht nur. Ein zufälliger Spieler gewinnt 33 % der Zeit, aber echte Menschen folgen Mustern – und Muster lassen sich lesen." },
-        { "q": "Muss ich mich anmelden oder etwas herunterladen?", "a": "Nein. Das Spiel läuft direkt im Browser. Kein Konto, kein Download, keine App – einfach die Seite öffnen und spielen." },
-        { "q": "Funktioniert es auf dem Handy?", "a": "Ja. Das Spiel ist vollständig responsiv und funktioniert auf jedem Smartphone oder Tablet mit einem modernen Browser." },
-        { "q": "Was ist der beste Eröffnungszug?", "a": "Statistisch ist Papier eine starke Wahl. Die meisten Spieler – besonders Anfänger – beginnen mit Stein, weil er stark wirkt. Papier kontert diese Tendenz und gibt dir einen Vorteil in der ersten Runde." }
+        {
+          "q": "Was schlägt Stein bei Stein Papier Schere?",
+          "a": "Papier schlägt Stein. Papier bedeckt symbolisch den Stein und ist der Gewinnerzug, wenn dein Gegner Stein wirft."
+        },
+        {
+          "q": "Was schlägt Papier?",
+          "a": "Schere schlägt Papier. Schere schneidet Papier und ist der richtige Zug, wenn dein Gegner Papier spielt."
+        },
+        {
+          "q": "Was schlägt Schere?",
+          "a": "Stein schlägt Schere. Stein zerschmettert die Schere und gewinnt, wenn dein Gegner Schere wirft."
+        },
+        {
+          "q": "Ist Stein Papier Schere nur Glück?",
+          "a": "Nicht nur. Ein zufälliger Spieler gewinnt 33 % der Zeit, aber echte Menschen folgen Mustern - und Muster lassen sich lesen."
+        },
+        {
+          "q": "Muss ich mich anmelden oder etwas herunterladen?",
+          "a": "Nein. Das Spiel läuft direkt im Browser. Kein Konto, kein Download, keine App - einfach die Seite öffnen und spielen."
+        },
+        {
+          "q": "Funktioniert es auf dem Handy?",
+          "a": "Ja. Das Spiel ist vollständig responsiv und funktioniert auf jedem Smartphone oder Tablet mit einem modernen Browser."
+        },
+        {
+          "q": "Was ist der beste Eröffnungszug?",
+          "a": "Statistisch ist Papier eine starke Wahl. Die meisten Spieler - besonders Anfänger - beginnen mit Stein, weil er stark wirkt. Papier kontert diese Tendenz und gibt dir einen Vorteil in der ersten Runde."
+        }
       ]
     }
   },
   "twoPlayers": {
     "h1": "Stein Papier Schere Online mit Freunden spielen",
+    "h1Label": "Echtzeit · Ohne Anmeldung",
+    "h1WithFriends": "Online mit Freunden spielen",
     "gameNotFound": "Spiel nicht gefunden. Erstelle oben ein neues.",
     "cancelGame": "Abbrechen und neues Spiel erstellen",
-    "pickMoveNote": "Wähle dreimal deinen Zug – Ergebnisse erscheinen, wenn beide Spieler fertig sind.",
+    "pickMoveNote": "Wähle dreimal deinen Zug - Ergebnisse erscheinen, wenn beide Spieler fertig sind.",
     "howToPlay": {
       "title": "Wie man Stein Papier Schere Online mit Freunden spielt",
-      "intro": "Mit einem Freund spielen geht in drei Schritten – kein Konto, keine App:",
+      "intro": "Mit einem Freund spielen geht in drei Schritten - kein Konto, keine App:",
       "createRoomLabel": "Raum erstellen",
       "createRoomText": "klick auf 'Spiel erstellen' oben oder auf der Startseite. Du erhältst sofort einen privaten Link.",
       "shareLinkLabel": "Link teilen",
@@ -119,10 +143,10 @@
       "claimCertText": "gewinne mehr Partien als dein Gegner und sichere dir ein persönliches Siegerzeugnis. Herunterladen oder teilen."
     },
     "howItWorks": {
-      "title": "Stein Papier Schere 1v1 – So funktioniert es",
-      "p1": "Beide wählen gleichzeitig und sehen die Wahl des anderen nicht, bevor sie bestätigt haben. Jede Partie ist dadurch fair – kein Reagieren im letzten Moment, keine Streitereien.",
+      "title": "Stein Papier Schere 1v1 - So funktioniert es",
+      "p1": "Beide wählen gleichzeitig und sehen die Wahl des anderen nicht, bevor sie bestätigt haben. Jede Partie ist dadurch fair - kein Reagieren im letzten Moment, keine Streitereien.",
       "firstTo2": "Wer die meisten Runden gewinnt, gewinnt die Partie. Erster auf 2 Siege gewinnt.",
-      "scores": "Punkte werden über mehrere Partien im selben Raum verfolgt – kein neuer Link nötig."
+      "scores": "Punkte werden über mehrere Partien im selben Raum verfolgt - kein neuer Link nötig."
     },
     "whySettle": {
       "title": "Warum mit Stein Papier Schere entscheiden?",
@@ -138,12 +162,30 @@
     "faq": {
       "title": "Häufig gestellte Fragen",
       "items": [
-        { "q": "Ist es kostenlos?", "a": "Ja. Völlig kostenlos, kein Konto nötig, kein Download erforderlich." },
-        { "q": "Braucht mein Freund ein Konto?", "a": "Nein. Einfach den Link teilen – keine Anmeldung auf keiner Seite." },
-        { "q": "Können wir von verschiedenen Geräten spielen?", "a": "Ja. Ein Spieler am PC, der andere am Handy – funktioniert auf jedem Gerät mit Browser." },
-        { "q": "Kann man den Zug des anderen sehen, bevor man wählt?", "a": "Nein. Beide Züge bleiben verborgen, bis beide Spieler fertig sind. Kein Spicken, kein Schummeln." },
-        { "q": "Was passiert, wenn ich den Browser schließe?", "a": "Der Spielraum bleibt offen. Öffne den Link erneut und mach weiter, wo du aufgehört hast." },
-        { "q": "Kann ich auf dem Handy spielen?", "a": "Ja. Das Spiel funktioniert auf jedem Smartphone oder Tablet." }
+        {
+          "q": "Ist es kostenlos?",
+          "a": "Ja. Völlig kostenlos, kein Konto nötig, kein Download erforderlich."
+        },
+        {
+          "q": "Braucht mein Freund ein Konto?",
+          "a": "Nein. Einfach den Link teilen - keine Anmeldung auf keiner Seite."
+        },
+        {
+          "q": "Können wir von verschiedenen Geräten spielen?",
+          "a": "Ja. Ein Spieler am PC, der andere am Handy - funktioniert auf jedem Gerät mit Browser."
+        },
+        {
+          "q": "Kann man den Zug des anderen sehen, bevor man wählt?",
+          "a": "Nein. Beide Züge bleiben verborgen, bis beide Spieler fertig sind. Kein Spicken, kein Schummeln."
+        },
+        {
+          "q": "Was passiert, wenn ich den Browser schließe?",
+          "a": "Der Spielraum bleibt offen. Öffne den Link erneut und mach weiter, wo du aufgehört hast."
+        },
+        {
+          "q": "Kann ich auf dem Handy spielen?",
+          "a": "Ja. Das Spiel funktioniert auf jedem Smartphone oder Tablet."
+        }
       ]
     }
   },
@@ -155,7 +197,7 @@
     "anonymousIdTitle": "Anonyme Spieler-ID",
     "anonymousIdText": "Eine zufällige Spieler-ID wird automatisch generiert, um das Spielen zu ermöglichen. Diese ID wird im lokalen Speicher deines Browsers gespeichert und ist nicht mit persönlichen Daten verknüpft.",
     "simpleAnalyticsTitle": "Einfache Analyse",
-    "simpleAnalyticsText": "Wir verwenden Simple Analytics, um die allgemeine Nutzung der Seite zu verstehen – z. B. wie viele Personen die Seite besuchen – ohne Einzelpersonen zu verfolgen oder Cookies zu nutzen.",
+    "simpleAnalyticsText": "Wir verwenden Simple Analytics, um die allgemeine Nutzung der Seite zu verstehen - z. B. wie viele Personen die Seite besuchen - ohne Einzelpersonen zu verfolgen oder Cookies zu nutzen.",
     "gameDataTitle": "Spieldaten",
     "gameDataText": "Deine Spielaktionen (Stein, Papier oder Schere) und deine anonyme Spieler-ID werden sicher in unserer Datenbank gespeichert. Dies dient ausschließlich dem Spielbetrieb und kann nicht zur Identifizierung verwendet werden.",
     "localStorageTitle": "Lokaler Speicher",
@@ -209,9 +251,18 @@
     "results": "Ergebnisse"
   },
   "gameOverlay": {
-    "win": { "headline": "Du gewinnst!", "sub": "Gut gemacht. Noch eine Runde?" },
-    "draw": { "headline": "Unentschieden!", "sub": "So knapp. Nochmal?" },
-    "lose": { "headline": "Du hast verloren.", "sub": "Nicht aufgeben – nochmal spielen!" },
+    "win": {
+      "headline": "Du gewinnst!",
+      "sub": "Gut gemacht. Noch eine Runde?"
+    },
+    "draw": {
+      "headline": "Unentschieden!",
+      "sub": "So knapp. Nochmal?"
+    },
+    "lose": {
+      "headline": "Du hast verloren.",
+      "sub": "Nicht aufgeben - nochmal spielen!"
+    },
     "youLabel": "Du",
     "getCertificate": "🏆 Zertifikat holen",
     "playAgain": "Nochmal spielen"
@@ -253,22 +304,64 @@
       "featureList": "Einzelspieler gegen Computer, Echtzeit-Multiplayer, Sofortige private Räume, Ohne Anmeldung, Mobilfreundlich"
     },
     "faqHome": [
-      { "q": "Was schlägt Stein bei Stein Papier Schere?", "a": "Papier schlägt Stein. Papier bedeckt symbolisch den Stein und ist der Gewinnerzug, wenn dein Gegner Stein wirft." },
-      { "q": "Was schlägt Papier bei Stein Papier Schere?", "a": "Schere schlägt Papier. Schere schneidet Papier und ist der richtige Zug, wenn dein Gegner Papier spielt." },
-      { "q": "Was schlägt Schere bei Stein Papier Schere?", "a": "Stein schlägt Schere. Stein zerschmettert die Schere und gewinnt, wenn dein Gegner Schere wirft." },
-      { "q": "Ist Stein Papier Schere nur Glück?", "a": "Im reinen Zufall gewinnt jeder Zug zu 33,3 %. Aber Menschen spielen nicht zufällig – sie folgen Mustern. Anfänger beginnen meist mit Stein, und Gewinner neigen dazu, ihren Zug zu wiederholen. Wer das erkennt, hat einen echten Vorteil." },
-      { "q": "Muss ich mich anmelden oder etwas herunterladen?", "a": "Nein. Das Spiel läuft direkt im Browser. Kein Konto, kein Download, keine App – einfach die Seite öffnen und spielen." },
-      { "q": "Funktioniert Stein Papier Schere Online auf dem Handy?", "a": "Ja. Das Spiel ist vollständig responsiv und funktioniert auf jedem Smartphone oder Tablet." },
-      { "q": "Was ist der beste Eröffnungszug?", "a": "Statistisch ist Papier eine starke Wahl. Die meisten Spieler – besonders Anfänger – beginnen mit Stein. Papier kontert diese Tendenz und gibt dir einen Vorteil in der ersten Runde." }
+      {
+        "q": "Was schlägt Stein bei Stein Papier Schere?",
+        "a": "Papier schlägt Stein. Papier bedeckt symbolisch den Stein und ist der Gewinnerzug, wenn dein Gegner Stein wirft."
+      },
+      {
+        "q": "Was schlägt Papier bei Stein Papier Schere?",
+        "a": "Schere schlägt Papier. Schere schneidet Papier und ist der richtige Zug, wenn dein Gegner Papier spielt."
+      },
+      {
+        "q": "Was schlägt Schere bei Stein Papier Schere?",
+        "a": "Stein schlägt Schere. Stein zerschmettert die Schere und gewinnt, wenn dein Gegner Schere wirft."
+      },
+      {
+        "q": "Ist Stein Papier Schere nur Glück?",
+        "a": "Im reinen Zufall gewinnt jeder Zug zu 33,3 %. Aber Menschen spielen nicht zufällig - sie folgen Mustern. Anfänger beginnen meist mit Stein, und Gewinner neigen dazu, ihren Zug zu wiederholen. Wer das erkennt, hat einen echten Vorteil."
+      },
+      {
+        "q": "Muss ich mich anmelden oder etwas herunterladen?",
+        "a": "Nein. Das Spiel läuft direkt im Browser. Kein Konto, kein Download, keine App - einfach die Seite öffnen und spielen."
+      },
+      {
+        "q": "Funktioniert Stein Papier Schere Online auf dem Handy?",
+        "a": "Ja. Das Spiel ist vollständig responsiv und funktioniert auf jedem Smartphone oder Tablet."
+      },
+      {
+        "q": "Was ist der beste Eröffnungszug?",
+        "a": "Statistisch ist Papier eine starke Wahl. Die meisten Spieler - besonders Anfänger - beginnen mit Stein. Papier kontert diese Tendenz und gibt dir einen Vorteil in der ersten Runde."
+      }
     ],
     "faqTwoPlayers": [
-      { "q": "Ist es kostenlos?", "a": "Ja. Völlig kostenlos, kein Konto nötig, kein Download erforderlich." },
-      { "q": "Braucht mein Freund ein Konto?", "a": "Nein. Einfach den Link teilen – keine Anmeldung auf keiner Seite." },
-      { "q": "Können wir von verschiedenen Geräten spielen?", "a": "Ja. Ein Spieler am PC, der andere am Handy – funktioniert auf jedem Gerät mit Browser." },
-      { "q": "Kann man den Zug des anderen sehen, bevor man wählt?", "a": "Nein. Beide Züge bleiben verborgen, bis beide Spieler fertig sind. Kein Spicken, kein Schummeln." },
-      { "q": "Was passiert, wenn ich den Browser schließe?", "a": "Der Spielraum bleibt offen. Öffne den Link erneut und mach weiter, wo du aufgehört hast." },
-      { "q": "Kann ich auf dem Handy spielen?", "a": "Ja. Das Spiel funktioniert auf jedem Smartphone oder Tablet." },
-      { "q": "Kann ich Stein Papier Schere nutzen, um eine Entscheidung zu treffen?", "a": "Natürlich. Online ist fairer als in Person – beide Züge werden gleichzeitig bestätigt und aufgedeckt, niemand kann zu spät werfen." }
+      {
+        "q": "Ist es kostenlos?",
+        "a": "Ja. Völlig kostenlos, kein Konto nötig, kein Download erforderlich."
+      },
+      {
+        "q": "Braucht mein Freund ein Konto?",
+        "a": "Nein. Einfach den Link teilen - keine Anmeldung auf keiner Seite."
+      },
+      {
+        "q": "Können wir von verschiedenen Geräten spielen?",
+        "a": "Ja. Ein Spieler am PC, der andere am Handy - funktioniert auf jedem Gerät mit Browser."
+      },
+      {
+        "q": "Kann man den Zug des anderen sehen, bevor man wählt?",
+        "a": "Nein. Beide Züge bleiben verborgen, bis beide Spieler fertig sind. Kein Spicken, kein Schummeln."
+      },
+      {
+        "q": "Was passiert, wenn ich den Browser schließe?",
+        "a": "Der Spielraum bleibt offen. Öffne den Link erneut und mach weiter, wo du aufgehört hast."
+      },
+      {
+        "q": "Kann ich auf dem Handy spielen?",
+        "a": "Ja. Das Spiel funktioniert auf jedem Smartphone oder Tablet."
+      },
+      {
+        "q": "Kann ich Stein Papier Schere nutzen, um eine Entscheidung zu treffen?",
+        "a": "Natürlich. Online ist fairer als in Person - beide Züge werden gleichzeitig bestätigt und aufgedeckt, niemand kann zu spät werfen."
+      }
     ]
   }
 }

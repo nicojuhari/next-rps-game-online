@@ -56,12 +56,12 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
             <HomeContent />
 
             <div className="text-center py-8 mt-2 border-t border-gray-100">
-                <p className="text-xs text-gray-400 tracking-widest uppercase mb-2">{t("h1Label")}</p>
-                <p className="font-semibold">
-                    <span className="text-blue-400 text-xl">{t("h1Rock")} </span>
-                    <span className="text-yellow-400 text-xl">{t("h1Paper")} </span>
-                    <span className="text-red-400 text-xl">{t("h1Scissors")} </span>
-                    <span className="text-gray-400 text-lg">{t("h1Online")}</span>
+                <p className="text-sm text-gray-400 font-light">
+                    {t("footerPreamble")}{" "}
+                    <span className="font-medium text-blue-400">{t("h1Rock")}</span>{" "}
+                    <span className="font-medium text-yellow-400">{t("h1Paper")}</span>{" "}
+                    <span className="font-medium text-red-400">{t("h1Scissors")}</span>{" "}
+                    <span className="text-gray-400">{t("h1Online")}</span>
                 </p>
             </div>
 

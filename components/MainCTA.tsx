@@ -29,15 +29,14 @@ const MainCTA = () => {
 
     return (
         <div className="text-center md:max-w-sm mx-auto w-full">
-            <p className="font-semibold text-lg text-center inline-flex items-center">
-                <span className="text-blue-500">{t("createLabel")}</span> <DotIcon size={32} className="text-gray-400" />
-                <span className="text-yellow-500">{t("shareLabel")}</span> <DotIcon size={32} className="text-gray-400" />
-                <span className="text-red-500">{t("playLabel")}</span>
-            </p>
-
-            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm mt-1">
+            <div className="bg-white p-6 rounded-xl border border-gray-200">
+                <p className="text-lg text-center inline-flex items-center text-gray-700 mb-6">
+                    <span>{t("createLabel")}</span> <DotIcon size={32} className="text-gray-400" />
+                    <span>{t("shareLabel")}</span> <DotIcon size={32} className="text-gray-400" />
+                    <span>{t("playLabel")}</span>
+                </p>
                 <div className="text-left">
-                    <label htmlFor="game-stakes" className="block text-sm text-gray-700">
+                    <label htmlFor="game-stakes" className="block text-sm text-gray-500">
                         {t("stakeLabel")} <span className="text-gray-400 text-xs">{t("stakeOptional")}</span>
                     </label>
                     <input
@@ -62,7 +61,7 @@ const MainCTA = () => {
                     )}
                     {t("createButton")}
                 </button>
-                <div className="mt-2 text-xs text-gray-400 tracking-wide">{t("noAccount")}</div>
+                <div className="mt-3 text-xs text-gray-400 tracking-wide">{t("noAccount")}</div>
             </div>
         </div>
     );

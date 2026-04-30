@@ -63,7 +63,7 @@ const FUNNY_BODIES_SINGLE: Array<(name: string, score: string) => string> = [
 
 const FUNNY_BODIES_MULTI: Array<(name: string, opponent: string, score: string) => string> = [
     (name, opponent, score) =>
-        `For defeating ${opponent} in what historians will describe as the most intense Rock Paper Scissors match ever witnessed. ${name} wins ${score} and has claimed the undying respect of everyone present (estimated: 1–3 people).`,
+        `For defeating ${opponent} in what historians will describe as the most intense Rock Paper Scissors match ever witnessed. ${name} wins ${score} and has claimed the undying respect of everyone present (estimated: 1-3 people).`,
     (name, opponent, score) =>
         `In a battle of wits that left ${opponent} rethinking several life choices, ${name} dominated ${score}. ${opponent} has agreed to acknowledge this publicly (under mild duress).`,
     (name, opponent, score) =>
@@ -87,7 +87,7 @@ const FUNNY_BODIES_MULTI: Array<(name: string, opponent: string, score: string) 
 export const getCertText = (data: CertificateData): { title: string; body: string } => {
     const { mode, player1Name, player2Name, player1SessionWins, player2SessionWins, winnerName, generatedAt } = data;
     const displayName = winnerName || player1Name;
-    const score = `${player1SessionWins}–${player2SessionWins}`;
+    const score = `${player1SessionWins}-${player2SessionWins}`;
 
     if (mode === "single") {
         const fn = FUNNY_BODIES_SINGLE[generatedAt % FUNNY_BODIES_SINGLE.length];

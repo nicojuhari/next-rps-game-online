@@ -1,7 +1,7 @@
 # Targeted Keywords - rps-game.online
 
 **Goal:** More organic traffic (Google + AI search) → AdSense revenue  
-**Context:** Site currently ranks positions 50–75 for most terms (pages 5–7). The opportunity is in climbing to page 1 for lower-competition terms while building content that justifies ranking for the bigger ones.
+**Context:** Site currently ranks positions 50-75 for most terms (pages 5-7). The opportunity is in climbing to page 1 for lower-competition terms while building content that justifies ranking for the bigger ones.
 
 ---
 
@@ -135,7 +135,7 @@ Core: `how to win rock paper scissors`, `rock paper scissors strategy`, `rock pa
 ## Quick Wins (do these first)
 
 1. **Add "AI" to the 1-player mode label** - captures 14K+ monthly searches currently going elsewhere
-2. **Title tag fix:** Current ranking position is 60+ - a strong, keyword-rich title tag alone can move this to position 20–30
+2. **Title tag fix:** Current ranking position is 60+ - a strong, keyword-rich title tag alone can move this to position 20-30
 3. **FAQ section on homepage** - answering "how to win rock paper scissors" and "is it luck or skill" satisfies informational intent and keeps users on page longer (better AdSense RPM)
 4. **Meta description for /two-players** - currently gets 0 clicks despite having the multiplayer feature people search for
 5. **"rock paper scissors multiplayer" is at position 41** - one good page optimization push could get this to page 1

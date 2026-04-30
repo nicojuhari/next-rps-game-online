@@ -42,6 +42,7 @@
     "h1Paper": "Paper",
     "h1Scissors": "Scissors",
     "h1Online": "Online",
+    "footerPreamble": "We hope you enjoy playing",
     "subtitle": "Play against the computer or challenge a friend\nNo download, no account required.",
     "privacyNoticeBefore": "Read our ",
     "privacyNoticeLink": "Privacy Policy",
@@ -109,6 +110,8 @@
   },
   "twoPlayers": {
     "h1": "Play Rock Paper Scissors Online with Friends",
+    "h1Label": "Real-time · No Signup",
+    "h1WithFriends": "Online with Friends",
     "gameNotFound": "Game not found. Create a new one above.",
     "cancelGame": "Cancel and create a new game",
     "pickMoveNote": "Pick your move 3 times, results show once both players are done.",

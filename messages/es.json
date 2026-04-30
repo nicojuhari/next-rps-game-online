@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Piedra Papel Tijeras Online - Gratis vs Computadora",
-      "description": "Juega Piedra Papel Tijeras online gratis. Desafía a la computadora al instante – sin descarga, sin cuenta. Mejor de 3 rondas, en cualquier dispositivo.",
+      "description": "Juega Piedra Papel Tijeras online gratis. Desafía a la computadora al instante - sin descarga, sin cuenta. Mejor de 3 rondas, en cualquier dispositivo.",
       "keywords": [
         "piedra papel tijeras online",
         "jugar piedra papel tijeras online",
@@ -36,6 +36,7 @@
     "h1Paper": "Papel",
     "h1Scissors": "Tijeras",
     "h1Online": "Online",
+    "footerPreamble": "Esperamos que disfrutes jugando",
     "subtitle": "Juega contra la computadora o desafía a un amigo\nSin descarga, sin cuenta requerida.",
     "privacyNoticeBefore": "Lee nuestra ",
     "privacyNoticeLink": "Política de Privacidad",
@@ -124,6 +125,8 @@
   },
   "twoPlayers": {
     "h1": "Juega Piedra Papel Tijeras Online con Amigos",
+    "h1Label": "En tiempo real · Sin Registro",
+    "h1WithFriends": "Online con Amigos",
     "gameNotFound": "Partida no encontrada. Crea una nueva arriba.",
     "cancelGame": "Cancelar y crear una nueva partida",
     "pickMoveNote": "Elige tu movimiento 3 veces, los resultados se muestran cuando ambos jugadores terminen.",

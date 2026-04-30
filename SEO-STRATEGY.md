@@ -89,7 +89,7 @@
 
 - **Title:** Play Rock Paper Scissors Online | Free Multiplayer RPS Game
 - **H1:** "Experience Customizable Rock Paper Scissors: Play Variations with Friends or Bots Online"
-- **Why it ranks:** Best content depth among game-only sites - FAQ section, multiple modes (Race, Survival, Best of Series), 2–4 players, bots, mobile-optimized
+- **Why it ranks:** Best content depth among game-only sites - FAQ section, multiple modes (Race, Survival, Best of Series), 2-4 players, bots, mobile-optimized
 - **Gaps:** No meta description, no structured data
 
 ### 3. wrpsa.com (World RPS Association)
@@ -259,7 +259,7 @@ Rock Paper Scissors: Rules, Strategy & How to Win
 - [ ] Add canonical tags
 - [ ] Add `og:title`, `og:description`, `og:image` for social previews
 - [ ] Add `VideoGame` JSON-LD structured data to both game pages (see schema below)
-- [ ] Add a content section + FAQ below each game UI (~300–500 words)
+- [ ] Add a content section + FAQ below each game UI (~300-500 words)
 - [ ] Create `sitemap.xml`
 
 ### VideoGame JSON-LD Schema
@@ -284,7 +284,7 @@ Rock Paper Scissors: Rules, Strategy & How to Win
 
 ---
 
-## Phase 2 - Content Authority (weeks 3–6)
+## Phase 2 - Content Authority (weeks 3-6)
 
 Build these pages to capture informational traffic and build topical authority:
 

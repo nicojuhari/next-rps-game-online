@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Pedra Papel Tesoura Online - Jogue Grátis vs Computador",
-      "description": "Jogue Pedra Papel Tesoura online de graça. Desafie o computador instantaneamente – sem download, sem conta. Melhor de 3 rodadas, em qualquer dispositivo.",
+      "description": "Jogue Pedra Papel Tesoura online de graça. Desafie o computador instantaneamente - sem download, sem conta. Melhor de 3 rodadas, em qualquer dispositivo.",
       "keywords": [
         "pedra papel tesoura online",
         "jogar pedra papel tesoura online",
@@ -36,6 +36,7 @@
     "h1Paper": "Papel",
     "h1Scissors": "Tesoura",
     "h1Online": "Online",
+    "footerPreamble": "Esperamos que você goste de jogar",
     "subtitle": "Jogue contra o computador ou desafie um amigo\nSem download, sem conta necessária.",
     "privacyNoticeBefore": "Leia nossa ",
     "privacyNoticeLink": "Política de Privacidade",
@@ -124,6 +125,8 @@
   },
   "twoPlayers": {
     "h1": "Jogue Pedra Papel Tesoura Online com Amigos",
+    "h1Label": "Em tempo real · Sem Cadastro",
+    "h1WithFriends": "Online com Amigos",
     "gameNotFound": "Partida não encontrada. Crie uma nova acima.",
     "cancelGame": "Cancelar e criar uma nova partida",
     "pickMoveNote": "Escolha seu movimento 3 vezes, os resultados aparecem quando ambos os jogadores terminarem.",
