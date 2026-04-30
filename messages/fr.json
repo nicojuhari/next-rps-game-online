@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Pierre Feuille Ciseaux en Ligne - Gratuit vs Ordinateur",
-      "description": "Jouez à Pierre Feuille Ciseaux en ligne gratuitement. Affrontez l'ordinateur - sans téléchargement ni compte. Meilleur des 3 manches, sur tous les appareils.",
+      "title": "Pierre Feuille Ciseaux en Ligne — Gratuit, Sans Inscription",
+      "description": "Jouez à Pierre Feuille Ciseaux en ligne gratuitement — contre l'ordinateur ou avec un ami. Révélation simultanée, meilleur des 3 manches. Sans compte, sans téléchargement, sur tous les appareils.",
       "keywords": [
         "pierre feuille ciseaux en ligne",
         "jouer pierre feuille ciseaux en ligne",
@@ -14,8 +14,8 @@
       ]
     },
     "twoPlayers": {
-      "title": "Pierre Feuille Ciseaux en Ligne avec des Amis - Multijoueur",
-      "description": "Défiez un ami en temps réel. Partagez un lien, choisissez vos coups, voyez qui gagne. Gratuit, sans inscription, sur tous les appareils.",
+      "title": "Pierre Feuille Ciseaux en Ligne avec des Amis — Temps Réel, Gratuit",
+      "description": "Défiez un ami à Pierre Feuille Ciseaux en ligne — partagez un lien, jouez en temps réel, gagnant désigné instantanément. Révélation simultanée. Sans compte, sans téléchargement. Sur tous les appareils.",
       "keywords": [
         "pierre feuille ciseaux multijoueur",
         "pierre feuille ciseaux avec amis en ligne",
@@ -41,86 +41,10 @@
     "privacyNoticeBefore": "Lis notre ",
     "privacyNoticeLink": "Politique de Confidentialité",
     "privacyNoticeAfter": " pour savoir comment nous protégeons tes données.",
-    "strategy": {
-      "title": "Comment gagner à Pierre Feuille Ciseaux",
-      "p1": "La plupart des joueurs voient Pierre Feuille Ciseaux comme un jeu de pur hasard. C'est une erreur.",
-      "p2": "Une étude de l'université de Zhejiang a analysé des centaines de milliers de parties et montré que les joueurs suivent des schémas prévisibles. Les chercheurs ont identifié une stratégie appelée « Gagne-Reste, Perd-Change » :",
-      "winLabel": "Si tu gagnes :",
-      "winText": "Ton adversaire va probablement changer de coup.",
-      "winCounterLabel": "Contre-coup :",
-      "winCounter": "Joue le même coup que lui - il bat ce qu'il va tenter ensuite.",
-      "loseLabel": "Si tu perds :",
-      "loseText": "Ton adversaire va probablement répéter son coup gagnant parce qu'il se sent en veine.",
-      "loseCounterLabel": "Contre-coup :",
-      "loseCounter": "Joue le coup qui bat ce qu'il vient de choisir.",
-      "firstThrowLabel": "Stratégie au premier coup :",
-      "firstThrowText": "Les débutants - surtout les hommes - commencent presque toujours par Pierre, parce que ça paraît le coup le plus fort.",
-      "tipLabel": "Conseil :",
-      "tip": "Contre un nouvel adversaire, commence par Feuille.",
-      "luckQ": "Pierre Feuille Ciseaux, c'est de la chance ou du skill ?",
-      "luckA": "Les deux. Un joueur aléatoire gagne 33,3 % du temps. Mais les humains ne choisissent pas au hasard - repérer leurs habitudes donne un vrai avantage.",
-      "certCTA": "Mets ta stratégie à l'épreuve - gagne plus de parties que ton adversaire et télécharge un certificat de victoire personnalisé à partager."
-    },
-    "rules": {
-      "title": "Règles de Pierre Feuille Ciseaux",
-      "p1": "Pierre Feuille Ciseaux se joue à deux. Chaque joueur montre simultanément l'un des trois signes - le gagnant est désigné par trois règles simples :",
-      "rockCrushes": "La pierre écrase les ciseaux",
-      "scissorsCuts": "Les ciseaux coupent la feuille",
-      "paperCovers": "La feuille recouvre la pierre",
-      "drawRule": "Si les deux joueurs choisissent le même signe, la manche est nulle.",
-      "bestOf3Q": "Comment fonctionne le meilleur des 3 ?",
-      "bestOf3A": "Chaque partie dure 3 manches. Les deux joueurs confirment tous leurs coups avant que les résultats soient révélés - personne ne peut réagir à l'autre. Celui qui gagne le plus de manches remporte la partie. Si chacun en gagne une et que la troisième est nulle, la partie est à égalité."
-    },
-    "statistics": {
-      "title": "Statistiques de Pierre Feuille Ciseaux",
-      "p1": "Dans un jeu purement aléatoire, chaque coup a une chance égale de 1 sur 3 (33,3 %) de gagner, perdre ou faire match nul.",
-      "p2": "En pratique, les humains ne jouent pas au hasard. Les données montrent que la distribution réelle est : Pierre ~35 %, Feuille ~35 %, Ciseaux ~30 %. Les ciseaux sont le signe le moins joué.",
-      "story": "En 2005, une seule manche de Pierre Feuille Ciseaux a décidé d'un contrat de vente aux enchères à 17,8 millions de dollars. Christie's et Sotheby's étaient à égalité pour les droits de vente d'une précieuse collection d'art et ont accepté de trancher par ce jeu.",
-      "sothebys": "Sotheby's a traité ça comme du hasard et a joué Feuille.",
-      "christies": "Christie's a demandé conseil aux filles jumelles de 11 ans d'un de ses directeurs. Elles ont raisonné : « Tout le monde pense que Pierre est le coup fort. Sotheby's s'attend à Pierre, donc ils vont jouer Feuille. Jouons Ciseaux. »",
-      "conclusion": "Christie's a joué Ciseaux. Sotheby's a joué Feuille. Christie's a gagné - prouvant que même dans un jeu simple, la psychologie bat le pur hasard."
-    },
-    "history": {
-      "title": "Qu'est-ce que Pierre Feuille Ciseaux ?",
-      "p1": "Pierre Feuille Ciseaux est un jeu de mains pratiqué dans le monde entier, généralement entre deux personnes. Il sert souvent à prendre une décision rapidement, mais c'est aussi un jeu de lecture de l'adversaire.",
-      "p2": "Le jeu remonte à plus de 2 000 ans, à la dynastie chinoise Han (206 av. J.-C. - 220 apr. J.-C.), où il s'appelait shoushiling et utilisait des gestes représentant une grenouille, un escargot et un serpent.",
-      "p3": "Il est arrivé au Japon sous le nom de Jan-Ken, où il est devenu un outil social quotidien pour régler des différends à l'école et au travail. Il a atteint l'Occident au début du XXe siècle. Aujourd'hui il porte de nombreux noms : roshambo aux États-Unis, piedra papel tijeras en Espagne - toujours les mêmes trois signes.",
-      "didYouKnow": "Le saviez-vous ? Le 27 août est officiellement la Journée mondiale de Pierre Feuille Ciseaux.",
-      "computerNote": "L'ordinateur sur ce site choisit au hasard - exactement 1 chance sur 3 de jouer Pierre, Feuille ou Ciseaux à chaque fois. Aucun trucage, juste de l'aléatoire.",
-      "fairPlay": "Jouer en ligne élimine aussi la principale façon de tricher en face à face. En personne, un joueur peut retarder son geste d'une fraction de seconde pour réagir à la main de l'adversaire - une technique appelée « shadowing ». Sur rps-game.online, les deux joueurs confirment leur choix en privé avant que les résultats soient affichés - chaque partie est vraiment équitable."
-    },
-    "faq": {
-      "title": "Questions Fréquentes",
-      "items": [
-        {
-          "q": "Qu'est-ce qui bat Pierre à Pierre Feuille Ciseaux ?",
-          "a": "La Feuille bat Pierre. La feuille recouvre symboliquement la pierre - c'est le coup gagnant quand ton adversaire joue Pierre."
-        },
-        {
-          "q": "Qu'est-ce qui bat Feuille ?",
-          "a": "Les Ciseaux battent Feuille. Les ciseaux coupent la feuille - c'est la bonne réponse quand ton adversaire joue Feuille."
-        },
-        {
-          "q": "Qu'est-ce qui bat Ciseaux ?",
-          "a": "Pierre bat les Ciseaux. La pierre écrase les ciseaux - c'est le coup gagnant quand ton adversaire joue Ciseaux."
-        },
-        {
-          "q": "Pierre Feuille Ciseaux, c'est juste de la chance ?",
-          "a": "Pas seulement. Un joueur aléatoire gagne 33 % du temps, mais les gens réels suivent des schémas - et les schémas se lisent."
-        },
-        {
-          "q": "Faut-il s'inscrire ou télécharger quelque chose ?",
-          "a": "Non. Le jeu tourne entièrement dans ton navigateur. Aucun compte, aucun téléchargement - ouvre la page et joue."
-        },
-        {
-          "q": "Ça marche sur mobile ?",
-          "a": "Oui. Le jeu est entièrement responsive et fonctionne sur tout smartphone ou tablette avec un navigateur moderne."
-        },
-        {
-          "q": "Quel est le meilleur premier coup ?",
-          "a": "Statistiquement, Feuille est un bon choix d'ouverture. La plupart des joueurs - surtout les débutants - commencent par Pierre. Jouer Feuille contrecarre cette tendance et donne un avantage dès la première manche."
-        }
-      ]
+    "challengeFriend": {
+      "heading": "Tu veux défier un ami ?",
+      "text": "Crée une salle privée, partage le lien et joue en temps réel. Aucun compte nécessaire de part et d'autre.",
+      "cta": "Jouer avec un ami →"
     }
   },
   "twoPlayers": {
@@ -129,65 +53,7 @@
     "h1WithFriends": "en Ligne avec des Amis",
     "gameNotFound": "Partie introuvable. Crée-en une nouvelle ci-dessus.",
     "cancelGame": "Annuler et créer une nouvelle partie",
-    "pickMoveNote": "Choisis ton coup 3 fois - les résultats s'affichent quand les deux joueurs ont terminé.",
-    "howToPlay": {
-      "title": "Comment Jouer à Pierre Feuille Ciseaux en Ligne avec des Amis",
-      "intro": "Jouer avec un ami, c'est trois étapes - sans compte, sans appli :",
-      "createRoomLabel": "Crée une salle privée",
-      "createRoomText": "clique sur « Créer une partie » ci-dessus ou depuis la page d'accueil. Tu reçois un lien privé immédiatement.",
-      "shareLinkLabel": "Partage le lien",
-      "shareLinkText": "envoie-le à ton ami via n'importe quelle appli de messagerie. Fonctionne sur tous les appareils.",
-      "playLabel": "Joue",
-      "playText": "les deux joueurs choisissent Pierre, Feuille ou Ciseaux. Le meilleur des 3 manches l'emporte.",
-      "claimCertLabel": "Obtiens ton certificat",
-      "claimCertText": "gagne plus de parties que ton adversaire et télécharge un certificat de victoire personnalisé à partager."
-    },
-    "howItWorks": {
-      "title": "Pierre Feuille Ciseaux 1v1 - Comment ça marche",
-      "p1": "Les deux joueurs choisissent en même temps et ne voient pas le choix de l'autre avant de confirmer. Chaque partie est vraiment équitable - pas de réaction de dernière seconde, pas de disputes.",
-      "firstTo2": "Celui qui remporte le plus de manches gagne la partie. Le premier à 2 victoires l'emporte.",
-      "scores": "Les scores sont suivis sur plusieurs parties dans la même salle - pas besoin de créer un nouveau lien à chaque fois."
-    },
-    "whySettle": {
-      "title": "Pourquoi trancher à Pierre Feuille Ciseaux ?",
-      "p1": "Pierre Feuille Ciseaux donne une chance égale à chacun et se joue en quelques secondes. Les gens l'utilisent pour décider :",
-      "items": [
-        "Qui paie le repas",
-        "Qui choisit le film ou la playlist",
-        "Qui commence dans un jeu de société",
-        "Toute décision où les deux veulent une chance équitable"
-      ],
-      "p2": "Jouer en ligne évite les disputes sur qui a joué quoi. Les deux coups sont confirmés et révélés en même temps, à chaque fois."
-    },
-    "faq": {
-      "title": "Questions Fréquentes",
-      "items": [
-        {
-          "q": "C'est gratuit ?",
-          "a": "Oui. Complètement gratuit, sans compte, sans téléchargement."
-        },
-        {
-          "q": "Mon ami doit-il créer un compte ?",
-          "a": "Non. Partage juste le lien - aucune inscription de part et d'autre."
-        },
-        {
-          "q": "On peut jouer depuis des appareils différents ?",
-          "a": "Oui. Un joueur sur PC, l'autre sur téléphone - ça marche sur tout appareil avec un navigateur."
-        },
-        {
-          "q": "L'un de nous peut-il voir le coup de l'autre avant de choisir ?",
-          "a": "Non. Les deux coups sont cachés jusqu'à ce que les deux joueurs aient terminé. Pas de triche possible."
-        },
-        {
-          "q": "Que se passe-t-il si je ferme le navigateur ?",
-          "a": "La salle reste ouverte. Rouvre le lien et reprends là où tu en étais."
-        },
-        {
-          "q": "Peut-on jouer sur mobile ?",
-          "a": "Oui. Le jeu fonctionne sur tout smartphone ou tablette."
-        }
-      ]
-    }
+    "pickMoveNote": "Choisis ton coup 3 fois - les résultats s'affichent quand les deux joueurs ont terminé."
   },
   "privacy": {
     "h1": "Confidentialité",
@@ -314,66 +180,6 @@
       "name": "Pierre Feuille Ciseaux en Ligne",
       "description": "Jouez à Pierre Feuille Ciseaux en ligne gratuitement. Affrontez l'ordinateur ou jouez en multijoueur en temps réel avec des amis. Sans téléchargement, sans inscription.",
       "featureList": "Solo contre ordinateur, Multijoueur en temps réel, Salles privées instantanées, Sans inscription, Compatible mobile"
-    },
-    "faqHome": [
-      {
-        "q": "Qu'est-ce qui bat Pierre à Pierre Feuille Ciseaux ?",
-        "a": "La Feuille bat Pierre. La feuille recouvre symboliquement la pierre - c'est le coup gagnant quand ton adversaire joue Pierre."
-      },
-      {
-        "q": "Qu'est-ce qui bat Feuille à Pierre Feuille Ciseaux ?",
-        "a": "Les Ciseaux battent Feuille. Les ciseaux coupent la feuille - c'est la bonne réponse quand ton adversaire joue Feuille."
-      },
-      {
-        "q": "Qu'est-ce qui bat Ciseaux à Pierre Feuille Ciseaux ?",
-        "a": "Pierre bat les Ciseaux. La pierre écrase les ciseaux - c'est le coup gagnant quand ton adversaire joue Ciseaux."
-      },
-      {
-        "q": "Pierre Feuille Ciseaux, c'est juste de la chance ?",
-        "a": "Au hasard pur, chaque coup gagne 33,3 % du temps. Mais les humains ne choisissent pas au hasard - ils suivent des schémas prévisibles. Les débutants commencent presque toujours par Pierre, et les joueurs ont tendance à répéter leurs coups gagnants. Repérer ces habitudes donne un vrai avantage."
-      },
-      {
-        "q": "Faut-il s'inscrire ou télécharger quelque chose pour jouer ?",
-        "a": "Non. Le jeu tourne entièrement dans ton navigateur. Aucun compte, aucun téléchargement - ouvre la page et joue."
-      },
-      {
-        "q": "Pierre Feuille Ciseaux en Ligne fonctionne-t-il sur mobile ?",
-        "a": "Oui. Le jeu est entièrement responsive et fonctionne sur tout smartphone ou tablette avec un navigateur moderne."
-      },
-      {
-        "q": "Quel est le meilleur premier coup à Pierre Feuille Ciseaux ?",
-        "a": "Statistiquement, Feuille est un bon choix d'ouverture. La plupart des joueurs - surtout les débutants - commencent par Pierre. Jouer Feuille contrecarre cette tendance et donne un avantage dès la première manche."
-      }
-    ],
-    "faqTwoPlayers": [
-      {
-        "q": "C'est gratuit ?",
-        "a": "Oui. Complètement gratuit, sans compte, sans téléchargement."
-      },
-      {
-        "q": "Mon ami doit-il créer un compte ?",
-        "a": "Non. Partage juste le lien - aucune inscription de part et d'autre."
-      },
-      {
-        "q": "On peut jouer depuis des appareils différents ?",
-        "a": "Oui. Un joueur sur PC, l'autre sur téléphone - ça marche sur tout appareil avec un navigateur."
-      },
-      {
-        "q": "L'un de nous peut-il voir le coup de l'autre avant de choisir ?",
-        "a": "Non. Les deux coups sont cachés jusqu'à ce que les deux joueurs aient terminé. Pas de triche possible."
-      },
-      {
-        "q": "Que se passe-t-il si je ferme le navigateur ?",
-        "a": "La salle reste ouverte. Rouvre le lien et reprends là où tu en étais."
-      },
-      {
-        "q": "Peut-on jouer sur mobile ?",
-        "a": "Oui. Le jeu fonctionne sur tout smartphone ou tablette."
-      },
-      {
-        "q": "Puis-je utiliser Pierre Feuille Ciseaux pour trancher une décision avec un ami ?",
-        "a": "Absolument. Jouer en ligne est plus équitable qu'en face à face - les deux coups sont confirmés et révélés en même temps, personne ne peut tricher en jouant en retard."
-      }
-    ]
+    }
   }
 }

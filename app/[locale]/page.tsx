@@ -5,6 +5,12 @@ import AdSense from "@/components/AdSense";
 import AnimatedPageTitle from "@/components/AnimatedPageTitle";
 import { createMetadata } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
+import { getHomeContent } from "@/content/home";
+import { routing, type Locale } from "@/i18n/routing";
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -20,15 +26,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: "home" });
-    const tJsonLd = await getTranslations({ locale, namespace: "jsonLd" });
+    const [t, content] = await Promise.all([
+        getTranslations({ locale, namespace: "home" }),
+        Promise.resolve(getHomeContent(locale as Locale)),
+    ]);
 
     const [subtitleLine1, subtitleLine2] = t("subtitle").split("\n");
 
     const faqJsonLd = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: (tJsonLd.raw("faqHome") as Array<{ q: string; a: string }>).map((item) => ({
+        mainEntity: content.faqItems.map((item) => ({
             "@type": "Question",
             name: item.q,
             acceptedAnswer: { "@type": "Answer", text: item.a },
@@ -48,8 +56,30 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
             />
 
             <OnePlayer />
+
+            <Link
+                href="/two-players"
+                className="flex flex-col gap-1 mt-6 px-5 py-4 rounded-xl border border-dashed border-gray-300 hover:border-blue-400 hover:bg-blue-50 transition-colors group"
+            >
+                <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-700">
+                    {t("challengeFriend.heading")}
+                </span>
+                <span className="text-xs text-gray-500 group-hover:text-blue-600">
+                    {t("challengeFriend.text")}
+                </span>
+                <span className="text-xs font-medium text-blue-600 mt-0.5">
+                    {t("challengeFriend.cta")}
+                </span>
+            </Link>
+
             <AdSense adSlot="6657389797" className="mt-6" />
-            <HomeContent />
+            <HomeContent
+                Strategy={content.Strategy}
+                Rules={content.Rules}
+                Statistics={content.Statistics}
+                History={content.History}
+                Faq={content.Faq}
+            />
 
             <div className="text-center py-8 mt-2 border-t">
                 <p className="text-sm text-gray-400 font-light">
