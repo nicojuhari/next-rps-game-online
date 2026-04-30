@@ -198,14 +198,17 @@
     "anonymousIdText": "Un identifiant aléatoire est généré automatiquement pour permettre le jeu. Il est stocké dans le stockage local de ton navigateur et n'est lié à aucune donnée personnelle.",
     "simpleAnalyticsTitle": "Statistiques simples",
     "simpleAnalyticsText": "Nous utilisons Simple Analytics pour comprendre l'utilisation générale du site - comme le nombre de visiteurs - sans tracer les individus ni utiliser de cookies.",
-    "gameDataTitle": "Données de jeu",
-    "gameDataText": "Tes actions en jeu (pierre, feuille ou ciseaux) et ton identifiant anonyme sont enregistrés de façon sécurisée dans notre base de données. Ces données servent uniquement au jeu et ne permettent pas de t'identifier.",
-    "localStorageTitle": "Stockage local",
-    "localStorageText": "La plupart de tes données de jeu restent sur ton appareil dans le stockage local. Cela garantit un jeu fluide et privé.",
+    "gameDataTitle": "Données de partie multijoueur",
+    "gameDataText": "Quand tu joues en multijoueur, tes coups et ton identifiant anonyme sont stockés dans une salle de jeu temporaire sur nos serveurs. Cette salle n'existe que pendant la partie et est supprimée à la fin ou via le bouton ci-dessous.",
+    "localStorageTitle": "Ce que nous stockons sur ton appareil",
+    "localStorageText": "Ton navigateur stocke localement : ton identifiant anonyme, tes victoires et défaites en solo, et un historique de tes coups des 3 derniers jours. L'historique de plus de 3 jours est supprimé automatiquement. Aucune de ces données n'est liée à ton identité.",
     "anonymityTitle": "Ton anonymat est préservé",
     "anonymityText": "Nous n'utilisons pas de cookies, nous ne te suivons pas sur le web et nous ne créons pas de profils. Tu peux jouer en toute anonymité.",
-    "deleteButton": "Supprimer mes données de jeu",
-    "deleteAlert": "Tes données de jeu ont été supprimées."
+    "deleteTitle": "Supprimer toutes mes données",
+    "deleteText": "Cela supprimera définitivement toutes les données locales de cet appareil (identifiant, scores et historique) ainsi que toutes les salles de jeu multijoueur actives dont tu fais partie.",
+    "deleteButton": "Supprimer toutes mes données",
+    "deleting": "Suppression…",
+    "deleteAlert": "Toutes tes données ont été supprimées et tes salles de jeu actives ont été effacées."
   },
   "header": {
     "logoTitle": "Pierre Feuille Ciseaux en Ligne",
@@ -249,6 +252,15 @@
     "computer": "Ordinateur",
     "secondPlayer": "2e joueur",
     "results": "Résultats"
+  },
+  "gameStats": {
+    "you": "Toi",
+    "result": "Résultat",
+    "win": "V",
+    "lose": "D",
+    "draw": "N",
+    "showAll": "Tout afficher ({count})",
+    "collapse": "Réduire"
   },
   "gameOverlay": {
     "win": {

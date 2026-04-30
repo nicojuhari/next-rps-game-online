@@ -198,14 +198,17 @@
     "anonymousIdText": "Eine zufällige Spieler-ID wird automatisch generiert, um das Spielen zu ermöglichen. Diese ID wird im lokalen Speicher deines Browsers gespeichert und ist nicht mit persönlichen Daten verknüpft.",
     "simpleAnalyticsTitle": "Einfache Analyse",
     "simpleAnalyticsText": "Wir verwenden Simple Analytics, um die allgemeine Nutzung der Seite zu verstehen - z. B. wie viele Personen die Seite besuchen - ohne Einzelpersonen zu verfolgen oder Cookies zu nutzen.",
-    "gameDataTitle": "Spieldaten",
-    "gameDataText": "Deine Spielaktionen (Stein, Papier oder Schere) und deine anonyme Spieler-ID werden sicher in unserer Datenbank gespeichert. Dies dient ausschließlich dem Spielbetrieb und kann nicht zur Identifizierung verwendet werden.",
-    "localStorageTitle": "Lokaler Speicher",
-    "localStorageText": "Die meisten Spieldaten verbleiben auf deinem Gerät. Das sorgt für einen reibungslosen und privaten Spielbetrieb.",
+    "gameDataTitle": "Mehrspieler-Spieldaten",
+    "gameDataText": "Wenn du ein Mehrspielerspiel spielst, werden deine Züge und deine anonyme ID in einem temporären Spielraum auf unseren Servern gespeichert. Dieser Raum existiert nur für die Dauer des Spiels und wird danach oder nach dem Löschen unten entfernt.",
+    "localStorageTitle": "Was wir auf deinem Gerät speichern",
+    "localStorageText": "Dein Browser speichert lokal: deine anonyme Spieler-ID, deine Siege und Niederlagen im Einzelspielermodus sowie eine Zughistorie der letzten 3 Tage. Ältere Einträge werden automatisch entfernt. Keines dieser Daten ist mit deiner Identität verknüpft.",
     "anonymityTitle": "Deine Anonymität ist sicher",
     "anonymityText": "Wir nutzen keine Cookies, verfolgen dich nicht im Web und erstellen keine Nutzerprofile. Du kannst das Spiel vollständig anonym genießen.",
-    "deleteButton": "Meine Spieldaten löschen",
-    "deleteAlert": "Deine Spieldaten wurden gelöscht."
+    "deleteTitle": "Alle meine Daten löschen",
+    "deleteText": "Dies löscht dauerhaft alle lokalen Daten auf diesem Gerät (Spieler-ID, Punkte und Spielverlauf) und entfernt alle aktiven Mehrspielerspielräume, an denen du beteiligt bist.",
+    "deleteButton": "Alle meine Daten löschen",
+    "deleting": "Wird gelöscht…",
+    "deleteAlert": "Alle deine Daten wurden gelöscht und deine aktiven Spielräume wurden entfernt."
   },
   "header": {
     "logoTitle": "Stein Papier Schere Online",
@@ -249,6 +252,15 @@
     "computer": "Computer",
     "secondPlayer": "2. Spieler",
     "results": "Ergebnisse"
+  },
+  "gameStats": {
+    "you": "Du",
+    "result": "Ergebnis",
+    "win": "G",
+    "lose": "V",
+    "draw": "U",
+    "showAll": "Alle anzeigen ({count})",
+    "collapse": "Einklappen"
   },
   "gameOverlay": {
     "win": {

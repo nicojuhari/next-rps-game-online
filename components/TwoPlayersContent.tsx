@@ -75,9 +75,9 @@ const TwoPlayersContent = () => {
             return (
                 <>
                     <GameBoard />
-                    <div className="max-w-sm mx-auto">
+                    {/* <div className="max-w-sm mx-auto">
                         <p className="text-xs mt-4 md:mt-6 text-gray-600 text-center">{t("pickMoveNote")}</p>
-                    </div>
+                    </div> */}
                 </>
             );
         }
@@ -145,8 +145,7 @@ const TwoPlayersContent = () => {
             </div>
             <div className="text-center py-8 mt-2 border-t">
                 <p className="text-sm text-gray-400 font-light">
-                    {tHome("footerPreamble")}{" "}
-                    <span className="font-medium text-blue-400">{tHome("h1Rock")}</span>{" "}
+                    {tHome("footerPreamble")} <span className="font-medium text-blue-400">{tHome("h1Rock")}</span>{" "}
                     <span className="font-medium text-yellow-400">{tHome("h1Paper")}</span>{" "}
                     <span className="font-medium text-red-400">{tHome("h1Scissors")}</span>{" "}
                     <span className="text-gray-400">{t("h1WithFriends")}</span>

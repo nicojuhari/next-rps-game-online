@@ -198,14 +198,17 @@
     "anonymousIdText": "Se genera automáticamente un ID de jugador aleatorio para habilitar el juego. Este ID se almacena en el almacenamiento local de tu navegador y no está vinculado a ningún dato personal.",
     "simpleAnalyticsTitle": "Analítica Simple",
     "simpleAnalyticsText": "Usamos Simple Analytics para entender el uso general del sitio web - como cuántas personas visitan - sin rastrear individuos ni usar cookies.",
-    "gameDataTitle": "Almacenamiento de Datos del Juego",
-    "gameDataText": "Tus acciones en el juego (piedra, papel o tijeras) y tu ID de jugador anónimo se guardan de forma segura en nuestra base de datos. Esto se usa únicamente para el juego y no puede usarse para identificarte.",
-    "localStorageTitle": "Almacenamiento Local",
-    "localStorageText": "La mayoría de tus datos de juego permanecen en tu dispositivo usando almacenamiento local. Esto ayuda al juego a funcionar de forma fluida y privada.",
+    "gameDataTitle": "Datos de Partida Multijugador",
+    "gameDataText": "Cuando juegas una partida multijugador, tus movimientos y tu ID anónimo se almacenan en una sala de juego temporal en nuestros servidores. Esta sala existe solo durante la partida y se elimina al terminar o al usar el botón de abajo.",
+    "localStorageTitle": "Qué Guardamos en tu Dispositivo",
+    "localStorageText": "Tu navegador almacena localmente: tu ID de jugador anónimo, tus victorias y derrotas en el modo individual, y un historial de movimientos de los últimos 3 días. El historial de más de 3 días se elimina automáticamente. Ningún dato está vinculado a tu identidad.",
     "anonymityTitle": "Tu Anonimato está Seguro",
     "anonymityText": "No usamos cookies, no te rastreamos por la web ni creamos perfiles de usuario. Puedes disfrutar del juego de forma completamente anónima.",
-    "deleteButton": "Eliminar Mis Datos de Juego",
-    "deleteAlert": "Tus datos de juego han sido eliminados."
+    "deleteTitle": "Eliminar Todos Mis Datos",
+    "deleteText": "Esto eliminará permanentemente todos los datos locales de este dispositivo (ID de jugador, puntuaciones e historial de partidas) y borrará cualquier sala de juego multijugador activa en la que participes.",
+    "deleteButton": "Eliminar Todos Mis Datos",
+    "deleting": "Eliminando…",
+    "deleteAlert": "Todos tus datos han sido eliminados y tus salas de juego activas han sido borradas."
   },
   "header": {
     "logoTitle": "Piedra Papel Tijeras Online",
@@ -249,6 +252,15 @@
     "computer": "Computadora",
     "secondPlayer": "2.º Jugador",
     "results": "Resultado"
+  },
+  "gameStats": {
+    "you": "Tú",
+    "result": "Result.",
+    "win": "G",
+    "lose": "P",
+    "draw": "E",
+    "showAll": "Ver todo ({count})",
+    "collapse": "Colapsar"
   },
   "gameOverlay": {
     "win": {

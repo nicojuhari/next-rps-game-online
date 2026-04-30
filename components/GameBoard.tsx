@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useFirebaseContext } from "@/contexts/FirebaseContext";
 import { useGame } from "@/lib/hooks/useGame";
@@ -10,7 +10,11 @@ import TableBoard from "./TableBoard";
 import GameEffects from "./GameEffects";
 import GameOverlay from "./GameOverlay";
 import CertificateModal from "./CertificateModal";
+import GameStatsTable from "./GameStatsTable";
+import { loadHistory, pushEntry, type GameHistoryEntry } from "@/lib/game-history";
 import { type CertificateData } from "@/lib/certificate";
+
+const HISTORY_KEY = "rps_mp_history";
 
 const GameBoard = () => {
     const t = useTranslations("gameBoard");
@@ -22,6 +26,12 @@ const GameBoard = () => {
     const [showCert, setShowCert] = useState(false);
     const [certData, setCertData] = useState<CertificateData | null>(null);
     const [certHint, setCertHint] = useState(false);
+    const [history, setHistory] = useState<GameHistoryEntry[]>([]);
+    const hasSavedHistoryRef = useRef(false);
+
+    useEffect(() => {
+        queueMicrotask(() => setHistory(loadHistory(HISTORY_KEY)));
+    }, []);
 
     const yourChoices = useMemo(() => {
         if (!gameData) return [];
@@ -69,11 +79,19 @@ const GameBoard = () => {
     };
 
     useEffect(() => {
-        if (isGameFinished && gameData) {
+        if (!isGameFinished) {
+            hasSavedHistoryRef.current = false;
+            return;
+        }
+        if (isGameFinished && gameData && !hasSavedHistoryRef.current) {
+            hasSavedHistoryRef.current = true;
             const winnerID = getGameWinner(gameData);
             updateGameWinner(gameData.$id, winnerID || "draw");
+            const result: GameHistoryEntry["result"] = winnerID === playerId ? "win" : winnerID === "draw" ? "draw" : "lose";
+            const entry = { yourChoices, opponentChoices: secondPlayerChoices, result, savedAt: Date.now(), gameId };
+            queueMicrotask(() => setHistory(pushEntry(HISTORY_KEY, entry)));
         }
-    }, [isGameFinished, gameData, updateGameWinner]);
+    }, [isGameFinished, gameData, updateGameWinner, playerId, yourChoices, secondPlayerChoices, gameId]);
 
     if (!isLoaded) return null;
 
@@ -175,6 +193,8 @@ const GameBoard = () => {
                 </button>
                 {certHint && <p className="text-xs text-gray-500 mt-1.5">{t("certUnlock")}</p>}
             </div>
+
+            <GameStatsTable entries={history.filter((e) => e.gameId === gameId)} opponentLabel={t("friend")} />
         </>
     );
 };

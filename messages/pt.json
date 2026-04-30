@@ -198,14 +198,17 @@
     "anonymousIdText": "Um ID de jogador aleatório é gerado automaticamente para habilitar o jogo. Este ID é armazenado no armazenamento local do seu navegador e não está vinculado a nenhum dado pessoal.",
     "simpleAnalyticsTitle": "Análise Simples",
     "simpleAnalyticsText": "Usamos Simple Analytics para entender o uso geral do site - como quantas pessoas visitam - sem rastrear indivíduos ou usar cookies.",
-    "gameDataTitle": "Armazenamento de Dados do Jogo",
-    "gameDataText": "Suas ações no jogo (pedra, papel ou tesoura) e seu ID de jogador anônimo são salvos com segurança em nosso banco de dados. Isso é usado apenas para fins de jogo e não pode ser usado para identificá-lo.",
-    "localStorageTitle": "Armazenamento Local",
-    "localStorageText": "A maioria dos seus dados de jogo fica no seu dispositivo usando armazenamento local. Isso ajuda o jogo a funcionar de forma suave e privada.",
+    "gameDataTitle": "Dados de Partida Multijogador",
+    "gameDataText": "Quando você joga uma partida multijogador, seus movimentos e ID anônimo são armazenados em uma sala de jogo temporária em nossos servidores. Essa sala existe apenas durante a partida e é excluída ao terminar ou ao usar o botão abaixo.",
+    "localStorageTitle": "O Que Guardamos no Seu Dispositivo",
+    "localStorageText": "Seu navegador armazena localmente: seu ID de jogador anônimo, suas vitórias e derrotas no modo individual, e um histórico de movimentos dos últimos 3 dias. O histórico com mais de 3 dias é removido automaticamente. Nenhum dado está vinculado à sua identidade.",
     "anonymityTitle": "Seu Anonimato está Seguro",
     "anonymityText": "Não usamos cookies, não rastreamos você pela web nem criamos perfis de usuário. Você pode desfrutar do jogo de forma completamente anônima.",
-    "deleteButton": "Excluir Meus Dados de Jogo",
-    "deleteAlert": "Seus dados de jogo foram excluídos."
+    "deleteTitle": "Excluir Todos os Meus Dados",
+    "deleteText": "Isso apagará permanentemente todos os dados locais deste dispositivo (ID do jogador, pontuações e histórico de partidas) e excluirá quaisquer salas de jogo multijogador ativas das quais você faça parte.",
+    "deleteButton": "Excluir Todos os Meus Dados",
+    "deleting": "Excluindo…",
+    "deleteAlert": "Todos os seus dados foram apagados e suas salas de jogo ativas foram excluídas."
   },
   "header": {
     "logoTitle": "Pedra Papel Tesoura Online",
@@ -249,6 +252,15 @@
     "computer": "Computador",
     "secondPlayer": "2.º Jogador",
     "results": "Resultado"
+  },
+  "gameStats": {
+    "you": "Você",
+    "result": "Result.",
+    "win": "V",
+    "lose": "D",
+    "draw": "E",
+    "showAll": "Ver tudo ({count})",
+    "collapse": "Recolher"
   },
   "gameOverlay": {
     "win": {

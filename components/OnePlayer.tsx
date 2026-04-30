@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import TableBoard from "@/components/TableBoard";
 import GameOverlay from "@/components/GameOverlay";
@@ -7,7 +7,11 @@ import CertificateModal from "@/components/CertificateModal";
 import { getGameWinner } from "@/lib/game-utils";
 import { type CertificateData } from "@/lib/certificate";
 import GameEffects from "@/components/GameEffects";
+import GameStatsTable from "@/components/GameStatsTable";
+import { loadHistory, pushEntry, type GameHistoryEntry } from "@/lib/game-history";
 import { XIcon } from "@phosphor-icons/react";
+
+const HISTORY_KEY = "rps_1p_history";
 
 const getButtonStyle = (key: string, finished: boolean) => {
     const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
@@ -37,17 +41,36 @@ const OnePlayer = () => {
     const [showCert, setShowCert] = useState(false);
     const [certData, setCertData] = useState<CertificateData | null>(null);
     const [certHint, setCertHint] = useState(false);
+    const [history, setHistory] = useState<GameHistoryEntry[]>([]);
+    const hasSavedRef = useRef(false);
 
     useEffect(() => {
         const storedUserWins = localStorage.getItem("rps_userWins");
         const storedComputerWins = localStorage.getItem("rps_computerWins");
         if (storedUserWins) queueMicrotask(() => setUserWins(Number(storedUserWins)));
         if (storedComputerWins) queueMicrotask(() => setComputerWins(Number(storedComputerWins)));
+        queueMicrotask(() => setHistory(loadHistory(HISTORY_KEY)));
     }, []);
 
     const isGameFinished = useMemo(() => {
         return playerChoices.length === 3 && computerChoices.length === 3;
     }, [playerChoices, computerChoices]);
+
+    useEffect(() => {
+        if (!isGameFinished) {
+            hasSavedRef.current = false;
+            return;
+        }
+        if (!hasSavedRef.current && gameWinner !== null) {
+            hasSavedRef.current = true;
+            const result: GameHistoryEntry["result"] = gameWinner === "player1" ? "win" : gameWinner === "computer" ? "lose" : "draw";
+            queueMicrotask(() =>
+                setHistory(
+                    pushEntry(HISTORY_KEY, { yourChoices: playerChoices, opponentChoices: computerChoices, result, savedAt: Date.now() }),
+                ),
+            );
+        }
+    }, [isGameFinished, gameWinner, playerChoices, computerChoices]);
 
     const getButtonLabel = (key: string) => {
         if (key === "1") return t("rock");
@@ -82,33 +105,32 @@ const OnePlayer = () => {
     const getComputerChoice = () => Math.floor(Math.random() * 3) + 1;
 
     const select = (choice: number) => {
-        if (playerChoices.length === 3) return;
-        setPlayerChoices((prev) => {
-            const newChoices = [...prev, choice];
-            if (prev.length === 2) {
-                const compChoices = [getComputerChoice(), getComputerChoice(), getComputerChoice()];
-                setComputerChoices(compChoices);
-                const winner = getGameWinner({
-                    $id: "local-one-player",
-                    maxPlayers: 2,
-                    players: {
-                        player1: { name: t("you"), choices: newChoices },
-                        computer: { name: tTable("computer"), choices: compChoices },
-                    },
-                });
-                setGameWinner(winner);
-                if (winner === "player1") {
-                    const n = userWins + 1;
-                    setUserWins(n);
-                    localStorage.setItem("rps_userWins", String(n));
-                } else if (winner === "computer") {
-                    const n = computerWins + 1;
-                    setComputerWins(n);
-                    localStorage.setItem("rps_computerWins", String(n));
-                }
+        if (playerChoices.length >= 3) return;
+        const newChoices = [...playerChoices, choice];
+        setPlayerChoices(newChoices);
+
+        if (newChoices.length === 3) {
+            const compChoices = [getComputerChoice(), getComputerChoice(), getComputerChoice()];
+            setComputerChoices(compChoices);
+            const winner = getGameWinner({
+                $id: "local-one-player",
+                maxPlayers: 2,
+                players: {
+                    player1: { name: t("you"), choices: newChoices },
+                    computer: { name: tTable("computer"), choices: compChoices },
+                },
+            });
+            setGameWinner(winner);
+            if (winner === "player1") {
+                const n = userWins + 1;
+                setUserWins(n);
+                localStorage.setItem("rps_userWins", String(n));
+            } else if (winner === "computer") {
+                const n = computerWins + 1;
+                setComputerWins(n);
+                localStorage.setItem("rps_computerWins", String(n));
             }
-            return newChoices;
-        });
+        }
     };
 
     const resetGame = () => {
@@ -120,8 +142,10 @@ const OnePlayer = () => {
     const resetScore = () => {
         setUserWins(0);
         setComputerWins(0);
+        setHistory([]);
         localStorage.removeItem("rps_userWins");
         localStorage.removeItem("rps_computerWins");
+        localStorage.removeItem(HISTORY_KEY);
     };
 
     const outcome = gameWinner === playerId ? "win" : gameWinner === "draw" ? "draw" : gameWinner ? "lose" : null;
@@ -166,16 +190,6 @@ const OnePlayer = () => {
                             isGameFinished={isGameFinished}
                             isOnePlayer={true}
                         />
-                        <div className="text-center h-6 mt-2 -mb-2">
-                            {(userWins > 0 || computerWins > 0) && (
-                                <button
-                                    onClick={resetScore}
-                                    className="transition-all duration-700 text-xs inline-flex gap-1 items-center text-gray-500 hover:text-red-400 cursor-pointer"
-                                >
-                                    {t("resetScore")} <XIcon size={10} weight="bold" />
-                                </button>
-                            )}
-                        </div>
                     </div>
                 </div>
 
@@ -205,6 +219,19 @@ const OnePlayer = () => {
                     {t("getCertificate")}
                 </button>
                 {certHint && <p className="text-xs text-gray-500 mt-1.5">{t("certUnlock")}</p>}
+            </div>
+
+            <GameStatsTable entries={history} opponentLabel={tTable("computer")} />
+
+            <div className="text-center h-6 mt-2">
+                {(userWins > 0 || computerWins > 0) && (
+                    <button
+                        onClick={resetScore}
+                        className="transition-all duration-700 text-xs inline-flex gap-1 items-center text-red-400 hover:text-red-600 cursor-pointer"
+                    >
+                        {t("resetScore")} <XIcon size={10} weight="bold" />
+                    </button>
+                )}
             </div>
 
             {showCert && certData && <CertificateModal data={certData} onClose={() => setShowCert(false)} />}

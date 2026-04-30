@@ -165,14 +165,17 @@
     "anonymousIdText": "A random player ID is automatically generated to enable gameplay. This ID is stored in your browser's local storage and is not linked to any personal data.",
     "simpleAnalyticsTitle": "Simple Analytics",
     "simpleAnalyticsText": "We use Simple Analytics to understand general website usage - like how many people visit - without tracking individuals or using cookies.",
-    "gameDataTitle": "Game Data Storage",
-    "gameDataText": "Your in-game actions (rock, paper, or scissors) and your anonymous player ID are saved securely in our database. This is used only for gameplay purposes and cannot be used to identify you.",
-    "localStorageTitle": "Local Storage",
-    "localStorageText": "Most of your game data stays on your device using local storage. This helps the game run smoothly and privately.",
+    "gameDataTitle": "Multiplayer Game Data",
+    "gameDataText": "When you play a multiplayer game, your moves and anonymous player ID are stored in a temporary game room on our servers. This room exists only for the duration of the game and is deleted when the game ends or when you use the delete button below.",
+    "localStorageTitle": "What We Store on Your Device",
+    "localStorageText": "Your browser stores the following locally: your anonymous player ID, your single-player win and loss counts, and a move history from your last 3 days of games. Game history older than 3 days is automatically removed. None of this data is linked to your identity.",
     "anonymityTitle": "Your Anonymity is Safe",
     "anonymityText": "We don't use cookies, track you across the web, or build user profiles. You can enjoy the game completely anonymously.",
-    "deleteButton": "Delete My Game Data",
-    "deleteAlert": "Your game data has been deleted."
+    "deleteTitle": "Delete All My Data",
+    "deleteText": "This will permanently clear all local data stored on this device (player ID, scores, and game history) and delete any active multiplayer game rooms you are part of.",
+    "deleteButton": "Delete All My Data",
+    "deleting": "Deleting…",
+    "deleteAlert": "All your data has been cleared and your active game rooms have been deleted."
   },
   "header": {
     "logoTitle": "Rock Paper Scissors Online",
@@ -216,6 +219,15 @@
     "computer": "Computer",
     "secondPlayer": "2nd Player",
     "results": "Results"
+  },
+  "gameStats": {
+    "you": "You",
+    "result": "Result",
+    "win": "W",
+    "lose": "L",
+    "draw": "D",
+    "showAll": "Show all ({count})",
+    "collapse": "Collapse"
   },
   "gameOverlay": {
     "win": { "headline": "You Win!", "sub": "Nicely done. Ready for another round?" },
