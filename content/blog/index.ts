@@ -18,6 +18,20 @@ const registry: Record<string, Partial<Record<Locale, PostLoader>>> = {
         de: () => import("./rock-paper-scissors-rules/de"),
         fr: () => import("./rock-paper-scissors-rules/fr"),
     },
+    "rock-paper-scissors-virtual-meeting-icebreaker": {
+        en: () => import("./rock-paper-scissors-virtual-meeting-icebreaker/en"),
+        es: () => import("./rock-paper-scissors-virtual-meeting-icebreaker/es"),
+        pt: () => import("./rock-paper-scissors-virtual-meeting-icebreaker/pt"),
+        de: () => import("./rock-paper-scissors-virtual-meeting-icebreaker/de"),
+        fr: () => import("./rock-paper-scissors-virtual-meeting-icebreaker/fr"),
+    },
+    "rock-paper-scissors-long-distance-couples": {
+        en: () => import("./rock-paper-scissors-long-distance-couples/en"),
+        es: () => import("./rock-paper-scissors-long-distance-couples/es"),
+        pt: () => import("./rock-paper-scissors-long-distance-couples/pt"),
+        de: () => import("./rock-paper-scissors-long-distance-couples/de"),
+        fr: () => import("./rock-paper-scissors-long-distance-couples/fr"),
+    },
 };
 
 export async function getBlogPost(slug: string, locale: Locale): Promise<BlogPostModule | null> {
