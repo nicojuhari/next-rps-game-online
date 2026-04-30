@@ -32,6 +32,20 @@ const registry: Record<string, Partial<Record<Locale, PostLoader>>> = {
         de: () => import("./rock-paper-scissors-long-distance-couples/de"),
         fr: () => import("./rock-paper-scissors-long-distance-couples/fr"),
     },
+    "rock-paper-scissors-vs-coin-flip": {
+        en: () => import("./rock-paper-scissors-vs-coin-flip/en"),
+        es: () => import("./rock-paper-scissors-vs-coin-flip/es"),
+        pt: () => import("./rock-paper-scissors-vs-coin-flip/pt"),
+        de: () => import("./rock-paper-scissors-vs-coin-flip/de"),
+        fr: () => import("./rock-paper-scissors-vs-coin-flip/fr"),
+    },
+    "rock-paper-scissors-online-with-friends": {
+        en: () => import("./rock-paper-scissors-online-with-friends/en"),
+        es: () => import("./rock-paper-scissors-online-with-friends/es"),
+        pt: () => import("./rock-paper-scissors-online-with-friends/pt"),
+        de: () => import("./rock-paper-scissors-online-with-friends/de"),
+        fr: () => import("./rock-paper-scissors-online-with-friends/fr"),
+    },
 };
 
 export async function getBlogPost(slug: string, locale: Locale): Promise<BlogPostModule | null> {

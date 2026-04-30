@@ -81,6 +81,8 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
                 Faq={content.Faq}
             />
 
+            <content.BlogLinks />
+
             <div className="text-center py-8 mt-2 border-t">
                 <p className="text-sm text-gray-400 font-light">
                     {t("footerPreamble")}{" "}

@@ -8,5 +8,6 @@ export type HomeSections = {
     Statistics: ComponentType
     History: ComponentType
     Faq: ComponentType
+    BlogLinks: ComponentType
     faqItems: FaqItem[]
 }

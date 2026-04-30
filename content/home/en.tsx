@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Link as LocaleLink } from "@/i18n/navigation";
 import type { FaqItem } from "./types";
 
 export const faqItems: FaqItem[] = [
@@ -16,16 +17,16 @@ export const faqItems: FaqItem[] = [
     },
     {
         q: "Is Rock Paper Scissors just luck?",
-        a: "Not entirely. A random player wins 33% of the time, but real people follow patterns — and patterns can be read.",
+        a: "Not entirely. A random player wins 33% of the time, but real people follow patterns - and patterns can be read.",
     },
     {
         q: "Do I need to sign up or download anything?",
-        a: "No. The game runs entirely in your browser. No account, no download, no app required — just open the page and play instantly.",
+        a: "No. The game runs entirely in your browser. No account, no download, no app required - just open the page and play instantly.",
     },
     { q: "Does it work on mobile?", a: "Yes. The game is fully responsive and works on any smartphone or tablet with a modern browser." },
     {
         q: "What is the best opening move?",
-        a: "Statistically, Paper is a strong opener. Most players — especially beginners — throw Rock first because it feels like the strongest move. Playing Paper counters that tendency and gives you a statistical edge in the first round.",
+        a: "Statistically, Paper is a strong opener. Most players - especially beginners - throw Rock first because it feels like the strongest move. Playing Paper counters that tendency and gives you a statistical edge in the first round.",
     },
     {
         q: "Can I play Rock Paper Scissors online with someone in a different country?",
@@ -33,11 +34,11 @@ export const faqItems: FaqItem[] = [
     },
     {
         q: "How does the computer pick its move? Is it rigged?",
-        a: "The computer picks randomly every time — Rock, Paper, and Scissors each have an equal 1 in 3 chance. There is no pattern, no adjustment based on your history, and no tricks.",
+        a: "The computer picks randomly every time - Rock, Paper, and Scissors each have an equal 1 in 3 chance. There is no pattern, no adjustment based on your history, and no tricks.",
     },
     {
         q: "Is Rock Paper Scissors online better than texting it?",
-        a: "Yes, because both players reveal their move at exactly the same time. In a texted game, one player can delay their response to react to the other's choice. Online, both moves are locked in and revealed simultaneously — no peeking, no cheating.",
+        a: "Yes, because both players reveal their move at exactly the same time. In a texted game, one player can delay their response to react to the other's choice. Online, both moves are locked in and revealed simultaneously - no peeking, no cheating.",
     },
 ];
 
@@ -57,7 +58,7 @@ export function Strategy() {
                     <li>
                         <span className="font-semibold text-gray-700">If you win:</span> Your opponent will probably switch moves.
                         <br />
-                        <span className="italic text-gray-500">Counter-move:</span> Play the move they just threw — it beats what
+                        <span className="italic text-gray-500">Counter-move:</span> Play the move they just threw - it beats what
                         they&apos;ll try next.
                     </li>
                     <li>
@@ -78,7 +79,7 @@ export function Strategy() {
                     wins 33.3% of the time. But human choices are not random, which is why spotting patterns gives you a real advantage.
                 </p>
                 <p>
-                    Put the strategy to the test — win more games than your opponent and you can claim a personalised winner&apos;s
+                    Put the strategy to the test - win more games than your opponent and you can claim a personalised winner&apos;s
                     certificate to download and share.
                 </p>
                 <p>
@@ -102,13 +103,13 @@ export function Rules() {
                 </p>
                 <ul className="pl-4 space-y-2 list-disc">
                     <li>
-                        <span className="font-semibold text-gray-700">Rock crushes Scissors</span> — ✊ → ✂️
+                        <span className="font-semibold text-gray-700">Rock crushes Scissors</span> - ✊ → ✂️
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Scissors cuts Paper</span> — ✂️ → 📄
+                        <span className="font-semibold text-gray-700">Scissors cuts Paper</span> - ✂️ → 📄
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Paper covers Rock</span> — 📄 → ✊
+                        <span className="font-semibold text-gray-700">Paper covers Rock</span> - 📄 → ✊
                     </li>
                 </ul>
                 <p>If both players throw the same gesture, the round is a draw.</p>
@@ -153,7 +154,7 @@ export function Statistics() {
                     </li>
                 </ul>
                 <p>
-                    Christie&apos;s played Scissors. Sotheby&apos;s played Paper. Christie&apos;s won — proving that even in a simple game,
+                    Christie&apos;s played Scissors. Sotheby&apos;s played Paper. Christie&apos;s won - proving that even in a simple game,
                     psychology beats pure chance.
                 </p>
             </div>
@@ -177,23 +178,48 @@ export function History() {
                 <p>
                     It reached Japan as <em>Jan-Ken</em>, where it became a daily social tool for settling disputes in schools and
                     businesses. It arrived in the West in the early 20th century and became the standard quick-decision game it is today.
-                    Today it goes by many names: <em>roshambo</em> in the US, <em>piedra papel tijeras</em> in Spanish-speaking countries —
+                    Today it goes by many names: <em>roshambo</em> in the US, <em>piedra papel tijeras</em> in Spanish-speaking countries -
                     all using the same three gestures.
                 </p>
                 <p>
                     <strong className="text-gray-700">Did you know?</strong> August 27th is officially World Rock Paper Scissors Day.
                 </p>
                 <p>
-                    The computer on this site picks randomly — it has an equal 1 in 3 chance of throwing Rock, Paper, or Scissors every
+                    The computer on this site picks randomly - it has an equal 1 in 3 chance of throwing Rock, Paper, or Scissors every
                     time. No tricks, just chance.
                 </p>
                 <p>
                     Playing online also removes the main way to cheat in a physical game. In person, a player can delay their throw by a
-                    split second to react to the opponent&apos;s hand — a technique called &ldquo;shadowing&rdquo;. On rps-game.online, both
+                    split second to react to the opponent&apos;s hand - a technique called &ldquo;shadowing&rdquo;. On rps-game.online, both
                     players commit their choice privately before either result is shown, so every match is genuinely fair.
                 </p>
             </div>
         </>
+    );
+}
+
+export function BlogLinks() {
+    const posts = [
+        { href: "/blog/how-to-win-rock-paper-scissors", title: "How to Win Rock Paper Scissors: Strategy & Psychology" },
+        { href: "/blog/rock-paper-scissors-rules", title: "Rock Paper Scissors Rules: The Complete Guide" },
+        { href: "/blog/rock-paper-scissors-virtual-meeting-icebreaker", title: "Rock Paper Scissors as a Virtual Meeting Icebreaker" },
+        { href: "/blog/rock-paper-scissors-long-distance-couples", title: "Rock Paper Scissors for Long-Distance Couples" },
+        { href: "/blog/rock-paper-scissors-vs-coin-flip", title: "Rock Paper Scissors vs Coin Flip: Which Is Fairer?" },
+        { href: "/blog/rock-paper-scissors-online-with-friends", title: "Rock Paper Scissors Online With Friends - No Account" },
+    ];
+    return (
+        <div className="mt-8 pt-6 border-t border-gray-100">
+            <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">From the Blog</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                {posts.map(({ href, title }) => (
+                    <li key={href}>
+                        <LocaleLink href={href} className="text-sm text-gray-600 hover:text-blue-600 hover:underline">
+                            {title} →
+                        </LocaleLink>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 
