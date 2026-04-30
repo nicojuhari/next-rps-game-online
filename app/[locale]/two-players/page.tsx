@@ -1,10 +1,18 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import TwoPlayersContent from "@/components/TwoPlayersContent";
+import TwoPlayersPageSections from "@/components/TwoPlayersPageSections";
 import { FirebaseProvider } from "@/contexts/FirebaseContext";
 import AnimatedPageTitle from "@/components/AnimatedPageTitle";
 import { createMetadata } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
+import { getTwoPlayersContent } from "@/content/two-players";
+import { routing } from "@/i18n/routing";
+import type { Locale } from "@/i18n/routing";
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -20,14 +28,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: "twoPlayers" });
-    const tHome = await getTranslations({ locale, namespace: "home" });
-    const tJsonLd = await getTranslations({ locale, namespace: "jsonLd" });
+    const [t, tHome, content] = await Promise.all([
+        getTranslations({ locale, namespace: "twoPlayers" }),
+        getTranslations({ locale, namespace: "home" }),
+        Promise.resolve(getTwoPlayersContent(locale as Locale)),
+    ]);
 
     const faqJsonLd = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: (tJsonLd.raw("faqTwoPlayers") as Array<{ q: string; a: string }>).map((item) => ({
+        mainEntity: content.faqItems.map((item) => ({
             "@type": "Question",
             name: item.q,
             acceptedAnswer: { "@type": "Answer", text: item.a },
@@ -58,6 +68,7 @@ const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) =
                     <TwoPlayersContent />
                 </FirebaseProvider>
             </Suspense>
+            <TwoPlayersPageSections locale={locale} sections={content} />
         </>
     );
 };

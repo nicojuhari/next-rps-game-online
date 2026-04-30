@@ -15,7 +15,6 @@ import AdSense from "./AdSense";
 
 const TwoPlayersContent = () => {
     const t = useTranslations("twoPlayers");
-    const tHome = useTranslations("home");
     const searchParams = useSearchParams();
     const gameId = searchParams.get("gameId");
     const router = useRouter();
@@ -45,9 +44,6 @@ const TwoPlayersContent = () => {
         await deleteGame(gameId);
         router.push("/two-players");
     };
-
-    const whySettleItems = t.raw("whySettle.items") as string[];
-    const faqItems = t.raw("faq.items") as Array<{ q: string; a: string }>;
 
     const renderGameSection = () => {
         if (!gameId) return <MainCTA />;
@@ -88,69 +84,6 @@ const TwoPlayersContent = () => {
         <div className="pb-8">
             {renderGameSection()}
             <AdSense adSlot="6657389797" className="mt-6" />
-            <div className="my-10 space-y-12 font-light">
-                <div>
-                    <h2 className="text-lg font-semibold mb-4">{t("howToPlay.title")}</h2>
-                    <div className="space-y-2">
-                        <p>{t("howToPlay.intro")}</p>
-                        <ol className="pl-4 space-y-2 list-decimal">
-                            <li>
-                                <span className="font-semibold">{t("howToPlay.createRoomLabel")}</span> - {t("howToPlay.createRoomText")}
-                            </li>
-                            <li>
-                                <span className="font-semibold">{t("howToPlay.shareLinkLabel")}</span> - {t("howToPlay.shareLinkText")}
-                            </li>
-                            <li>
-                                <span className="font-semibold">{t("howToPlay.playLabel")}</span> - {t("howToPlay.playText")}
-                            </li>
-                            <li>
-                                <span className="font-semibold">{t("howToPlay.claimCertLabel")}</span> - {t("howToPlay.claimCertText")}
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div>
-                    <h2 className="text-lg font-semibold mb-4">{t("howItWorks.title")}</h2>
-                    <div className="space-y-2">
-                        <p>{t("howItWorks.p1")}</p>
-                        <ul className="list-disc pl-4 space-y-2">
-                            <li>{t("howItWorks.firstTo2")}</li>
-                            <li>{t("howItWorks.scores")}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h2 className="text-lg font-semibold mb-4">{t("whySettle.title")}</h2>
-                    <div className="space-y-2">
-                        <p>{t("whySettle.p1")}</p>
-                        <ul className="list-disc pl-4 space-y-1">
-                            {whySettleItems.map((item, i) => (
-                                <li key={i}>{item}</li>
-                            ))}
-                        </ul>
-                        <p>{t("whySettle.p2")}</p>
-                    </div>
-                </div>
-                <div>
-                    <h2 className="text-lg font-semibold mb-4">{t("faq.title")}</h2>
-                    <div className="space-y-4">
-                        {faqItems.map((item, i) => (
-                            <div key={i}>
-                                <h3 className="font-semibold text-sm text-gray-800">{item.q}</h3>
-                                <p className="text-sm text-gray-600 mt-1">{item.a}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-            <div className="text-center py-8 mt-2 border-t">
-                <p className="text-sm text-gray-400 font-light">
-                    {tHome("footerPreamble")} <span className="font-medium text-blue-400">{tHome("h1Rock")}</span>{" "}
-                    <span className="font-medium text-yellow-400">{tHome("h1Paper")}</span>{" "}
-                    <span className="font-medium text-red-400">{tHome("h1Scissors")}</span>{" "}
-                    <span className="text-gray-400">{t("h1WithFriends")}</span>
-                </p>
-            </div>
         </div>
     );
 };

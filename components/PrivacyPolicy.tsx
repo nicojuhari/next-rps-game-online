@@ -24,7 +24,7 @@ const PrivacyPolicyComp = () => {
                 const mine = snapshot.docs.filter((d) => d.data().players?.[playerId] !== undefined);
                 await Promise.all(mine.map((d) => deleteDoc(d.ref)));
             } catch {
-                // best-effort — localStorage is already cleared
+                // best-effort - localStorage is already cleared
             }
         }
 
