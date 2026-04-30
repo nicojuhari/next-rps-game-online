@@ -7,7 +7,7 @@ const Header = () => {
     const t = useTranslations("header");
 
     return (
-        <header className="bg-white/10 border-b border-gray-100">
+        <header className="bg-white/50 border-b border-gray-100">
             <div className="container h-14 flex items-center justify-between">
                 <Link href="/" title={t("logoTitle")}>
                     <svg className="h-4" viewBox="0 0 499 226" fill="none" xmlns="http://www.w3.org/2000/svg">

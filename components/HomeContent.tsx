@@ -7,7 +7,7 @@ const HomeContent = () => {
 
     return (
         <div className="my-10 space-y-4 font-light">
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("strategy.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("strategy.p1")}</p>
@@ -37,7 +37,7 @@ const HomeContent = () => {
                 </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("rules.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("rules.p1")}</p>
@@ -58,7 +58,7 @@ const HomeContent = () => {
                 </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("statistics.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("statistics.p1")}</p>
@@ -72,7 +72,7 @@ const HomeContent = () => {
                 </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">{t("history.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("history.p1")}</p>
@@ -84,7 +84,7 @@ const HomeContent = () => {
                 </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("faq.title")}</h2>
                 <div className="space-y-4 text-sm text-gray-600">
                     {faqItems.map((item, i) => (

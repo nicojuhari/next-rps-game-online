@@ -130,7 +130,7 @@ const OnePlayer = () => {
     return (
         <>
             <div className="max-w-sm mx-auto relative">
-                <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <div className="rounded-xl overflow-hidden border border-gray-ss200">
                     <div className="bg-gray-700 px-5 pt-3 pb-2">
                         <div className="flex items-center justify-between">
                             <div className="text-center min-w-12">

@@ -110,7 +110,7 @@ const GameBoard = () => {
     return (
         <>
             <div className="max-w-sm mx-auto relative">
-                <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <div className="rounded-xl overflow-hidden border border-gray-200">
                     <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
                         <div className="text-center min-w-12">
                             <div className="text-blue-100 text-xs uppercase tracking-widest">{t("you")}</div>
