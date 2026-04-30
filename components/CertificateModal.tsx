@@ -96,7 +96,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
         >
             {/* Step 1: Setup form */}
             {step === 1 && (
-                <div className="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl">
+                <div className="bg-white rounded-2xl p-6 w-full max-w-sm border">
                     <div className="flex items-center justify-between mb-5">
                         <h2 className="text-lg font-bold text-gray-800">{t("title")}</h2>
                         <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
@@ -113,7 +113,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                             onChange={(e) => setWinnerName(e.target.value)}
                             placeholder={t("anonymous")}
                             maxLength={40}
-                            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
+                            className="w-full border rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
                         />
                     </div>
 
@@ -127,7 +127,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                                 onChange={(e) => setPlayer2Name(e.target.value)}
                                 placeholder={t("friendPlaceholder")}
                                 maxLength={40}
-                                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
+                                className="w-full border rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-400 transition-colors"
                             />
                         </div>
                     )}

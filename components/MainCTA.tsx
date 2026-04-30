@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { LinkIcon, SpinnerGapIcon } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 import { useFirebase } from "@/lib/hooks/useFirebase";
 import { usePlayer } from "@/lib/hooks/usePlayer";
 
@@ -30,8 +31,13 @@ const MainCTA = () => {
     const steps = [t("createLabel"), t("shareLabel"), t("playLabel")];
 
     return (
-        <div className="md:max-w-sm mx-auto w-full">
-            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+        <motion.div
+            className="md:max-w-sm mx-auto w-full"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+            <div className="bg-white p-6 rounded-xl border">
                 {/* Steps */}
                 <div className="flex items-start justify-center mb-6">
                     {steps.map((label, i) => (
@@ -42,7 +48,7 @@ const MainCTA = () => {
                                 </span>
                                 <span className="text-xs text-gray-500 font-medium">{label}</span>
                             </div>
-                            {i < 2 && <div className="w-10 border-t border-dashed border-gray-200 mb-3.5 mx-2" />}
+                            {i < 2 && <div className="w-10 border-t border-dashed mb-3.5 mx-2" />}
                         </div>
                     ))}
                 </div>
@@ -55,7 +61,7 @@ const MainCTA = () => {
                     <input
                         type="text"
                         id="game-stakes"
-                        className="w-full p-2 h-10 border border-gray-200 rounded-lg text-sm placeholder:text-xs focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-50 transition-all"
+                        className="w-full p-2 h-10 border rounded-lg text-sm placeholder:text-xs focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-50 transition-all"
                         placeholder={t("stakePlaceholder")}
                         maxLength={50}
                         onChange={(e) => setGameStake(e.target.value)}
@@ -78,7 +84,7 @@ const MainCTA = () => {
 
                 <div className="mt-3 text-center text-xs text-gray-400">{t("noAccount")}</div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

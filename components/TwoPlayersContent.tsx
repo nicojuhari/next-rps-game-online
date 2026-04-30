@@ -143,7 +143,7 @@ const TwoPlayersContent = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-center py-8 mt-2 border-t border-gray-100">
+            <div className="text-center py-8 mt-2 border-t">
                 <p className="text-sm text-gray-400 font-light">
                     {tHome("footerPreamble")}{" "}
                     <span className="font-medium text-blue-400">{tHome("h1Rock")}</span>{" "}

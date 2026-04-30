@@ -90,7 +90,7 @@ const GameBoard = () => {
 
     const getButtonStyle = (key: string) => {
         const base = "flex flex-col items-center justify-center gap-1.5 py-4 rounded-xl border-2 transition-all duration-200 select-none";
-        if (isDisabled) return `${base} cursor-not-allowed opacity-40 bg-gray-50 border-gray-200`;
+        if (isDisabled) return `${base} cursor-not-allowed opacity-40 bg-gray-50`;
         if (key === "1")
             return `${base} cursor-pointer bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100 hover:scale-105`;
         if (key === "2")
@@ -110,7 +110,7 @@ const GameBoard = () => {
     return (
         <>
             <div className="max-w-sm mx-auto relative">
-                <div className="rounded-xl overflow-hidden border border-gray-200">
+                <div className="rounded-xl overflow-hidden border">
                     <div className="bg-gray-700 px-5 py-3 flex items-center justify-between">
                         <div className="text-center min-w-12">
                             <div className="text-blue-100 text-xs uppercase tracking-widest">{t("you")}</div>
@@ -168,7 +168,7 @@ const GameBoard = () => {
                     className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${
                         canGetCert
                             ? "border-amber-200 text-amber-600 bg-amber-50 hover:bg-amber-100 hover:border-amber-300"
-                            : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
+                            : "text-gray-400 bg-gray-50"
                     }`}
                 >
                     {t("getCertificate")}

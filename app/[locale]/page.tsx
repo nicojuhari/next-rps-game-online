@@ -2,6 +2,7 @@ import Link from "next/link";
 import OnePlayer from "@/components/OnePlayer";
 import HomeContent from "@/components/HomeContent";
 import AdSense from "@/components/AdSense";
+import AnimatedPageTitle from "@/components/AnimatedPageTitle";
 import { createMetadata } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
 
@@ -37,25 +38,20 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-            <div className="pt-8 pb-6 text-center space-y-3">
-                <p className="block text-sm font-normal text-gray-400 tracking-widest uppercase mb-2">{t("h1Label")}</p>
-                <h1 className="font-semibold leading-tight">
-                    <span className="text-blue-500 text-3xl md:text-4xl">{t("h1Rock")} </span>
-                    <span className="text-yellow-500 text-3xl md:text-4xl">{t("h1Paper")} </span>
-                    <span className="text-red-500 text-3xl md:text-4xl">{t("h1Scissors")} </span>
-                    <span className="text-gray-400 text-2xl md:text-3xl">{t("h1Online")}</span>
-                </h1>
-                <p className="text-gray-500 text-sm font-light">
-                    {subtitleLine1}
-                    <br /> {subtitleLine2}
-                </p>
-            </div>
+            <AnimatedPageTitle
+                label={t("h1Label")}
+                rock={t("h1Rock")}
+                paper={t("h1Paper")}
+                scissors={t("h1Scissors")}
+                suffix={t("h1Online")}
+                subtitle={<>{subtitleLine1}<br />{subtitleLine2}</>}
+            />
 
             <OnePlayer />
             <AdSense adSlot="6657389797" className="mt-6" />
             <HomeContent />
 
-            <div className="text-center py-8 mt-2 border-t border-gray-100">
+            <div className="text-center py-8 mt-2 border-t">
                 <p className="text-sm text-gray-400 font-light">
                     {t("footerPreamble")}{" "}
                     <span className="font-medium text-blue-400">{t("h1Rock")}</span>{" "}

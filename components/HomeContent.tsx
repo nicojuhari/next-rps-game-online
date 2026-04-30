@@ -1,5 +1,13 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+
+const card = (i: number) => ({
+    initial: { opacity: 0, y: 18 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-40px" },
+    transition: { duration: 0.4, delay: i * 0.07, ease: "easeOut" as const },
+});
 
 const HomeContent = () => {
     const t = useTranslations("home");
@@ -7,7 +15,7 @@ const HomeContent = () => {
 
     return (
         <div className="my-10 space-y-4 font-light">
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <motion.div className="bg-white rounded-xl p-6 border" {...card(0)}>
                 <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("strategy.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("strategy.p1")}</p>
@@ -35,9 +43,9 @@ const HomeContent = () => {
                     </p>
                     <p>{t("strategy.certCTA")}</p>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <motion.div className="bg-white rounded-xl p-6 border" {...card(1)}>
                 <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("rules.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("rules.p1")}</p>
@@ -56,9 +64,9 @@ const HomeContent = () => {
                     <p className="font-semibold text-gray-700">{t("rules.bestOf3Q")}</p>
                     <p>{t("rules.bestOf3A")}</p>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <motion.div className="bg-white rounded-xl p-6 border" {...card(2)}>
                 <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("statistics.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("statistics.p1")}</p>
@@ -70,9 +78,9 @@ const HomeContent = () => {
                     </ul>
                     <p>{t("statistics.conclusion")}</p>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <motion.div className="bg-white rounded-xl p-6 border" {...card(3)}>
                 <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">{t("history.title")}</h2>
                 <div className="space-y-2 text-sm text-gray-600">
                     <p>{t("history.p1")}</p>
@@ -82,9 +90,9 @@ const HomeContent = () => {
                     <p>{t("history.computerNote")}</p>
                     <p>{t("history.fairPlay")}</p>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <motion.div className="bg-white rounded-xl p-6 border" {...card(4)}>
                 <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">{t("faq.title")}</h2>
                 <div className="space-y-4 text-sm text-gray-600">
                     {faqItems.map((item, i) => (
@@ -94,7 +102,7 @@ const HomeContent = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

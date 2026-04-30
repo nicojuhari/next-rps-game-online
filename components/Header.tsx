@@ -2,13 +2,19 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { UsersIcon } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 
 const Header = () => {
     const t = useTranslations("header");
 
     return (
-        <header className="bg-white/50 border-b border-gray-100">
+        <header className="bg-white/50 border-b">
             <div className="container h-14 flex items-center justify-between">
+                <motion.div
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                >
                 <Link href="/" title={t("logoTitle")}>
                     <svg className="h-4" viewBox="0 0 499 226" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -25,7 +31,13 @@ const Header = () => {
                         />
                     </svg>
                 </Link>
+                </motion.div>
 
+                <motion.div
+                    initial={{ opacity: 0, x: 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                >
                 <Link
                     href="/two-players"
                     className="btn-cta-green inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white"
@@ -33,6 +45,7 @@ const Header = () => {
                     <UsersIcon weight="duotone" size={14} />
                     {t("playWithFriend")}
                 </Link>
+                </motion.div>
             </div>
         </header>
     );

@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import TwoPlayersContent from "@/components/TwoPlayersContent";
 import { FirebaseProvider } from "@/contexts/FirebaseContext";
+import AnimatedPageTitle from "@/components/AnimatedPageTitle";
 import { createMetadata } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
 
@@ -36,15 +37,14 @@ const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) =
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-            <div className="pt-8 pb-6 text-center space-y-3">
-                <p className="block text-sm font-normal text-gray-400 tracking-widest uppercase mb-4">{t("h1Label")}</p>
-                <h1 className="font-semibold leading-tight">
-                    <span className="text-blue-500 text-3xl md:text-4xl">{tHome("h1Rock")} </span>
-                    <span className="text-yellow-500 text-3xl md:text-4xl">{tHome("h1Paper")} </span>
-                    <span className="text-red-500 text-3xl md:text-4xl">{tHome("h1Scissors")} </span>
-                    <span className="text-gray-400 text-xl md:text-2xl block">{t("h1WithFriends")}</span>
-                </h1>
-            </div>
+            <AnimatedPageTitle
+                label={t("h1Label")}
+                rock={tHome("h1Rock")}
+                paper={tHome("h1Paper")}
+                scissors={tHome("h1Scissors")}
+                suffix={t("h1WithFriends")}
+                suffixClassName="text-gray-400 text-xl md:text-2xl block"
+            />
             <Suspense
                 fallback={
                     <div className="py-8">

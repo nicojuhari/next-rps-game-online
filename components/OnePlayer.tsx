@@ -14,7 +14,7 @@ const getButtonStyle = (key: string, finished: boolean) => {
     const disabled = "cursor-not-allowed opacity-40";
     const active = "cursor-pointer hover:scale-105";
 
-    if (finished) return `${base} ${disabled} bg-gray-50 border-gray-200`;
+    if (finished) return `${base} ${disabled} bg-gray-50`;
     if (key === "1")
         return `${base} ${active} bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100`;
     if (key === "2")
@@ -130,7 +130,7 @@ const OnePlayer = () => {
     return (
         <>
             <div className="max-w-sm mx-auto relative">
-                <div className="rounded-xl overflow-hidden border border-gray-ss200">
+                <div className="rounded-xl overflow-hidden border">
                     <div className="bg-gray-700 px-5 pt-3 pb-2">
                         <div className="flex items-center justify-between">
                             <div className="text-center min-w-12">
@@ -199,7 +199,7 @@ const OnePlayer = () => {
                     className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${
                         canGetCert
                             ? "border-amber-200 text-amber-600 bg-amber-50 hover:bg-amber-100 hover:border-amber-300"
-                            : "border-gray-200 text-gray-400 bg-gray-50 hover:border-gray-300"
+                            : "text-gray-400 bg-gray-50"
                     }`}
                 >
                     {t("getCertificate")}
