@@ -71,6 +71,18 @@ const PrivacyPolicyComp = () => {
                 </div>
 
                 <div>
+                    <h2 className="text-lg font-semibold">{t("adsenseTitle")}</h2>
+                    <p className="text-gray-600">{t("adsenseText")}</p>
+                    <p className="text-gray-600 mt-1">
+                        {t("adsenseOptOut")}{" "}
+                        <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                            {t("adsenseOptOutLink")}
+                        </a>
+                        {t("adsenseOptOutAfter")}
+                    </p>
+                </div>
+
+                <div>
                     <h2 className="text-lg font-semibold">{t("anonymityTitle")}</h2>
                     <p className="text-gray-600">{t("anonymityText")}</p>
                 </div>

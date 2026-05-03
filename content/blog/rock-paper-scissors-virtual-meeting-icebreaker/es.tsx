@@ -30,11 +30,11 @@ export const faqItems: FaqItem[] = [
     },
     {
         q: "¿Cuánto dura un icebreaker virtual de piedra papel tijeras?",
-        a: "Un partido al mejor de 3 dura 30–60 segundos. Un torneo completo con 8 personas tarda unos 10 minutos. Una ronda rápida donde todos juegan con el de su izquierda dura 2–3 minutos.",
+        a: "Un partido al mejor de 3 dura 30-60 segundos. Un torneo completo con 8 personas tarda unos 10 minutos. Una ronda rápida donde todos juegan con el de su izquierda dura 2-3 minutos.",
     },
     {
         q: "¿Puede funcionar piedra papel tijeras con equipos grandes?",
-        a: "Sí. Para equipos de más de 8–10 personas, organiza un torneo en cuadro o divide en grupos más pequeños. Todos los partidos son independientes - las parejas pueden jugar simultáneamente sin necesidad de coordinación.",
+        a: "Sí. Para equipos de más de 8-10 personas, organiza un torneo en cuadro o divide en grupos más pequeños. Todos los partidos son independientes - las parejas pueden jugar simultáneamente sin necesidad de coordinación.",
     },
 ];
 
@@ -98,7 +98,7 @@ export function Content() {
             {/* Section 3 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Cómo Hacerlo: Paso a Paso</h2>
             <p className="mb-4">
-                Esto lleva menos de 2 minutos de principio a fin para una pareja, o 5–10 minutos para un torneo completo.
+                Esto lleva menos de 2 minutos de principio a fin para una pareja, o 5-10 minutos para un torneo completo.
             </p>
             <div className="space-y-3 mb-6">
                 <div className="flex gap-3">
@@ -186,19 +186,19 @@ export function Content() {
             <p className="mb-4">
                 Para una actividad de equipo dedicada, organiza un torneo en cuadro. Con 8 personas: empareja a todos aleatoriamente, juega
                 4 partidos de primera ronda simultáneamente (cada pareja obtiene su propio enlace), luego semifinales y final. Todo tarda
-                10–12 minutos.
+                10-12 minutos.
             </p>
 
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Desempatar una votación igualada</h3>
             <p className="mb-4">
-                El equipo está dividido 2–2 sobre una decisión. En lugar de acudir al manager como árbitro (lo que crea presión jerárquica),
+                El equipo está dividido 2-2 sobre una decisión. En lugar de acudir al manager como árbitro (lo que crea presión jerárquica),
                 cada bando elige un campeón y juegan. El resultado es aleatorio - pero se acepta como justo porque ambas partes lo
                 acordaron.
             </p>
 
             {/* Section 5 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Organizar un Torneo para Equipos Grandes</h2>
-            <p className="mb-4">Para equipos de 8–16 personas, la eliminación directa funciona bien:</p>
+            <p className="mb-4">Para equipos de 8-16 personas, la eliminación directa funciona bien:</p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>
                     Usa una herramienta de cuadro (Challonge, Bracket HQ, o una hoja de cálculo simple) para establecer los emparejamientos
@@ -225,33 +225,33 @@ export function Content() {
                     <tbody className="text-gray-600">
                         <tr>
                             <td className="p-3 border border-gray-200">&ldquo;Dos verdades y una mentira&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5–15 min</td>
+                            <td className="p-3 border border-gray-200">5-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Requiere comodidad hablando; incómodo para miembros nuevos o introvertidos
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Quiz de trivia</td>
-                            <td className="p-3 border border-gray-200">10–20 min</td>
+                            <td className="p-3 border border-gray-200">10-20 min</td>
                             <td className="p-3 border border-gray-200">
                                 La brecha de conocimiento penaliza a no hablantes nativos y miembros junior
                             </td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200">Bingo virtual</td>
-                            <td className="p-3 border border-gray-200">10–15 min</td>
+                            <td className="p-3 border border-gray-200">10-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Requiere una herramienta compartida, tiempo de configuración, alguien que facilite
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Asociación de palabras</td>
-                            <td className="p-3 border border-gray-200">3–5 min</td>
-                            <td className="p-3 border border-gray-200">Difícil con más de 4–5 personas; pierde energía rápido</td>
+                            <td className="p-3 border border-gray-200">3-5 min</td>
+                            <td className="p-3 border border-gray-200">Difícil con más de 4-5 personas; pierde energía rápido</td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200 font-semibold text-gray-800">Piedra Papel Tijeras</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1–10 min</td>
+                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 min</td>
                             <td className="p-3 border border-gray-200 text-green-700 font-medium">
                                 Sin configuración. Sin hablar. En igualdad. Escala a cualquier tamaño.
                             </td>
@@ -309,14 +309,14 @@ export function Content() {
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">¿Cuánto dura un icebreaker virtual de piedra papel tijeras?</h3>
                     <p className="text-gray-600 text-sm">
-                        Un partido al mejor de 3 dura 30–60 segundos. Un torneo con 8 personas tarda unos 10 minutos. Una ronda rápida donde
-                        todos juegan con el de su izquierda dura 2–3 minutos.
+                        Un partido al mejor de 3 dura 30-60 segundos. Un torneo con 8 personas tarda unos 10 minutos. Una ronda rápida donde
+                        todos juegan con el de su izquierda dura 2-3 minutos.
                     </p>
                 </div>
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">¿Funciona con equipos grandes?</h3>
                     <p className="text-gray-600 text-sm">
-                        Sí. Para equipos de más de 8–10 personas, organiza un torneo en cuadro o divide en grupos más pequeños. Todos los
+                        Sí. Para equipos de más de 8-10 personas, organiza un torneo en cuadro o divide en grupos más pequeños. Todos los
                         partidos son independientes y pueden jugarse simultáneamente.
                     </p>
                 </div>

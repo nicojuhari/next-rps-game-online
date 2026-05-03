@@ -27,7 +27,19 @@
     },
     "privacy": {
       "title": "Politique de Confidentialité - Pierre Feuille Ciseaux",
-      "description": "Découvrez comment nous protégeons tes données sur Pierre Feuille Ciseaux en Ligne. Aucun cookie, aucun suivi, aucune donnée personnelle collectée."
+      "description": "Politique de confidentialité de Pierre Feuille Ciseaux en Ligne. Ce que nous collectons, comment Google AdSense utilise les cookies et comment se désinscrire."
+    },
+    "about": {
+      "title": "À propos - Pierre Feuille Ciseaux en Ligne",
+      "description": "Pierre Feuille Ciseaux en Ligne est un jeu gratuit sans inscription, créé par Nick. Joue contre l'ordinateur ou défie un ami en temps réel."
+    },
+    "blog": {
+      "title": "Blog - Conseils, Stratégie et Règles de Pierre Feuille Ciseaux",
+      "description": "Articles sur la stratégie, les règles, l'histoire et comment jouer à Pierre Feuille Ciseaux en ligne avec des amis."
+    },
+    "terms": {
+      "title": "Conditions d'Utilisation - Pierre Feuille Ciseaux en Ligne",
+      "description": "Conditions d'utilisation de Pierre Feuille Ciseaux en Ligne. Règles d'usage, propriété intellectuelle et limitations de responsabilité."
     }
   },
   "home": {
@@ -69,7 +81,12 @@
     "localStorageTitle": "Ce que nous stockons sur ton appareil",
     "localStorageText": "Ton navigateur stocke localement : ton identifiant anonyme, tes victoires et défaites en solo, et un historique de tes coups des 3 derniers jours. L'historique de plus de 3 jours est supprimé automatiquement. Aucune de ces données n'est liée à ton identité.",
     "anonymityTitle": "Ton anonymat est préservé",
-    "anonymityText": "Nous n'utilisons pas de cookies, nous ne te suivons pas sur le web et nous ne créons pas de profils. Tu peux jouer en toute anonymité.",
+    "anonymityText": "Nous ne collectons pas de données personnelles, ne te suivons pas sur le web et ne créons pas de profils. Note que Google AdSense (pour la publicité sur ce site) place des cookies publicitaires — voir la section Publicité ci-dessus pour les options de désinscription.",
+    "adsenseTitle": "Publicité (Google AdSense)",
+    "adsenseText": "Ce site utilise Google AdSense pour afficher des publicités. Google utilise des cookies pour diffuser des annonces en fonction de tes visites précédentes sur ce site et d'autres sites.",
+    "adsenseOptOut": "Tu peux désactiver la publicité personnalisée sur",
+    "adsenseOptOutLink": "Paramètres des annonces Google",
+    "adsenseOptOutAfter": ".",
     "deleteTitle": "Supprimer toutes mes données",
     "deleteText": "Cela supprimera définitivement toutes les données locales de cet appareil (identifiant, scores et historique) ainsi que toutes les salles de jeu multijoueur actives dont tu fais partie.",
     "deleteButton": "Supprimer toutes mes données",
@@ -181,5 +198,42 @@
       "description": "Jouez à Pierre Feuille Ciseaux en ligne gratuitement. Affrontez l'ordinateur ou jouez en multijoueur en temps réel avec des amis. Sans téléchargement, sans inscription.",
       "featureList": "Solo contre ordinateur, Multijoueur en temps réel, Salles privées instantanées, Sans inscription, Compatible mobile"
     }
+  },
+  "about": {
+    "h1": "À propos de Pierre Feuille Ciseaux en Ligne",
+    "intro": "Un jeu de Pierre Feuille Ciseaux gratuit et sans inscription qui fonctionne sur n'importe quel appareil — sans téléchargement, sans compte, sans suivi.",
+    "projectTitle": "Le Projet",
+    "projectText": "Ce site existe pour donner à chacun un moyen simple et instantané de jouer à Pierre Feuille Ciseaux — contre l'ordinateur ou avec un ami en temps réel. Pas de publicité dans la zone de jeu, pas de compte à créer, pas de données personnelles collectées.",
+    "whoTitle": "Qui l'a créé",
+    "whoText": "Créé et maintenu par Nick, développeur web. C'est un projet personnel — fait pour le plaisir et pour garder le jeu gratuit et accessible à tous.",
+    "contactTitle": "Contact",
+    "contactText": "Pour des questions, des retours ou des demandes de partenariat, envoie un e-mail à :"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  },
+  "terms": {
+    "lastUpdated": "Dernière mise à jour : 3 mai 2026",
+    "h1": "Conditions d'Utilisation",
+    "intro": "Lis attentivement ces conditions avant d'utiliser rps-game.online. En accédant au site ou en l'utilisant, tu acceptes d'être lié par ces conditions.",
+    "acceptanceTitle": "1. Acceptation des conditions",
+    "acceptanceText": "En utilisant rps-game.online tu acceptes ces Conditions d'Utilisation. Si tu n'es pas d'accord, cesse d'utiliser le site.",
+    "useTitle": "2. Utilisation du service",
+    "useText": "rps-game.online est un jeu en ligne gratuit à usage personnel et non commercial. Tu t'engages à ne pas abuser du service, à ne pas tenter d'en perturber le fonctionnement et à ne pas l'utiliser d'une manière contraire aux lois en vigueur.",
+    "ipTitle": "3. Propriété intellectuelle",
+    "ipText": "Tout le contenu de ce site — y compris le design du jeu, les graphiques, le code et le contenu écrit — est la propriété de rps-game.online. Tu ne peux pas le copier, reproduire ou distribuer sans autorisation écrite préalable.",
+    "disclaimerTitle": "4. Absence de garantie",
+    "disclaimerText": "Ce site est fourni \"tel quel\", sans garantie d'aucune sorte. Nous ne garantissons pas que le service sera ininterrompu, exempt d'erreurs ou adapté à un usage particulier.",
+    "liabilityTitle": "5. Limitation de responsabilité",
+    "liabilityText": "Dans toute la mesure permise par la loi, rps-game.online et son propriétaire ne sont pas responsables des dommages indirects, accidentels ou consécutifs découlant de l'utilisation ou de l'impossibilité d'utiliser ce site.",
+    "adsTitle": "6. Publicité tierce",
+    "adsText": "Ce site utilise Google AdSense pour afficher des publicités. Google peut utiliser des cookies pour diffuser des annonces en fonction de ton historique de navigation. Tu peux te désinscrire sur adssettings.google.com. Nous ne sommes pas responsables du contenu des publicités tierces.",
+    "changesTitle": "7. Modifications des conditions",
+    "changesText": "Nous pouvons mettre à jour ces conditions à tout moment. L'utilisation continue du site après la publication de modifications vaut acceptation des conditions mises à jour.",
+    "contactTitle": "8. Contact",
+    "contactText": "Pour toute question relative à ces conditions, contacte-nous à :"
   }
 }

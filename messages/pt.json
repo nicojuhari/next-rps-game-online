@@ -27,7 +27,19 @@
     },
     "privacy": {
       "title": "Política de Privacidade - Pedra Papel Tesoura Online",
-      "description": "Saiba como protegemos seus dados no Pedra Papel Tesoura Online. Sem cookies, sem rastreamento e nenhum dado pessoal coletado. Jogue com privacidade total."
+      "description": "Política de privacidade do Pedra Papel Tesoura Online. O que coletamos, como o Google AdSense usa cookies e como se excluir."
+    },
+    "about": {
+      "title": "Sobre - Pedra Papel Tesoura Online",
+      "description": "Pedra Papel Tesoura Online é um jogo gratuito sem cadastro, criado por Nick. Jogue contra o computador ou desafie um amigo em tempo real."
+    },
+    "blog": {
+      "title": "Blog - Dicas, Estratégia e Regras de Pedra Papel Tesoura",
+      "description": "Artigos sobre estratégia, regras, história e como jogar Pedra Papel Tesoura online com amigos."
+    },
+    "terms": {
+      "title": "Termos de Serviço - Pedra Papel Tesoura Online",
+      "description": "Termos de Serviço do Pedra Papel Tesoura Online. Regras de uso, propriedade intelectual e limitações de responsabilidade."
     }
   },
   "home": {
@@ -69,7 +81,12 @@
     "localStorageTitle": "O Que Guardamos no Seu Dispositivo",
     "localStorageText": "Seu navegador armazena localmente: seu ID de jogador anônimo, suas vitórias e derrotas no modo individual, e um histórico de movimentos dos últimos 3 dias. O histórico com mais de 3 dias é removido automaticamente. Nenhum dado está vinculado à sua identidade.",
     "anonymityTitle": "Seu Anonimato está Seguro",
-    "anonymityText": "Não usamos cookies, não rastreamos você pela web nem criamos perfis de usuário. Você pode desfrutar do jogo de forma completamente anônima.",
+    "anonymityText": "Não coletamos dados pessoais, não rastreamos você pela web nem criamos perfis de usuário. Note que o Google AdSense (para anúncios neste site) usa cookies publicitários — consulte a seção de Publicidade acima para as opções de exclusão.",
+    "adsenseTitle": "Publicidade (Google AdSense)",
+    "adsenseText": "Este site usa Google AdSense para exibir anúncios. O Google usa cookies para exibir anúncios com base nas suas visitas anteriores a este e outros sites.",
+    "adsenseOptOut": "Você pode desativar a publicidade personalizada em",
+    "adsenseOptOutLink": "Configurações de Anúncios do Google",
+    "adsenseOptOutAfter": ".",
     "deleteTitle": "Excluir Todos os Meus Dados",
     "deleteText": "Isso apagará permanentemente todos os dados locais deste dispositivo (ID do jogador, pontuações e histórico de partidas) e excluirá quaisquer salas de jogo multijogador ativas das quais você faça parte.",
     "deleteButton": "Excluir Todos os Meus Dados",
@@ -181,5 +198,42 @@
       "description": "Jogue Pedra Papel Tesoura online de graça. Desafie o computador ou jogue multijogador em tempo real com amigos. Sem download, sem cadastro necessário.",
       "featureList": "Um jogador vs Computador, Multijogador em Tempo Real, Salas Privadas Instantâneas, Sem Cadastro Necessário, Compatível com Celular"
     }
+  },
+  "about": {
+    "h1": "Sobre Pedra Papel Tesoura Online",
+    "intro": "Um jogo de Pedra Papel Tesoura gratuito e sem cadastro que funciona em qualquer dispositivo — sem download, sem conta, sem rastreamento.",
+    "projectTitle": "O Projeto",
+    "projectText": "Este site existe para dar a qualquer pessoa uma forma limpa e instantânea de jogar Pedra Papel Tesoura — contra o computador ou com um amigo em tempo real. Sem anúncios que interrompam o jogo, sem contas para criar, sem dados pessoais coletados.",
+    "whoTitle": "Quem Criou",
+    "whoText": "Criado e mantido por Nick, desenvolvedor web. É um projeto pessoal — feito por diversão e para manter o jogo gratuito e acessível a qualquer pessoa com um navegador.",
+    "contactTitle": "Contato",
+    "contactText": "Para dúvidas, sugestões ou pedidos de parceria, envie um e-mail para:"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about": "Sobre",
+    "privacy": "Privacidade",
+    "terms": "Termos"
+  },
+  "terms": {
+    "lastUpdated": "Última atualização: 3 de maio de 2026",
+    "h1": "Termos de Serviço",
+    "intro": "Leia estes termos com atenção antes de usar rps-game.online. Ao acessar ou usar este site, você concorda em cumpri-los.",
+    "acceptanceTitle": "1. Aceitação dos Termos",
+    "acceptanceText": "Ao usar rps-game.online você concorda com estes Termos de Serviço. Se não concordar, pare de usar o site.",
+    "useTitle": "2. Uso do Serviço",
+    "useText": "rps-game.online é um jogo online gratuito para uso pessoal e não comercial. Você concorda em não usar indevidamente o serviço, não tentar interromper seu funcionamento nem usá-lo de forma que viole leis ou regulamentos aplicáveis.",
+    "ipTitle": "3. Propriedade Intelectual",
+    "ipText": "Todo o conteúdo deste site — incluindo o design do jogo, gráficos, código e conteúdo escrito — é propriedade de rps-game.online. Você não pode copiar, reproduzir ou distribuí-lo sem permissão prévia por escrito.",
+    "disclaimerTitle": "4. Sem Garantias",
+    "disclaimerText": "Este site é fornecido \"como está\", sem garantia de qualquer tipo. Não garantimos que o serviço será ininterrupto, sem erros ou adequado para qualquer finalidade específica.",
+    "liabilityTitle": "5. Limitação de Responsabilidade",
+    "liabilityText": "Na máxima extensão permitida por lei, rps-game.online e seu proprietário não são responsáveis por quaisquer danos indiretos, incidentais ou consequentes decorrentes do uso ou incapacidade de uso deste site.",
+    "adsTitle": "6. Publicidade de Terceiros",
+    "adsText": "Este site usa Google AdSense para exibir anúncios. O Google pode usar cookies para exibir anúncios com base no seu histórico de navegação. Você pode desativar isso em adssettings.google.com. Não somos responsáveis pelo conteúdo de anúncios de terceiros.",
+    "changesTitle": "7. Alterações nos Termos",
+    "changesText": "Podemos atualizar estes termos a qualquer momento. O uso continuado do site após a publicação de alterações constitui sua aceitação dos termos atualizados.",
+    "contactTitle": "8. Contato",
+    "contactText": "Para dúvidas sobre estes termos, entre em contato:"
   }
 }

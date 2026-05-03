@@ -199,7 +199,7 @@ export function Content() {
 
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Départager un vote à égalité</h3>
             <p className="mb-4">
-                L&apos;équipe est partagée 2–2 sur une décision. Plutôt que d&apos;aller au manager comme arbitre (ce qui crée une pression
+                L&apos;équipe est partagée 2-2 sur une décision. Plutôt que d&apos;aller au manager comme arbitre (ce qui crée une pression
                 hiérarchique), chaque camp choisit un champion et ils jouent. Le résultat est aléatoire - mais accepté comme équitable car
                 les deux parties y ont consenti.
             </p>
@@ -231,35 +231,35 @@ export function Content() {
                     <tbody className="text-gray-600">
                         <tr>
                             <td className="p-3 border border-gray-200">&ldquo;Deux vérités et un mensonge&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5–15 min</td>
+                            <td className="p-3 border border-gray-200">5-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Nécessite de l&apos;aisance à l&apos;oral ; gênant pour les membres nouveaux ou introvertis
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Quiz de culture générale</td>
-                            <td className="p-3 border border-gray-200">10–20 min</td>
+                            <td className="p-3 border border-gray-200">10-20 min</td>
                             <td className="p-3 border border-gray-200">
                                 L&apos;écart de connaissances pénalise les non-natifs et les membres juniors
                             </td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200">Bingo virtuel</td>
-                            <td className="p-3 border border-gray-200">10–15 min</td>
+                            <td className="p-3 border border-gray-200">10-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Nécessite un outil partagé, un temps de configuration, quelqu&apos;un pour animer
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Association de mots</td>
-                            <td className="p-3 border border-gray-200">3–5 min</td>
+                            <td className="p-3 border border-gray-200">3-5 min</td>
                             <td className="p-3 border border-gray-200">
-                                Difficile avec plus de 4–5 personnes ; perd de l&apos;énergie rapidement
+                                Difficile avec plus de 4-5 personnes ; perd de l&apos;énergie rapidement
                             </td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200 font-semibold text-gray-800">Pierre Feuille Ciseaux</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1–10 min</td>
+                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 min</td>
                             <td className="p-3 border border-gray-200 text-green-700 font-medium">
                                 Pas de configuration. Pas besoin de parler. Terrain égal. S&apos;adapte à toute taille d&apos;équipe.
                             </td>

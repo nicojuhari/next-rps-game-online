@@ -33,7 +33,19 @@
     },
     "privacy": {
       "title": "Privacy Policy - Rock Paper Scissors Online",
-      "description": "Learn about our privacy practices and data protection policies for Rock Paper Scissors Online. We prioritize your privacy and data security."
+      "description": "Privacy policy for Rock Paper Scissors Online. Learn what data we collect, how Google AdSense uses cookies, and how to opt out."
+    },
+    "about": {
+      "title": "About - Rock Paper Scissors Online",
+      "description": "Rock Paper Scissors Online is a free, no-signup game built by Nick. Play against the computer or challenge a friend in real time."
+    },
+    "blog": {
+      "title": "Blog - Rock Paper Scissors Tips, Strategy & Rules",
+      "description": "Articles on rock paper scissors strategy, rules, history, and how to play online with friends."
+    },
+    "terms": {
+      "title": "Terms of Service - Rock Paper Scissors Online",
+      "description": "Terms of Service for Rock Paper Scissors Online. Read our usage rules, intellectual property policy, and disclaimers."
     }
   },
   "home": {
@@ -75,7 +87,12 @@
     "localStorageTitle": "What We Store on Your Device",
     "localStorageText": "Your browser stores the following locally: your anonymous player ID, your single-player win and loss counts, and a move history from your last 3 days of games. Game history older than 3 days is automatically removed. None of this data is linked to your identity.",
     "anonymityTitle": "Your Anonymity is Safe",
-    "anonymityText": "We don't use cookies, track you across the web, or build user profiles. You can enjoy the game completely anonymously.",
+    "anonymityText": "We don't collect personal data, track you across the web, or build user profiles. Note that Google AdSense (used for ads on this site) places advertising cookies — see the Advertising section above for details and opt-out options.",
+    "adsenseTitle": "Advertising (Google AdSense)",
+    "adsenseText": "This site uses Google AdSense to display ads. Google uses cookies to serve ads based on your previous visits to this and other websites.",
+    "adsenseOptOut": "You can opt out of personalised advertising at",
+    "adsenseOptOutLink": "Google Ads Settings",
+    "adsenseOptOutAfter": ".",
     "deleteTitle": "Delete All My Data",
     "deleteText": "This will permanently clear all local data stored on this device (player ID, scores, and game history) and delete any active multiplayer game rooms you are part of.",
     "deleteButton": "Delete All My Data",
@@ -187,5 +204,42 @@
       "description": "Play Rock Paper Scissors online for free. Challenge the computer or play real-time multiplayer with friends. No download, no signup required.",
       "featureList": "Single-player vs Computer, Real-time Multiplayer, Instant Private Rooms, No Signup Required, Mobile Compatible"
     }
+  },
+  "about": {
+    "h1": "About Rock Paper Scissors Online",
+    "intro": "A free, no-signup Rock Paper Scissors game that works on any device — no download, no account, no tracking.",
+    "projectTitle": "The Project",
+    "projectText": "This site exists to give anyone a clean, instant way to play Rock Paper Scissors — against the computer or with a friend in real time. No ads interrupt the game, no accounts are required, and no personal data is collected.",
+    "whoTitle": "Who Built It",
+    "whoText": "Built and maintained by Nick, a web developer. This is a side project — made for fun and to keep the game free and accessible to anyone with a browser.",
+    "contactTitle": "Contact",
+    "contactText": "For questions, feedback, or partnership requests, reach out by email:"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "terms": {
+    "lastUpdated": "Last updated: May 3, 2026",
+    "h1": "Terms of Service",
+    "intro": "Please read these terms carefully before using rps-game.online. By accessing or using this site, you agree to be bound by them.",
+    "acceptanceTitle": "1. Acceptance of Terms",
+    "acceptanceText": "By using rps-game.online you agree to these Terms of Service. If you do not agree, please stop using the site.",
+    "useTitle": "2. Use of Service",
+    "useText": "rps-game.online is a free online game provided for personal, non-commercial use. You agree not to misuse the service, attempt to disrupt its operation, or use it in any way that violates applicable laws or regulations.",
+    "ipTitle": "3. Intellectual Property",
+    "ipText": "All content on this site — including the game design, graphics, code, and written content — is the property of rps-game.online. You may not copy, reproduce, or distribute it without prior written permission.",
+    "disclaimerTitle": "4. No Warranty",
+    "disclaimerText": "This site is provided \"as is\" without any warranty of any kind. We do not guarantee that the service will be uninterrupted, error-free, or suitable for any particular purpose.",
+    "liabilityTitle": "5. Limitation of Liability",
+    "liabilityText": "To the fullest extent permitted by law, rps-game.online and its owner are not liable for any indirect, incidental, or consequential damages arising from your use of or inability to use this site.",
+    "adsTitle": "6. Third-Party Advertising",
+    "adsText": "This site uses Google AdSense to display advertisements. Google may use cookies to serve ads based on your browsing history. You can opt out at adssettings.google.com. We are not responsible for the content of third-party ads.",
+    "changesTitle": "7. Changes to Terms",
+    "changesText": "We may update these terms at any time. Continued use of the site after changes are posted constitutes your acceptance of the updated terms.",
+    "contactTitle": "8. Contact",
+    "contactText": "For questions about these terms, contact us at:"
   }
 }

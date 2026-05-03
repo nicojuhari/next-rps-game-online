@@ -61,3 +61,19 @@ export function getBlogStaticParams(): { locale: string; slug: string }[] {
         Object.keys(localeMap).map((locale) => ({ locale, slug }))
     );
 }
+
+export async function getAllBlogPostsMeta(locale: Locale) {
+    const slugs = Object.keys(registry);
+    const posts = await Promise.all(
+        slugs.map(async (slug) => {
+            const loaders = registry[slug];
+            const load = loaders[locale] ?? loaders.en;
+            if (!load) return null;
+            const mod = await load();
+            return mod.meta;
+        })
+    );
+    return posts
+        .filter(Boolean)
+        .sort((a, b) => new Date(b!.publishedAt).getTime() - new Date(a!.publishedAt).getTime()) as import("./types").BlogPostMeta[];
+}

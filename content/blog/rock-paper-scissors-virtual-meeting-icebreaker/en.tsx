@@ -30,11 +30,11 @@ export const faqItems: FaqItem[] = [
     },
     {
         q: "How long does a virtual RPS icebreaker take?",
-        a: "A single match (best-of-3) takes 30–60 seconds. A full 8-person tournament bracket takes about 10 minutes. A quick round-robin where everyone plays the person to their left on the call takes 2–3 minutes.",
+        a: "A single match (best-of-3) takes 30-60 seconds. A full 8-person tournament bracket takes about 10 minutes. A quick round-robin where everyone plays the person to their left on the call takes 2-3 minutes.",
     },
     {
         q: "Can rock paper scissors work with large teams?",
-        a: "Yes. For teams larger than 8–10, run it as a bracket tournament over multiple rounds, or split into smaller groups. Each match is independent - anyone can play from any device simultaneously without coordination overhead.",
+        a: "Yes. For teams larger than 8-10, run it as a bracket tournament over multiple rounds, or split into smaller groups. Each match is independent - anyone can play from any device simultaneously without coordination overhead.",
     },
 ];
 
@@ -97,7 +97,7 @@ export function Content() {
 
             {/* Section 3 - How to run it */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">How to Run It: Step by Step</h2>
-            <p className="mb-4">This takes under 2 minutes from start to finish for a pair, or 5–10 minutes for a full team bracket.</p>
+            <p className="mb-4">This takes under 2 minutes from start to finish for a pair, or 5-10 minutes for a full team bracket.</p>
             <div className="space-y-3 mb-6">
                 <div className="flex gap-3">
                     <span className="flex-shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
@@ -111,7 +111,7 @@ export function Content() {
                     </div>
                 </div>
                 <div className="flex gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
+                    <span className="shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
                         2
                     </span>
                     <div>
@@ -123,7 +123,7 @@ export function Content() {
                     </div>
                 </div>
                 <div className="flex gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
+                    <span className="shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
                         3
                     </span>
                     <div>
@@ -134,7 +134,7 @@ export function Content() {
                     </div>
                 </div>
                 <div className="flex gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
+                    <span className="shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
                         4
                     </span>
                     <div>
@@ -181,21 +181,21 @@ export function Content() {
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Team building tournament</h3>
             <p className="mb-4">
                 For a dedicated team activity, run a bracket tournament. With 8 people: seed everyone randomly, run 4 first-round matches
-                simultaneously (each pair gets their own link), then semifinals and a final. The whole thing takes 10–12 minutes. Keep a
+                simultaneously (each pair gets their own link), then semifinals and a final. The whole thing takes 10-12 minutes. Keep a
                 leaderboard visible on screen. The structure creates stakes and narrative - &ldquo;the person who went out in the
                 semis&rdquo; is now a team reference point.
             </p>
 
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Breaking a tie vote</h3>
             <p className="mb-4">
-                The team is split 2–2 on a decision. Instead of going to the manager as a tiebreaker (which creates hierarchy pressure), the
+                The team is split 2-2 on a decision. Instead of going to the manager as a tiebreaker (which creates hierarchy pressure), the
                 two sides each pick a champion and play. The result is random - but it&apos;s accepted as fair because both sides agreed to
                 it.
             </p>
 
             {/* Section 5 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Running a Tournament Bracket for Larger Teams</h2>
-            <p className="mb-4">For teams of 8–16, a single-elimination bracket works well:</p>
+            <p className="mb-4">For teams of 8-16, a single-elimination bracket works well:</p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>Use a bracket tool (Challonge, Bracket HQ, or a simple spreadsheet) to set the pairings</li>
                 <li>Share each pair&apos;s game link simultaneously in the group chat</li>
@@ -204,7 +204,7 @@ export function Content() {
                 <li>Final match runs live with everyone watching on the call</li>
             </ul>
             <p className="mb-4">
-                For teams larger than 16, split into groups of 4–6 first, run intra-group round-robins, then take the top 1–2 from each
+                For teams larger than 16, split into groups of 4-6 first, run intra-group round-robins, then take the top 1-2 from each
                 group into a final bracket.
             </p>
 
@@ -223,33 +223,33 @@ export function Content() {
                     <tbody className="text-gray-600">
                         <tr>
                             <td className="p-3 border border-gray-200">&ldquo;Two truths and a lie&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5–15 min</td>
+                            <td className="p-3 border border-gray-200">5-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Requires comfort speaking; awkward for new/introverted team members
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Trivia quiz</td>
-                            <td className="p-3 border border-gray-200">10–20 min</td>
+                            <td className="p-3 border border-gray-200">10-20 min</td>
                             <td className="p-3 border border-gray-200">
                                 Knowledge gap disadvantages non-native speakers and junior members
                             </td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200">Virtual bingo</td>
-                            <td className="p-3 border border-gray-200">10–15 min</td>
+                            <td className="p-3 border border-gray-200">10-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Requires a shared tool, setup time, someone to facilitate throughout
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Word association</td>
-                            <td className="p-3 border border-gray-200">3–5 min</td>
-                            <td className="p-3 border border-gray-200">Hard to run with more than 4–5 people; loses energy quickly</td>
+                            <td className="p-3 border border-gray-200">3-5 min</td>
+                            <td className="p-3 border border-gray-200">Hard to run with more than 4-5 people; loses energy quickly</td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200 font-semibold text-gray-800">Rock Paper Scissors</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1–10 min</td>
+                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 min</td>
                             <td className="p-3 border border-gray-200 text-green-700 font-medium">
                                 No setup. No speaking required. Equal footing. Scales to any team size.
                             </td>
@@ -309,14 +309,14 @@ export function Content() {
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">How long does a virtual RPS icebreaker take?</h3>
                     <p className="text-gray-600 text-sm">
-                        A single best-of-3 match takes 30–60 seconds. A full 8-person tournament bracket takes about 10 minutes. A quick
-                        round where everyone plays the person to their left takes 2–3 minutes.
+                        A single best-of-3 match takes 30-60 seconds. A full 8-person tournament bracket takes about 10 minutes. A quick
+                        round where everyone plays the person to their left takes 2-3 minutes.
                     </p>
                 </div>
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Can rock paper scissors work with large teams?</h3>
                     <p className="text-gray-600 text-sm">
-                        Yes. For teams larger than 8–10, run a bracket tournament or split into smaller groups. All matches are independent
+                        Yes. For teams larger than 8-10, run a bracket tournament or split into smaller groups. All matches are independent
                         - pairs can play simultaneously without coordination overhead.
                     </p>
                 </div>

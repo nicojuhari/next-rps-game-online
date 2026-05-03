@@ -172,7 +172,7 @@ export function History() {
                     settle decisions, but it is also a game of reading your opponent.
                 </p>
                 <p>
-                    The game traces back over <strong className="text-gray-700">2,000 years to the Chinese Han Dynasty</strong> (206 BC –
+                    The game traces back over <strong className="text-gray-700">2,000 years to the Chinese Han Dynasty</strong> (206 BC -
                     220 AD), where it was called <em>shoushiling</em> and used gestures representing a Frog, a Slug, and a Snake.
                 </p>
                 <p>

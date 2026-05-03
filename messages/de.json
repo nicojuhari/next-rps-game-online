@@ -27,7 +27,19 @@
     },
     "privacy": {
       "title": "Datenschutzerklärung - Stein Papier Schere Online",
-      "description": "Erfahre, wie wir deine Daten bei Stein Papier Schere Online schützen. Keine Cookies, kein Tracking, keine persönlichen Daten. Deine Privatsphäre ist sicher."
+      "description": "Datenschutzerklärung für Stein Papier Schere Online. Was wir erfassen, wie Google AdSense Cookies nutzt und wie du dich abmelden kannst."
+    },
+    "about": {
+      "title": "Über uns - Stein Papier Schere Online",
+      "description": "Stein Papier Schere Online ist ein kostenloses Spiel ohne Anmeldung, erstellt von Nick. Spiel gegen den Computer oder fordere einen Freund in Echtzeit heraus."
+    },
+    "blog": {
+      "title": "Blog - Tipps, Strategie und Regeln für Stein Papier Schere",
+      "description": "Artikel über Strategie, Regeln, Geschichte und wie man Stein Papier Schere online mit Freunden spielt."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen - Stein Papier Schere Online",
+      "description": "Nutzungsbedingungen für Stein Papier Schere Online. Nutzungsregeln, geistiges Eigentum und Haftungsausschlüsse."
     }
   },
   "home": {
@@ -69,7 +81,12 @@
     "localStorageTitle": "Was wir auf deinem Gerät speichern",
     "localStorageText": "Dein Browser speichert lokal: deine anonyme Spieler-ID, deine Siege und Niederlagen im Einzelspielermodus sowie eine Zughistorie der letzten 3 Tage. Ältere Einträge werden automatisch entfernt. Keines dieser Daten ist mit deiner Identität verknüpft.",
     "anonymityTitle": "Deine Anonymität ist sicher",
-    "anonymityText": "Wir nutzen keine Cookies, verfolgen dich nicht im Web und erstellen keine Nutzerprofile. Du kannst das Spiel vollständig anonym genießen.",
+    "anonymityText": "Wir sammeln keine persönlichen Daten, verfolgen dich nicht im Web und erstellen keine Nutzerprofile. Beachte, dass Google AdSense (für Werbung auf dieser Seite) Werbe-Cookies setzt — siehe den Abschnitt Werbung oben für Opt-out-Optionen.",
+    "adsenseTitle": "Werbung (Google AdSense)",
+    "adsenseText": "Diese Seite verwendet Google AdSense zur Anzeige von Werbung. Google verwendet Cookies, um Anzeigen basierend auf deinen vorherigen Besuchen auf dieser und anderen Websites zu schalten.",
+    "adsenseOptOut": "Du kannst personalisierte Werbung unter",
+    "adsenseOptOutLink": "Google Anzeigeneinstellungen",
+    "adsenseOptOutAfter": " deaktivieren.",
     "deleteTitle": "Alle meine Daten löschen",
     "deleteText": "Dies löscht dauerhaft alle lokalen Daten auf diesem Gerät (Spieler-ID, Punkte und Spielverlauf) und entfernt alle aktiven Mehrspielerspielräume, an denen du beteiligt bist.",
     "deleteButton": "Alle meine Daten löschen",
@@ -181,5 +198,42 @@
       "description": "Spiel Stein Papier Schere online kostenlos. Fordere den Computer heraus oder spiel Echtzeit-Multiplayer mit Freunden. Kein Download, keine Anmeldung.",
       "featureList": "Einzelspieler gegen Computer, Echtzeit-Multiplayer, Sofortige private Räume, Ohne Anmeldung, Mobilfreundlich"
     }
+  },
+  "about": {
+    "h1": "Über Stein Papier Schere Online",
+    "intro": "Ein kostenloses Stein-Papier-Schere-Spiel ohne Anmeldung, das auf jedem Gerät funktioniert — kein Download, kein Konto, kein Tracking.",
+    "projectTitle": "Das Projekt",
+    "projectText": "Diese Seite bietet jedem eine schnelle, unkomplizierte Möglichkeit, Stein Papier Schere zu spielen — gegen den Computer oder mit einem Freund in Echtzeit. Keine Werbung im Spielbereich, keine Konten erforderlich, keine persönlichen Daten gesammelt.",
+    "whoTitle": "Wer es gebaut hat",
+    "whoText": "Erstellt und gepflegt von Nick, einem Webentwickler. Es ist ein Nebenprojekt — aus Spaß entstanden und um das Spiel für jeden mit einem Browser kostenlos und zugänglich zu halten.",
+    "contactTitle": "Kontakt",
+    "contactText": "Bei Fragen, Feedback oder Kooperationsanfragen bitte eine E-Mail an:"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen"
+  },
+  "terms": {
+    "lastUpdated": "Letzte Aktualisierung: 3. Mai 2026",
+    "h1": "Nutzungsbedingungen",
+    "intro": "Bitte lies diese Bedingungen sorgfältig durch, bevor du rps-game.online verwendest. Durch den Zugriff auf diese Website stimmst du ihnen zu.",
+    "acceptanceTitle": "1. Akzeptanz der Bedingungen",
+    "acceptanceText": "Durch die Nutzung von rps-game.online stimmst du diesen Nutzungsbedingungen zu. Wenn du nicht einverstanden bist, nutz die Website bitte nicht.",
+    "useTitle": "2. Nutzung des Dienstes",
+    "useText": "rps-game.online ist ein kostenloses Online-Spiel für den persönlichen, nicht-kommerziellen Gebrauch. Du stimmst zu, den Dienst nicht zu missbrauchen, dessen Betrieb nicht zu stören und ihn nicht auf eine Weise zu nutzen, die gegen geltende Gesetze verstößt.",
+    "ipTitle": "3. Geistiges Eigentum",
+    "ipText": "Alle Inhalte dieser Website — einschließlich Spieldesign, Grafiken, Code und Texte — sind Eigentum von rps-game.online. Du darfst sie ohne vorherige schriftliche Genehmigung nicht kopieren, reproduzieren oder verteilen.",
+    "disclaimerTitle": "4. Keine Garantie",
+    "disclaimerText": "Diese Website wird \"wie besehen\" ohne jegliche Garantie bereitgestellt. Wir garantieren nicht, dass der Dienst unterbrechungsfrei, fehlerfrei oder für einen bestimmten Zweck geeignet ist.",
+    "liabilityTitle": "5. Haftungsbeschränkung",
+    "liabilityText": "Im größtmöglichen gesetzlich zulässigen Umfang haften rps-game.online und sein Inhaber nicht für mittelbare, zufällige oder Folgeschäden, die aus der Nutzung oder Nichtnutzbarkeit dieser Website entstehen.",
+    "adsTitle": "6. Werbung Dritter",
+    "adsText": "Diese Website verwendet Google AdSense zur Anzeige von Werbung. Google kann Cookies nutzen, um Anzeigen basierend auf deinem Browserverlauf zu schalten. Du kannst dies unter adssettings.google.com deaktivieren. Wir sind nicht verantwortlich für den Inhalt von Drittanbieter-Anzeigen.",
+    "changesTitle": "7. Änderungen der Bedingungen",
+    "changesText": "Wir können diese Bedingungen jederzeit aktualisieren. Die fortgesetzte Nutzung der Website nach Veröffentlichung von Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.",
+    "contactTitle": "8. Kontakt",
+    "contactText": "Bei Fragen zu diesen Bedingungen erreichst du uns unter:"
   }
 }

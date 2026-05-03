@@ -173,7 +173,7 @@ export function Content() {
                         <tr>
                             <td className="p-3 border border-gray-200 font-medium text-gray-700">Durée</td>
                             <td className="p-3 border border-gray-200">5 secondes</td>
-                            <td className="p-3 border border-gray-200">30–60 secondes</td>
+                            <td className="p-3 border border-gray-200">30-60 secondes</td>
                         </tr>
                     </tbody>
                 </table>

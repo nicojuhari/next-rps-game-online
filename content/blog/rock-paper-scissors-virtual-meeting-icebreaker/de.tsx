@@ -30,11 +30,11 @@ export const faqItems: FaqItem[] = [
     },
     {
         q: "Wie lange dauert ein virtueller SSP-Icebreaker?",
-        a: "Ein Best-of-3-Match dauert 30–60 Sekunden. Ein komplettes 8-Personen-Turnierklammer dauert etwa 10 Minuten. Eine schnelle Runde, in der jeder gegen die Person links spielt, dauert 2–3 Minuten.",
+        a: "Ein Best-of-3-Match dauert 30-60 Sekunden. Ein komplettes 8-Personen-Turnierklammer dauert etwa 10 Minuten. Eine schnelle Runde, in der jeder gegen die Person links spielt, dauert 2-3 Minuten.",
     },
     {
         q: "Funktioniert Schere Stein Papier mit großen Teams?",
-        a: "Ja. Für Teams größer als 8–10 Personen, veranstalte ein Turnier oder teile in kleinere Gruppen auf. Alle Spiele sind unabhängig - Paare können gleichzeitig spielen, ohne Koordinationsaufwand.",
+        a: "Ja. Für Teams größer als 8-10 Personen, veranstalte ein Turnier oder teile in kleinere Gruppen auf. Alle Spiele sind unabhängig - Paare können gleichzeitig spielen, ohne Koordinationsaufwand.",
     },
 ];
 
@@ -99,7 +99,7 @@ export function Content() {
             {/* Section 3 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Schritt für Schritt: So läuft es ab</h2>
             <p className="mb-4">
-                Das dauert unter 2 Minuten von Anfang bis Ende für ein Paar, oder 5–10 Minuten für ein vollständiges Turnier.
+                Das dauert unter 2 Minuten von Anfang bis Ende für ein Paar, oder 5-10 Minuten für ein vollständiges Turnier.
             </p>
             <div className="space-y-3 mb-6">
                 <div className="flex gap-3">
@@ -187,7 +187,7 @@ export function Content() {
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Team-Building-Turnier</h3>
             <p className="mb-4">
                 Für eine dedizierte Teamaktivität, veranstalte ein Turnierklammer. Mit 8 Personen: alle zufällig setzen, 4 Erstrundenspiele
-                gleichzeitig spielen (jedes Paar bekommt seinen eigenen Link), dann Halbfinale und Finale. Alles dauert 10–12 Minuten.
+                gleichzeitig spielen (jedes Paar bekommt seinen eigenen Link), dann Halbfinale und Finale. Alles dauert 10-12 Minuten.
             </p>
 
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Pattsituation bei einer Abstimmung lösen</h3>
@@ -199,7 +199,7 @@ export function Content() {
 
             {/* Section 5 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Turnier-Klammer für größere Teams organisieren</h2>
-            <p className="mb-4">Für Teams von 8–16 Personen funktioniert einfache Elimination gut:</p>
+            <p className="mb-4">Für Teams von 8-16 Personen funktioniert einfache Elimination gut:</p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>Ein Klammer-Tool (Challonge, Bracket HQ oder eine einfache Tabelle) für die Paarungen verwenden</li>
                 <li>Den Spiellink jedes Paares gleichzeitig im Gruppenchat teilen</li>
@@ -224,33 +224,33 @@ export function Content() {
                     <tbody className="text-gray-600">
                         <tr>
                             <td className="p-3 border border-gray-200">&ldquo;Zwei Wahrheiten und eine Lüge&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5–15 Min</td>
+                            <td className="p-3 border border-gray-200">5-15 Min</td>
                             <td className="p-3 border border-gray-200">
                                 Erfordert Redevertrauen; unangenehm für neue/introvertierte Mitglieder
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Trivia-Quiz</td>
-                            <td className="p-3 border border-gray-200">10–20 Min</td>
+                            <td className="p-3 border border-gray-200">10-20 Min</td>
                             <td className="p-3 border border-gray-200">
                                 Wissenslücken benachteiligen Nicht-Muttersprachler und Junior-Mitglieder
                             </td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200">Virtuelles Bingo</td>
-                            <td className="p-3 border border-gray-200">10–15 Min</td>
+                            <td className="p-3 border border-gray-200">10-15 Min</td>
                             <td className="p-3 border border-gray-200">
                                 Braucht gemeinsames Tool, Einrichtungszeit, jemanden zur Moderation
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Wortassoziation</td>
-                            <td className="p-3 border border-gray-200">3–5 Min</td>
-                            <td className="p-3 border border-gray-200">Schwer mit mehr als 4–5 Personen; verliert schnell Energie</td>
+                            <td className="p-3 border border-gray-200">3-5 Min</td>
+                            <td className="p-3 border border-gray-200">Schwer mit mehr als 4-5 Personen; verliert schnell Energie</td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200 font-semibold text-gray-800">Schere Stein Papier</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1–10 Min</td>
+                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 Min</td>
                             <td className="p-3 border border-gray-200 text-green-700 font-medium">
                                 Keine Einrichtung. Kein Reden nötig. Gleiche Ausgangslage. Skaliert auf jede Teamgröße.
                             </td>
@@ -308,14 +308,14 @@ export function Content() {
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Wie lange dauert ein virtueller SSP-Icebreaker?</h3>
                     <p className="text-gray-600 text-sm">
-                        Ein Best-of-3-Match dauert 30–60 Sekunden. Ein Turnier mit 8 Personen etwa 10 Minuten. Eine Schnellrunde wo jeder
-                        gegen die linke Person spielt, dauert 2–3 Minuten.
+                        Ein Best-of-3-Match dauert 30-60 Sekunden. Ein Turnier mit 8 Personen etwa 10 Minuten. Eine Schnellrunde wo jeder
+                        gegen die linke Person spielt, dauert 2-3 Minuten.
                     </p>
                 </div>
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Funktioniert es mit großen Teams?</h3>
                     <p className="text-gray-600 text-sm">
-                        Ja. Für Teams größer als 8–10 Personen ein Turnierklammer organisieren oder in kleinere Gruppen aufteilen. Alle
+                        Ja. Für Teams größer als 8-10 Personen ein Turnierklammer organisieren oder in kleinere Gruppen aufteilen. Alle
                         Spiele sind unabhängig und können gleichzeitig gespielt werden.
                     </p>
                 </div>

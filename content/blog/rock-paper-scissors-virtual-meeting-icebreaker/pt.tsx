@@ -30,11 +30,11 @@ export const faqItems: FaqItem[] = [
     },
     {
         q: "Quanto tempo dura um icebreaker virtual de pedra papel tesoura?",
-        a: "Uma partida melhor de 3 dura 30–60 segundos. Um torneio completo com 8 pessoas leva cerca de 10 minutos. Uma rodada rápida onde todos jogam com a pessoa à sua esquerda leva 2–3 minutos.",
+        a: "Uma partida melhor de 3 dura 30-60 segundos. Um torneio completo com 8 pessoas leva cerca de 10 minutos. Uma rodada rápida onde todos jogam com a pessoa à sua esquerda leva 2-3 minutos.",
     },
     {
         q: "Pedra papel tesoura funciona com equipes grandes?",
-        a: "Sim. Para equipes maiores de 8–10 pessoas, organize um torneio em chave ou divida em grupos menores. Todas as partidas são independentes - os pares podem jogar simultaneamente sem sobrecarga de coordenação.",
+        a: "Sim. Para equipes maiores de 8-10 pessoas, organize um torneio em chave ou divida em grupos menores. Todas as partidas são independentes - os pares podem jogar simultaneamente sem sobrecarga de coordenação.",
     },
 ];
 
@@ -96,7 +96,7 @@ export function Content() {
 
             {/* Section 3 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Como Fazer: Passo a Passo</h2>
-            <p className="mb-4">Isso leva menos de 2 minutos do início ao fim para um par, ou 5–10 minutos para uma chave completa.</p>
+            <p className="mb-4">Isso leva menos de 2 minutos do início ao fim para um par, ou 5-10 minutos para uma chave completa.</p>
             <div className="space-y-3 mb-6">
                 <div className="flex gap-3">
                     <span className="flex-shrink-0 w-7 h-7 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold">
@@ -179,18 +179,18 @@ export function Content() {
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Torneio de team building</h3>
             <p className="mb-4">
                 Para uma atividade dedicada de equipe, organize uma chave eliminatória. Com 8 pessoas: sorteie os pares, jogue 4 partidas de
-                primeira rodada simultaneamente (cada par recebe seu próprio link), depois semifinais e final. Tudo leva 10–12 minutos.
+                primeira rodada simultaneamente (cada par recebe seu próprio link), depois semifinais e final. Tudo leva 10-12 minutos.
             </p>
 
             <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Desempatar uma votação</h3>
             <p className="mb-4">
-                O time está dividido 2–2 numa decisão. Em vez de ir ao gestor como árbitro (o que cria pressão hierárquica), cada lado
+                O time está dividido 2-2 numa decisão. Em vez de ir ao gestor como árbitro (o que cria pressão hierárquica), cada lado
                 escolhe um campeão e jogam. O resultado é aleatório - mas é aceito como justo porque os dois lados concordaram.
             </p>
 
             {/* Section 5 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Organizando um Torneio para Equipes Grandes</h2>
-            <p className="mb-4">Para equipes de 8–16 pessoas, a eliminação simples funciona bem:</p>
+            <p className="mb-4">Para equipes de 8-16 pessoas, a eliminação simples funciona bem:</p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>Use uma ferramenta de chave (Challonge, Bracket HQ, ou uma planilha simples) para definir os pares</li>
                 <li>Compartilhe o link de cada par simultaneamente no chat do grupo</li>
@@ -215,31 +215,31 @@ export function Content() {
                     <tbody className="text-gray-600">
                         <tr>
                             <td className="p-3 border border-gray-200">&ldquo;Duas verdades e uma mentira&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5–15 min</td>
+                            <td className="p-3 border border-gray-200">5-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Exige conforto para falar; constrangedor para membros novos ou introvertidos
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Quiz de trivia</td>
-                            <td className="p-3 border border-gray-200">10–20 min</td>
+                            <td className="p-3 border border-gray-200">10-20 min</td>
                             <td className="p-3 border border-gray-200">Diferença de conhecimento penaliza não-nativos e membros júnior</td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200">Bingo virtual</td>
-                            <td className="p-3 border border-gray-200">10–15 min</td>
+                            <td className="p-3 border border-gray-200">10-15 min</td>
                             <td className="p-3 border border-gray-200">
                                 Requer ferramenta compartilhada, tempo de configuração, alguém para facilitar
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="p-3 border border-gray-200">Associação de palavras</td>
-                            <td className="p-3 border border-gray-200">3–5 min</td>
-                            <td className="p-3 border border-gray-200">Difícil com mais de 4–5 pessoas; perde energia rápido</td>
+                            <td className="p-3 border border-gray-200">3-5 min</td>
+                            <td className="p-3 border border-gray-200">Difícil com mais de 4-5 pessoas; perde energia rápido</td>
                         </tr>
                         <tr>
                             <td className="p-3 border border-gray-200 font-semibold text-gray-800">Pedra Papel Tesoura</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1–10 min</td>
+                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 min</td>
                             <td className="p-3 border border-gray-200 text-green-700 font-medium">
                                 Sem configuração. Sem falar. Igualdade. Escala para qualquer tamanho.
                             </td>
@@ -297,14 +297,14 @@ export function Content() {
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Quanto tempo dura um icebreaker virtual de pedra papel tesoura?</h3>
                     <p className="text-gray-600 text-sm">
-                        Uma partida melhor de 3 dura 30–60 segundos. Um torneio com 8 pessoas leva cerca de 10 minutos. Uma rodada rápida
-                        onde todos jogam com a pessoa à esquerda leva 2–3 minutos.
+                        Uma partida melhor de 3 dura 30-60 segundos. Um torneio com 8 pessoas leva cerca de 10 minutos. Uma rodada rápida
+                        onde todos jogam com a pessoa à esquerda leva 2-3 minutos.
                     </p>
                 </div>
                 <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Funciona com equipes grandes?</h3>
                     <p className="text-gray-600 text-sm">
-                        Sim. Para equipes maiores de 8–10 pessoas, organize uma chave ou divida em grupos menores. Todas as partidas são
+                        Sim. Para equipes maiores de 8-10 pessoas, organize uma chave ou divida em grupos menores. Todas as partidas são
                         independentes e podem acontecer simultaneamente.
                     </p>
                 </div>

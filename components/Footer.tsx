@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter, usePathname, Link } from "@/i18n/navigation";
 
 const languages = [
     { code: "en", label: "English", flag: "🇺🇸" },
@@ -36,6 +36,8 @@ const Footer = () => {
         router.replace(pathname, { locale: newLocale });
         setOpen(false);
     };
+
+    const t = useTranslations("footer");
 
     return (
         <footer className="bg-white/50 border-t">
@@ -75,6 +77,13 @@ const Footer = () => {
                         </div>
                     )}
                 </div>
+                <nav className="flex items-center gap-4 text-xs text-gray-400">
+                    <Link href="/blog" className="hover:text-gray-600 transition-colors">{t("blog")}</Link>
+                    <Link href="/about" className="hover:text-gray-600 transition-colors">{t("about")}</Link>
+                    <Link href="/privacy" className="hover:text-gray-600 transition-colors">{t("privacy")}</Link>
+                    <Link href="/terms" className="hover:text-gray-600 transition-colors">{t("terms")}</Link>
+                </nav>
+
                 <div className="flex items-center gap-1 text-sm text-gray-500">
                     Created with{" "}
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-red-600" viewBox="0 0 256 256">

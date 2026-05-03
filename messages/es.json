@@ -27,7 +27,19 @@
     },
     "privacy": {
       "title": "Política de Privacidad - Piedra Papel Tijeras Online",
-      "description": "Conoce nuestras prácticas de privacidad para Piedra Papel Tijeras Online. Sin cookies, sin rastreo, ningún dato personal almacenado."
+      "description": "Política de privacidad de Piedra Papel Tijeras Online. Qué datos recogemos, cómo usa Google AdSense cookies y cómo excluirte."
+    },
+    "about": {
+      "title": "Acerca de - Piedra Papel Tijeras Online",
+      "description": "Piedra Papel Tijeras Online es un juego gratuito sin registro, creado por Nick. Juega contra la computadora o reta a un amigo en tiempo real."
+    },
+    "blog": {
+      "title": "Blog - Consejos, Estrategia y Reglas de Piedra Papel Tijeras",
+      "description": "Artículos sobre estrategia, reglas, historia y cómo jugar Piedra Papel Tijeras online con amigos."
+    },
+    "terms": {
+      "title": "Términos de Servicio - Piedra Papel Tijeras Online",
+      "description": "Términos de Servicio de Piedra Papel Tijeras Online. Reglas de uso, propiedad intelectual y limitaciones de responsabilidad."
     }
   },
   "home": {
@@ -69,7 +81,12 @@
     "localStorageTitle": "Qué Guardamos en tu Dispositivo",
     "localStorageText": "Tu navegador almacena localmente: tu ID de jugador anónimo, tus victorias y derrotas en el modo individual, y un historial de movimientos de los últimos 3 días. El historial de más de 3 días se elimina automáticamente. Ningún dato está vinculado a tu identidad.",
     "anonymityTitle": "Tu Anonimato está Seguro",
-    "anonymityText": "No usamos cookies, no te rastreamos por la web ni creamos perfiles de usuario. Puedes disfrutar del juego de forma completamente anónima.",
+    "anonymityText": "No recopilamos datos personales, no te rastreamos por la web ni creamos perfiles de usuario. Ten en cuenta que Google AdSense (para anuncios en este sitio) usa cookies publicitarias — consulta la sección de Publicidad arriba para las opciones de exclusión.",
+    "adsenseTitle": "Publicidad (Google AdSense)",
+    "adsenseText": "Este sitio usa Google AdSense para mostrar anuncios. Google usa cookies para mostrar anuncios basados en tus visitas anteriores a este y otros sitios web.",
+    "adsenseOptOut": "Puedes desactivar la publicidad personalizada en",
+    "adsenseOptOutLink": "Configuración de Anuncios de Google",
+    "adsenseOptOutAfter": ".",
     "deleteTitle": "Eliminar Todos Mis Datos",
     "deleteText": "Esto eliminará permanentemente todos los datos locales de este dispositivo (ID de jugador, puntuaciones e historial de partidas) y borrará cualquier sala de juego multijugador activa en la que participes.",
     "deleteButton": "Eliminar Todos Mis Datos",
@@ -181,5 +198,42 @@
       "description": "Juega Piedra Papel Tijeras online gratis. Desafía a la computadora o juega multijugador en tiempo real con amigos. Sin descarga, sin registro requerido.",
       "featureList": "Un jugador vs Computadora, Multijugador en Tiempo Real, Salas Privadas Instantáneas, Sin Registro Requerido, Compatible con Móvil"
     }
+  },
+  "about": {
+    "h1": "Acerca de Piedra Papel Tijeras Online",
+    "intro": "Un juego de Piedra Papel Tijeras gratuito y sin registro que funciona en cualquier dispositivo — sin descarga, sin cuenta, sin rastreo.",
+    "projectTitle": "El Proyecto",
+    "projectText": "Este sitio existe para dar a cualquiera una forma limpia e instantánea de jugar a Piedra Papel Tijeras — contra la computadora o con un amigo en tiempo real. Sin anuncios que interrumpan el juego, sin cuentas que crear, sin datos personales recopilados.",
+    "whoTitle": "Quién lo Creó",
+    "whoText": "Creado y mantenido por Nick, desarrollador web. Es un proyecto personal — hecho por diversión y para mantener el juego gratuito y accesible a cualquiera con un navegador.",
+    "contactTitle": "Contacto",
+    "contactText": "Para preguntas, comentarios o solicitudes de colaboración, escribe un correo a:"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "terms": {
+    "lastUpdated": "Última actualización: 3 de mayo de 2026",
+    "h1": "Términos de Servicio",
+    "intro": "Lee estos términos detenidamente antes de usar rps-game.online. Al acceder o usar este sitio, aceptas quedar vinculado por ellos.",
+    "acceptanceTitle": "1. Aceptación de los Términos",
+    "acceptanceText": "Al usar rps-game.online aceptas estos Términos de Servicio. Si no estás de acuerdo, deja de usar el sitio.",
+    "useTitle": "2. Uso del Servicio",
+    "useText": "rps-game.online es un juego online gratuito para uso personal y no comercial. Aceptas no hacer un uso indebido del servicio, no intentar interrumpir su funcionamiento ni usarlo de manera que infrinja las leyes aplicables.",
+    "ipTitle": "3. Propiedad Intelectual",
+    "ipText": "Todo el contenido de este sitio — incluido el diseño del juego, gráficos, código y contenido escrito — es propiedad de rps-game.online. No puedes copiarlo, reproducirlo ni distribuirlo sin permiso previo por escrito.",
+    "disclaimerTitle": "4. Sin Garantías",
+    "disclaimerText": "Este sitio se ofrece \"tal cual\" sin garantía de ningún tipo. No garantizamos que el servicio sea ininterrumpido, libre de errores ni adecuado para ningún propósito específico.",
+    "liabilityTitle": "5. Limitación de Responsabilidad",
+    "liabilityText": "En la máxima medida permitida por la ley, rps-game.online y su propietario no son responsables de ningún daño indirecto, incidental o consecuente derivado del uso o imposibilidad de uso de este sitio.",
+    "adsTitle": "6. Publicidad de Terceros",
+    "adsText": "Este sitio utiliza Google AdSense para mostrar anuncios. Google puede usar cookies para mostrar anuncios según tu historial de navegación. Puedes desactivarlo en adssettings.google.com. No somos responsables del contenido de los anuncios de terceros.",
+    "changesTitle": "7. Cambios en los Términos",
+    "changesText": "Podemos actualizar estos términos en cualquier momento. El uso continuado del sitio tras la publicación de cambios constituye tu aceptación de los términos actualizados.",
+    "contactTitle": "8. Contacto",
+    "contactText": "Para preguntas sobre estos términos, contáctanos en:"
   }
 }
