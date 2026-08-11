@@ -45,7 +45,7 @@ const Footer = () => {
                 <div className="relative" ref={ref}>
                     <button
                         onClick={() => setOpen(!open)}
-                        className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+                        className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
                     >
                         <span className="text-base leading-none">{current.flag}</span>
                         <span className="text-xs font-medium uppercase tracking-wide">{current.code}</span>
@@ -66,8 +66,8 @@ const Footer = () => {
                                     onClick={() => switchLocale(code)}
                                     className={`w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left transition-colors cursor-pointer ${
                                         code === locale
-                                            ? "bg-gray-50 text-gray-800 font-medium"
-                                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-800"
+                                            ? "bg-gray-50 text-gray-900 font-medium"
+                                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                                     }`}
                                 >
                                     <span className="text-base leading-none">{flag}</span>
@@ -84,7 +84,7 @@ const Footer = () => {
                     <Link href="/terms" className="hover:text-gray-600 transition-colors">{t("terms")}</Link>
                 </nav>
 
-                <div className="flex items-center gap-1 text-sm text-gray-500">
+                <div className="flex items-center gap-1 text-sm text-gray-400">
                     Created with{" "}
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-red-600" viewBox="0 0 256 256">
                         <path
@@ -93,7 +93,7 @@ const Footer = () => {
                         />
                     </svg>{" "}
                     by{" "}
-                    <a href="https://nicojuhari.com" title="Web design by Nick" className="text-gray-500 hover:text-gray-700">
+                    <a href="https://nicojuhari.com" title="Web design by Nick" className="text-gray-400 hover:text-gray-600">
                         Nick
                     </a>
                 </div>

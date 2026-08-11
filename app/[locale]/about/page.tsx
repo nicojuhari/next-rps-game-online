@@ -1,5 +1,5 @@
 import { createMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import Link from "next/link";
 
@@ -9,6 +9,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
         locale,
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const AboutPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale: locale as Locale, namespace: "about" });
 
     return (
@@ -28,7 +30,7 @@ const AboutPage = async ({ params }: { params: Promise<{ locale: string }> }) =>
             <nav className="text-sm text-gray-400 mb-6">
                 <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
                 <span className="mx-2">/</span>
-                <span className="text-gray-500">{t("h1")}</span>
+                <span className="text-gray-400">{t("h1")}</span>
             </nav>
 
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("h1")}</h1>
@@ -36,17 +38,17 @@ const AboutPage = async ({ params }: { params: Promise<{ locale: string }> }) =>
 
             <div className="space-y-8">
                 <div>
-                    <h2 className="text-lg font-semibold text-gray-800 mb-2">{t("projectTitle")}</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 mb-2">{t("projectTitle")}</h2>
                     <p className="text-gray-600 leading-relaxed">{t("projectText")}</p>
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold text-gray-800 mb-2">{t("whoTitle")}</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 mb-2">{t("whoTitle")}</h2>
                     <p className="text-gray-600 leading-relaxed">{t("whoText")}</p>
                 </div>
 
                 <div className="border-t pt-6">
-                    <h2 className="text-lg font-semibold text-gray-800 mb-2">{t("contactTitle")}</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 mb-2">{t("contactTitle")}</h2>
                     <p className="text-gray-600 mb-2">{t("contactText")}</p>
                     <a
                         href="mailto:contact@rps-game.online"

@@ -45,37 +45,37 @@ export const faqItems: FaqItem[] = [
 export function Strategy() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 How to Win at Rock Paper Scissors
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>Most players treat Rock Paper Scissors as pure chance, like flipping a coin. It is not.</p>
                 <p>
                     A study by Zhejiang University analyzed hundreds of thousands of matches and found that human players follow predictable
-                    patterns. They discovered a strategy called <strong className="text-gray-700">Win-Stay, Lose-Shift</strong>:
+                    patterns. They discovered a strategy called <strong className="text-gray-600">Win-Stay, Lose-Shift</strong>:
                 </p>
                 <ul className="list-disc space-y-2 pl-4">
                     <li>
-                        <span className="font-semibold text-gray-700">If you win:</span> Your opponent will probably switch moves.
+                        <span className="font-semibold text-gray-600">If you win:</span> Your opponent will probably switch moves.
                         <br />
-                        <span className="italic text-gray-500">Counter-move:</span> Play the move they just threw - it beats what
+                        <span className="italic text-gray-400">Counter-move:</span> Play the move they just threw - it beats what
                         they&apos;ll try next.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">If you lose:</span> Your opponent is likely to repeat their winning
+                        <span className="font-semibold text-gray-600">If you lose:</span> Your opponent is likely to repeat their winning
                         move because it feels &ldquo;lucky&rdquo;.
                         <br />
-                        <span className="italic text-gray-500">Counter-move:</span> Play the move that beats what they just threw.
+                        <span className="italic text-gray-400">Counter-move:</span> Play the move that beats what they just threw.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">First Throw Strategy:</span> Beginners, especially male players,
+                        <span className="font-semibold text-gray-600">First Throw Strategy:</span> Beginners, especially male players,
                         overwhelmingly open with Rock because it feels strong.
                         <br />
-                        <span className="italic text-gray-500">Tip:</span> Against a new opponent, throw Paper first.
+                        <span className="italic text-gray-400">Tip:</span> Against a new opponent, throw Paper first.
                     </li>
                 </ul>
                 <p>
-                    <span className="font-semibold text-gray-700">Is Rock Paper Scissors luck or skill?</span> Both. A purely random player
+                    <span className="font-semibold text-gray-600">Is Rock Paper Scissors luck or skill?</span> Both. A purely random player
                     wins 33.3% of the time. But human choices are not random, which is why spotting patterns gives you a real advantage.
                 </p>
                 <p>
@@ -95,7 +95,7 @@ export function Strategy() {
 export function Rules() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">Rock Paper Scissors Rules</h2>
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">Rock Paper Scissors Rules</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>
                     Rock Paper Scissors is played between two players. Each player reveals one of three hand gestures at the same time, and
@@ -103,17 +103,17 @@ export function Rules() {
                 </p>
                 <ul className="pl-4 space-y-2 list-disc">
                     <li>
-                        <span className="font-semibold text-gray-700">Rock crushes Scissors</span> - ✊ → ✂️
+                        <span className="font-semibold text-gray-600">Rock crushes Scissors</span> - ✊ → ✂️
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Scissors cuts Paper</span> - ✂️ → 📄
+                        <span className="font-semibold text-gray-600">Scissors cuts Paper</span> - ✂️ → 📄
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Paper covers Rock</span> - 📄 → ✊
+                        <span className="font-semibold text-gray-600">Paper covers Rock</span> - 📄 → ✊
                     </li>
                 </ul>
                 <p>If both players throw the same gesture, the round is a draw.</p>
-                <p className="font-semibold text-gray-700">How does best of 3 work?</p>
+                <p className="font-semibold text-gray-600">How does best of 3 work?</p>
                 <p>
                     Each match is 3 rounds. Both players lock in all their choices before any results are shown, so neither player can react
                     to the other. The player who wins the most rounds takes the game. If each player wins one round and the third is a draw,
@@ -132,16 +132,16 @@ export function Rules() {
 export function Statistics() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">Rock Paper Scissors Statistics</h2>
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">Rock Paper Scissors Statistics</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>In a perfectly random game, each throw has an equal 1 in 3 chance (33.3%) of winning, losing, or drawing.</p>
                 <p>
                     In practice, humans do not throw randomly. Research suggests the actual distribution among casual players looks like:{" "}
-                    <strong className="text-gray-700">Rock ~35%, Paper ~35%, Scissors ~30%</strong>. Scissors is thrown the least.
+                    <strong className="text-gray-600">Rock ~35%, Paper ~35%, Scissors ~30%</strong>. Scissors is thrown the least.
                 </p>
                 <p>
                     In 2005, a single hand of Rock Paper Scissors decided a{" "}
-                    <strong className="text-gray-700">$17.8 million auction contract</strong>. The two most famous auction houses,
+                    <strong className="text-gray-600">$17.8 million auction contract</strong>. The two most famous auction houses,
                     Christie&apos;s and Sotheby&apos;s, were deadlocked over the rights to sell a valuable art collection and agreed to
                     settle it with one game.
                 </p>
@@ -165,14 +165,14 @@ export function Statistics() {
 export function History() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">What Is Rock Paper Scissors?</h2>
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">What Is Rock Paper Scissors?</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>
                     Rock Paper Scissors is a hand game played worldwide, usually between two people. It is commonly used as a quick way to
                     settle decisions, but it is also a game of reading your opponent.
                 </p>
                 <p>
-                    The game traces back over <strong className="text-gray-700">2,000 years to the Chinese Han Dynasty</strong> (206 BC -
+                    The game traces back over <strong className="text-gray-600">2,000 years to the Chinese Han Dynasty</strong> (206 BC -
                     220 AD), where it was called <em>shoushiling</em> and used gestures representing a Frog, a Slug, and a Snake.
                 </p>
                 <p>
@@ -182,7 +182,7 @@ export function History() {
                     all using the same three gestures.
                 </p>
                 <p>
-                    <strong className="text-gray-700">Did you know?</strong> August 27th is officially World Rock Paper Scissors Day.
+                    <strong className="text-gray-600">Did you know?</strong> August 27th is officially World Rock Paper Scissors Day.
                 </p>
                 <p>
                     The computer on this site picks randomly - it has an equal 1 in 3 chance of throwing Rock, Paper, or Scissors every
@@ -226,11 +226,11 @@ export function BlogLinks() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Frequently Asked Questions</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Frequently Asked Questions</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

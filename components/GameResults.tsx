@@ -24,7 +24,7 @@ const GameResults = ({ playerId, gameWinner, onShare }: GameResultsProps) => {
             {onShare && (
                 <button
                     onClick={onShare}
-                    className="mt-2 text-xs text-gray-400 hover:text-gray-700 underline underline-offset-2 transition-colors cursor-pointer"
+                    className="mt-2 text-xs text-gray-400 hover:text-gray-600 underline underline-offset-2 transition-colors cursor-pointer"
                 >
                     {t("shareScore")}
                 </button>

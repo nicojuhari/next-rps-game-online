@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Les réunions à distance ont une première minute gênante. Tout le monde se connecte, quelqu&apos;un demande &ldquo;vous
                 m&apos;entendez ?&rdquo;, puis il y a un silence avant que l&apos;ordre du jour commence. Un bon brise-glace règle ça - mais
                 la plupart nécessitent un animateur, une application partagée ou 10 minutes d&apos;explication. Pierre Feuille Ciseaux
@@ -62,24 +62,24 @@ export function Content() {
             <p className="mb-4">Pierre Feuille Ciseaux contourne les trois :</p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Zéro configuration :</strong> pas de compte, pas de téléchargement, pas d&apos;attente
+                    <strong className="text-gray-900">Zéro configuration :</strong> pas de compte, pas de téléchargement, pas d&apos;attente
                     que l&apos;animateur partage son écran. Les joueurs ouvrent le lien eux-mêmes.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Pas de barrière linguistique :</strong> les règles - pierre bat ciseaux, ciseaux bat
+                    <strong className="text-gray-900">Pas de barrière linguistique :</strong> les règles - pierre bat ciseaux, ciseaux bat
                     feuille, feuille bat pierre - s&apos;expliquent en 10 secondes et sont déjà connues dans la plupart des cultures.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Terrain égal :</strong> aucun avantage de connaissance, aucune confiance en prise de
+                    <strong className="text-gray-900">Terrain égal :</strong> aucun avantage de connaissance, aucune confiance en prise de
                     parole requise, aucun signal de hiérarchie. Le stagiaire et le directeur jouent exactement dans les mêmes conditions.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Résultat immédiat :</strong> chaque match produit un gagnant clair et une réaction
+                    <strong className="text-gray-900">Résultat immédiat :</strong> chaque match produit un gagnant clair et une réaction
                     naturelle - un rire, un grognement, une demande de revanche. Cette réaction, c&apos;est le brise-glace qui fait son
                     travail.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Fonctionne sur tous les appareils :</strong> téléphone, tablette, ordinateur - pas
+                    <strong className="text-gray-900">Fonctionne sur tous les appareils :</strong> téléphone, tablette, ordinateur - pas
                     d&apos;extension de navigateur, pas d&apos;approbation informatique requise.
                 </li>
             </ul>
@@ -111,7 +111,7 @@ export function Content() {
                         1
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">L&apos;hôte ouvre le jeu et crée une salle</p>
+                        <p className="font-semibold text-gray-900">L&apos;hôte ouvre le jeu et crée une salle</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Allez dans le jeu à 2 joueurs, cliquez sur &ldquo;Créer une partie&rdquo; et copiez le lien depuis votre
                             navigateur.
@@ -123,7 +123,7 @@ export function Content() {
                         2
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Collez le lien dans le chat de la réunion</p>
+                        <p className="font-semibold text-gray-900">Collez le lien dans le chat de la réunion</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Fonctionne dans Zoom, Teams, Meet, Slack ou toute fenêtre de chat. L&apos;autre joueur clique et rejoint
                             instantanément - sans compte nécessaire.
@@ -135,7 +135,7 @@ export function Content() {
                         3
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Les deux joueurs choisissent leur coup</p>
+                        <p className="font-semibold text-gray-900">Les deux joueurs choisissent leur coup</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Chaque joueur appuie sur Pierre, Feuille ou Ciseaux sur son propre appareil. Le choix est caché jusqu&apos;à ce
                             que les deux aient soumis.
@@ -147,7 +147,7 @@ export function Content() {
                         4
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Le résultat se révèle simultanément</p>
+                        <p className="font-semibold text-gray-900">Le résultat se révèle simultanément</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Les deux coups apparaissent en même temps. Format au meilleur des 3 - le premier à gagner 2 manches gagne le
                             match.
@@ -158,7 +158,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Essayez avant votre prochain appel.</p>
+                <p className="font-semibold text-gray-900 mb-1">Essayez avant votre prochain appel.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Ouvrez une salle maintenant - sans compte, collez juste le lien dans le chat de votre réunion.
                 </p>
@@ -170,34 +170,34 @@ export function Content() {
             {/* Section 4 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Utilisations concrètes en réunion</h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Échauffement rapide pour le standup d&apos;équipe</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Échauffement rapide pour le standup d&apos;équipe</h3>
             <p className="mb-4">
                 Avant que l&apos;agenda du standup commence, l&apos;animateur associe deux personnes au hasard et joue un match en direct.
                 45 secondes, crée un moment de légèreté et fait que les gens sont attentifs avant que la vraie réunion commence.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Prendre une décision de groupe</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Prendre une décision de groupe</h3>
             <p className="mb-4">
                 Qui présente en premier dans la démo ? Qui choisit l&apos;option déjeuner de l&apos;équipe ? Qui rédige le compte-rendu ?
                 Plutôt qu&apos;un silence gêné ou que la voix la plus forte gagne, jouez un match rapide. Les deux acceptent le résultat car
                 ils ont eu une chance équitable.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Intégration d&apos;un nouveau membre de l&apos;équipe</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Intégration d&apos;un nouveau membre de l&apos;équipe</h3>
             <p className="mb-4">
                 Associez le nouvel arrivant à chaque membre existant pour un match rapide sa première semaine. Moins intimidant que de se
                 présenter devant un groupe, génère des sujets de conversation naturels en tête-à-tête et aide à mémoriser les noms plus vite
                 grâce au contexte du jeu.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Tournoi de team building</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Tournoi de team building</h3>
             <p className="mb-4">
                 Pour une activité d&apos;équipe dédiée, organisez un tableau à élimination. Avec 8 personnes : mettez tout le monde
                 aléatoirement, jouez 4 matchs de premier tour simultanément (chaque paire obtient son propre lien), puis demi-finales et
                 finale. Tout prend 10 à 12 minutes.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Départager un vote à égalité</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Départager un vote à égalité</h3>
             <p className="mb-4">
                 L&apos;équipe est partagée 2-2 sur une décision. Plutôt que d&apos;aller au manager comme arbitre (ce qui crée une pression
                 hiérarchique), chaque camp choisit un champion et ils jouent. Le résultat est aléatoire - mais accepté comme équitable car
@@ -222,45 +222,45 @@ export function Content() {
             <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Format</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Durée</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Problème</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Format</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Durée</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Problème</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200">&ldquo;Deux vérités et un mensonge&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5-15 min</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">&ldquo;Deux vérités et un mensonge&rdquo;</td>
+                            <td className="p-3 border-b border-gray-200">5-15 min</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Nécessite de l&apos;aisance à l&apos;oral ; gênant pour les membres nouveaux ou introvertis
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Quiz de culture générale</td>
-                            <td className="p-3 border border-gray-200">10-20 min</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Quiz de culture générale</td>
+                            <td className="p-3 border-b border-gray-200">10-20 min</td>
+                            <td className="p-3 border-b border-gray-200">
                                 L&apos;écart de connaissances pénalise les non-natifs et les membres juniors
                             </td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Bingo virtuel</td>
-                            <td className="p-3 border border-gray-200">10-15 min</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Bingo virtuel</td>
+                            <td className="p-3 border-b border-gray-200">10-15 min</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Nécessite un outil partagé, un temps de configuration, quelqu&apos;un pour animer
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Association de mots</td>
-                            <td className="p-3 border border-gray-200">3-5 min</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Association de mots</td>
+                            <td className="p-3 border-b border-gray-200">3-5 min</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Difficile avec plus de 4-5 personnes ; perd de l&apos;énergie rapidement
                             </td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Pierre Feuille Ciseaux</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 min</td>
-                            <td className="p-3 border border-gray-200 text-green-700 font-medium">
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Pierre Feuille Ciseaux</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">1-10 min</td>
+                            <td className="p-3 border-b border-gray-200 text-green-700 font-medium">
                                 Pas de configuration. Pas besoin de parler. Terrain égal. S&apos;adapte à toute taille d&apos;équipe.
                             </td>
                         </tr>
@@ -287,43 +287,43 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Questions Fréquentes</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Peut-on jouer à pierre feuille ciseaux en visioconférence Zoom ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Peut-on jouer à pierre feuille ciseaux en visioconférence Zoom ?</h3>
+                    <p className="text-gray-600">
                         Oui. Chaque joueur ouvre le jeu sur son propre appareil. Partagez le lien dans le chat Zoom, les deux choisissent en
                         privé et le résultat se révèle simultanément - sans compter à voix haute, sans problèmes de latence.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Quels sont de bons brise-glaces pour les réunions virtuelles ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Quels sont de bons brise-glaces pour les réunions virtuelles ?</h3>
+                    <p className="text-gray-600">
                         Les meilleurs sont rapides, sans configuration et fonctionnent pour tous les niveaux de confort. PFC répond aux
                         trois : moins de 60 secondes, sans app ni compte, connu dans toutes les cultures.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Comment organiser un tournoi en visioconférence ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Comment organiser un tournoi en visioconférence ?</h3>
+                    <p className="text-gray-600">
                         Formez des paires dans un tableau. Partagez le lien de chaque paire dans le chat. Tous les matchs du premier tour
                         simultanément. Gagnants avancent. Avec 8 personnes, moins de 10 minutes.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Pourquoi est-ce un bon brise-glace d&apos;équipe ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Pourquoi est-ce un bon brise-glace d&apos;équipe ?</h3>
+                    <p className="text-gray-600">
                         Universellement connu, moins d&apos;une minute, sans avantage de connaissance ni aisance à l&apos;oral requise, et
                         toujours un gagnant clair - qui génère une réaction naturelle.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Combien de temps dure un brise-glace virtuel de PFC ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Combien de temps dure un brise-glace virtuel de PFC ?</h3>
+                    <p className="text-gray-600">
                         Un match au meilleur des 3 dure 30 à 60 secondes. Un tournoi avec 8 personnes environ 10 minutes. Un tour rapide où
                         tout le monde joue contre la personne à gauche prend 2 à 3 minutes.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Fonctionne-t-il avec de grandes équipes ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Fonctionne-t-il avec de grandes équipes ?</h3>
+                    <p className="text-gray-600">
                         Oui. Pour les équipes de plus de 8 à 10 personnes, organisez un tournoi à élimination ou divisez en groupes plus
                         petits. Tous les matchs sont indépendants et peuvent se jouer simultanément.
                     </p>
@@ -332,8 +332,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Prêt pour votre prochaine réunion ?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Prêt pour votre prochaine réunion ?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Ouvrez une salle maintenant - collez le lien dans le chat de votre réunion et commencez en moins de 10 secondes.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

@@ -98,7 +98,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
             {step === 1 && (
                 <div className="bg-white rounded-2xl p-6 w-full max-w-sm border">
                     <div className="flex items-center justify-between mb-5">
-                        <h2 className="text-lg font-bold text-gray-800">{t("title")}</h2>
+                        <h2 className="text-lg font-bold text-gray-900">{t("title")}</h2>
                         <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
                             <X size={20} weight="bold" />
                         </button>
@@ -106,7 +106,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
 
                     {/* Winner name */}
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">{t("yourName")}</label>
+                        <label className="block text-sm font-medium text-gray-600 mb-1.5">{t("yourName")}</label>
                         <input
                             type="text"
                             value={winnerName}
@@ -120,7 +120,7 @@ const CertificateModal = ({ data, onClose }: CertificateModalProps) => {
                     {/* Opponent name (multiplayer only) */}
                     {data.mode === "multi" && (
                         <div className="mb-6">
-                            <label className="block text-sm font-medium text-gray-700 mb-1.5">{t("opponentName")}</label>
+                            <label className="block text-sm font-medium text-gray-600 mb-1.5">{t("opponentName")}</label>
                             <input
                                 type="text"
                                 value={player2Name}

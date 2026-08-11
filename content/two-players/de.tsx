@@ -38,26 +38,26 @@ export const faqItems: FaqItem[] = [
 export function HowToPlay() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Wie man Stein Papier Schere Online mit Freunden spielt
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>Mit einem Freund spielen geht in drei Schritten - kein Konto, keine App:</p>
                 <ol className="pl-4 space-y-2 list-decimal">
                     <li>
-                        <span className="font-semibold text-gray-700">Raum erstellen</span> - klick auf &ldquo;Spiel erstellen&rdquo; oben
+                        <span className="font-semibold text-gray-600">Raum erstellen</span> - klick auf &ldquo;Spiel erstellen&rdquo; oben
                         oder auf der Startseite. Du erhältst sofort einen privaten Link.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Link teilen</span> - schick ihn über eine beliebige Messaging-App.
+                        <span className="font-semibold text-gray-600">Link teilen</span> - schick ihn über eine beliebige Messaging-App.
                         Funktioniert auf jedem Gerät.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Spielen</span> - beide wählen Stein, Papier oder Schere. Beste aus 3
+                        <span className="font-semibold text-gray-600">Spielen</span> - beide wählen Stein, Papier oder Schere. Beste aus 3
                         Runden entscheidet.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Zertifikat holen</span> - gewinne mehr Partien als dein Gegner und
+                        <span className="font-semibold text-gray-600">Zertifikat holen</span> - gewinne mehr Partien als dein Gegner und
                         sichere dir ein persönliches Siegerzeugnis. Herunterladen oder teilen.
                     </li>
                 </ol>
@@ -69,7 +69,7 @@ export function HowToPlay() {
 export function HowItWorks() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Stein Papier Schere 1v1 - So funktioniert es
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -89,7 +89,7 @@ export function HowItWorks() {
 export function WhySettle() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Warum mit Stein Papier Schere entscheiden?
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -111,12 +111,12 @@ export function WhySettle() {
 export function UseCases() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Stein Papier Schere Funktioniert in Mehr Situationen als du Denkst
             </h2>
             <div className="space-y-4 text-sm text-gray-600">
                 <div>
-                    <p className="font-semibold text-gray-700">Virtuelle Meetings &amp; Eisbrecher</p>
+                    <p className="font-semibold text-gray-600">Virtuelle Meetings &amp; Eisbrecher</p>
                     <p className="mt-1">
                         Brauchst du einen 60-Sekunden-Eisbrecher für deinen Team-Call? SPS funktioniert auf jedem Gerät, braucht keine
                         Einrichtung und sorgt in unter einer Minute für Gelächter.{" "}
@@ -126,7 +126,7 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Fernbeziehungen &amp; Freunde auf Distanz</p>
+                    <p className="font-semibold text-gray-600">Fernbeziehungen &amp; Freunde auf Distanz</p>
                     <p className="mt-1">
                         Wenn ihr gemeinsam aus verschiedenen Städten entscheidet, schlägt ein geteilter Link jedes Mal das Zählen bis drei
                         im Videoanruf.{" "}
@@ -136,13 +136,13 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Jede Entscheidung treffen</p>
+                    <p className="font-semibold text-gray-600">Jede Entscheidung treffen</p>
                     <p className="mt-1">
                         Wer wählt das Restaurant? Wer fängt an? Wer ruft die Eltern an? Beide bekommen eine gleiche Chance, und das Ergebnis
                         ist sofort und fair.
                     </p>
                 </div>
-                <div className="pt-3 border-t border-gray-100 text-gray-500">
+                <div className="pt-3 border-t border-gray-100 text-gray-400">
                     Noch nicht bereit, jemanden herauszufordern?{" "}
                     <Link href="/" className="text-blue-600 hover:underline font-medium">
                         Übe allein gegen den Computer →
@@ -156,11 +156,11 @@ export function UseCases() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Häufig gestellte Fragen</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Häufig gestellte Fragen</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

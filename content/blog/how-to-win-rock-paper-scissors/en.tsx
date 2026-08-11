@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Rock Paper Scissors looks like a coin flip. But research from Zhejiang University, the MIT Technology Review, and behavioral
                 psychologists proves it isn&apos;t. Human beings are predictable - and once you know the patterns, you can exploit them.
             </p>
@@ -70,13 +70,13 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>
-                    <strong className="text-gray-800">Rock: ~35%</strong> - the most-thrown move, well above the expected 33.3%
+                    <strong className="text-gray-900">Rock: ~35%</strong> - the most-thrown move, well above the expected 33.3%
                 </li>
                 <li>
-                    <strong className="text-gray-800">Scissors: ~35%</strong> - nearly tied with Rock
+                    <strong className="text-gray-900">Scissors: ~35%</strong> - nearly tied with Rock
                 </li>
                 <li>
-                    <strong className="text-gray-800">Paper: ~29.6%</strong> - thrown least often
+                    <strong className="text-gray-900">Paper: ~29.6%</strong> - thrown least often
                 </li>
             </ul>
             <p className="mb-4">
@@ -93,26 +93,26 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">The Win-Stay, Lose-Shift Pattern</h2>
             <p className="mb-4">
                 The Zhejiang study&apos;s key finding was a behavioral pattern they named{" "}
-                <strong className="text-gray-800">Win-Stay, Lose-Shift</strong>:
+                <strong className="text-gray-900">Win-Stay, Lose-Shift</strong>:
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">If a player wins:</strong> they tend to repeat the move that just won
+                    <strong className="text-gray-900">If a player wins:</strong> they tend to repeat the move that just won
                 </li>
                 <li>
-                    <strong className="text-gray-800">If a player loses:</strong> they tend to shift to the next move clockwise in the
+                    <strong className="text-gray-900">If a player loses:</strong> they tend to shift to the next move clockwise in the
                     cycle: Rock → Paper → Scissors → Rock
                 </li>
             </ul>
             <p className="mb-4">How to use this in practice: after every round, ask - did my opponent just win or lose?</p>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 text-sm space-y-2">
-                <p className="font-semibold text-gray-800">If they just won (Win-Stay - expect them to repeat):</p>
+                <p className="font-semibold text-gray-900">If they just won (Win-Stay - expect them to repeat):</p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
                     <li>They won with Rock → expect Rock again → you play Paper</li>
                     <li>They won with Paper → expect Paper again → you play Scissors</li>
                     <li>They won with Scissors → expect Scissors again → you play Rock</li>
                 </ul>
-                <p className="font-semibold text-gray-800 mt-3">If they just lost (Lose-Shift - expect the next move in the cycle):</p>
+                <p className="font-semibold text-gray-900 mt-3">If they just lost (Lose-Shift - expect the next move in the cycle):</p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
                     <li>They lost with Rock → expect Paper next → you play Scissors</li>
                     <li>They lost with Paper → expect Scissors next → you play Rock</li>
@@ -172,51 +172,51 @@ export function Content() {
             <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Round</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Situation</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Play</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Reason</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Round</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Situation</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Play</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Reason</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200">Round 1</td>
-                            <td className="p-3 border border-gray-200">vs unfamiliar opponent</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Paper</td>
-                            <td className="p-3 border border-gray-200">Beats Rock, the most common opener</td>
+                            <td className="p-3 border-b border-gray-200">Round 1</td>
+                            <td className="p-3 border-b border-gray-200">vs unfamiliar opponent</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Paper</td>
+                            <td className="p-3 border-b border-gray-200">Beats Rock, the most common opener</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Round 1</td>
-                            <td className="p-3 border border-gray-200">vs experienced player</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Scissors</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Round 1</td>
+                            <td className="p-3 border-b border-gray-200">vs experienced player</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Scissors</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Experts expect Paper and counter with Scissors - so you match them
                             </td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Round 2</td>
-                            <td className="p-3 border border-gray-200">Opponent just won Round 1</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Counter their winning move</td>
-                            <td className="p-3 border border-gray-200">Win-Stay: expect them to repeat</td>
+                            <td className="p-3 border-b border-gray-200">Round 2</td>
+                            <td className="p-3 border-b border-gray-200">Opponent just won Round 1</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Counter their winning move</td>
+                            <td className="p-3 border-b border-gray-200">Win-Stay: expect them to repeat</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Round 2</td>
-                            <td className="p-3 border border-gray-200">Opponent just lost Round 1</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Counter their next cycle move</td>
-                            <td className="p-3 border border-gray-200">Lose-Shift: Rock→Paper, Paper→Scissors, Scissors→Rock</td>
+                            <td className="p-3 border-b border-gray-200">Round 2</td>
+                            <td className="p-3 border-b border-gray-200">Opponent just lost Round 1</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Counter their next cycle move</td>
+                            <td className="p-3 border-b border-gray-200">Lose-Shift: Rock→Paper, Paper→Scissors, Scissors→Rock</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Round 3</td>
-                            <td className="p-3 border border-gray-200">Opponent threw same move twice</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Eliminate that move</td>
-                            <td className="p-3 border border-gray-200">Double-throw: they won&apos;t throw it a third time</td>
+                            <td className="p-3 border-b border-gray-200">Round 3</td>
+                            <td className="p-3 border-b border-gray-200">Opponent threw same move twice</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Eliminate that move</td>
+                            <td className="p-3 border-b border-gray-200">Double-throw: they won&apos;t throw it a third time</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Round 3</td>
-                            <td className="p-3 border border-gray-200">Must win, no clear read</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Paper</td>
-                            <td className="p-3 border border-gray-200">Statistically strongest move under pressure</td>
+                            <td className="p-3 border-b border-gray-200">Round 3</td>
+                            <td className="p-3 border-b border-gray-200">Must win, no clear read</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Paper</td>
+                            <td className="p-3 border-b border-gray-200">Statistically strongest move under pressure</td>
                         </tr>
                     </tbody>
                 </table>
@@ -224,7 +224,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Put this strategy to the test.</p>
+                <p className="font-semibold text-gray-900 mb-1">Put this strategy to the test.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Challenge a friend - see if they can read your patterns before you read theirs.
                 </p>
@@ -234,7 +234,7 @@ export function Content() {
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         Practice vs Computer
                     </Link>
@@ -262,43 +262,43 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Frequently Asked Questions</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Is paper the best move in rock paper scissors?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Is paper the best move in rock paper scissors?</h3>
+                    <p className="text-gray-600">
                         Statistically, yes - paper beats rock, which is the most commonly thrown move at around 35% of the time. But against
                         experienced players who know this, scissors is the expected counter-play, which can make rock safer.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What is the win-stay lose-shift strategy?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What is the win-stay lose-shift strategy?</h3>
+                    <p className="text-gray-600">
                         A behavioral pattern in which winners tend to repeat the move that just won, while losers shift to the next move in
                         the cycle (Rock → Paper → Scissors → Rock). Confirmed by Zhejiang University in 2014 across over 100,000 rounds.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Does psychology really affect rock paper scissors?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Does psychology really affect rock paper scissors?</h3>
+                    <p className="text-gray-600">
                         Yes. Multiple peer-reviewed studies show humans deviate significantly from random play. People anchor to moves
                         emotionally, react predictably to wins and losses, and create patterns that skilled opponents can read.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Can you win at rock paper scissors every time?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Can you win at rock paper scissors every time?</h3>
+                    <p className="text-gray-600">
                         Not every time - but consistently above 33% against human opponents by reading behavioral patterns. Against a true
                         random number generator (like this site&apos;s computer mode), no strategy applies.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What is the best first move in rock paper scissors?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What is the best first move in rock paper scissors?</h3>
+                    <p className="text-gray-600">
                         Against any unfamiliar opponent, Paper is the statistically strongest opening. Rock is the most commonly thrown
                         first move - especially by beginners and male players - so Paper gives you the best expected outcome in round 1.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Is rock paper scissors really random?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Is rock paper scissors really random?</h3>
+                    <p className="text-gray-600">
                         Not when humans are playing. Research from Zhejiang University found that human players follow predictable patterns
                         based on whether they just won or lost. A computer using a random number generator is truly random - human opponents
                         are not.
@@ -308,15 +308,15 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">You&apos;ve read the strategy.</p>
-                <p className="text-sm text-gray-500 mb-5">The only way to sharpen it is to play against someone who hasn&apos;t.</p>
+                <p className="font-semibold text-gray-900 mb-1">You&apos;ve read the strategy.</p>
+                <p className="text-sm text-gray-400 mb-5">The only way to sharpen it is to play against someone who hasn&apos;t.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <CtaLink href="/two-players" className="text-sm px-5 py-2.5">
                         Challenge a Friend →
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         Practice vs Computer
                     </Link>

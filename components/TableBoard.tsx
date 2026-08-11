@@ -21,7 +21,7 @@ const TableBoard = ({
         <div className="mt-4 md:mt-6 rounded-md bg-gray-100/5">
             <table className="w-full table-fixed border-collapse player-selected-table">
                 <thead>
-                    <tr className="text-gray-500">
+                    <tr className="text-gray-400">
                         <th className="font-light">{t("you")}</th>
                         {!isOnePlayer ? (
                             <th className="truncate font-light">{t("secondPlayer")}</th>
@@ -63,7 +63,7 @@ const TableBoard = ({
                                     ) : (
                                         <div className="h-6">
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 0 && (
-                                                <EqualsIcon weight="light" className="w-6 h-6 text-gray-500" />
+                                                <EqualsIcon weight="light" className="w-6 h-6 text-gray-400" />
                                             )}
                                             {compareChoices(yourChoices?.[item], secondPlayerChoices[item]) === 1 && (
                                                 <CheckCircleIcon weight="light" className="w-6 h-6 text-green-500" />

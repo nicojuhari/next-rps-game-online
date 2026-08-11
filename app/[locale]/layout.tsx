@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
@@ -10,23 +10,20 @@ import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
-    children,
-    params,
-}: {
-    children: React.ReactNode;
-    params: Promise<{ locale: string }>;
-}) {
+export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
     const { locale } = await params;
 
     if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
         notFound();
     }
 
+    setRequestLocale(locale);
     const messages = await getMessages();
     const tJsonLd = await getTranslations({ locale, namespace: "jsonLd" });
     const isProduction = process.env.NODE_ENV === "production";
@@ -76,7 +73,12 @@ export default async function LocaleLayout({
                     />
                 )}
                 {isProduction && (
-                    <Script src="https://scripts.simpleanalyticscdn.com/latest.js" strategy="afterInteractive" async data-collect-dnt="true" />
+                    <Script
+                        src="https://scripts.simpleanalyticscdn.com/latest.js"
+                        strategy="afterInteractive"
+                        async
+                        data-collect-dnt="true"
+                    />
                 )}
             </body>
         </html>

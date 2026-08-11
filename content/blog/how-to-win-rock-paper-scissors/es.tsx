@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Piedra Papel Tijeras parece un lanzamiento de moneda. Pero investigaciones de la Universidad de Zhejiang, el MIT Technology
                 Review y psicólogos conductuales demuestran que no lo es. Los seres humanos son predecibles - y una vez que conoces los
                 patrones, puedes explotarlos.
@@ -72,13 +72,13 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>
-                    <strong className="text-gray-800">Piedra: ~35%</strong> - la jugada más usada, muy por encima del esperado 33,3%
+                    <strong className="text-gray-900">Piedra: ~35%</strong> - la jugada más usada, muy por encima del esperado 33,3%
                 </li>
                 <li>
-                    <strong className="text-gray-800">Tijeras: ~35%</strong> - casi empatada con Piedra
+                    <strong className="text-gray-900">Tijeras: ~35%</strong> - casi empatada con Piedra
                 </li>
                 <li>
-                    <strong className="text-gray-800">Papel: ~29,6%</strong> - la jugada menos usada
+                    <strong className="text-gray-900">Papel: ~29,6%</strong> - la jugada menos usada
                 </li>
             </ul>
             <p className="mb-4">
@@ -95,26 +95,26 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">El Patrón Ganar-Quedarse, Perder-Cambiar</h2>
             <p className="mb-4">
                 El hallazgo clave del estudio de Zhejiang fue un patrón de comportamiento que llamaron{" "}
-                <strong className="text-gray-800">Ganar-Quedarse, Perder-Cambiar</strong>:
+                <strong className="text-gray-900">Ganar-Quedarse, Perder-Cambiar</strong>:
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Si un jugador gana:</strong> tiende a repetir la jugada que acaba de ganar
+                    <strong className="text-gray-900">Si un jugador gana:</strong> tiende a repetir la jugada que acaba de ganar
                 </li>
                 <li>
-                    <strong className="text-gray-800">Si un jugador pierde:</strong> tiende a cambiar a la siguiente jugada en el ciclo:
+                    <strong className="text-gray-900">Si un jugador pierde:</strong> tiende a cambiar a la siguiente jugada en el ciclo:
                     Piedra → Papel → Tijeras → Piedra
                 </li>
             </ul>
             <p className="mb-4">Cómo usar esto en la práctica: después de cada ronda, pregúntate - ¿mi oponente acaba de ganar o perder?</p>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 text-sm space-y-2">
-                <p className="font-semibold text-gray-800">Si acaban de ganar (Ganar-Quedarse - espera que repitan):</p>
+                <p className="font-semibold text-gray-900">Si acaban de ganar (Ganar-Quedarse - espera que repitan):</p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
                     <li>Ganaron con Piedra → espera Piedra otra vez → tú juegas Papel</li>
                     <li>Ganaron con Papel → espera Papel otra vez → tú juegas Tijeras</li>
                     <li>Ganaron con Tijeras → espera Tijeras otra vez → tú juegas Piedra</li>
                 </ul>
-                <p className="font-semibold text-gray-800 mt-3">
+                <p className="font-semibold text-gray-900 mt-3">
                     Si acaban de perder (Perder-Cambiar - espera la siguiente jugada en el ciclo):
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
@@ -179,53 +179,53 @@ export function Content() {
             <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Ronda</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Situación</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Jugada</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Razón</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Ronda</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Situación</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Jugada</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Razón</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200">Ronda 1</td>
-                            <td className="p-3 border border-gray-200">vs oponente desconocido</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Papel</td>
-                            <td className="p-3 border border-gray-200">Vence a Piedra, la apertura más común</td>
+                            <td className="p-3 border-b border-gray-200">Ronda 1</td>
+                            <td className="p-3 border-b border-gray-200">vs oponente desconocido</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Papel</td>
+                            <td className="p-3 border-b border-gray-200">Vence a Piedra, la apertura más común</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Ronda 1</td>
-                            <td className="p-3 border border-gray-200">vs jugador experimentado</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Tijeras</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Ronda 1</td>
+                            <td className="p-3 border-b border-gray-200">vs jugador experimentado</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Tijeras</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Los expertos esperan Papel y usan Tijeras - así que tú los igualas
                             </td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Ronda 2</td>
-                            <td className="p-3 border border-gray-200">Oponente ganó la Ronda 1</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Contrarresta su jugada ganadora</td>
-                            <td className="p-3 border border-gray-200">Ganar-Quedarse: espera que repita</td>
+                            <td className="p-3 border-b border-gray-200">Ronda 2</td>
+                            <td className="p-3 border-b border-gray-200">Oponente ganó la Ronda 1</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Contrarresta su jugada ganadora</td>
+                            <td className="p-3 border-b border-gray-200">Ganar-Quedarse: espera que repita</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Ronda 2</td>
-                            <td className="p-3 border border-gray-200">Oponente perdió la Ronda 1</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">
+                            <td className="p-3 border-b border-gray-200">Ronda 2</td>
+                            <td className="p-3 border-b border-gray-200">Oponente perdió la Ronda 1</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">
                                 Contrarresta su siguiente jugada en el ciclo
                             </td>
-                            <td className="p-3 border border-gray-200">Perder-Cambiar: Piedra→Papel, Papel→Tijeras, Tijeras→Piedra</td>
+                            <td className="p-3 border-b border-gray-200">Perder-Cambiar: Piedra→Papel, Papel→Tijeras, Tijeras→Piedra</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Ronda 3</td>
-                            <td className="p-3 border border-gray-200">Oponente lanzó la misma jugada dos veces</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Elimina esa jugada</td>
-                            <td className="p-3 border border-gray-200">Doble lanzamiento: no la lanzará por tercera vez</td>
+                            <td className="p-3 border-b border-gray-200">Ronda 3</td>
+                            <td className="p-3 border-b border-gray-200">Oponente lanzó la misma jugada dos veces</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Elimina esa jugada</td>
+                            <td className="p-3 border-b border-gray-200">Doble lanzamiento: no la lanzará por tercera vez</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Ronda 3</td>
-                            <td className="p-3 border border-gray-200">Debes ganar, sin lectura clara</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Papel</td>
-                            <td className="p-3 border border-gray-200">Jugada estadísticamente más fuerte bajo presión</td>
+                            <td className="p-3 border-b border-gray-200">Ronda 3</td>
+                            <td className="p-3 border-b border-gray-200">Debes ganar, sin lectura clara</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Papel</td>
+                            <td className="p-3 border-b border-gray-200">Jugada estadísticamente más fuerte bajo presión</td>
                         </tr>
                     </tbody>
                 </table>
@@ -233,7 +233,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Pon esta estrategia a prueba.</p>
+                <p className="font-semibold text-gray-900 mb-1">Pon esta estrategia a prueba.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Desafía a un amigo - ve si puede leer tus patrones antes de que tú leas los suyos.
                 </p>
@@ -243,7 +243,7 @@ export function Content() {
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         Practicar vs Computadora
                     </Link>
@@ -272,48 +272,48 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Preguntas Frecuentes</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">¿Es papel la mejor jugada en piedra papel tijeras?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">¿Es papel la mejor jugada en piedra papel tijeras?</h3>
+                    <p className="text-gray-600">
                         Estadísticamente, sí - papel vence a piedra, que es la jugada más común con alrededor del 35% de las veces. Pero
                         contra jugadores experimentados que conocen esto, tijeras es la respuesta esperada, lo que puede hacer que piedra
                         sea más segura.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">¿Qué es la estrategia ganar-quedarse, perder-cambiar?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">¿Qué es la estrategia ganar-quedarse, perder-cambiar?</h3>
+                    <p className="text-gray-600">
                         Un patrón de comportamiento en el que los ganadores tienden a repetir la jugada que acaba de ganar, mientras que los
                         perdedores cambian a la siguiente jugada en el ciclo (Piedra → Papel → Tijeras → Piedra). Confirmado por la
                         Universidad de Zhejiang en 2014 en más de 100.000 rondas.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">¿La psicología realmente afecta al piedra papel tijeras?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">¿La psicología realmente afecta al piedra papel tijeras?</h3>
+                    <p className="text-gray-600">
                         Sí. Múltiples estudios revisados por pares muestran que los humanos se desvían significativamente del juego
                         aleatorio. Las personas se anclan a jugadas emocionalmente, reaccionan de manera predecible a victorias y derrotas,
                         y crean patrones que oponentes hábiles pueden leer.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">¿Puedes ganar en piedra papel tijeras siempre?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">¿Puedes ganar en piedra papel tijeras siempre?</h3>
+                    <p className="text-gray-600">
                         No siempre - pero consistentemente por encima del 33% contra oponentes humanos leyendo patrones de comportamiento.
                         Contra un generador de números aleatorios verdadero (como el modo computadora de este sitio), ninguna estrategia
                         aplica.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">¿Cuál es la mejor primera jugada en piedra papel tijeras?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">¿Cuál es la mejor primera jugada en piedra papel tijeras?</h3>
+                    <p className="text-gray-600">
                         Contra cualquier oponente desconocido, Papel es la apertura estadísticamente más fuerte. Piedra es la jugada inicial
                         más común - especialmente en principiantes y jugadores masculinos - así que Papel te da el mejor resultado esperado
                         en la ronda 1.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">¿Es piedra papel tijeras realmente aleatorio?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">¿Es piedra papel tijeras realmente aleatorio?</h3>
+                    <p className="text-gray-600">
                         No cuando juegan humanos. Investigaciones de la Universidad de Zhejiang encontraron que los jugadores humanos siguen
                         patrones predecibles basados en si acaban de ganar o perder. Una computadora que usa un generador de números
                         aleatorios es verdaderamente aleatoria - los oponentes humanos no lo son.
@@ -323,15 +323,15 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Ya leíste la estrategia.</p>
-                <p className="text-sm text-gray-500 mb-5">La única forma de perfeccionarla es jugar contra alguien que no la conoce.</p>
+                <p className="font-semibold text-gray-900 mb-1">Ya leíste la estrategia.</p>
+                <p className="text-sm text-gray-400 mb-5">La única forma de perfeccionarla es jugar contra alguien que no la conoce.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <CtaLink href="/two-players" className="text-sm px-5 py-2.5">
                         Desafiar a un Amigo →
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         Practicar vs Computadora
                     </Link>

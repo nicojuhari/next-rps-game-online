@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Vous et un ami devez décider quelque chose. Vous n&apos;êtes pas dans la même pièce. S&apos;envoyer des messages
                 &ldquo;pierre feuille ciseaux partez !&rdquo; ne fonctionne pas - l&apos;un voit toujours le choix de l&apos;autre avant de
                 s&apos;être engagé. Il existe une meilleure façon : une partie en temps réel avec révélation simultanée, sans compte, prête
@@ -51,7 +51,7 @@ export function Content() {
 
             {/* Snippet-ready answer */}
             <div className="bg-gray-50 border-l-4 border-blue-400 px-5 py-4 mb-8 rounded-r-lg">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-600">
                     <strong>Réponse rapide :</strong> Pour jouer à pierre feuille ciseaux en ligne avec un ami - ouvrez la partie à 2
                     joueurs, partagez le lien unique de la salle avec votre ami, et les deux choisissent en même temps. Le résultat est
                     révélé simultanément. Sans compte ni téléchargement.
@@ -77,7 +77,7 @@ export function Content() {
                 Comment jouer à pierre feuille ciseaux en ligne avec des amis - étape par étape
             </h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Étape 1 - Ouvrez la partie à 2 joueurs</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Étape 1 - Ouvrez la partie à 2 joueurs</h3>
             <p className="mb-4">
                 Accédez à la{" "}
                 <Link href="/two-players" className="text-blue-600 hover:underline">
@@ -88,21 +88,21 @@ export function Content() {
                 secondes environ.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Étape 2 - Partagez le lien avec votre ami</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Étape 2 - Partagez le lien avec votre ami</h3>
             <p className="mb-4">
                 Quand vous ouvrez une salle de jeu, vous obtenez une URL unique. Copiez-la et envoyez-la à votre ami - par SMS, WhatsApp,
                 Discord, e-mail, ce que vous utilisez déjà pour communiquer. Il l&apos;ouvre sur son appareil, depuis n&apos;importe où dans
                 le monde, et vous êtes connectés. Pas de mot de passe partagé, pas de code de salle à coordonner.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Étape 3 - Les deux joueurs choisissent en même temps</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Étape 3 - Les deux joueurs choisissent en même temps</h3>
             <p className="mb-4">
                 Chaque joueur voit les mêmes trois options : Pierre, Feuille, Ciseaux. Vous validez tous les deux votre choix en privé -
                 aucun ne peut voir celui de l&apos;autre tant que les deux n&apos;ont pas soumis le leur. Pas de décompte à coordonner, pas
                 de confiance nécessaire. Le système impose la révélation simultanée.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Étape 4 - Découvrez qui a gagné</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Étape 4 - Découvrez qui a gagné</h3>
             <p className="mb-4">
                 Une fois que les deux ont choisi, le résultat est instantané. Vous jouez en meilleur des 3 - le premier à gagner 2 manches
                 remporte la partie. Le score se met à jour en temps réel. Pas de score à noter manuellement, pas de &ldquo;attends,
@@ -111,7 +111,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Prêt à jouer maintenant ?</p>
+                <p className="font-semibold text-gray-900 mb-1">Prêt à jouer maintenant ?</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Partagez un lien - les deux choisissent en même temps, résultat instantané. Sans compte.
                 </p>
@@ -187,37 +187,37 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Questions fréquentes</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Dois-je créer un compte pour jouer ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Dois-je créer un compte pour jouer ?</h3>
+                    <p className="text-gray-600">
                         Non. Le jeu est totalement anonyme - pas d&apos;e-mail, pas de mot de passe, pas de profil. Il suffit d&apos;ouvrir
                         le lien et de jouer.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Comment inviter mon ami ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Comment inviter mon ami ?</h3>
+                    <p className="text-gray-600">
                         Ouvrez la partie à 2 joueurs, copiez le lien unique de la salle et envoyez-le comme vous communiquez - SMS,
                         WhatsApp, Discord, e-mail. Quand il ouvre le lien, vous êtes connectés.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">C&apos;est gratuit ?</h3>
-                    <p className="text-gray-600 text-sm">Oui, toujours gratuit. Pas d&apos;abonnement ni d&apos;achats intégrés.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">C&apos;est gratuit ?</h3>
+                    <p className="text-gray-600">Oui, toujours gratuit. Pas d&apos;abonnement ni d&apos;achats intégrés.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Combien de manches dure une partie ?</h3>
-                    <p className="text-gray-600 text-sm">Meilleur des 3. Le premier à gagner 2 manches gagne la partie.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Combien de manches dure une partie ?</h3>
+                    <p className="text-gray-600">Meilleur des 3. Le premier à gagner 2 manches gagne la partie.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Peut-on jouer sur téléphone ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Peut-on jouer sur téléphone ?</h3>
+                    <p className="text-gray-600">
                         Oui. Le jeu fonctionne dans n&apos;importe quel navigateur mobile sur iOS et Android - aucun téléchargement
                         d&apos;application requis.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Que se passe-t-il si je perds la connexion en cours de partie ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Que se passe-t-il si je perds la connexion en cours de partie ?</h3>
+                    <p className="text-gray-600">
                         La salle de jeu persiste brièvement. Si vous vous reconnectez tous les deux au même lien, la partie reprend là où
                         elle s&apos;était arrêtée.
                     </p>
@@ -226,8 +226,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Prêt à trancher ça ?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Prêt à trancher ça ?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Démarrez une partie à 2 joueurs, partagez le lien et jouez en moins de 60 secondes. Sans compte.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

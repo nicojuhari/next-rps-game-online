@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import AnimatedCard from "./AnimatedCard";
 import type { TwoPlayersSections } from "@/content/two-players/types";
 
 type Props = {
@@ -17,9 +16,9 @@ export default async function TwoPlayersPageSections({ locale, sections }: Props
         <>
             <div className="my-10 space-y-4 font-light">
                 {sectionList.map((Section, i) => (
-                    <AnimatedCard key={i} i={i}>
+                    <div key={i} className="bg-white rounded-xl p-6 border">
                         <Section />
-                    </AnimatedCard>
+                    </div>
                 ))}
             </div>
             <div className="text-center py-8 mt-2 border-t">

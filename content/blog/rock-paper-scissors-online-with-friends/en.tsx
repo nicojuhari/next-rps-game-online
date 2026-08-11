@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 You and a friend need to settle something. You&apos;re not in the same room. Texting &ldquo;rock paper scissors go!&rdquo;
                 back and forth doesn&apos;t work - one of you always sees the other&apos;s choice before they&apos;ve committed.
                 There&apos;s a better way: a real-time game with simultaneous reveal, no account needed, running in under 60 seconds.
@@ -50,7 +50,7 @@ export function Content() {
 
             {/* Snippet-ready answer */}
             <div className="bg-gray-50 border-l-4 border-blue-400 px-5 py-4 mb-8 rounded-r-lg">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-600">
                     <strong>Quick answer:</strong> To play rock paper scissors online with a friend - open the 2-player game, share the
                     unique room link with your friend, and both pick at the same time. The result reveals simultaneously. No account or
                     download needed.
@@ -75,7 +75,7 @@ export function Content() {
                 How to Play Rock Paper Scissors Online With Friends - Step by Step
             </h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Step 1 - Open the 2-Player Game</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Step 1 - Open the 2-Player Game</h3>
             <p className="mb-4">
                 Go to the{" "}
                 <Link href="/two-players" className="text-blue-600 hover:underline">
@@ -85,21 +85,21 @@ export function Content() {
                 tablet. Takes about five seconds to get to the game room.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Step 2 - Share the Link With Your Friend</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Step 2 - Share the Link With Your Friend</h3>
             <p className="mb-4">
                 When you open a game room, you get a unique URL. Copy it and send it to your friend - by text, WhatsApp, Discord, email,
                 carrier pigeon, whatever you&apos;re already using to talk. They open it on their device, anywhere in the world, and
                 you&apos;re connected. No shared password, no lobby code to coordinate.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Step 3 - Both Players Pick at the Same Time</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Step 3 - Both Players Pick at the Same Time</h3>
             <p className="mb-4">
                 Each player sees the same three choices: Rock, Paper, Scissors. You both lock in your pick privately - neither player can
                 see the other&apos;s choice until both have submitted. No countdown to coordinate, no trust required. The system enforces
                 the simultaneous reveal.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Step 4 - See Who Wins</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Step 4 - See Who Wins</h3>
             <p className="mb-4">
                 Once both picks are in, the result is instant. You play best of 3 - first to win 2 rounds wins the match. The score updates
                 in real time. No manual tracking, no &ldquo;wait, what was the score?&rdquo; moments. The dispute is settled, fairly, in
@@ -108,7 +108,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Ready to play right now?</p>
+                <p className="font-semibold text-gray-900 mb-1">Ready to play right now?</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Share a link - both players pick simultaneously, result is instant. No account needed.
                 </p>
@@ -183,35 +183,35 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Frequently Asked Questions</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Do I need to create an account to play?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Do I need to create an account to play?</h3>
+                    <p className="text-gray-600">
                         No. The game is completely anonymous - no email, no password, no profile. Just open the link and play.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">How do I invite my friend?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">How do I invite my friend?</h3>
+                    <p className="text-gray-600">
                         Open the 2-player game, copy the unique room link, and send it however you communicate - text, WhatsApp, Discord,
                         email. When they open the link, you&apos;re connected.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Is it free?</h3>
-                    <p className="text-gray-600 text-sm">Yes, always free to play. No subscription, no in-app purchases.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Is it free?</h3>
+                    <p className="text-gray-600">Yes, always free to play. No subscription, no in-app purchases.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">How many rounds does a game last?</h3>
-                    <p className="text-gray-600 text-sm">Best of 3. The first player to win 2 rounds wins the match.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">How many rounds does a game last?</h3>
+                    <p className="text-gray-600">Best of 3. The first player to win 2 rounds wins the match.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Can I play on my phone?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Can I play on my phone?</h3>
+                    <p className="text-gray-600">
                         Yes. The game runs in any mobile browser on iOS and Android - no app download required.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What if I lose my connection mid-game?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What if I lose my connection mid-game?</h3>
+                    <p className="text-gray-600">
                         The game room persists briefly. If you both reconnect to the same link, the game resumes from where you left off.
                     </p>
                 </div>
@@ -219,8 +219,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Ready to settle this?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Ready to settle this?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Start a 2-player game, share the link, and play in under 60 seconds. No account needed.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

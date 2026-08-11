@@ -43,10 +43,10 @@ const MainCTA = () => {
                     {steps.map((label, i) => (
                         <div key={i} className="flex items-center">
                             <div className="flex flex-col items-center gap-1.5">
-                                <span className="w-7 h-7 rounded-full bg-gray-100 text-gray-500 text-xs font-bold inline-flex items-center justify-center">
+                                <span className="w-7 h-7 rounded-full bg-gray-100 text-gray-400 text-xs font-bold inline-flex items-center justify-center">
                                     {i + 1}
                                 </span>
-                                <span className="text-xs text-gray-500 font-medium">{label}</span>
+                                <span className="text-xs text-gray-400 font-medium">{label}</span>
                             </div>
                             {i < 2 && <div className="w-10 border-t border-dashed mb-3.5 mx-2" />}
                         </div>
@@ -55,7 +55,7 @@ const MainCTA = () => {
 
                 {/* Stake input */}
                 <div className="text-left">
-                    <label htmlFor="game-stakes" className="block text-sm text-gray-500 mb-1">
+                    <label htmlFor="game-stakes" className="block text-sm text-gray-400 mb-1">
                         {t("stakeLabel")} <span className="text-gray-400 text-xs">{t("stakeOptional")}</span>
                     </label>
                     <input

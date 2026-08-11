@@ -35,26 +35,26 @@ export const faqItems: FaqItem[] = [
 export function HowToPlay() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Comment Jouer à Pierre Feuille Ciseaux en Ligne avec des Amis
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>Jouer avec un ami, c&apos;est trois étapes - sans compte, sans appli :</p>
                 <ol className="pl-4 space-y-2 list-decimal">
                     <li>
-                        <span className="font-semibold text-gray-700">Crée une salle privée</span> - clique sur &laquo;&nbsp;Créer une
+                        <span className="font-semibold text-gray-600">Crée une salle privée</span> - clique sur &laquo;&nbsp;Créer une
                         partie&nbsp;&raquo; ci-dessus ou depuis la page d&apos;accueil. Tu reçois un lien privé immédiatement.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Partage le lien</span> - envoie-le à ton ami via n&apos;importe quelle
+                        <span className="font-semibold text-gray-600">Partage le lien</span> - envoie-le à ton ami via n&apos;importe quelle
                         appli de messagerie. Fonctionne sur tous les appareils.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Joue</span> - les deux joueurs choisissent Pierre, Feuille ou Ciseaux.
+                        <span className="font-semibold text-gray-600">Joue</span> - les deux joueurs choisissent Pierre, Feuille ou Ciseaux.
                         Le meilleur des 3 manches l&apos;emporte.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Obtiens ton certificat</span> - gagne plus de parties que ton
+                        <span className="font-semibold text-gray-600">Obtiens ton certificat</span> - gagne plus de parties que ton
                         adversaire et télécharge un certificat de victoire personnalisé à partager.
                     </li>
                 </ol>
@@ -66,7 +66,7 @@ export function HowToPlay() {
 export function HowItWorks() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Pierre Feuille Ciseaux 1v1 - Comment ça marche
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -88,7 +88,7 @@ export function HowItWorks() {
 export function WhySettle() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Pourquoi trancher à Pierre Feuille Ciseaux ?
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -114,12 +114,12 @@ export function WhySettle() {
 export function UseCases() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Pierre Feuille Ciseaux Fonctionne dans Plus de Situations que tu ne le Crois
             </h2>
             <div className="space-y-4 text-sm text-gray-600">
                 <div>
-                    <p className="font-semibold text-gray-700">Réunions Virtuelles et Brise-Glace</p>
+                    <p className="font-semibold text-gray-600">Réunions Virtuelles et Brise-Glace</p>
                     <p className="mt-1">
                         Besoin d&apos;un brise-glace de 60 secondes pour ton appel d&apos;équipe ? PFC fonctionne sur n&apos;importe quel
                         appareil, sans configuration, et fait rire tout le monde en moins d&apos;une minute.{" "}
@@ -129,7 +129,7 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Couples et Amis à Distance</p>
+                    <p className="font-semibold text-gray-600">Couples et Amis à Distance</p>
                     <p className="mt-1">
                         Quand vous décidez quelque chose ensemble depuis des villes différentes, un lien partagé surpasse le compte à
                         rebours jusqu&apos;à trois en visioconférence.{" "}
@@ -139,13 +139,13 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Régler N&apos;importe Quelle Décision</p>
+                    <p className="font-semibold text-gray-600">Régler N&apos;importe Quelle Décision</p>
                     <p className="mt-1">
                         Qui choisit le restaurant ? Qui va en premier ? Qui appelle les parents ? Les deux joueurs ont une chance égale, et
                         le résultat est instantané et équitable.
                     </p>
                 </div>
-                <div className="pt-3 border-t border-gray-100 text-gray-500">
+                <div className="pt-3 border-t border-gray-100 text-gray-400">
                     Pas encore prêt à défier quelqu&apos;un ?{" "}
                     <Link href="/" className="text-blue-600 hover:underline font-medium">
                         Entraîne-toi seul contre l&apos;ordinateur →
@@ -159,11 +159,11 @@ export function UseCases() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Questions Fréquentes</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Questions Fréquentes</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

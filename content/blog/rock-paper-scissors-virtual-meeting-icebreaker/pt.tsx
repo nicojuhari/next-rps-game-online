@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Reuniões remotas têm um primeiro minuto incômodo. Todo mundo entra, alguém pergunta &ldquo;vocês estão me ouvindo?&rdquo;, e
                 aí tem um silêncio antes da pauta começar. Um bom icebreaker resolve isso - mas a maioria precisa de facilitador, app
                 compartilhado ou 10 minutos de explicação. Pedra Papel Tesoura não precisa de nada disso. Compartilha um link, escolhe uma
@@ -60,23 +60,23 @@ export function Content() {
             <p className="mb-4">Pedra Papel Tesoura contorna os três:</p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Zero configuração:</strong> sem cadastro, sem download, sem esperar o facilitador
+                    <strong className="text-gray-900">Zero configuração:</strong> sem cadastro, sem download, sem esperar o facilitador
                     compartilhar a tela. Os jogadores abrem o link por conta própria.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Sem barreira de idioma:</strong> as regras - pedra vence tesoura, tesoura vence papel,
+                    <strong className="text-gray-900">Sem barreira de idioma:</strong> as regras - pedra vence tesoura, tesoura vence papel,
                     papel vence pedra - se explicam em 10 segundos e já são conhecidas na maioria das culturas.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Igualdade de condições:</strong> sem vantagem de conhecimento, sem exigência de
+                    <strong className="text-gray-900">Igualdade de condições:</strong> sem vantagem de conhecimento, sem exigência de
                     confiança para falar, sem sinal de hierarquia. O estagiário e o diretor jogam exatamente nos mesmos termos.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Resultado imediato:</strong> cada partida produz um vencedor claro e uma reação
+                    <strong className="text-gray-900">Resultado imediato:</strong> cada partida produz um vencedor claro e uma reação
                     natural - uma risada, um gemido, um pedido de revanche. Essa reação é o icebreaker funcionando.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Funciona em qualquer dispositivo:</strong> celular, tablet, notebook - sem extensão de
+                    <strong className="text-gray-900">Funciona em qualquer dispositivo:</strong> celular, tablet, notebook - sem extensão de
                     navegador, sem aprovação de TI.
                 </li>
             </ul>
@@ -103,7 +103,7 @@ export function Content() {
                         1
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">O host abre o jogo e cria uma sala</p>
+                        <p className="font-semibold text-gray-900">O host abre o jogo e cria uma sala</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Acesse o jogo para 2 jogadores, clique em &ldquo;Criar partida&rdquo; e copie o link do navegador.
                         </p>
@@ -114,7 +114,7 @@ export function Content() {
                         2
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Cole o link no chat da reunião</p>
+                        <p className="font-semibold text-gray-900">Cole o link no chat da reunião</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Funciona no Zoom, Teams, Meet, Slack ou qualquer janela de chat. O outro jogador clica e entra na hora - sem
                             cadastro.
@@ -126,7 +126,7 @@ export function Content() {
                         3
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Os dois jogadores escolhem sua jogada</p>
+                        <p className="font-semibold text-gray-900">Os dois jogadores escolhem sua jogada</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Cada jogador toca Pedra, Papel ou Tesoura no próprio dispositivo. A escolha fica oculta até os dois enviarem.
                         </p>
@@ -137,7 +137,7 @@ export function Content() {
                         4
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">O resultado é revelado simultaneamente</p>
+                        <p className="font-semibold text-gray-900">O resultado é revelado simultaneamente</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             As duas jogadas aparecem ao mesmo tempo. Formato melhor de 3 - o primeiro a vencer 2 rodadas ganha a partida.
                         </p>
@@ -147,7 +147,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Experimente antes da sua próxima chamada.</p>
+                <p className="font-semibold text-gray-900 mb-1">Experimente antes da sua próxima chamada.</p>
                 <p className="text-sm text-gray-600 mb-4">Abra uma sala agora - sem cadastro, só cole o link no chat da reunião.</p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">
                     Criar uma Sala de Jogo →
@@ -157,32 +157,32 @@ export function Content() {
             {/* Section 4 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Formas Concretas de Usar em Reuniões</h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Aquecimento rápido para o standup do time</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Aquecimento rápido para o standup do time</h3>
             <p className="mb-4">
                 Antes da pauta começar, o facilitador forma um par aleatório e joga uma partida ao vivo. Leva 45 segundos, cria um momento
                 de leveza e faz as pessoas prestarem atenção antes da reunião de verdade começar.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Tomar uma decisão de grupo</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Tomar uma decisão de grupo</h3>
             <p className="mb-4">
                 Quem apresenta primeiro na demo? Quem escolhe o almoço do time? Quem escreve o resumo da reunião? Em vez de um silêncio
                 constrangedor ou a voz mais alta ganhar, jogam uma partida rápida. As duas pessoas aceitam o resultado porque tiveram uma
                 chance justa.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Integração de novo membro da equipe</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Integração de novo membro da equipe</h3>
             <p className="mb-4">
                 Forme o novo com cada membro existente para uma partida rápida na primeira semana. É menos intimidador do que pedir para se
                 apresentar para o grupo, gera conversas naturais um a um e ajuda a lembrar nomes mais rápido pelo contexto do jogo.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Torneio de team building</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Torneio de team building</h3>
             <p className="mb-4">
                 Para uma atividade dedicada de equipe, organize uma chave eliminatória. Com 8 pessoas: sorteie os pares, jogue 4 partidas de
                 primeira rodada simultaneamente (cada par recebe seu próprio link), depois semifinais e final. Tudo leva 10-12 minutos.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Desempatar uma votação</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Desempatar uma votação</h3>
             <p className="mb-4">
                 O time está dividido 2-2 numa decisão. Em vez de ir ao gestor como árbitro (o que cria pressão hierárquica), cada lado
                 escolhe um campeão e jogam. O resultado é aleatório - mas é aceito como justo porque os dois lados concordaram.
@@ -206,41 +206,41 @@ export function Content() {
             <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Formato</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Tempo</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Problema</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Formato</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Tempo</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Problema</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200">&ldquo;Duas verdades e uma mentira&rdquo;</td>
-                            <td className="p-3 border border-gray-200">5-15 min</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">&ldquo;Duas verdades e uma mentira&rdquo;</td>
+                            <td className="p-3 border-b border-gray-200">5-15 min</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Exige conforto para falar; constrangedor para membros novos ou introvertidos
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Quiz de trivia</td>
-                            <td className="p-3 border border-gray-200">10-20 min</td>
-                            <td className="p-3 border border-gray-200">Diferença de conhecimento penaliza não-nativos e membros júnior</td>
+                            <td className="p-3 border-b border-gray-200">Quiz de trivia</td>
+                            <td className="p-3 border-b border-gray-200">10-20 min</td>
+                            <td className="p-3 border-b border-gray-200">Diferença de conhecimento penaliza não-nativos e membros júnior</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Bingo virtual</td>
-                            <td className="p-3 border border-gray-200">10-15 min</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Bingo virtual</td>
+                            <td className="p-3 border-b border-gray-200">10-15 min</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Requer ferramenta compartilhada, tempo de configuração, alguém para facilitar
                             </td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Associação de palavras</td>
-                            <td className="p-3 border border-gray-200">3-5 min</td>
-                            <td className="p-3 border border-gray-200">Difícil com mais de 4-5 pessoas; perde energia rápido</td>
+                            <td className="p-3 border-b border-gray-200">Associação de palavras</td>
+                            <td className="p-3 border-b border-gray-200">3-5 min</td>
+                            <td className="p-3 border-b border-gray-200">Difícil com mais de 4-5 pessoas; perde energia rápido</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Pedra Papel Tesoura</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">1-10 min</td>
-                            <td className="p-3 border border-gray-200 text-green-700 font-medium">
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Pedra Papel Tesoura</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">1-10 min</td>
+                            <td className="p-3 border-b border-gray-200 text-green-700 font-medium">
                                 Sem configuração. Sem falar. Igualdade. Escala para qualquer tamanho.
                             </td>
                         </tr>
@@ -267,43 +267,43 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Perguntas Frequentes</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Dá para jogar pedra papel tesoura em uma chamada de Zoom?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Dá para jogar pedra papel tesoura em uma chamada de Zoom?</h3>
+                    <p className="text-gray-600">
                         Sim. Cada jogador abre o jogo no próprio dispositivo. Compartilhe o link no chat, os dois escolhem em privado e o
                         resultado é revelado simultaneamente - sem contar em voz alta, sem problemas de latência.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Quais são bons icebreakers para reuniões virtuais?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Quais são bons icebreakers para reuniões virtuais?</h3>
+                    <p className="text-gray-600">
                         Os melhores são rápidos, sem configuração e funcionam para qualquer nível de conforto. Pedra Papel Tesoura atende os
                         três critérios: menos de 60 segundos, sem app ou cadastro, conhecido em todas as culturas.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Como organizar um torneio em videochamada?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Como organizar um torneio em videochamada?</h3>
+                    <p className="text-gray-600">
                         Forme pares em uma chave. Compartilhe o link de cada par no chat. Todos os jogos da primeira rodada acontecem ao
                         mesmo tempo. Vencedores avançam. Com 8 pessoas, menos de 10 minutos.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Por que é um bom icebreaker de equipe?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Por que é um bom icebreaker de equipe?</h3>
+                    <p className="text-gray-600">
                         Universalmente conhecido, menos de um minuto, sem vantagem de conhecimento nem necessidade de confiança para falar,
                         e sempre produz um vencedor claro que gera uma reação natural.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Quanto tempo dura um icebreaker virtual de pedra papel tesoura?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Quanto tempo dura um icebreaker virtual de pedra papel tesoura?</h3>
+                    <p className="text-gray-600">
                         Uma partida melhor de 3 dura 30-60 segundos. Um torneio com 8 pessoas leva cerca de 10 minutos. Uma rodada rápida
                         onde todos jogam com a pessoa à esquerda leva 2-3 minutos.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Funciona com equipes grandes?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Funciona com equipes grandes?</h3>
+                    <p className="text-gray-600">
                         Sim. Para equipes maiores de 8-10 pessoas, organize uma chave ou divida em grupos menores. Todas as partidas são
                         independentes e podem acontecer simultaneamente.
                     </p>
@@ -312,8 +312,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Pronto para a próxima reunião?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Pronto para a próxima reunião?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Abra uma sala agora - cole o link no chat da reunião e comece em menos de 10 segundos.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

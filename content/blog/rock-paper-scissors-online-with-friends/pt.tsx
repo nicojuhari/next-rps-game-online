@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Você e um amigo precisam decidir algo. Não estão no mesmo lugar. Mandar mensagens de &ldquo;pedra papel tesoura já!&rdquo;
                 não funciona - um sempre vê a escolha do outro antes de confirmar a sua. Existe uma forma melhor: uma partida em tempo real
                 com revelação simultânea, sem conta, pronta em menos de 60 segundos.
@@ -50,7 +50,7 @@ export function Content() {
 
             {/* Snippet-ready answer */}
             <div className="bg-gray-50 border-l-4 border-blue-400 px-5 py-4 mb-8 rounded-r-lg">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-600">
                     <strong>Resposta rápida:</strong> Para jogar pedra papel tesoura online com um amigo - abra a partida de 2 jogadores,
                     compartilhe o link único da sala com seu amigo, e os dois escolhem ao mesmo tempo. O resultado é revelado
                     simultaneamente. Sem conta ou download.
@@ -73,7 +73,7 @@ export function Content() {
             {/* Section 2 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Como jogar pedra papel tesoura online com amigos - passo a passo</h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Passo 1 - Abra a partida de 2 jogadores</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Passo 1 - Abra a partida de 2 jogadores</h3>
             <p className="mb-4">
                 Acesse a{" "}
                 <Link href="/two-players" className="text-blue-600 hover:underline">
@@ -83,21 +83,21 @@ export function Content() {
                 dispositivo - computador, celular, tablet. Você chega à sala de jogo em cerca de cinco segundos.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Passo 2 - Compartilhe o link com seu amigo</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Passo 2 - Compartilhe o link com seu amigo</h3>
             <p className="mb-4">
                 Ao abrir uma sala de jogo, você recebe uma URL única. Copie e envie para seu amigo - por SMS, WhatsApp, Discord, e-mail, o
                 que você já usa para conversar. Ele abre no dispositivo dele, de qualquer lugar do mundo, e vocês estão conectados. Sem
                 senha compartilhada, sem código de sala para coordenar.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Passo 3 - Os dois escolhem ao mesmo tempo</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Passo 3 - Os dois escolhem ao mesmo tempo</h3>
             <p className="mb-4">
                 Cada jogador vê as mesmas três opções: Pedra, Papel, Tesoura. Os dois confirmam a escolha em privado - nenhum pode ver a do
                 outro até que ambos tenham enviado a sua. Sem contagem regressiva para coordenar, sem precisar confiar. O sistema garante a
                 revelação simultânea.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Passo 4 - Descubram quem ganhou</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Passo 4 - Descubram quem ganhou</h3>
             <p className="mb-4">
                 Assim que os dois escolheram, o resultado é instantâneo. Você joga melhor de 3 - o primeiro a vencer 2 rodadas ganha a
                 partida. A pontuação é atualizada em tempo real. Sem anotar manualmente, sem &ldquo;espera, quanto era o placar?&rdquo;. A
@@ -106,7 +106,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Pronto para jogar agora?</p>
+                <p className="font-semibold text-gray-900 mb-1">Pronto para jogar agora?</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Compartilhe um link - os dois escolhem ao mesmo tempo, resultado instantâneo. Sem conta.
                 </p>
@@ -180,35 +180,35 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Perguntas frequentes</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Preciso criar uma conta para jogar?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Preciso criar uma conta para jogar?</h3>
+                    <p className="text-gray-600">
                         Não. O jogo é completamente anônimo - sem e-mail, sem senha, sem perfil. Basta abrir o link e jogar.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Como convido meu amigo?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Como convido meu amigo?</h3>
+                    <p className="text-gray-600">
                         Abra a partida de 2 jogadores, copie o link único da sala e envie como preferir - SMS, WhatsApp, Discord, e-mail.
                         Quando ele abrir o link, vocês estarão conectados.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">É gratuito?</h3>
-                    <p className="text-gray-600 text-sm">Sim, sempre gratuito. Sem assinatura nem compras no aplicativo.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">É gratuito?</h3>
+                    <p className="text-gray-600">Sim, sempre gratuito. Sem assinatura nem compras no aplicativo.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Quantas rodadas dura uma partida?</h3>
-                    <p className="text-gray-600 text-sm">Melhor de 3. O primeiro a vencer 2 rodadas ganha a partida.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Quantas rodadas dura uma partida?</h3>
+                    <p className="text-gray-600">Melhor de 3. O primeiro a vencer 2 rodadas ganha a partida.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Dá para jogar pelo celular?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Dá para jogar pelo celular?</h3>
+                    <p className="text-gray-600">
                         Sim. O jogo funciona em qualquer navegador mobile no iOS e Android - sem precisar baixar nenhum app.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">O que acontece se eu perder a conexão no meio da partida?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">O que acontece se eu perder a conexão no meio da partida?</h3>
+                    <p className="text-gray-600">
                         A sala de jogo persiste por um momento. Se os dois se reconectarem ao mesmo link, a partida continua de onde parou.
                     </p>
                 </div>
@@ -216,8 +216,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Pronto para resolver isso?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Pronto para resolver isso?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Inicie uma partida de 2 jogadores, compartilhe o link e joguem em menos de 60 segundos. Sem conta.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

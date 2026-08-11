@@ -48,7 +48,7 @@ export const faqItems: FaqItem[] = [
 export function Strategy() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Comment gagner à Pierre Feuille Ciseaux
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -56,30 +56,30 @@ export function Strategy() {
                 <p>
                     Une étude de l&apos;université de Zhejiang a analysé des centaines de milliers de parties et montré que les joueurs
                     suivent des schémas prévisibles. Les chercheurs ont identifié une stratégie appelée{" "}
-                    <strong className="text-gray-700">Gagne-Reste, Perd-Change</strong> :
+                    <strong className="text-gray-600">Gagne-Reste, Perd-Change</strong> :
                 </p>
                 <ul className="list-disc space-y-2 pl-4">
                     <li>
-                        <span className="font-semibold text-gray-700">Si tu gagnes :</span> Ton adversaire va probablement changer de coup.
+                        <span className="font-semibold text-gray-600">Si tu gagnes :</span> Ton adversaire va probablement changer de coup.
                         <br />
-                        <span className="italic text-gray-500">Contre-coup :</span> Joue le même coup que lui - il bat ce qu&apos;il va
+                        <span className="italic text-gray-400">Contre-coup :</span> Joue le même coup que lui - il bat ce qu&apos;il va
                         tenter ensuite.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Si tu perds :</span> Ton adversaire va probablement répéter son coup
+                        <span className="font-semibold text-gray-600">Si tu perds :</span> Ton adversaire va probablement répéter son coup
                         gagnant parce qu&apos;il se sent en veine.
                         <br />
-                        <span className="italic text-gray-500">Contre-coup :</span> Joue le coup qui bat ce qu&apos;il vient de choisir.
+                        <span className="italic text-gray-400">Contre-coup :</span> Joue le coup qui bat ce qu&apos;il vient de choisir.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Stratégie au premier coup :</span> Les débutants - surtout les hommes
+                        <span className="font-semibold text-gray-600">Stratégie au premier coup :</span> Les débutants - surtout les hommes
                         - commencent presque toujours par Pierre, parce que ça paraît le coup le plus fort.
                         <br />
-                        <span className="italic text-gray-500">Conseil :</span> Contre un nouvel adversaire, commence par Feuille.
+                        <span className="italic text-gray-400">Conseil :</span> Contre un nouvel adversaire, commence par Feuille.
                     </li>
                 </ul>
                 <p>
-                    <span className="font-semibold text-gray-700">Pierre Feuille Ciseaux, c&apos;est de la chance ou du skill ?</span> Les
+                    <span className="font-semibold text-gray-600">Pierre Feuille Ciseaux, c&apos;est de la chance ou du skill ?</span> Les
                     deux. Un joueur aléatoire gagne 33,3 % du temps. Mais les humains ne choisissent pas au hasard - repérer leurs habitudes
                     donne un vrai avantage.
                 </p>
@@ -100,7 +100,7 @@ export function Strategy() {
 export function Rules() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Règles de Pierre Feuille Ciseaux
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -110,17 +110,17 @@ export function Rules() {
                 </p>
                 <ul className="pl-4 space-y-2 list-disc">
                     <li>
-                        <span className="font-semibold text-gray-700">La pierre écrase les ciseaux</span> - ✊ → ✂️
+                        <span className="font-semibold text-gray-600">La pierre écrase les ciseaux</span> - ✊ → ✂️
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Les ciseaux coupent la feuille</span> - ✂️ → 📄
+                        <span className="font-semibold text-gray-600">Les ciseaux coupent la feuille</span> - ✂️ → 📄
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">La feuille recouvre la pierre</span> - 📄 → ✊
+                        <span className="font-semibold text-gray-600">La feuille recouvre la pierre</span> - 📄 → ✊
                     </li>
                 </ul>
                 <p>Si les deux joueurs choisissent le même signe, la manche est nulle.</p>
-                <p className="font-semibold text-gray-700">Comment fonctionne le meilleur des 3 ?</p>
+                <p className="font-semibold text-gray-600">Comment fonctionne le meilleur des 3 ?</p>
                 <p>
                     Chaque partie dure 3 manches. Les deux joueurs confirment tous leurs coups avant que les résultats soient révélés -
                     personne ne peut réagir à l&apos;autre. Celui qui gagne le plus de manches remporte la partie. Si chacun en gagne une et
@@ -139,7 +139,7 @@ export function Rules() {
 export function Statistics() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Statistiques de Pierre Feuille Ciseaux
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -148,12 +148,12 @@ export function Statistics() {
                 </p>
                 <p>
                     En pratique, les humains ne jouent pas au hasard. Les données montrent que la distribution réelle est :{" "}
-                    <strong className="text-gray-700">Pierre ~35 %, Feuille ~35 %, Ciseaux ~30 %</strong>. Les ciseaux sont le signe le
+                    <strong className="text-gray-600">Pierre ~35 %, Feuille ~35 %, Ciseaux ~30 %</strong>. Les ciseaux sont le signe le
                     moins joué.
                 </p>
                 <p>
                     En 2005, une seule manche de Pierre Feuille Ciseaux a décidé d&apos;un contrat de vente aux enchères à{" "}
-                    <strong className="text-gray-700">17,8 millions de dollars</strong>. Christie&apos;s et Sotheby&apos;s étaient à égalité
+                    <strong className="text-gray-600">17,8 millions de dollars</strong>. Christie&apos;s et Sotheby&apos;s étaient à égalité
                     pour les droits de vente d&apos;une précieuse collection d&apos;art et ont accepté de trancher par ce jeu.
                 </p>
                 <ul className="list-disc pl-4 space-y-1">
@@ -176,7 +176,7 @@ export function Statistics() {
 export function History() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Qu&apos;est-ce que Pierre Feuille Ciseaux ?
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -185,7 +185,7 @@ export function History() {
                     souvent à prendre une décision rapidement, mais c&apos;est aussi un jeu de lecture de l&apos;adversaire.
                 </p>
                 <p>
-                    Le jeu remonte à plus de <strong className="text-gray-700">2 000 ans, à la dynastie chinoise Han</strong> (206 av. J.-C.
+                    Le jeu remonte à plus de <strong className="text-gray-600">2 000 ans, à la dynastie chinoise Han</strong> (206 av. J.-C.
                     - 220 apr. J.-C.), où il s&apos;appelait <em>shoushiling</em> et utilisait des gestes représentant une grenouille, un
                     escargot et un serpent.
                 </p>
@@ -195,7 +195,7 @@ export function History() {
                     de nombreux noms : <em>roshambo</em> aux États-Unis, piedra papel tijeras en Espagne - toujours les mêmes trois signes.
                 </p>
                 <p>
-                    <strong className="text-gray-700">Le saviez-vous ?</strong> Le 27 août est officiellement la Journée mondiale de Pierre
+                    <strong className="text-gray-600">Le saviez-vous ?</strong> Le 27 août est officiellement la Journée mondiale de Pierre
                     Feuille Ciseaux.
                 </p>
                 <p>
@@ -244,11 +244,11 @@ export function BlogLinks() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Questions Fréquentes</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Questions Fréquentes</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

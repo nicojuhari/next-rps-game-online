@@ -5,7 +5,7 @@ import TwoPlayersPageSections from "@/components/TwoPlayersPageSections";
 import { FirebaseProvider } from "@/contexts/FirebaseContext";
 import AnimatedPageTitle from "@/components/AnimatedPageTitle";
 import { createMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getTwoPlayersContent } from "@/content/two-players";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
@@ -16,6 +16,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
         locale,
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const TwoPlayers = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
+    setRequestLocale(locale);
     const [t, tHome, content] = await Promise.all([
         getTranslations({ locale, namespace: "twoPlayers" }),
         getTranslations({ locale, namespace: "home" }),

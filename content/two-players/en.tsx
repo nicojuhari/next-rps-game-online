@@ -38,26 +38,26 @@ export const faqItems: FaqItem[] = [
 export function HowToPlay() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 How to Play Rock Paper Scissors Online with Friends
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>Playing with a friend takes three steps - no account or app needed:</p>
                 <ol className="pl-4 space-y-2 list-decimal">
                     <li>
-                        <span className="font-semibold text-gray-700">Create a private room</span> - click &ldquo;Create a Game&rdquo; above
+                        <span className="font-semibold text-gray-600">Create a private room</span> - click &ldquo;Create a Game&rdquo; above
                         or on the homepage. You get a private link right away.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Share the link</span> - send it to your friend via any messaging app.
+                        <span className="font-semibold text-gray-600">Share the link</span> - send it to your friend via any messaging app.
                         Works on any device.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Play</span> - both players pick Rock, Paper, or Scissors. Best of 3
+                        <span className="font-semibold text-gray-600">Play</span> - both players pick Rock, Paper, or Scissors. Best of 3
                         rounds decides the winner.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Claim your certificate</span> - win more games than your opponent and
+                        <span className="font-semibold text-gray-600">Claim your certificate</span> - win more games than your opponent and
                         grab a personalised winner&apos;s certificate. Download it or copy it to rub it in.
                     </li>
                 </ol>
@@ -69,7 +69,7 @@ export function HowToPlay() {
 export function HowItWorks() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Rock Paper Scissors 1v1 - How It Works
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -89,7 +89,7 @@ export function HowItWorks() {
 export function WhySettle() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Why Settle It with Rock Paper Scissors?
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -112,12 +112,12 @@ export function WhySettle() {
 export function UseCases() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Rock Paper Scissors Works in More Situations Than You Think
             </h2>
             <div className="space-y-4 text-sm text-gray-600">
                 <div>
-                    <p className="font-semibold text-gray-700">Virtual Meetings &amp; Icebreakers</p>
+                    <p className="font-semibold text-gray-600">Virtual Meetings &amp; Icebreakers</p>
                     <p className="mt-1">
                         Need a 60-second icebreaker for your team call? RPS works on any device, needs no setup, and gets everyone laughing
                         in under a minute.{" "}
@@ -127,7 +127,7 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Long-Distance Couples &amp; Friends</p>
+                    <p className="font-semibold text-gray-600">Long-Distance Couples &amp; Friends</p>
                     <p className="mt-1">
                         When you&apos;re deciding something together from different cities, a shared link beats counting to three over a
                         video call every time.{" "}
@@ -137,13 +137,13 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Settling Any Decision</p>
+                    <p className="font-semibold text-gray-600">Settling Any Decision</p>
                     <p className="mt-1">
                         Who picks the restaurant? Who goes first? Who calls the parents? Both players get an equal shot, and the result is
                         instant and fair.
                     </p>
                 </div>
-                <div className="pt-3 border-t border-gray-100 text-gray-500">
+                <div className="pt-3 border-t border-gray-100 text-gray-400">
                     Not ready to challenge someone?{" "}
                     <Link href="/" className="text-blue-600 hover:underline font-medium">
                         Practice solo against the computer →
@@ -157,11 +157,11 @@ export function UseCases() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Frequently Asked Questions</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Frequently Asked Questions</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

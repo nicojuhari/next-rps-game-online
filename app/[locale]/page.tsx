@@ -3,8 +3,9 @@ import OnePlayer from "@/components/OnePlayer";
 import HomeContent from "@/components/HomeContent";
 import AdSense from "@/components/AdSense";
 import AnimatedPageTitle from "@/components/AnimatedPageTitle";
+import { UsersIcon } from "@phosphor-icons/react/dist/ssr";
 import { createMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getHomeContent } from "@/content/home";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -14,6 +15,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
         locale,
@@ -26,6 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
     const { locale } = await params;
+    setRequestLocale(locale);
     const [t, content] = await Promise.all([
         getTranslations({ locale, namespace: "home" }),
         Promise.resolve(getHomeContent(locale as Locale)),
@@ -59,15 +62,20 @@ const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
             <Link
                 href="/two-players"
-                className="flex flex-col gap-1 mt-6 px-5 py-4 rounded-xl border border-dashed border-gray-300 hover:border-blue-400 hover:bg-blue-50 transition-colors group"
+                className="flex items-center gap-4 mt-6 px-5 py-4 rounded-xl border bg-white hover:border-blue-300 hover:shadow-md transition-shadow group"
             >
-                <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-700">
-                    {t("challengeFriend.heading")}
+                <span className="shrink-0 w-11 h-11 rounded-full bg-blue-50 text-blue-600 inline-flex items-center justify-center">
+                    <UsersIcon size={20} weight="bold" />
                 </span>
-                <span className="text-xs text-gray-500 group-hover:text-blue-600">
-                    {t("challengeFriend.text")}
+                <span className="flex flex-col gap-0.5 min-w-0">
+                    <span className="text-sm font-semibold text-gray-600">
+                        {t("challengeFriend.heading")}
+                    </span>
+                    <span className="text-xs text-gray-400">
+                        {t("challengeFriend.text")}
+                    </span>
                 </span>
-                <span className="text-xs font-medium text-blue-600 mt-0.5">
+                <span className="ml-auto shrink-0 text-xs font-medium text-blue-600 transition-transform group-hover:translate-x-0.5">
                     {t("challengeFriend.cta")}
                 </span>
             </Link>

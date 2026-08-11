@@ -180,7 +180,7 @@ const OnePlayer = () => {
                                     disabled={isGameFinished}
                                 >
                                     <span className="text-3xl">{item}</span>
-                                    <span className="text-xs text-gray-500 font-medium">{getButtonLabel(key)}</span>
+                                    <span className="text-xs text-gray-400 font-medium">{getButtonLabel(key)}</span>
                                 </button>
                             ))}
                         </div>
@@ -218,7 +218,7 @@ const OnePlayer = () => {
                 >
                     {t("getCertificate")}
                 </button>
-                {certHint && <p className="text-xs text-gray-500 mt-1.5">{t("certUnlock")}</p>}
+                {certHint && <p className="text-xs text-gray-400 mt-1.5">{t("certUnlock")}</p>}
             </div>
 
             <GameStatsTable entries={history} opponentLabel={tTable("computer")} />

@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Vous êtes en appel avec votre partenaire. Le moment appelle une compétition amicale. Pierre feuille ciseaux est parfait -
                 sauf que compter &ldquo;1-2-3&rdquo; devant la caméra ne fonctionne jamais vraiment. Le délai réseau fait que quelqu&apos;un
                 voit toujours le geste de l&apos;autre une demi-seconde avant. Voici comment le faire correctement : instantané, équitable,
@@ -59,23 +59,23 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Instantané :</strong> pas d&apos;app, pas d&apos;inscription, pas d&apos;attente. Un
+                    <strong className="text-gray-900">Instantané :</strong> pas d&apos;app, pas d&apos;inscription, pas d&apos;attente. Un
                     partenaire crée la salle, partage le lien et en moins de 60 secondes vous jouez.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Sans pression :</strong> si vous perdez à 23h vous pouvez blâmer la malchance et
+                    <strong className="text-gray-900">Sans pression :</strong> si vous perdez à 23h vous pouvez blâmer la malchance et
                     exiger la revanche.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Vraiment utile :</strong> utilisez-le pour décider qui choisit le film ce soir, qui
+                    <strong className="text-gray-900">Vraiment utile :</strong> utilisez-le pour décider qui choisit le film ce soir, qui
                     envoie le premier message demain, ou qui organise la prochaine visite.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Légèrement compétitif :</strong> crée un moment de drama et un gagnant clair - sans
+                    <strong className="text-gray-900">Légèrement compétitif :</strong> crée un moment de drama et un gagnant clair - sans
                     l&apos;ambiguïté du &ldquo;c&apos;est toi qui décides&rdquo;.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Fonctionne sur n&apos;importe quel appareil :</strong> téléphone, tablette, ordinateur
+                    <strong className="text-gray-900">Fonctionne sur n&apos;importe quel appareil :</strong> téléphone, tablette, ordinateur
                     - votre partenaire n&apos;a rien à installer.
                 </li>
             </ul>
@@ -105,7 +105,7 @@ export function Content() {
                         1
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Ouvrez le jeu à 2 joueurs et créez une salle</p>
+                        <p className="font-semibold text-gray-900">Ouvrez le jeu à 2 joueurs et créez une salle</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             5 secondes. Pas de compte - cliquez simplement sur &ldquo;Créer une partie&rdquo;.
                         </p>
@@ -116,7 +116,7 @@ export function Content() {
                         2
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Envoyez le lien à votre partenaire</p>
+                        <p className="font-semibold text-gray-900">Envoyez le lien à votre partenaire</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Copiez depuis le navigateur et envoyez par WhatsApp, iMessage, Discord ou où vous discutez.
                         </p>
@@ -127,7 +127,7 @@ export function Content() {
                         3
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Votre partenaire l&apos;ouvre sur son appareil</p>
+                        <p className="font-semibold text-gray-900">Votre partenaire l&apos;ouvre sur son appareil</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Fonctionne sur n&apos;importe quel téléphone, tablette ou ordinateur - n&apos;importe quel navigateur,
                             n&apos;importe quel pays.
@@ -139,7 +139,7 @@ export function Content() {
                         4
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Les deux choisissent en même temps</p>
+                        <p className="font-semibold text-gray-900">Les deux choisissent en même temps</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Chaque joueur tape Pierre, Feuille ou Ciseaux en privé. La révélation a lieu après que les deux ont confirmé -
                             impossible de tricher. Format meilleur des 3.
@@ -150,7 +150,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Envoyez le lien à votre partenaire maintenant.</p>
+                <p className="font-semibold text-gray-900 mb-1">Envoyez le lien à votre partenaire maintenant.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Pas de compte, pas d&apos;app - partagez juste le lien et décidez qui commande ce soir.
                 </p>
@@ -164,28 +164,28 @@ export function Content() {
                 Façons amusantes d&apos;utiliser PFC dans votre relation à distance
             </h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Le jeu des décisions</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Le jeu des décisions</h3>
             <p className="mb-4">
                 Utilisez le meilleur des 3 pour régler les petits débats qui n&apos;ont pas besoin de débat : qui envoie le premier message
                 demain, qui choisit le film du rendez-vous virtuel, qui réserve les billets pour la prochaine visite. C&apos;est plus
                 amusant que &ldquo;c&apos;est toi qui décides&rdquo; et élimine complètement le loop &ldquo;non, toi tu décides&rdquo;.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">L&apos;édition défis</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">L&apos;édition défis</h3>
             <p className="mb-4">
                 Chaque manche a un enjeu : le perdant partage une photo gênante, danse de façon ridicule devant la caméra ou envoie un vrai
                 compliment. Une partie de 3 manches devient 15 minutes de divertissement. Fonctionne mieux tard le soir quand quelqu&apos;un
                 demande continuellement des revanches.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Le classement cumulé</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Le classement cumulé</h3>
             <p className="mb-4">
                 Tenez un décompte sur plusieurs sessions. Après 10 manches ou 2 semaines, celui avec moins de victoires doit quelque chose -
                 une lettre écrite à la main, un colis surprise, organiser le prochain rendez-vous en entier. Le classement vous donne un
                 sujet de conversation : &ldquo;tu es devant uniquement grâce à cette manche hasardeuse de mardi.&rdquo;
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">L&apos;échauffement avant le rendez-vous</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">L&apos;échauffement avant le rendez-vous</h3>
             <p className="mb-4">
                 Avant votre soirée virtuelle, jouez le meilleur des 3 pour décider qui choisit l&apos;activité. Ça vous met tous les deux de
                 bonne humeur avant que le vrai rendez-vous commence - et qui perd ne peut pas se plaindre du choix après.
@@ -194,7 +194,7 @@ export function Content() {
             {/* Section 5 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Fonctionne-t-il sur n&apos;importe quel appareil ?</h2>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-700 font-medium mb-1">
+                <p className="text-sm text-gray-600 font-medium mb-1">
                     Fonctionne sur n&apos;importe quel appareil - pas d&apos;app, pas de compte, juste un lien.
                 </p>
                 <p className="text-sm text-gray-600">
@@ -223,44 +223,44 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Questions fréquentes</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Peut-on jouer à pierre feuille ciseaux à longue distance ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Peut-on jouer à pierre feuille ciseaux à longue distance ?</h3>
+                    <p className="text-gray-600">
                         Oui. Un partenaire crée une salle et envoie le lien. L&apos;autre l&apos;ouvre depuis n&apos;importe quel appareil,
                         n&apos;importe où. Les deux choisissent en privé et le résultat se révèle en même temps. Pas d&apos;app, pas de
                         compte.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Comment jouer équitablement en visio ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Comment jouer équitablement en visio ?</h3>
+                    <p className="text-gray-600">
                         Compter jusqu&apos;à trois devant la caméra ne fonctionne pas - le délai réseau fait qu&apos;un joueur voit le coup
                         de l&apos;autre avant. Avec un jeu dans le navigateur, les deux coups sont verrouillés avant que quiconque voie le
                         résultat.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Avons-nous besoin d&apos;un compte ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Avons-nous besoin d&apos;un compte ?</h3>
+                    <p className="text-gray-600">
                         Non. Pas d&apos;e-mail, pas de mot de passe, pas de compte. Ouvrez le lien et jouez.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Et si nous sommes dans des pays différents ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Et si nous sommes dans des pays différents ?</h3>
+                    <p className="text-gray-600">
                         Fonctionne depuis n&apos;importe où avec internet - n&apos;importe quel pays, n&apos;importe quel fuseau horaire,
                         n&apos;importe quel appareil.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Peut-on jouer plus d&apos;une manche ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Peut-on jouer plus d&apos;une manche ?</h3>
+                    <p className="text-gray-600">
                         Oui - chaque session est meilleur des 3. Jouez autant de sessions que vous voulez et tenez votre propre score
                         cumulé.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Quels jeux gratuits fonctionnent sans télécharger ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Quels jeux gratuits fonctionnent sans télécharger ?</h3>
+                    <p className="text-gray-600">
                         PFC est l&apos;option la plus rapide - ouvrez le navigateur, créez une salle et partagez le lien. Pas de
                         téléchargement, pas de compte, fonctionne sur n&apos;importe quel téléphone ou ordinateur.
                     </p>
@@ -269,8 +269,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Prêts à jouer ?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Prêts à jouer ?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Envoyez le lien à votre partenaire - pas de compte, pas d&apos;app, juste une partie. Décidez les plans du soir en une
                     manche.
                 </p>

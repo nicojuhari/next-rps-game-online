@@ -21,8 +21,8 @@ const WaitingPlayerTwo = () => {
     return (
         <div className="my-6 text-center bg-white p-6 rounded-xl border space-y-5">
             <div className="space-y-1">
-                <div className="text-base font-semibold text-gray-800">{t("roomCreated")}</div>
-                <div className="text-sm text-gray-500">{t("sharePrompt")}</div>
+                <div className="text-base font-semibold text-gray-900">{t("roomCreated")}</div>
+                <div className="text-sm text-gray-400">{t("sharePrompt")}</div>
             </div>
 
             {/* Pulsing waiting indicator */}
@@ -34,12 +34,12 @@ const WaitingPlayerTwo = () => {
 
             {/* URL display + copy */}
             <div className="flex items-center gap-2 bg-gray-50 border rounded-lg px-3 py-2 text-left">
-                <span className="flex-1 text-xs text-gray-500 truncate font-mono">{url}</span>
+                <span className="flex-1 text-xs text-gray-400 truncate font-mono">{url}</span>
                 <button
                     onClick={copyToClipboard}
                     title={t("copyLink")}
                     className="shrink-0 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md transition-all cursor-pointer
-                        bg-white border text-gray-600 hover:text-gray-800"
+                        bg-white border text-gray-600 hover:text-gray-900"
                 >
                     {copied ? (
                         <>

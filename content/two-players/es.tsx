@@ -38,26 +38,26 @@ export const faqItems: FaqItem[] = [
 export function HowToPlay() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Cómo Jugar Piedra Papel Tijeras Online con Amigos
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>Jugar con un amigo son tres pasos - sin cuenta ni aplicación:</p>
                 <ol className="pl-4 space-y-2 list-decimal">
                     <li>
-                        <span className="font-semibold text-gray-700">Crea una sala privada</span> - haz clic en &ldquo;Crear una
+                        <span className="font-semibold text-gray-600">Crea una sala privada</span> - haz clic en &ldquo;Crear una
                         Partida&rdquo; arriba o en la página de inicio. Obtendrás un enlace privado de inmediato.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Comparte el enlace</span> - envíaselo a tu amigo por cualquier
+                        <span className="font-semibold text-gray-600">Comparte el enlace</span> - envíaselo a tu amigo por cualquier
                         aplicación de mensajería. Funciona en cualquier dispositivo.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Juega</span> - ambos jugadores eligen Piedra, Papel o Tijeras. El
+                        <span className="font-semibold text-gray-600">Juega</span> - ambos jugadores eligen Piedra, Papel o Tijeras. El
                         mejor de 3 rondas decide al ganador.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Reclama tu certificado</span> - gana más partidas que tu oponente y
+                        <span className="font-semibold text-gray-600">Reclama tu certificado</span> - gana más partidas que tu oponente y
                         obtén un certificado de ganador personalizado. Descárgalo o compártelo para presumir.
                     </li>
                 </ol>
@@ -69,7 +69,7 @@ export function HowToPlay() {
 export function HowItWorks() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Piedra Papel Tijeras 1v1 - Cómo Funciona
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -92,7 +92,7 @@ export function HowItWorks() {
 export function WhySettle() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 ¿Por Qué Decidirlo con Piedra Papel Tijeras?
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -117,12 +117,12 @@ export function WhySettle() {
 export function UseCases() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Piedra Papel Tijeras Funciona en Más Situaciones de las que Crees
             </h2>
             <div className="space-y-4 text-sm text-gray-600">
                 <div>
-                    <p className="font-semibold text-gray-700">Reuniones Virtuales y Rompehielos</p>
+                    <p className="font-semibold text-gray-600">Reuniones Virtuales y Rompehielos</p>
                     <p className="mt-1">
                         ¿Necesitas un rompehielos de 60 segundos para tu videollamada? PPT funciona en cualquier dispositivo, no requiere
                         configuración y hace reír a todos en menos de un minuto.{" "}
@@ -132,7 +132,7 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Parejas y Amigos a Larga Distancia</p>
+                    <p className="font-semibold text-gray-600">Parejas y Amigos a Larga Distancia</p>
                     <p className="mt-1">
                         Cuando decidís algo juntos desde distintas ciudades, un enlace compartido supera contar hasta tres en videollamada.{" "}
                         <Link href="/blog/rock-paper-scissors-long-distance-couples" className="text-blue-600 hover:underline">
@@ -141,13 +141,13 @@ export function UseCases() {
                     </p>
                 </div>
                 <div>
-                    <p className="font-semibold text-gray-700">Resolver Cualquier Decisión</p>
+                    <p className="font-semibold text-gray-600">Resolver Cualquier Decisión</p>
                     <p className="mt-1">
                         ¿Quién elige el restaurante? ¿Quién va primero? ¿Quién llama a los padres? Ambos jugadores tienen la misma
                         oportunidad y el resultado es instantáneo y justo.
                     </p>
                 </div>
-                <div className="pt-3 border-t border-gray-100 text-gray-500">
+                <div className="pt-3 border-t border-gray-100 text-gray-400">
                     ¿No estás listo para desafiar a alguien?{" "}
                     <Link href="/" className="text-blue-600 hover:underline font-medium">
                         Practica solo contra el ordenador →
@@ -161,11 +161,11 @@ export function UseCases() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Preguntas Frecuentes</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Preguntas Frecuentes</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

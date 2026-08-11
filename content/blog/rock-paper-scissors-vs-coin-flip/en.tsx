@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 You need to settle something between two people. The options on the table: flip a coin or play rock paper scissors. Both
                 feel fair. Both are fast. So which one actually is fairer - and does it matter? Here&apos;s what the math, psychology, and
                 game theory say.
@@ -50,7 +50,7 @@ export function Content() {
 
             {/* Snippet-ready answer */}
             <div className="bg-gray-50 border-l-4 border-blue-400 px-5 py-4 mb-8 rounded-r-lg">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-600">
                     <strong>Short answer:</strong> Both are 50/50 in base probability. Rock paper scissors adds player agency, reduces
                     variance with best-of-3, and - when played online with simultaneous reveal - is more cheat-resistant than texting your
                     move. A coin flip is faster and closer to true random. Neither is "wrong." RPS is more engaging; coin flip is more
@@ -84,19 +84,19 @@ export function Content() {
             <p className="mb-4">But in practice, RPS has several advantages over a coin flip for settling disputes:</p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Agency:</strong> both players make an active choice. Even if the outcome is random, it
+                    <strong className="text-gray-900">Agency:</strong> both players make an active choice. Even if the outcome is random, it
                     doesn&apos;t feel arbitrary - you played for it.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Lower variance:</strong> best-of-3 format means the result is more stable than a
+                    <strong className="text-gray-900">Lower variance:</strong> best-of-3 format means the result is more stable than a
                     single coin flip. One coin flip can go either way; best-of-3 RPS requires winning 2 out of 3 rounds.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Simultaneous reveal:</strong> when played correctly, neither player can see the
+                    <strong className="text-gray-900">Simultaneous reveal:</strong> when played correctly, neither player can see the
                     other&apos;s move before committing. No one can claim they &ldquo;would have picked differently&rdquo;.
                 </li>
                 <li>
-                    <strong className="text-gray-800">More satisfying:</strong> the losing party chose their move - they can&apos;t blame
+                    <strong className="text-gray-900">More satisfying:</strong> the losing party chose their move - they can&apos;t blame
                     the physics of a coin. This makes the outcome easier to accept.
                 </li>
             </ul>
@@ -114,57 +114,57 @@ export function Content() {
             <div className="overflow-x-auto mb-6">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Factor</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Coin Flip</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Rock Paper Scissors</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Factor</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Coin Flip</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Rock Paper Scissors</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Base probability</td>
-                            <td className="p-3 border border-gray-200">50/50</td>
-                            <td className="p-3 border border-gray-200">50/50</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Base probability</td>
+                            <td className="p-3 border-b border-gray-200">50/50</td>
+                            <td className="p-3 border-b border-gray-200">50/50</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Player agency</td>
-                            <td className="p-3 border border-gray-200">None</td>
-                            <td className="p-3 border border-gray-200">High</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Player agency</td>
+                            <td className="p-3 border-b border-gray-200">None</td>
+                            <td className="p-3 border-b border-gray-200">High</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Variance per decision</td>
-                            <td className="p-3 border border-gray-200">Single flip</td>
-                            <td className="p-3 border border-gray-200">Best-of-3 (lower variance)</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Variance per decision</td>
+                            <td className="p-3 border-b border-gray-200">Single flip</td>
+                            <td className="p-3 border-b border-gray-200">Best-of-3 (lower variance)</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Skill component</td>
-                            <td className="p-3 border border-gray-200">None</td>
-                            <td className="p-3 border border-gray-200">Small (vs humans)</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Skill component</td>
+                            <td className="p-3 border-b border-gray-200">None</td>
+                            <td className="p-3 border-b border-gray-200">Small (vs humans)</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Cheating risk (in person)</td>
-                            <td className="p-3 border border-gray-200">Low</td>
-                            <td className="p-3 border border-gray-200">Low (simultaneous reveal)</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Cheating risk (in person)</td>
+                            <td className="p-3 border-b border-gray-200">Low</td>
+                            <td className="p-3 border-b border-gray-200">Low (simultaneous reveal)</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Cheating risk (remote, texting)</td>
-                            <td className="p-3 border border-gray-200">Low</td>
-                            <td className="p-3 border border-gray-200 text-amber-700 font-medium">High - second to reveal can adjust</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Cheating risk (remote, texting)</td>
+                            <td className="p-3 border-b border-gray-200">Low</td>
+                            <td className="p-3 border-b border-gray-200 text-amber-700 font-medium">High - second to reveal can adjust</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Cheating risk (online, real-time)</td>
-                            <td className="p-3 border border-gray-200">N/A</td>
-                            <td className="p-3 border border-gray-200 text-green-700 font-medium">None - simultaneous reveal enforced</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Cheating risk (online, real-time)</td>
+                            <td className="p-3 border-b border-gray-200">N/A</td>
+                            <td className="p-3 border-b border-gray-200 text-green-700 font-medium">None - simultaneous reveal enforced</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Fun factor</td>
-                            <td className="p-3 border border-gray-200">Low</td>
-                            <td className="p-3 border border-gray-200">High</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Fun factor</td>
+                            <td className="p-3 border-b border-gray-200">Low</td>
+                            <td className="p-3 border-b border-gray-200">High</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200 font-medium text-gray-700">Time to complete</td>
-                            <td className="p-3 border border-gray-200">5 seconds</td>
-                            <td className="p-3 border border-gray-200">30-60 seconds</td>
+                            <td className="p-3 border-b border-gray-200 font-medium text-gray-600">Time to complete</td>
+                            <td className="p-3 border-b border-gray-200">5 seconds</td>
+                            <td className="p-3 border-b border-gray-200">30-60 seconds</td>
                         </tr>
                     </tbody>
                 </table>
@@ -172,7 +172,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Need to settle something right now?</p>
+                <p className="font-semibold text-gray-900 mb-1">Need to settle something right now?</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Share a link - both players pick simultaneously, result is instant. No account needed.
                 </p>
@@ -186,19 +186,19 @@ export function Content() {
             <p className="mb-4">A coin flip is the right call when:</p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">You need an instant answer</strong> - no time for a 3-round match, just need a result
+                    <strong className="text-gray-900">You need an instant answer</strong> - no time for a 3-round match, just need a result
                     in 5 seconds.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Both parties want zero agency</strong> - sometimes people genuinely don&apos;t want
+                    <strong className="text-gray-900">Both parties want zero agency</strong> - sometimes people genuinely don&apos;t want
                     the weight of having chosen. A coin flip removes that entirely.
                 </li>
                 <li>
-                    <strong className="text-gray-800">There&apos;s a skill gap</strong> - if one person knows RPS strategy and the other
+                    <strong className="text-gray-900">There&apos;s a skill gap</strong> - if one person knows RPS strategy and the other
                     doesn&apos;t, the game is no longer 50/50. A coin flip restores the level playing field.
                 </li>
                 <li>
-                    <strong className="text-gray-800">You&apos;re alone and reporting the result</strong> - a coin flip is easier to do solo
+                    <strong className="text-gray-900">You&apos;re alone and reporting the result</strong> - a coin flip is easier to do solo
                     and report honestly. RPS requires both parties present.
                 </li>
             </ul>
@@ -208,19 +208,19 @@ export function Content() {
             <p className="mb-4">RPS is the stronger choice when:</p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">You want the outcome to feel earned</strong> - both parties chose their move. The
+                    <strong className="text-gray-900">You want the outcome to feel earned</strong> - both parties chose their move. The
                     loser can&apos;t attribute the result to bad luck alone.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Variance matters</strong> - best-of-3 produces a more reliable outcome than a single
+                    <strong className="text-gray-900">Variance matters</strong> - best-of-3 produces a more reliable outcome than a single
                     flip. For decisions where one-flip randomness feels too arbitrary, RPS gives a better sample size.
                 </li>
                 <li>
-                    <strong className="text-gray-800">You want some drama</strong> - three rounds of buildup beats a single flip for
+                    <strong className="text-gray-900">You want some drama</strong> - three rounds of buildup beats a single flip for
                     engagement. There&apos;s a reason sports use best-of-7, not coin flips.
                 </li>
                 <li>
-                    <strong className="text-gray-800">You&apos;re doing it remotely</strong> - texting your RPS choice is broken (the second
+                    <strong className="text-gray-900">You&apos;re doing it remotely</strong> - texting your RPS choice is broken (the second
                     person to reveal can cheat). An online tool with simultaneous reveal fixes this. A coin flip doesn&apos;t have this
                     problem - but it also isn&apos;t any fun.
                 </li>
@@ -252,7 +252,7 @@ export function Content() {
                         1
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Open the 2-player game and create a room</p>
+                        <p className="font-semibold text-gray-900">Open the 2-player game and create a room</p>
                         <p className="text-sm text-gray-600 mt-0.5">No account needed - takes 5 seconds.</p>
                     </div>
                 </div>
@@ -261,7 +261,7 @@ export function Content() {
                         2
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Share the link</p>
+                        <p className="font-semibold text-gray-900">Share the link</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Send over text, WhatsApp, Discord - wherever. The other person opens it on any device.
                         </p>
@@ -272,7 +272,7 @@ export function Content() {
                         3
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Both players pick simultaneously</p>
+                        <p className="font-semibold text-gray-900">Both players pick simultaneously</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Each locks in their choice privately. The result reveals only after both have submitted.
                         </p>
@@ -283,7 +283,7 @@ export function Content() {
                         4
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Winner wins, dispute settled</p>
+                        <p className="font-semibold text-gray-900">Winner wins, dispute settled</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Best-of-3 format. No arguments about who revealed first - neither could have.
                         </p>
@@ -310,43 +310,43 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Frequently Asked Questions</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Is rock paper scissors truly 50/50?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Is rock paper scissors truly 50/50?</h3>
+                    <p className="text-gray-600">
                         Against a random opponent, yes. Against a human, there&apos;s a small skill component - people have non-random
                         tendencies. This doesn&apos;t make it less fair; it makes it more interesting.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Is a coin flip more random than rock paper scissors?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Is a coin flip more random than rock paper scissors?</h3>
+                    <p className="text-gray-600">
                         A physical coin flip is closer to true random. But RPS best-of-3 reduces variance more than a single coin flip, so
                         for settling disputes it produces a more stable outcome.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Can you cheat at online rock paper scissors?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Can you cheat at online rock paper scissors?</h3>
+                    <p className="text-gray-600">
                         Not with a proper simultaneous-reveal system. Both picks are locked in before either player sees the result -
                         there&apos;s no way to adjust your choice after seeing the other person&apos;s.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What if both players know RPS strategy?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What if both players know RPS strategy?</h3>
+                    <p className="text-gray-600">
                         Then it&apos;s a skill game rather than a luck game - which most people find more satisfying. If one player has
                         significantly more experience, use a coin flip instead to keep it 50/50.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What is a fair way to decide between two people?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What is a fair way to decide between two people?</h3>
+                    <p className="text-gray-600">
                         Both a coin flip and RPS are statistically fair (50/50). RPS adds agency and drama; a coin flip is faster and purely
                         random. For remote decisions, online RPS with simultaneous reveal is the most cheat-resistant option.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">How do you fairly settle an argument online?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">How do you fairly settle an argument online?</h3>
+                    <p className="text-gray-600">
                         Use an online RPS game with simultaneous reveal - one player creates a room, shares the link, both pick at the same
                         time. This avoids the texting problem where the second to reveal can see the first player&apos;s move and adjust.
                     </p>
@@ -355,8 +355,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Next time you need to decide something, skip the coin flip.</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Next time you need to decide something, skip the coin flip.</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Challenge the other person to a best-of-3 - it only takes 60 seconds and actually feels like you played for it.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

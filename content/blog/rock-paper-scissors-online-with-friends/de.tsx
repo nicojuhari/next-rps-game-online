@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Du und ein Freund müsst etwas entscheiden. Ihr seid nicht im selben Raum. Per Nachricht &ldquo;Schere Stein Papier
                 los!&rdquo; hin- und herzuschreiben funktioniert nicht - einer sieht immer die Wahl des anderen, bevor er sich festgelegt
                 hat. Es gibt einen besseren Weg: Ein Echtzeit-Spiel mit simultaner Enthüllung, ohne Account, startbereit in unter 60
@@ -51,7 +51,7 @@ export function Content() {
 
             {/* Snippet-ready answer */}
             <div className="bg-gray-50 border-l-4 border-blue-400 px-5 py-4 mb-8 rounded-r-lg">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-600">
                     <strong>Kurze Antwort:</strong> Um Schere Stein Papier online mit einem Freund zu spielen - öffne das 2-Spieler-Spiel,
                     teile den einzigartigen Raumlink mit deinem Freund, und beide wählen gleichzeitig. Das Ergebnis wird simultan enthüllt.
                     Kein Account oder Download nötig.
@@ -77,7 +77,7 @@ export function Content() {
                 Schere Stein Papier online mit Freunden spielen - Schritt für Schritt
             </h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Schritt 1 - Öffne das 2-Spieler-Spiel</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Schritt 1 - Öffne das 2-Spieler-Spiel</h3>
             <p className="mb-4">
                 Gehe zum{" "}
                 <Link href="/two-players" className="text-blue-600 hover:underline">
@@ -87,21 +87,21 @@ export function Content() {
                 - Desktop, Handy, Tablet. Du bist in etwa fünf Sekunden im Spielraum.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Schritt 2 - Teile den Link mit deinem Freund</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Schritt 2 - Teile den Link mit deinem Freund</h3>
             <p className="mb-4">
                 Wenn du einen Spielraum öffnest, erhältst du eine einzigartige URL. Kopiere sie und schicke sie deinem Freund - per SMS,
                 WhatsApp, Discord, E-Mail, was auch immer ihr nutzt. Er öffnet sie auf seinem Gerät, von überall auf der Welt, und ihr seid
                 verbunden. Kein geteiltes Passwort, kein Raumcode zum Koordinieren.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Schritt 3 - Beide wählen gleichzeitig</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Schritt 3 - Beide wählen gleichzeitig</h3>
             <p className="mb-4">
                 Jeder Spieler sieht dieselben drei Optionen: Stein, Papier, Schere. Beide bestätigen ihre Wahl privat - keiner kann die des
                 anderen sehen, bis beide abgestimmt haben. Kein Countdown zum Koordinieren, kein Vertrauen nötig. Das System erzwingt die
                 simultane Enthüllung.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Schritt 4 - Erfahrt, wer gewonnen hat</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Schritt 4 - Erfahrt, wer gewonnen hat</h3>
             <p className="mb-4">
                 Sobald beide gewählt haben, steht das Ergebnis sofort fest. Ihr spielt Best of 3 - wer zuerst 2 Runden gewinnt, gewinnt das
                 Spiel. Der Punktestand aktualisiert sich in Echtzeit. Kein manuelles Mitschreiben, kein &ldquo;Warte mal, wie war der
@@ -110,7 +110,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Bereit, jetzt zu spielen?</p>
+                <p className="font-semibold text-gray-900 mb-1">Bereit, jetzt zu spielen?</p>
                 <p className="text-sm text-gray-600 mb-4">Link teilen - beide wählen gleichzeitig, Ergebnis sofort. Kein Account nötig.</p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">
                     2-Spieler-Spiel starten →
@@ -182,36 +182,36 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Häufig gestellte Fragen</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Muss ich einen Account erstellen, um zu spielen?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Muss ich einen Account erstellen, um zu spielen?</h3>
+                    <p className="text-gray-600">
                         Nein. Das Spiel ist völlig anonym - keine E-Mail, kein Passwort, kein Profil. Einfach den Link öffnen und
                         losspielen.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Wie lade ich meinen Freund ein?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Wie lade ich meinen Freund ein?</h3>
+                    <p className="text-gray-600">
                         Öffne das 2-Spieler-Spiel, kopiere den einzigartigen Raumlink und schicke ihn wie gewohnt - SMS, WhatsApp, Discord,
                         E-Mail. Sobald er den Link öffnet, seid ihr verbunden.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Ist es kostenlos?</h3>
-                    <p className="text-gray-600 text-sm">Ja, immer kostenlos. Kein Abo, keine In-App-Käufe.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Ist es kostenlos?</h3>
+                    <p className="text-gray-600">Ja, immer kostenlos. Kein Abo, keine In-App-Käufe.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Wie viele Runden dauert ein Spiel?</h3>
-                    <p className="text-gray-600 text-sm">Best of 3. Wer zuerst 2 Runden gewinnt, gewinnt das Spiel.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Wie viele Runden dauert ein Spiel?</h3>
+                    <p className="text-gray-600">Best of 3. Wer zuerst 2 Runden gewinnt, gewinnt das Spiel.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Kann ich auf dem Handy spielen?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Kann ich auf dem Handy spielen?</h3>
+                    <p className="text-gray-600">
                         Ja. Das Spiel läuft in jedem mobilen Browser auf iOS und Android - kein App-Download erforderlich.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Was passiert, wenn ich während des Spiels die Verbindung verliere?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Was passiert, wenn ich während des Spiels die Verbindung verliere?</h3>
+                    <p className="text-gray-600">
                         Der Spielraum bleibt kurz erhalten. Wenn ihr euch beide wieder mit demselben Link verbindet, wird das Spiel dort
                         fortgesetzt, wo es aufgehört hat.
                     </p>
@@ -220,8 +220,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Bereit, es zu entscheiden?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Bereit, es zu entscheiden?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Starte ein 2-Spieler-Spiel, teile den Link und spielt in unter 60 Sekunden. Kein Account nötig.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

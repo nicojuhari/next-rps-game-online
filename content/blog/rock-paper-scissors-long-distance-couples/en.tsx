@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 You&apos;re on a call with your partner. The moment calls for a friendly competition. Rock paper scissors is perfect -
                 except counting &ldquo;1-2-3&rdquo; on video never works fairly. Network lag means someone always sees the other&apos;s hand
                 a half-second early. Here&apos;s how to do it right: instant, fair, from anywhere, no app needed.
@@ -56,23 +56,23 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Instant:</strong> no app, no signup, no waiting. One partner creates a room, shares a
+                    <strong className="text-gray-900">Instant:</strong> no app, no signup, no waiting. One partner creates a room, shares a
                     link, you&apos;re playing in under 60 seconds.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Zero pressure:</strong> if you lose at 11pm you can just blame bad luck and demand a
+                    <strong className="text-gray-900">Zero pressure:</strong> if you lose at 11pm you can just blame bad luck and demand a
                     rematch.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Actually useful:</strong> use it to decide who picks tonight&apos;s movie, who texts
+                    <strong className="text-gray-900">Actually useful:</strong> use it to decide who picks tonight&apos;s movie, who texts
                     first tomorrow, or who plans the next visit.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Slightly competitive:</strong> creates a moment of drama and a clear winner - no
+                    <strong className="text-gray-900">Slightly competitive:</strong> creates a moment of drama and a clear winner - no
                     ambiguous &ldquo;you decide&rdquo; situation.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Works on any device:</strong> phone, tablet, laptop - your partner doesn&apos;t need
+                    <strong className="text-gray-900">Works on any device:</strong> phone, tablet, laptop - your partner doesn&apos;t need
                     to install anything.
                 </li>
             </ul>
@@ -99,7 +99,7 @@ export function Content() {
                         1
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Open the 2-player game and create a room</p>
+                        <p className="font-semibold text-gray-900">Open the 2-player game and create a room</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Takes 5 seconds. No account needed - just click &ldquo;Create game&rdquo;.
                         </p>
@@ -110,7 +110,7 @@ export function Content() {
                         2
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Send the link to your partner</p>
+                        <p className="font-semibold text-gray-900">Send the link to your partner</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Copy it from the browser and send over WhatsApp, iMessage, Discord, or wherever you chat.
                         </p>
@@ -121,7 +121,7 @@ export function Content() {
                         3
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Partner opens it on their device</p>
+                        <p className="font-semibold text-gray-900">Partner opens it on their device</p>
                         <p className="text-sm text-gray-600 mt-0.5">Works on any phone, tablet, or laptop - any browser, any country.</p>
                     </div>
                 </div>
@@ -130,7 +130,7 @@ export function Content() {
                         4
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Both pick simultaneously</p>
+                        <p className="font-semibold text-gray-900">Both pick simultaneously</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Each player taps Rock, Paper, or Scissors privately. The reveal happens after both have committed - no peeking
                             possible. Best-of-3 format.
@@ -141,7 +141,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Send your partner the link right now.</p>
+                <p className="font-semibold text-gray-900 mb-1">Send your partner the link right now.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     No account, no app - just share the link and settle who&apos;s in charge of tonight&apos;s plans.
                 </p>
@@ -155,28 +155,28 @@ export function Content() {
                 Fun Ways to Use Rock Paper Scissors in Your Long-Distance Relationship
             </h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">The Decision Game</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">The Decision Game</h3>
             <p className="mb-4">
                 Use best-of-3 to settle the small debates that don&apos;t need a debate: who texts first tomorrow, who picks the movie for
                 your virtual date night, who books flights for the next visit. It&apos;s more fun than &ldquo;you decide&rdquo; and removes
                 the &ldquo;no you decide&rdquo; loop entirely.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">The Dare Edition</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">The Dare Edition</h3>
             <p className="mb-4">
                 Each round has a stake: loser shares an embarrassing photo, does a silly dance on camera, or sends a genuine compliment. A
                 3-round game turns into 15 minutes of entertainment. Works best late-night when you both have nothing else to do and someone
                 keeps demanding rematches.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">The Running Scoreboard</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">The Running Scoreboard</h3>
             <p className="mb-4">
                 Keep a tally across multiple sessions. After 10 rounds or 2 weeks, the one with fewer wins owes something - a handwritten
                 letter, a care package, planning the next date in full. The scoreboard gives you something to reference in conversation:
                 &ldquo;you&apos;re only ahead because of that fluke round on Tuesday.&rdquo;
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">The Pre-Date Warmup</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">The Pre-Date Warmup</h3>
             <p className="mb-4">
                 Before your virtual date night, play best-of-3 to decide who picks the activity - movie, game, show, or topic. It gets you
                 both laughing and present before the actual date starts, and whoever loses can&apos;t complain about the choice later.
@@ -185,7 +185,7 @@ export function Content() {
             {/* Section 5 - Device info */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Can You Play on Any Device?</h2>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-700 font-medium mb-1">Works on any device - no app, no account, just a link.</p>
+                <p className="text-sm text-gray-600 font-medium mb-1">Works on any device - no app, no account, just a link.</p>
                 <p className="text-sm text-gray-600">
                     iOS and Android phones, any laptop, any tablet, any browser. Your partner doesn&apos;t need to install anything or
                     create an account. The link works worldwide, regardless of which country either of you is in.
@@ -212,38 +212,38 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Frequently Asked Questions</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Can you play rock paper scissors long distance?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Can you play rock paper scissors long distance?</h3>
+                    <p className="text-gray-600">
                         Yes. One partner creates a game room and sends the link. The other opens it from any device, anywhere. Both pick
                         privately and the result reveals at the same time. No app, no account needed.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">How do you play rock paper scissors on a video call fairly?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">How do you play rock paper scissors on a video call fairly?</h3>
+                    <p className="text-gray-600">
                         Counting to three on camera doesn&apos;t work - lag means one player sees the other&apos;s move early. Use a
                         browser-based game instead: both moves are locked in before either player sees the result.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Do we both need accounts to play?</h3>
-                    <p className="text-gray-600 text-sm">No. No email, no password, no account. Open the link and play.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Do we both need accounts to play?</h3>
+                    <p className="text-gray-600">No. No email, no password, no account. Open the link and play.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What if we&apos;re in different countries?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What if we&apos;re in different countries?</h3>
+                    <p className="text-gray-600">
                         Works from anywhere with an internet connection - any country, any time zone, any device.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Is there a way to play more than one round?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Is there a way to play more than one round?</h3>
+                    <p className="text-gray-600">
                         Yes - each session is best-of-3. Play as many sessions as you want and keep your own running score across the week.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">What free games can two people play online without downloading?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">What free games can two people play online without downloading?</h3>
+                    <p className="text-gray-600">
                         Rock Paper Scissors is the fastest option - open a browser, create a room, share the link. No download, no account,
                         plays on any phone or laptop.
                     </p>
@@ -252,8 +252,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Ready to play?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Ready to play?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Send your partner the link - no account, no app, just a game. Settle tonight&apos;s plans in one round.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { getBlogPost, getBlogStaticParams } from "@/content/blog";
 import { createMetadata } from "@/lib/metadata";
@@ -10,6 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
     const { locale, slug } = await params;
+    setRequestLocale(locale);
     const post = await getBlogPost(slug, locale as Locale);
     if (!post) return {};
     return createMetadata({
@@ -22,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function BlogPostPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
     const { locale, slug } = await params;
+    setRequestLocale(locale);
     const post = await getBlogPost(slug, locale as Locale);
     if (!post) notFound();
 
@@ -69,7 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                 <nav className="text-sm text-gray-400 mb-6">
                     <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
                     <span className="mx-2">/</span>
-                    <span className="text-gray-500">Blog</span>
+                    <span className="text-gray-400">Blog</span>
                 </nav>
 
                 {/* Header */}

@@ -48,7 +48,7 @@ export const faqItems: FaqItem[] = [
 export function Strategy() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Cómo Ganar en Piedra Papel Tijeras
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -56,31 +56,31 @@ export function Strategy() {
                 <p>
                     Un estudio de la Universidad de Zhejiang analizó cientos de miles de partidas y descubrió que los jugadores humanos
                     siguen patrones predecibles. Encontraron una estrategia llamada{" "}
-                    <strong className="text-gray-700">Gana-Mantén, Pierde-Cambia</strong>:
+                    <strong className="text-gray-600">Gana-Mantén, Pierde-Cambia</strong>:
                 </p>
                 <ul className="list-disc space-y-2 pl-4">
                     <li>
-                        <span className="font-semibold text-gray-700">Si ganas:</span> Tu oponente probablemente cambiará de movimiento.
+                        <span className="font-semibold text-gray-600">Si ganas:</span> Tu oponente probablemente cambiará de movimiento.
                         <br />
-                        <span className="italic text-gray-500">Contramovimiento:</span> Juega el movimiento que acaban de hacer - vence lo
+                        <span className="italic text-gray-400">Contramovimiento:</span> Juega el movimiento que acaban de hacer - vence lo
                         que intentarán a continuación.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Si pierdes:</span> Tu oponente probablemente repetirá su movimiento
+                        <span className="font-semibold text-gray-600">Si pierdes:</span> Tu oponente probablemente repetirá su movimiento
                         ganador porque se siente &ldquo;con suerte&rdquo;.
                         <br />
-                        <span className="italic text-gray-500">Contramovimiento:</span> Juega el movimiento que vence lo que acaban de
+                        <span className="italic text-gray-400">Contramovimiento:</span> Juega el movimiento que vence lo que acaban de
                         lanzar.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Estrategia del Primer Lanzamiento:</span> Los principiantes,
+                        <span className="font-semibold text-gray-600">Estrategia del Primer Lanzamiento:</span> Los principiantes,
                         especialmente los jugadores masculinos, abren mayoritariamente con Piedra porque se siente fuerte.
                         <br />
-                        <span className="italic text-gray-500">Consejo:</span> Contra un oponente nuevo, lanza Papel primero.
+                        <span className="italic text-gray-400">Consejo:</span> Contra un oponente nuevo, lanza Papel primero.
                     </li>
                 </ul>
                 <p>
-                    <span className="font-semibold text-gray-700">¿Piedra Papel Tijeras es suerte o habilidad?</span> Ambos. Un jugador
+                    <span className="font-semibold text-gray-600">¿Piedra Papel Tijeras es suerte o habilidad?</span> Ambos. Un jugador
                     puramente aleatorio gana el 33,3% del tiempo. Pero las elecciones humanas no son aleatorias, por eso detectar patrones
                     te da una ventaja real.
                 </p>
@@ -101,7 +101,7 @@ export function Strategy() {
 export function Rules() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">Reglas de Piedra Papel Tijeras</h2>
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">Reglas de Piedra Papel Tijeras</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>
                     Piedra Papel Tijeras se juega entre dos personas. Cada jugador revela uno de tres gestos al mismo tiempo, y el ganador
@@ -109,17 +109,17 @@ export function Rules() {
                 </p>
                 <ul className="pl-4 space-y-2 list-disc">
                     <li>
-                        <span className="font-semibold text-gray-700">Piedra aplasta Tijeras</span> - ✊ → ✂️
+                        <span className="font-semibold text-gray-600">Piedra aplasta Tijeras</span> - ✊ → ✂️
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Tijeras corta Papel</span> - ✂️ → 📄
+                        <span className="font-semibold text-gray-600">Tijeras corta Papel</span> - ✂️ → 📄
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Papel cubre Piedra</span> - 📄 → ✊
+                        <span className="font-semibold text-gray-600">Papel cubre Piedra</span> - 📄 → ✊
                     </li>
                 </ul>
                 <p>Si ambos jugadores hacen el mismo gesto, la ronda es un empate.</p>
-                <p className="font-semibold text-gray-700">¿Cómo funciona el mejor de 3?</p>
+                <p className="font-semibold text-gray-600">¿Cómo funciona el mejor de 3?</p>
                 <p>
                     Cada partida tiene 3 rondas. Ambos jugadores confirman todas sus elecciones antes de que se muestren los resultados,
                     para que ningún jugador pueda reaccionar al otro. El jugador que gane más rondas gana la partida. Si cada jugador gana
@@ -138,7 +138,7 @@ export function Rules() {
 export function Statistics() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Estadísticas de Piedra Papel Tijeras
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -148,12 +148,12 @@ export function Statistics() {
                 </p>
                 <p>
                     En la práctica, los humanos no lanzan aleatoriamente. Las investigaciones sugieren que la distribución real entre
-                    jugadores casuales es: <strong className="text-gray-700">Piedra ~35%, Papel ~35%, Tijeras ~30%</strong>. Tijeras se
+                    jugadores casuales es: <strong className="text-gray-600">Piedra ~35%, Papel ~35%, Tijeras ~30%</strong>. Tijeras se
                     lanza con menor frecuencia.
                 </p>
                 <p>
                     En 2005, una sola mano de Piedra Papel Tijeras decidió un contrato de subasta de{" "}
-                    <strong className="text-gray-700">17,8 millones de dólares</strong>. Las dos casas de subastas más famosas,
+                    <strong className="text-gray-600">17,8 millones de dólares</strong>. Las dos casas de subastas más famosas,
                     Christie&apos;s y Sotheby&apos;s, estaban en punto muerto por los derechos de venta de una valiosa colección de arte y
                     acordaron resolverlo con un juego.
                 </p>
@@ -177,14 +177,14 @@ export function Statistics() {
 export function History() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">¿Qué es Piedra Papel Tijeras?</h2>
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">¿Qué es Piedra Papel Tijeras?</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>
                     Piedra Papel Tijeras es un juego de manos jugado en todo el mundo, generalmente entre dos personas. Se usa comúnmente
                     como una forma rápida de tomar decisiones, pero también es un juego de leer a tu oponente.
                 </p>
                 <p>
-                    El juego se remonta a más de <strong className="text-gray-700">2.000 años a la Dinastía Han China</strong> (206 a.C. -
+                    El juego se remonta a más de <strong className="text-gray-600">2.000 años a la Dinastía Han China</strong> (206 a.C. -
                     220 d.C.), donde se llamaba <em>shoushiling</em> y usaba gestos que representaban una Rana, una Babosa y una Serpiente.
                 </p>
                 <p>
@@ -194,7 +194,7 @@ export function History() {
                     todos usando los mismos tres gestos.
                 </p>
                 <p>
-                    <strong className="text-gray-700">¿Sabías que?</strong> El 27 de agosto es oficialmente el Día Mundial de Piedra Papel
+                    <strong className="text-gray-600">¿Sabías que?</strong> El 27 de agosto es oficialmente el Día Mundial de Piedra Papel
                     Tijeras.
                 </p>
                 <p>
@@ -243,11 +243,11 @@ export function BlogLinks() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Preguntas Frecuentes</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Preguntas Frecuentes</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Pierre Feuille Ciseaux ressemble à un pile ou face. Mais des recherches de l&apos;Université de Zhejiang, du MIT Technology
                 Review et de psychologues comportementaux prouvent que non. Les êtres humains sont prévisibles - et une fois que vous
                 connaissez les schémas, vous pouvez les exploiter.
@@ -73,13 +73,13 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>
-                    <strong className="text-gray-800">Pierre : ~35%</strong> - le coup le plus joué, bien au-dessus des 33,3% attendus
+                    <strong className="text-gray-900">Pierre : ~35%</strong> - le coup le plus joué, bien au-dessus des 33,3% attendus
                 </li>
                 <li>
-                    <strong className="text-gray-800">Ciseaux : ~35%</strong> - presque à égalité avec Pierre
+                    <strong className="text-gray-900">Ciseaux : ~35%</strong> - presque à égalité avec Pierre
                 </li>
                 <li>
-                    <strong className="text-gray-800">Feuille : ~29,6%</strong> - le coup le moins joué
+                    <strong className="text-gray-900">Feuille : ~29,6%</strong> - le coup le moins joué
                 </li>
             </ul>
             <p className="mb-4">
@@ -97,14 +97,14 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Le Schéma Gagner-Rester, Perdre-Changer</h2>
             <p className="mb-4">
                 La découverte clé de l&apos;étude de Zhejiang était un schéma comportemental qu&apos;ils ont nommé{" "}
-                <strong className="text-gray-800">Gagner-Rester, Perdre-Changer</strong> :
+                <strong className="text-gray-900">Gagner-Rester, Perdre-Changer</strong> :
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Si un joueur gagne :</strong> il tend à répéter le coup qui vient de gagner
+                    <strong className="text-gray-900">Si un joueur gagne :</strong> il tend à répéter le coup qui vient de gagner
                 </li>
                 <li>
-                    <strong className="text-gray-800">Si un joueur perd :</strong> il tend à passer au coup suivant dans le sens horaire du
+                    <strong className="text-gray-900">Si un joueur perd :</strong> il tend à passer au coup suivant dans le sens horaire du
                     cycle : Pierre → Feuille → Ciseaux → Pierre
                 </li>
             </ul>
@@ -112,7 +112,7 @@ export function Content() {
                 Comment utiliser cela en pratique : après chaque manche, demandez-vous - mon adversaire vient-il de gagner ou de perdre ?
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 text-sm space-y-2">
-                <p className="font-semibold text-gray-800">
+                <p className="font-semibold text-gray-900">
                     S&apos;ils viennent de gagner (Gagner-Rester - attendez qu&apos;ils répètent) :
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
@@ -120,7 +120,7 @@ export function Content() {
                     <li>Gagné avec Feuille → attendez Feuille à nouveau → vous jouez Ciseaux</li>
                     <li>Gagné avec Ciseaux → attendez Ciseaux à nouveau → vous jouez Pierre</li>
                 </ul>
-                <p className="font-semibold text-gray-800 mt-3">
+                <p className="font-semibold text-gray-900 mt-3">
                     S&apos;ils viennent de perdre (Perdre-Changer - attendez le prochain coup du cycle) :
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
@@ -186,51 +186,51 @@ export function Content() {
             <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Tour</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Situation</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Coup</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Raison</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Tour</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Situation</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Coup</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Raison</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200">Tour 1</td>
-                            <td className="p-3 border border-gray-200">vs adversaire inconnu</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Feuille</td>
-                            <td className="p-3 border border-gray-200">Bat Pierre, l&apos;ouverture la plus courante</td>
+                            <td className="p-3 border-b border-gray-200">Tour 1</td>
+                            <td className="p-3 border-b border-gray-200">vs adversaire inconnu</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Feuille</td>
+                            <td className="p-3 border-b border-gray-200">Bat Pierre, l&apos;ouverture la plus courante</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Tour 1</td>
-                            <td className="p-3 border border-gray-200">vs joueur expérimenté</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Ciseaux</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Tour 1</td>
+                            <td className="p-3 border-b border-gray-200">vs joueur expérimenté</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Ciseaux</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Les experts attendent Feuille et contrent avec Ciseaux - alors vous les égalez
                             </td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Tour 2</td>
-                            <td className="p-3 border border-gray-200">L&apos;adversaire a gagné le Tour 1</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Contrer leur coup gagnant</td>
-                            <td className="p-3 border border-gray-200">Gagner-Rester : attendez qu&apos;ils répètent</td>
+                            <td className="p-3 border-b border-gray-200">Tour 2</td>
+                            <td className="p-3 border-b border-gray-200">L&apos;adversaire a gagné le Tour 1</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Contrer leur coup gagnant</td>
+                            <td className="p-3 border-b border-gray-200">Gagner-Rester : attendez qu&apos;ils répètent</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Tour 2</td>
-                            <td className="p-3 border border-gray-200">L&apos;adversaire a perdu le Tour 1</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Contrer leur prochain coup du cycle</td>
-                            <td className="p-3 border border-gray-200">Perdre-Changer : Pierre→Feuille, Feuille→Ciseaux, Ciseaux→Pierre</td>
+                            <td className="p-3 border-b border-gray-200">Tour 2</td>
+                            <td className="p-3 border-b border-gray-200">L&apos;adversaire a perdu le Tour 1</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Contrer leur prochain coup du cycle</td>
+                            <td className="p-3 border-b border-gray-200">Perdre-Changer : Pierre→Feuille, Feuille→Ciseaux, Ciseaux→Pierre</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Tour 3</td>
-                            <td className="p-3 border border-gray-200">L&apos;adversaire a joué le même coup deux fois</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Éliminer ce coup</td>
-                            <td className="p-3 border border-gray-200">Double lancer : ils ne le joueront pas une troisième fois</td>
+                            <td className="p-3 border-b border-gray-200">Tour 3</td>
+                            <td className="p-3 border-b border-gray-200">L&apos;adversaire a joué le même coup deux fois</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Éliminer ce coup</td>
+                            <td className="p-3 border-b border-gray-200">Double lancer : ils ne le joueront pas une troisième fois</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Tour 3</td>
-                            <td className="p-3 border border-gray-200">Doit gagner, pas de lecture claire</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Feuille</td>
-                            <td className="p-3 border border-gray-200">Coup statistiquement le plus fort sous pression</td>
+                            <td className="p-3 border-b border-gray-200">Tour 3</td>
+                            <td className="p-3 border-b border-gray-200">Doit gagner, pas de lecture claire</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Feuille</td>
+                            <td className="p-3 border-b border-gray-200">Coup statistiquement le plus fort sous pression</td>
                         </tr>
                     </tbody>
                 </table>
@@ -238,7 +238,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Mettez cette stratégie à l&apos;épreuve.</p>
+                <p className="font-semibold text-gray-900 mb-1">Mettez cette stratégie à l&apos;épreuve.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Défiez un ami - voyez s&apos;il peut lire vos schémas avant que vous lisiez les siens.
                 </p>
@@ -248,7 +248,7 @@ export function Content() {
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         S&apos;entraîner contre l&apos;Ordinateur
                     </Link>
@@ -281,48 +281,48 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Questions Fréquemment Posées</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">La feuille est-elle le meilleur coup à Pierre Feuille Ciseaux ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">La feuille est-elle le meilleur coup à Pierre Feuille Ciseaux ?</h3>
+                    <p className="text-gray-600">
                         Statistiquement, oui - la feuille bat la pierre, qui est le coup le plus courant avec environ 35% du temps. Mais
                         contre des joueurs expérimentés qui savent cela, les ciseaux sont le contre-jeu attendu, ce qui peut rendre pierre
                         plus sûr.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Qu&apos;est-ce que la stratégie gagner-rester, perdre-changer ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Qu&apos;est-ce que la stratégie gagner-rester, perdre-changer ?</h3>
+                    <p className="text-gray-600">
                         Un schéma comportemental dans lequel les gagnants tendent à répéter le coup qui vient de gagner, tandis que les
                         perdants passent au coup suivant dans le cycle (Pierre → Feuille → Ciseaux → Pierre). Confirmé par l&apos;Université
                         de Zhejiang en 2014 sur plus de 100 000 manches.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">La psychologie affecte-t-elle vraiment Pierre Feuille Ciseaux ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">La psychologie affecte-t-elle vraiment Pierre Feuille Ciseaux ?</h3>
+                    <p className="text-gray-600">
                         Oui. Plusieurs études évaluées par des pairs montrent que les humains s&apos;écartent significativement du jeu
                         aléatoire. Les gens s&apos;ancrent émotionnellement à des coups, réagissent de manière prévisible aux victoires et
                         aux défaites, et créent des schémas que des adversaires habiles peuvent lire.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Peut-on gagner à Pierre Feuille Ciseaux à chaque fois ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Peut-on gagner à Pierre Feuille Ciseaux à chaque fois ?</h3>
+                    <p className="text-gray-600">
                         Pas à chaque fois - mais constamment au-dessus de 33% contre des adversaires humains en lisant les schémas
                         comportementaux. Contre un vrai générateur de nombres aléatoires (comme le mode ordinateur de ce site), aucune
                         stratégie ne s&apos;applique.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Quel est le meilleur premier coup à Pierre Feuille Ciseaux ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Quel est le meilleur premier coup à Pierre Feuille Ciseaux ?</h3>
+                    <p className="text-gray-600">
                         Contre tout adversaire inconnu, Feuille est statistiquement la plus forte ouverture. Pierre est le coup initial le
                         plus fréquent - surtout chez les débutants et les joueurs masculins - donc Feuille offre le meilleur résultat
                         attendu au tour 1.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Pierre Feuille Ciseaux est-il vraiment aléatoire ?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Pierre Feuille Ciseaux est-il vraiment aléatoire ?</h3>
+                    <p className="text-gray-600">
                         Non quand des humains jouent. Des recherches de l&apos;Université de Zhejiang ont montré que les joueurs humains
                         suivent des schémas prévisibles selon qu&apos;ils viennent de gagner ou de perdre. Un ordinateur utilisant un
                         générateur de nombres aléatoires est véritablement aléatoire - les adversaires humains ne le sont pas.
@@ -332,8 +332,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Vous avez lu la stratégie.</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Vous avez lu la stratégie.</p>
+                <p className="text-sm text-gray-400 mb-5">
                     La seule façon de l&apos;affiner est de jouer contre quelqu&apos;un qui ne la connaît pas.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -342,7 +342,7 @@ export function Content() {
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         S&apos;entraîner contre l&apos;Ordinateur
                     </Link>

@@ -48,7 +48,7 @@ const TwoPlayersContent = () => {
     const renderGameSection = () => {
         if (!gameId) return <MainCTA />;
         if (loading) return <Image src="/loading.svg" loading="eager" alt="Loading" width={40} height={40} className="mx-auto my-24" />;
-        if (!gameData) return <p className="text-center text-gray-500 my-12">{t("gameNotFound")}</p>;
+        if (!gameData) return <p className="text-center text-gray-400 my-12">{t("gameNotFound")}</p>;
 
         const playerCount = Object.keys(gameData.players || {}).length;
         const hasJoined = !!gameData.players?.[playerId];

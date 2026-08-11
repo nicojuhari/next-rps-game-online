@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllBlogPostsMeta } from "@/content/blog";
 import { createMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -10,6 +10,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: "meta" });
     return createMetadata({
         locale,
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function BlogIndexPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const posts = await getAllBlogPostsMeta(locale as Locale);
 
     return (
@@ -29,11 +31,11 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
             <nav className="text-sm text-gray-400 mb-6">
                 <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
                 <span className="mx-2">/</span>
-                <span className="text-gray-500">Blog</span>
+                <span className="text-gray-400">Blog</span>
             </nav>
 
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-2">Blog</h1>
-            <p className="text-gray-500 mb-10">Rock Paper Scissors — strategy, rules, history, and tips.</p>
+            <p className="text-gray-400 mb-10">Rock Paper Scissors — strategy, rules, history, and tips.</p>
 
             <ul className="space-y-6">
                 {posts.map((post) => {
@@ -51,7 +53,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
                                 <h2 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 transition-colors mb-1">
                                     {post.title}
                                 </h2>
-                                <p className="text-sm text-gray-500 leading-relaxed mb-3">{post.description}</p>
+                                <p className="text-sm text-gray-400 leading-relaxed mb-3">{post.description}</p>
                                 <div className="flex items-center gap-3 text-xs text-gray-400">
                                     <time dateTime={post.publishedAt}>{date}</time>
                                     <span>·</span>

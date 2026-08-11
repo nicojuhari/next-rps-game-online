@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Du bist mit deinem Partner am Telefon. Der Moment ruft nach einem freundlichen Wettkampf. Schere Stein Papier ist perfekt -
                 außer dass das klassische &ldquo;1-2-3&rdquo; vor der Kamera nie fair funktioniert. Netzwerklatenz sorgt dafür, dass jemand
                 die Geste des anderen immer eine halbe Sekunde früher sieht. So geht es richtig: sofort, fair, von überall, ohne App.
@@ -56,23 +56,23 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Sofort:</strong> keine App, keine Anmeldung, kein Warten. Eine Person erstellt den
+                    <strong className="text-gray-900">Sofort:</strong> keine App, keine Anmeldung, kein Warten. Eine Person erstellt den
                     Raum, teilt den Link und in unter 60 Sekunden spielt ihr.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Kein Druck:</strong> wenn du um 23 Uhr verlierst, kannst du einfach Pech behaupten und
+                    <strong className="text-gray-900">Kein Druck:</strong> wenn du um 23 Uhr verlierst, kannst du einfach Pech behaupten und
                     eine Revanche fordern.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Wirklich nützlich:</strong> nutzt es, um zu entscheiden, wer den Film heute Abend
+                    <strong className="text-gray-900">Wirklich nützlich:</strong> nutzt es, um zu entscheiden, wer den Film heute Abend
                     wählt, wer morgen als Erstes schreibt, oder wer den nächsten Besuch plant.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Leicht kompetitiv:</strong> erzeugt einen Moment Spannung und einen klaren Gewinner -
+                    <strong className="text-gray-900">Leicht kompetitiv:</strong> erzeugt einen Moment Spannung und einen klaren Gewinner -
                     kein ambivalentes &ldquo;Du entscheidest&rdquo;.
                 </li>
                 <li>
-                    <strong className="text-gray-800">Funktioniert auf jedem Gerät:</strong> Handy, Tablet, Laptop - dein Partner muss
+                    <strong className="text-gray-900">Funktioniert auf jedem Gerät:</strong> Handy, Tablet, Laptop - dein Partner muss
                     nichts installieren.
                 </li>
             </ul>
@@ -99,7 +99,7 @@ export function Content() {
                         1
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">2-Spieler-Spiel öffnen und Raum erstellen</p>
+                        <p className="font-semibold text-gray-900">2-Spieler-Spiel öffnen und Raum erstellen</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Dauert 5 Sekunden. Kein Konto nötig - einfach auf &ldquo;Spiel erstellen&rdquo; klicken.
                         </p>
@@ -110,7 +110,7 @@ export function Content() {
                         2
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Link an deinen Partner schicken</p>
+                        <p className="font-semibold text-gray-900">Link an deinen Partner schicken</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Aus dem Browser kopieren und per WhatsApp, iMessage, Discord oder wo ihr chattet senden.
                         </p>
@@ -121,7 +121,7 @@ export function Content() {
                         3
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Partner öffnet es auf seinem Gerät</p>
+                        <p className="font-semibold text-gray-900">Partner öffnet es auf seinem Gerät</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Funktioniert auf jedem Handy, Tablet oder Laptop - jeder Browser, jedes Land.
                         </p>
@@ -132,7 +132,7 @@ export function Content() {
                         4
                     </span>
                     <div>
-                        <p className="font-semibold text-gray-800">Beide wählen gleichzeitig</p>
+                        <p className="font-semibold text-gray-900">Beide wählen gleichzeitig</p>
                         <p className="text-sm text-gray-600 mt-0.5">
                             Jeder tippt Stein, Papier oder Schere privat. Die Enthüllung findet statt, nachdem beide eingereicht haben -
                             kein Schummeln möglich. Best-of-3-Format.
@@ -143,7 +143,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Schick deinem Partner jetzt den Link.</p>
+                <p className="font-semibold text-gray-900 mb-1">Schick deinem Partner jetzt den Link.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Kein Konto, keine App - einfach den Link teilen und entscheiden, wer heute Abend die Pläne bestimmt.
                 </p>
@@ -155,28 +155,28 @@ export function Content() {
             {/* Section 4 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Lustige Wege, SSP in eurer Fernbeziehung einzusetzen</h2>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Das Entscheidungsspiel</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Das Entscheidungsspiel</h3>
             <p className="mb-4">
                 Nutzt Best-of-3, um kleine Debatten zu lösen, die keine Debatte brauchen: wer morgen als Erstes schreibt, wer den Film für
                 das virtuelle Date wählt, wer die Flüge für den nächsten Besuch bucht. Macht mehr Spaß als &ldquo;Du entscheidest&rdquo; und
                 beendet die &ldquo;Nein, du entscheidest&rdquo;-Schleife komplett.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Die Mutprobe-Edition</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Die Mutprobe-Edition</h3>
             <p className="mb-4">
                 Jede Runde hat einen Einsatz: Der Verlierer teilt ein peinliches Foto, tanzt albern vor der Kamera oder schickt ein echtes
                 Kompliment. Ein 3-Runden-Spiel wird zu 15 Minuten Unterhaltung. Funktioniert am besten spät abends, wenn jemand immer wieder
                 eine Revanche fordert.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Die laufende Bestenliste</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Die laufende Bestenliste</h3>
             <p className="mb-4">
                 Führt eine Zählung über mehrere Sessions. Nach 10 Runden oder 2 Wochen schuldet der mit weniger Siegen etwas - einen
                 handgeschriebenen Brief, ein Überraschungspaket, das komplette nächste Date planen. Die Bestenliste gibt euch
                 Gesprächsstoff: &ldquo;Du führst nur dank der Panne-Runde am Dienstag.&rdquo;
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-800">Das Aufwärmen vor dem Date</h3>
+            <h3 className="text-base font-semibold mt-6 mb-2 text-gray-900">Das Aufwärmen vor dem Date</h3>
             <p className="mb-4">
                 Vor eurem virtuellen Abend spielt Best-of-3, um zu entscheiden, wer die Aktivität wählt. Bringt euch beide in Stimmung,
                 bevor das eigentliche Date beginnt - und wer verliert, kann sich später nicht über die Wahl beschweren.
@@ -185,7 +185,7 @@ export function Content() {
             {/* Section 5 */}
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Funktioniert es auf jedem Gerät?</h2>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-700 font-medium mb-1">
+                <p className="text-sm text-gray-600 font-medium mb-1">
                     Funktioniert auf jedem Gerät - keine App, kein Konto, nur ein Link.
                 </p>
                 <p className="text-sm text-gray-600">
@@ -214,36 +214,36 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Häufig gestellte Fragen</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Kann man Schere Stein Papier auf Distanz spielen?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Kann man Schere Stein Papier auf Distanz spielen?</h3>
+                    <p className="text-gray-600">
                         Ja. Eine Person erstellt einen Raum und schickt den Link. Die andere öffnet ihn von jedem Gerät, überall. Beide
                         wählen privat und das Ergebnis wird gleichzeitig enthüllt. Keine App, kein Konto.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Wie spielt man fair beim Videoanruf?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Wie spielt man fair beim Videoanruf?</h3>
+                    <p className="text-gray-600">
                         Bis drei zählen auf Kamera funktioniert nicht - Lag sorgt dafür, dass ein Spieler den Zug des anderen früher sieht.
                         Mit einem Browser-Spiel werden beide Züge gesperrt, bevor jemand das Ergebnis sieht.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Brauchen wir ein Konto?</h3>
-                    <p className="text-gray-600 text-sm">Nein. Keine E-Mail, kein Passwort, kein Konto. Link öffnen und spielen.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Brauchen wir ein Konto?</h3>
+                    <p className="text-gray-600">Nein. Keine E-Mail, kein Passwort, kein Konto. Link öffnen und spielen.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Was, wenn wir in verschiedenen Ländern sind?</h3>
-                    <p className="text-gray-600 text-sm">Funktioniert überall mit Internet - jedes Land, jede Zeitzone, jedes Gerät.</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Was, wenn wir in verschiedenen Ländern sind?</h3>
+                    <p className="text-gray-600">Funktioniert überall mit Internet - jedes Land, jede Zeitzone, jedes Gerät.</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Kann man mehr als eine Runde spielen?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Kann man mehr als eine Runde spielen?</h3>
+                    <p className="text-gray-600">
                         Ja - jede Session ist Best-of-3. Spielt so viele Sessions, wie ihr wollt, und führt euren eigenen Gesamtstand.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Welche kostenlosen Spiele funktionieren ohne Download?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Welche kostenlosen Spiele funktionieren ohne Download?</h3>
+                    <p className="text-gray-600">
                         SSP ist die schnellste Option - Browser öffnen, Raum erstellen, Link teilen. Kein Download, kein Konto, funktioniert
                         auf jedem Handy oder Laptop.
                     </p>
@@ -252,8 +252,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Bereit zu spielen?</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Bereit zu spielen?</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Schick deinem Partner den Link - kein Konto, keine App, nur ein Spiel. Entscheidet die Abendpläne in einer Runde.
                 </p>
                 <CtaLink href="/two-players" className="text-sm px-5 py-2.5">

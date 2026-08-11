@@ -45,7 +45,7 @@ export const faqItems: FaqItem[] = [
 export function Strategy() {
     return (
         <>
-            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-blue-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Wie du bei Stein Papier Schere gewinnst
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -53,31 +53,31 @@ export function Strategy() {
                 <p>
                     Eine Studie der Universität Zhejiang untersuchte Hunderttausende von Partien und entdeckte, dass Menschen vorhersehbaren
                     Mustern folgen. Die Forscher fanden eine Strategie namens{" "}
-                    <strong className="text-gray-700">Gewinn-Halten, Verlust-Wechseln</strong>:
+                    <strong className="text-gray-600">Gewinn-Halten, Verlust-Wechseln</strong>:
                 </p>
                 <ul className="list-disc space-y-2 pl-4">
                     <li>
-                        <span className="font-semibold text-gray-700">Wenn du gewinnst:</span> Dein Gegner wechselt wahrscheinlich seinen
+                        <span className="font-semibold text-gray-600">Wenn du gewinnst:</span> Dein Gegner wechselt wahrscheinlich seinen
                         Zug.
                         <br />
-                        <span className="italic text-gray-500">Gegenzug:</span> Spiel denselben Zug wie dein Gegner - er schlägt das, was
+                        <span className="italic text-gray-400">Gegenzug:</span> Spiel denselben Zug wie dein Gegner - er schlägt das, was
                         als Nächstes kommt.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Wenn du verlierst:</span> Dein Gegner wiederholt seinen Siegeszug,
+                        <span className="font-semibold text-gray-600">Wenn du verlierst:</span> Dein Gegner wiederholt seinen Siegeszug,
                         weil er sich &ldquo;glücklich&rdquo; fühlt.
                         <br />
-                        <span className="italic text-gray-500">Gegenzug:</span> Spiel den Zug, der seinen letzten Zug schlägt.
+                        <span className="italic text-gray-400">Gegenzug:</span> Spiel den Zug, der seinen letzten Zug schlägt.
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Strategie beim ersten Wurf:</span> Anfänger - besonders männliche
+                        <span className="font-semibold text-gray-600">Strategie beim ersten Wurf:</span> Anfänger - besonders männliche
                         Spieler - beginnen meist mit Stein, weil er stark wirkt.
                         <br />
-                        <span className="italic text-gray-500">Tipp:</span> Gegen einen unbekannten Gegner: fang mit Papier an.
+                        <span className="italic text-gray-400">Tipp:</span> Gegen einen unbekannten Gegner: fang mit Papier an.
                     </li>
                 </ul>
                 <p>
-                    <span className="font-semibold text-gray-700">Ist Stein Papier Schere Glück oder Können?</span> Beides. Ein rein
+                    <span className="font-semibold text-gray-600">Ist Stein Papier Schere Glück oder Können?</span> Beides. Ein rein
                     zufälliger Spieler gewinnt 33,3 % der Zeit. Menschliche Entscheidungen sind aber nicht zufällig - Muster zu erkennen
                     bringt einen echten Vorteil.
                 </p>
@@ -98,7 +98,7 @@ export function Strategy() {
 export function Rules() {
     return (
         <>
-            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-800">Regeln von Stein Papier Schere</h2>
+            <h2 className="border-l-4 border-yellow-500 pl-3 text-base font-semibold mb-3 text-gray-900">Regeln von Stein Papier Schere</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>
                     Stein Papier Schere wird zwischen zwei Spielern gespielt. Beide zeigen gleichzeitig eines von drei Zeichen - der
@@ -106,17 +106,17 @@ export function Rules() {
                 </p>
                 <ul className="pl-4 space-y-2 list-disc">
                     <li>
-                        <span className="font-semibold text-gray-700">Stein schlägt Schere</span> - ✊ → ✂️
+                        <span className="font-semibold text-gray-600">Stein schlägt Schere</span> - ✊ → ✂️
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Schere schneidet Papier</span> - ✂️ → 📄
+                        <span className="font-semibold text-gray-600">Schere schneidet Papier</span> - ✂️ → 📄
                     </li>
                     <li>
-                        <span className="font-semibold text-gray-700">Papier bedeckt Stein</span> - 📄 → ✊
+                        <span className="font-semibold text-gray-600">Papier bedeckt Stein</span> - 📄 → ✊
                     </li>
                 </ul>
                 <p>Zeigen beide dasselbe Zeichen, endet die Runde unentschieden.</p>
-                <p className="font-semibold text-gray-700">Wie funktioniert &ldquo;Beste aus 3&rdquo;?</p>
+                <p className="font-semibold text-gray-600">Wie funktioniert &ldquo;Beste aus 3&rdquo;?</p>
                 <p>
                     Jede Partie besteht aus 3 Runden. Beide Spieler wählen alle Züge, bevor Ergebnisse angezeigt werden - niemand kann auf
                     den anderen reagieren. Wer die meisten Runden gewinnt, gewinnt die Partie. Gewinnt jeder eine Runde und die dritte endet
@@ -135,7 +135,7 @@ export function Rules() {
 export function Statistics() {
     return (
         <>
-            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-800">
+            <h2 className="border-l-4 border-red-500 pl-3 text-base font-semibold mb-3 text-gray-900">
                 Statistiken zu Stein Papier Schere
             </h2>
             <div className="space-y-2 text-sm text-gray-600">
@@ -145,12 +145,12 @@ export function Statistics() {
                 </p>
                 <p>
                     In der Praxis spielen Menschen nicht zufällig. Forschungen zeigen, dass die tatsächliche Verteilung ungefähr so
-                    aussieht: <strong className="text-gray-700">Stein ~35 %, Papier ~35 %, Schere ~30 %</strong>. Schere wird am seltensten
+                    aussieht: <strong className="text-gray-600">Stein ~35 %, Papier ~35 %, Schere ~30 %</strong>. Schere wird am seltensten
                     gewählt.
                 </p>
                 <p>
                     2005 entschied eine einzige Runde Stein Papier Schere über einen Auktionsauftrag im Wert von{" "}
-                    <strong className="text-gray-700">17,8 Millionen Dollar</strong>. Christie&apos;s und Sotheby&apos;s waren sich uneinig
+                    <strong className="text-gray-600">17,8 Millionen Dollar</strong>. Christie&apos;s und Sotheby&apos;s waren sich uneinig
                     über das Recht, eine wertvolle Kunstsammlung zu versteigern, und einigten sich auf ein Spiel.
                 </p>
                 <ul className="list-disc pl-4 space-y-1">
@@ -172,14 +172,14 @@ export function Statistics() {
 export function History() {
     return (
         <>
-            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-800">Was ist Stein Papier Schere?</h2>
+            <h2 className="border-l-4 border-green-600 pl-3 text-base font-semibold mb-3 text-gray-900">Was ist Stein Papier Schere?</h2>
             <div className="space-y-2 text-sm text-gray-600">
                 <p>
                     Stein Papier Schere ist ein Handspiel, das weltweit gespielt wird - meist zwischen zwei Personen. Es dient oft als
                     schnelle Entscheidungshilfe, ist aber auch ein Spiel des gegenseitigen Einschätzens.
                 </p>
                 <p>
-                    Das Spiel reicht über <strong className="text-gray-700">2.000 Jahre zurück in die chinesische Han-Dynastie</strong> (206
+                    Das Spiel reicht über <strong className="text-gray-600">2.000 Jahre zurück in die chinesische Han-Dynastie</strong> (206
                     v. Chr. - 220 n. Chr.), wo es <em>Shoushiling</em> hieß und Gesten eines Frosches, einer Schnecke und einer Schlange
                     darstellte.
                 </p>
@@ -189,7 +189,7 @@ export function History() {
                     Papel Tijeras in Spanien - immer dieselben drei Gesten.
                 </p>
                 <p>
-                    <strong className="text-gray-700">Wusstest du?</strong> Der 27. August ist offiziell der Welt-Stein-Papier-Schere-Tag.
+                    <strong className="text-gray-600">Wusstest du?</strong> Der 27. August ist offiziell der Welt-Stein-Papier-Schere-Tag.
                 </p>
                 <p>
                     Der Computer auf dieser Seite wählt rein zufällig - jedes Mal eine gleiche Chance von 1 zu 3 für Stein, Papier oder
@@ -236,11 +236,11 @@ export function BlogLinks() {
 export function Faq() {
     return (
         <>
-            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-800">Häufig gestellte Fragen</h2>
+            <h2 className="border-l-4 border-purple-500 pl-3 text-base font-semibold mb-3 text-gray-900">Häufig gestellte Fragen</h2>
             <div className="space-y-4 text-sm text-gray-600">
                 {faqItems.map((item, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-800">{item.q}</h3>
+                        <h3 className="font-semibold text-gray-900">{item.q}</h3>
                         <p className="mt-1">{item.a}</p>
                     </div>
                 ))}

@@ -40,9 +40,9 @@ export const faqItems: FaqItem[] = [
 
 export function Content() {
     return (
-        <article className="text-gray-700 leading-relaxed">
+        <article className="text-gray-600 leading-relaxed">
             {/* Opening */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-gray-600 mb-6">
                 Schere Stein Papier wirkt wie ein Münzwurf. Aber Forschungen der Universität Zhejiang, des MIT Technology Review und
                 Verhaltenspsychologen beweisen das Gegenteil. Menschen sind vorhersehbar - und wer die Muster kennt, kann sie ausnutzen.
             </p>
@@ -71,13 +71,13 @@ export function Content() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-1">
                 <li>
-                    <strong className="text-gray-800">Stein: ~35%</strong> - der häufigste Zug, deutlich über den erwarteten 33,3%
+                    <strong className="text-gray-900">Stein: ~35%</strong> - der häufigste Zug, deutlich über den erwarteten 33,3%
                 </li>
                 <li>
-                    <strong className="text-gray-800">Schere: ~35%</strong> - fast gleichauf mit Stein
+                    <strong className="text-gray-900">Schere: ~35%</strong> - fast gleichauf mit Stein
                 </li>
                 <li>
-                    <strong className="text-gray-800">Papier: ~29,6%</strong> - der seltenste Zug
+                    <strong className="text-gray-900">Papier: ~29,6%</strong> - der seltenste Zug
                 </li>
             </ul>
             <p className="mb-4">
@@ -94,15 +94,15 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-3 text-gray-900">Das Gewinner-Bleiben, Verlierer-Wechseln-Muster</h2>
             <p className="mb-4">
                 Der wichtigste Befund der Zhejiang-Studie war ein Verhaltensmuster, das sie{" "}
-                <strong className="text-gray-800">Gewinner-Bleiben, Verlierer-Wechseln</strong> nannten:
+                <strong className="text-gray-900">Gewinner-Bleiben, Verlierer-Wechseln</strong> nannten:
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-2">
                 <li>
-                    <strong className="text-gray-800">Wenn ein Spieler gewinnt:</strong> neigt er dazu, den gerade gewonnenen Zug zu
+                    <strong className="text-gray-900">Wenn ein Spieler gewinnt:</strong> neigt er dazu, den gerade gewonnenen Zug zu
                     wiederholen
                 </li>
                 <li>
-                    <strong className="text-gray-800">Wenn ein Spieler verliert:</strong> neigt er dazu, zum nächsten Zug im Uhrzeigersinn
+                    <strong className="text-gray-900">Wenn ein Spieler verliert:</strong> neigt er dazu, zum nächsten Zug im Uhrzeigersinn
                     zu wechseln: Stein → Papier → Schere → Stein
                 </li>
             </ul>
@@ -110,13 +110,13 @@ export function Content() {
                 So wendest du das in der Praxis an: Frage dich nach jeder Runde - hat mein Gegner gerade gewonnen oder verloren?
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 text-sm space-y-2">
-                <p className="font-semibold text-gray-800">Wenn sie gerade gewonnen haben (Gewinner-Bleiben - erwarte Wiederholung):</p>
+                <p className="font-semibold text-gray-900">Wenn sie gerade gewonnen haben (Gewinner-Bleiben - erwarte Wiederholung):</p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
                     <li>Gewonnen mit Stein → erwarte wieder Stein → du spielst Papier</li>
                     <li>Gewonnen mit Papier → erwarte wieder Papier → du spielst Schere</li>
                     <li>Gewonnen mit Schere → erwarte wieder Schere → du spielst Stein</li>
                 </ul>
-                <p className="font-semibold text-gray-800 mt-3">
+                <p className="font-semibold text-gray-900 mt-3">
                     Wenn sie gerade verloren haben (Verlierer-Wechseln - erwarte den nächsten Zug im Zyklus):
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
@@ -181,51 +181,51 @@ export function Content() {
             <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border-collapse">
                     <thead>
-                        <tr className="bg-gray-100 text-gray-700">
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Runde</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Situation</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Zug</th>
-                            <th className="text-left p-3 border border-gray-200 font-semibold">Grund</th>
+                        <tr className="bg-gray-100 text-gray-600">
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Runde</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Situation</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Zug</th>
+                            <th className="text-left p-3 border-b border-gray-200 font-semibold">Grund</th>
                         </tr>
                     </thead>
                     <tbody className="text-gray-600">
                         <tr>
-                            <td className="p-3 border border-gray-200">Runde 1</td>
-                            <td className="p-3 border border-gray-200">vs unbekannter Gegner</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Papier</td>
-                            <td className="p-3 border border-gray-200">Schlägt Stein, die häufigste Eröffnung</td>
+                            <td className="p-3 border-b border-gray-200">Runde 1</td>
+                            <td className="p-3 border-b border-gray-200">vs unbekannter Gegner</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Papier</td>
+                            <td className="p-3 border-b border-gray-200">Schlägt Stein, die häufigste Eröffnung</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Runde 1</td>
-                            <td className="p-3 border border-gray-200">vs erfahrener Spieler</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Schere</td>
-                            <td className="p-3 border border-gray-200">
+                            <td className="p-3 border-b border-gray-200">Runde 1</td>
+                            <td className="p-3 border-b border-gray-200">vs erfahrener Spieler</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Schere</td>
+                            <td className="p-3 border-b border-gray-200">
                                 Experten erwarten Papier und kontern mit Schere - also matchst du sie
                             </td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Runde 2</td>
-                            <td className="p-3 border border-gray-200">Gegner hat Runde 1 gewonnen</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Konter seinen Gewinnzug</td>
-                            <td className="p-3 border border-gray-200">Gewinner-Bleiben: erwarte Wiederholung</td>
+                            <td className="p-3 border-b border-gray-200">Runde 2</td>
+                            <td className="p-3 border-b border-gray-200">Gegner hat Runde 1 gewonnen</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Konter seinen Gewinnzug</td>
+                            <td className="p-3 border-b border-gray-200">Gewinner-Bleiben: erwarte Wiederholung</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Runde 2</td>
-                            <td className="p-3 border border-gray-200">Gegner hat Runde 1 verloren</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Konter seinen nächsten Zykluszug</td>
-                            <td className="p-3 border border-gray-200">Verlierer-Wechseln: Stein→Papier, Papier→Schere, Schere→Stein</td>
+                            <td className="p-3 border-b border-gray-200">Runde 2</td>
+                            <td className="p-3 border-b border-gray-200">Gegner hat Runde 1 verloren</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Konter seinen nächsten Zykluszug</td>
+                            <td className="p-3 border-b border-gray-200">Verlierer-Wechseln: Stein→Papier, Papier→Schere, Schere→Stein</td>
                         </tr>
                         <tr>
-                            <td className="p-3 border border-gray-200">Runde 3</td>
-                            <td className="p-3 border border-gray-200">Gegner warf denselben Zug zweimal</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Diesen Zug ausschließen</td>
-                            <td className="p-3 border border-gray-200">Doppelwurf: er wird ihn kein drittes Mal werfen</td>
+                            <td className="p-3 border-b border-gray-200">Runde 3</td>
+                            <td className="p-3 border-b border-gray-200">Gegner warf denselben Zug zweimal</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Diesen Zug ausschließen</td>
+                            <td className="p-3 border-b border-gray-200">Doppelwurf: er wird ihn kein drittes Mal werfen</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="p-3 border border-gray-200">Runde 3</td>
-                            <td className="p-3 border border-gray-200">Muss gewinnen, keine klare Einschätzung</td>
-                            <td className="p-3 border border-gray-200 font-semibold text-gray-800">Papier</td>
-                            <td className="p-3 border border-gray-200">Statistisch stärkster Zug unter Druck</td>
+                            <td className="p-3 border-b border-gray-200">Runde 3</td>
+                            <td className="p-3 border-b border-gray-200">Muss gewinnen, keine klare Einschätzung</td>
+                            <td className="p-3 border-b border-gray-200 font-semibold text-gray-900">Papier</td>
+                            <td className="p-3 border-b border-gray-200">Statistisch stärkster Zug unter Druck</td>
                         </tr>
                     </tbody>
                 </table>
@@ -233,7 +233,7 @@ export function Content() {
 
             {/* Mid-article CTA */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 my-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Teste diese Strategie in der Praxis.</p>
+                <p className="font-semibold text-gray-900 mb-1">Teste diese Strategie in der Praxis.</p>
                 <p className="text-sm text-gray-600 mb-4">
                     Fordere einen Freund heraus - schau, ob er deine Muster lesen kann, bevor du seine liest.
                 </p>
@@ -243,7 +243,7 @@ export function Content() {
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         Gegen Computer üben
                     </Link>
@@ -275,45 +275,45 @@ export function Content() {
             <h2 className="text-xl font-bold mt-10 mb-4 text-gray-900">Häufig gestellte Fragen</h2>
             <div className="space-y-5">
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Ist Papier der beste Zug bei Schere Stein Papier?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Ist Papier der beste Zug bei Schere Stein Papier?</h3>
+                    <p className="text-gray-600">
                         Statistisch gesehen ja - Papier schlägt Stein, der mit etwa 35% der häufigste Zug ist. Aber gegen erfahrene Spieler,
                         die das wissen, ist Schere der erwartete Gegenzug, was Stein sicherer machen kann.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Was ist die Gewinner-Bleiben, Verlierer-Wechseln-Strategie?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Was ist die Gewinner-Bleiben, Verlierer-Wechseln-Strategie?</h3>
+                    <p className="text-gray-600">
                         Ein Verhaltensmuster, bei dem Gewinner dazu neigen, den gerade gewonnenen Zug zu wiederholen, während Verlierer zum
                         nächsten Zug im Zyklus wechseln (Stein → Papier → Schere → Stein). Bestätigt von der Universität Zhejiang 2014 in
                         über 100.000 Runden.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Beeinflusst Psychologie wirklich Schere Stein Papier?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Beeinflusst Psychologie wirklich Schere Stein Papier?</h3>
+                    <p className="text-gray-600">
                         Ja. Mehrere peer-reviewed Studien zeigen, dass Menschen deutlich vom Zufallsspiel abweichen. Menschen verankern sich
                         emotional an Züge, reagieren vorhersehbar auf Siege und Niederlagen und erzeugen Muster, die erfahrene Gegner lesen
                         können.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Kann man Schere Stein Papier immer gewinnen?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Kann man Schere Stein Papier immer gewinnen?</h3>
+                    <p className="text-gray-600">
                         Nicht immer - aber konsistent über 33% gegen menschliche Gegner durch das Lesen von Verhaltensmustern. Gegen einen
                         echten Zufallszahlengenerator (wie den Computermodus dieser Seite) gilt keine Strategie.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Was ist der beste erste Zug bei Schere Stein Papier?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Was ist der beste erste Zug bei Schere Stein Papier?</h3>
+                    <p className="text-gray-600">
                         Gegen jeden unbekannten Gegner ist Papier die statistisch stärkste Eröffnung. Stein ist der häufigste erste Zug -
                         besonders bei Anfängern und männlichen Spielern - also bietet Papier das beste erwartete Ergebnis in Runde 1.
                     </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Ist Schere Stein Papier wirklich zufällig?</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-semibold text-gray-900 mb-1">Ist Schere Stein Papier wirklich zufällig?</h3>
+                    <p className="text-gray-600">
                         Nicht wenn Menschen spielen. Forschungen der Universität Zhejiang zeigten, dass menschliche Spieler vorhersehbare
                         Muster befolgen, je nachdem ob sie gerade gewonnen oder verloren haben. Ein Computer mit einem
                         Zufallszahlengenerator ist wirklich zufällig - menschliche Gegner nicht.
@@ -323,8 +323,8 @@ export function Content() {
 
             {/* End CTA */}
             <div className="border-t border-gray-200 mt-10 pt-8 text-center">
-                <p className="font-semibold text-gray-800 mb-1">Du hast die Strategie gelesen.</p>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="font-semibold text-gray-900 mb-1">Du hast die Strategie gelesen.</p>
+                <p className="text-sm text-gray-400 mb-5">
                     Der einzige Weg, sie zu schärfen, ist gegen jemanden zu spielen, der sie nicht kennt.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -333,7 +333,7 @@ export function Content() {
                     </CtaLink>
                     <Link
                         href="/"
-                        className="inline-block bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors"
+                        className="inline-block bg-white hover:bg-gray-50 text-gray-600 font-medium text-sm px-5 py-2.5 rounded-lg border border-gray-200 transition-colors"
                     >
                         Gegen Computer üben
                     </Link>
